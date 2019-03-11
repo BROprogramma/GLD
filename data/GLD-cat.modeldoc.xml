@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book name="Grondwaterstandonderzoek (GLD)"
+      subpath="Conceptual model/Grondwaterstandonderzoek (GLD)/20190308"
+      type="BASISMODEL"
+      id="EAPK_B8110702_E32D_436d_A462_87C8F17007D9"
+      generator-version="1.52.1"
+      generator-date="2019-03-11T08:21:04Z">
+   <chapter title="CHAPTER-CATALOG" type="cat">
+      <section type="DOMAIN" name="Model" id="global_package_Model">
+         <section type="IMAGEMAPS" name="Model-imagemap" id="imagemap_package_Model">
+            <section type="IMAGEMAP"
+                     name="Domeinmodel - overzicht"
+                     id="EAID_7E25C3ED_2822_4362_A89A_0474BB1CFF50">
+               <content>
+                  <part type="CFG-DOC-NAAM">
+                     <item>Naam</item>
+                     <item>Domeinmodel - overzicht</item>
+                  </part>
+                  <part type="CFG-DOC-DESCRIPTION">
+                     <item>Omschrijving</item>
+                     <item/>
+                  </part>
+               </content>
+            </section>
+         </section>
+         <section type="OVERVIEW-OBJECTTYPE">
+            <section name="Grondwaterstandonderzoek"
+                     type="OBJECTTYPE"
+                     id="global_class_Model_Grondwaterstandonderzoek"
+                     uuid="EAID_5876720F_795D_40b5_82B8_BC782B71FA3A">
+               <content>
+                  <part type="CFG-DOC-NAAM">
+                     <item>Naam</item>
+                     <item>Grondwaterstandonderzoek</item>
+                  </part>
+                  <part type="CFG-DOC-HERKOMST">
+                     <item>Herkomst</item>
+                     <item>BRO</item>
+                  </part>
+                  <part type="CFG-DOC-HERKOMSTDEFINITIE">
+                     <item>Herkomst definitie</item>
+                     <item>BRO</item>
+                  </part>
+               </content>
+            </section>
+         </section>
+         <!--removed empty content-->
+         <!--removed empty content-->
+         <!--removed empty content-->
+         <!--removed empty content-->
+         <!--removed empty content-->
+         <!--removed empty content-->
+         <!--removed empty content-->
+         <!--removed empty content-->
+      </section>
+   </chapter>
+   <chapter title="CHAPTER-LISTS" type="lis">
+      <section type="DETAILS-CODELIST"/>
+      <section type="DETAILS-ENUMERATION"/>
+   </chapter>
+</book>
