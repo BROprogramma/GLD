@@ -4,7 +4,7 @@
       type="BASISMODEL"
       id="EAPK_B8110702_E32D_436d_A462_87C8F17007D9"
       generator-version="1.53.1"
-      generator-date="2019-06-17T13:24:58Z">
+      generator-date="2019-06-17T13:32:01Z">
    <chapter title="CHAPTER-CATALOG" type="cat"><!--removed empty content-->
       <section type="DOMAIN" name="Model" id="global_package_Model">
          <section type="IMAGEMAPS" name="Model-imagemap" id="imagemap_package_Model">
@@ -390,19 +390,121 @@
                         </item>
                         <item>0 .. 1</item>
                      </part>
-                     <part type="COMPOSER">
+                  </content>
+               </section>
+               <section type="SHORT-ASSOCIATIONS">
+                  <content approach="association">
+                     <itemtype/>
+                     <itemtype type="ASSOCIATION-NAME"/>
+                     <itemtype type="ASSOCIATION-DEFINITION"/>
+                     <part>
                         <item>
-                           <item type="detail" idref="detail_class_Model_GMWBuisverwijzing">bemonsteringspunt (GMW-buisverwijzing)</item>
+                           <item>Grondwaterstandonderzoek</item>
+                           <item>is specialisatie van</item>
+                           <item>
+                              <item type="global" idref="global_class_Model_Registratieobject">Registratieobject</item>
+                           </item>
                         </item>
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">De gegevens die nodig zijn voor een verwijzing naar een specifieke buis in een grondwatermonitoringput.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een registratieobject en dat in de registratie ondergrond is opgenomen.</p>
+                        </item>
+                     </part>
+                     <part>
+                        <item>
+                           <item>Grondwaterstandonderzoek</item>
+                           <item>[ 1 ]</item>
+                           <item>
+                              <item type="detail"
+                                    idref="detail_association_Model_Grondwaterstandonderzoek_bemonsteringspunt">bemonsteringspunt: bemonsteringspunt</item>
+                           </item>
+                           <item>
+                              <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
+                           </item>
+                           <item>[ 1 ]</item>
                         </item>
                         <item/>
-                        <item>1</item>
                      </part>
-                     <part type="COMPOSED">
+                  </content>
+                  <content approach="target">
+                     <itemtype/>
+                     <itemtype type="ROLE-NAME"/>
+                     <itemtype type="ROLE-DEFINITION"/>
+                     <part>
+                        <item>
+                           <item>Grondwaterstandonderzoek</item>
+                           <item>is specialisatie van</item>
+                           <item>
+                              <item type="global" idref="global_class_Model_Registratieobject">Registratieobject</item>
+                           </item>
+                        </item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een registratieobject en dat in de registratie ondergrond is opgenomen.</p>
+                        </item>
+                     </part>
+                     <part>
+                        <item>
+                           <item>Grondwaterstandonderzoek</item>
+                           <item>[ 1 ]</item>
+                           <item>
+                              <item type="detail"
+                                    idref="detail_association_Model_Grondwaterstandonderzoek_bemonsteringspunt">bemonsteringspunt: bemonsteringspunt</item>
+                           </item>
+                           <item>
+                              <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
+                           </item>
+                           <item>[ 1 ]</item>
+                        </item>
+                        <item/>
+                     </part>
+                  </content>
+               </section>
+            </section>
+            <section name="GMW-buisverwijzing"
+                     type="OBJECTTYPE"
+                     id="global_class_Model_GMWBuisverwijzing"
+                     uuid="EAID_3337CDCE_0A5D_4aee_AEB0_14AF7652B102">
+               <content>
+                  <part type="CFG-DOC-NAAM">
+                     <item>Naam</item>
+                     <item>GMW-buisverwijzing</item>
+                  </part>
+                  <part type="CFG-DOC-HERKOMST">
+                     <item>Herkomst</item>
+                     <item>BRO</item>
+                  </part>
+                  <part type="CFG-DOC-DEFINITIE">
+                     <item>Definitie</item>
+                     <item>
+                        <p xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:html="http://www.w3.org/1999/xhtml"
+                           xmlns:imvert="http://www.imvertor.org/schema/system">De gegevens die nodig zijn voor een verwijzing naar een specifieke buis in een grondwatermonitoringput waar het grondwater is bemonsterd. </p>
+                     </item>
+                  </part>
+                  <part type="CFG-DOC-HERKOMSTDEFINITIE">
+                     <item>Herkomst definitie</item>
+                     <item>BRO</item>
+                  </part>
+                  <part type="CFG-DOC-TOELICHTING">
+                     <item>Toelichting</item>
+                     <item>
+                        <p xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:html="http://www.w3.org/1999/xhtml"
+                           xmlns:imvert="http://www.imvertor.org/schema/system">Het <em>BRO-ID</em> van de <em>grondwatermonitoringput</em> wordt opgenomen plus het volgnummer van de specifieke buis in de put.</p>
+                     </item>
+                  </part>
+               </content>
+               <section type="SHORT-ATTRIBUTES">
+                  <content>
+                     <itemtype/>
+                     <itemtype type="ATTRIBUTE-NAME"/>
+                     <itemtype type="ATTRIBUTE-DEFINITION"/>
+                     <itemtype type="ATTRIBUTE-FORMAT"/>
+                     <itemtype type="ATTRIBUTE-CARD"/>
+                     <part>
                         <item>
                            <item type="detail" idref="detail_attribute_Model_GMWBuisverwijzing_bROID">BRO-ID</item>
                         </item>
@@ -416,7 +518,7 @@
                         </item>
                         <item>1</item>
                      </part>
-                     <part type="COMPOSED">
+                     <part>
                         <item>
                            <item type="detail"
                                  idref="detail_attribute_Model_GMWBuisverwijzing_buisnummer">buisnummer</item>
@@ -440,17 +542,18 @@
                      <itemtype type="ASSOCIATION-DEFINITION"/>
                      <part>
                         <item>
-                           <item>Grondwaterstandonderzoek</item>
-                           <item>is specialisatie van</item>
                            <item>
-                              <item type="global" idref="global_class_Model_Registratieobject">Registratieobject</item>
+                              <item type="global" idref="global_class_Model_Grondwaterstandonderzoek">Grondwaterstandonderzoek</item>
                            </item>
+                           <item>[ 1 ]</item>
+                           <item>
+                              <item type="detail"
+                                    idref="detail_association_Model_Grondwaterstandonderzoek_bemonsteringspunt">bemonsteringspunt: bemonsteringspunt</item>
+                           </item>
+                           <item>GMW-buisverwijzing</item>
+                           <item>[ 1 ]</item>
                         </item>
-                        <item>
-                           <p xmlns="http://www.w3.org/1999/xhtml"
-                              xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een registratieobject en dat in de registratie ondergrond is opgenomen.</p>
-                        </item>
+                        <item/>
                      </part>
                   </content>
                   <content approach="target">
@@ -459,17 +562,18 @@
                      <itemtype type="ROLE-DEFINITION"/>
                      <part>
                         <item>
-                           <item>Grondwaterstandonderzoek</item>
-                           <item>is specialisatie van</item>
                            <item>
-                              <item type="global" idref="global_class_Model_Registratieobject">Registratieobject</item>
+                              <item type="global" idref="global_class_Model_Grondwaterstandonderzoek">Grondwaterstandonderzoek</item>
                            </item>
+                           <item>[ 1 ]</item>
+                           <item>
+                              <item type="detail"
+                                    idref="detail_association_Model_Grondwaterstandonderzoek_bemonsteringspunt">bemonsteringspunt: bemonsteringspunt</item>
+                           </item>
+                           <item>GMW-buisverwijzing</item>
+                           <item>[ 1 ]</item>
                         </item>
-                        <item>
-                           <p xmlns="http://www.w3.org/1999/xhtml"
-                              xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een registratieobject en dat in de registratie ondergrond is opgenomen.</p>
-                        </item>
+                        <item/>
                      </part>
                   </content>
                </section>
@@ -1580,154 +1684,6 @@
                      </content>
                   </section>
                </section>
-               <section name="GMW-buisverwijzing"
-                        type="DETAIL-COMPOSITE"
-                        id="detail_class_Model_GMWBuisverwijzing"
-                        id-global="global_class_Model_GMWBuisverwijzing"
-                        uuid="EAID_3337CDCE_0A5D_4aee_AEB0_14AF7652B102">
-                  <content>
-                     <part type="CFG-DOC-NAAM">
-                        <item>Naam</item>
-                        <item>GMW-buisverwijzing</item>
-                     </part>
-                     <part type="CFG-DOC-HERKOMST">
-                        <item>Herkomst</item>
-                        <item>BRO</item>
-                     </part>
-                     <part type="CFG-DOC-DEFINITIE">
-                        <item>Definitie</item>
-                        <item>
-                           <p xmlns="http://www.w3.org/1999/xhtml"
-                              xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">De gegevens die nodig zijn voor een verwijzing naar een specifieke buis in een grondwatermonitoringput.</p>
-                        </item>
-                     </part>
-                     <part type="CFG-DOC-HERKOMSTDEFINITIE">
-                        <item>Herkomst definitie</item>
-                        <item>BRO</item>
-                     </part>
-                     <part type="CFG-DOC-INDICATIEAUTHENTIEK">
-                        <item>Indicatie authentiek</item>
-                        <item>Authentiek</item>
-                     </part>
-                  </content>
-                  <section name="BRO-ID"
-                           type="DETAIL-COMPOSITE-ATTRIBUTE"
-                           id="detail_attribute_Model_GMWBuisverwijzing_bROID"
-                           id-global="global_attribute_Model_GMWBuisverwijzing_bROID">
-                     <content>
-                        <part type="COMPOSER">
-                           <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
-                        </part>
-                        <part type="CFG-DOC-NAAM">
-                           <item>Naam</item>
-                           <item>BRO-ID</item>
-                        </part>
-                        <part type="CFG-DOC-HERKOMST">
-                           <item>Herkomst</item>
-                           <item>BRO</item>
-                        </part>
-                        <part type="CFG-DOC-DEFINITIE">
-                           <item>Definitie</item>
-                           <item>
-                              <p xmlns="http://www.w3.org/1999/xhtml"
-                                 xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">De identificatie van de <em>grondwatermonitoringput</em> in de basisregistratie ondergrond.</p>
-                           </item>
-                        </part>
-                        <part type="CFG-DOC-HERKOMSTDEFINITIE">
-                           <item>Herkomst definitie</item>
-                           <item>BRO</item>
-                        </part>
-                        <part type="CFG-DOC-MOGELIJKGEENWAARDE">
-                           <item>Mogelijk geen waarde</item>
-                           <item>Nee</item>
-                        </part>
-                        <part type="CFG-DOC-INDICATIEMATERIELEHISTORIE">
-                           <item>Indicatie materiële historie</item>
-                           <item>Nee</item>
-                        </part>
-                        <part type="CFG-DOC-INDICATIEFORMELEHISTORIE">
-                           <item>Indicatie formele historie</item>
-                           <item>Nee</item>
-                        </part>
-                        <part type="CFG-DOC-INDICATIEKARDINALITEIT">
-                           <item>Indicatie kardinaliteit</item>
-                           <item>1</item>
-                        </part>
-                        <part type="CFG-DOC-INDICATIEAUTHENTIEK">
-                           <item>Indicatie authentiek</item>
-                           <item>Authentiek</item>
-                        </part>
-                        <part type="CFG-DOC-FORMAAT">
-                           <item>Formaat</item>
-                           <item>Registratieobjectcode</item>
-                        </part>
-                     </content>
-                  </section>
-                  <section name="buisnummer"
-                           type="DETAIL-COMPOSITE-ATTRIBUTE"
-                           id="detail_attribute_Model_GMWBuisverwijzing_buisnummer"
-                           id-global="global_attribute_Model_GMWBuisverwijzing_buisnummer">
-                     <content>
-                        <part type="COMPOSER">
-                           <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
-                        </part>
-                        <part type="CFG-DOC-NAAM">
-                           <item>Naam</item>
-                           <item>buisnummer</item>
-                        </part>
-                        <part type="CFG-DOC-HERKOMST">
-                           <item>Herkomst</item>
-                           <item>BRO</item>
-                        </part>
-                        <part type="CFG-DOC-DEFINITIE">
-                           <item>Definitie</item>
-                           <item>
-                              <p xmlns="http://www.w3.org/1999/xhtml"
-                                 xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het identificerende nummer van de monitoringbuis in de grondwatermonitoringput in de basisregistratie ondergrond.</p>
-                           </item>
-                        </part>
-                        <part type="CFG-DOC-HERKOMSTDEFINITIE">
-                           <item>Herkomst definitie</item>
-                           <item>BRO</item>
-                        </part>
-                        <part type="CFG-DOC-TOELICHTING">
-                           <item>Toelichting</item>
-                           <item>
-                              <p xmlns="http://www.w3.org/1999/xhtml"
-                                 xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">Type = Nummer3, maar werkt even niet.</p>
-                           </item>
-                        </part>
-                        <part type="CFG-DOC-MOGELIJKGEENWAARDE">
-                           <item>Mogelijk geen waarde</item>
-                           <item>Nee</item>
-                        </part>
-                        <part type="CFG-DOC-INDICATIEMATERIELEHISTORIE">
-                           <item>Indicatie materiële historie</item>
-                           <item>Nee</item>
-                        </part>
-                        <part type="CFG-DOC-INDICATIEFORMELEHISTORIE">
-                           <item>Indicatie formele historie</item>
-                           <item>Nee</item>
-                        </part>
-                        <part type="CFG-DOC-INDICATIEKARDINALITEIT">
-                           <item>Indicatie kardinaliteit</item>
-                           <item>1</item>
-                        </part>
-                        <part type="CFG-DOC-INDICATIEAUTHENTIEK">
-                           <item>Indicatie authentiek</item>
-                           <item>Authentiek</item>
-                        </part>
-                        <part type="CFG-DOC-FORMAAT">
-                           <item>Formaat</item>
-                           <item>Nummer2</item>
-                        </part>
-                     </content>
-                  </section>
-               </section>
                <section name="start onderzoek"
                         type="DETAIL-ATTRIBUTE"
                         id="detail_attribute_Model_Grondwaterstandonderzoek_startOnderzoek"
@@ -1854,6 +1810,186 @@
                      <part type="CFG-DOC-FORMAAT">
                         <item>Formaat</item>
                         <item>Datum</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEAFLEIDBAAR">
+                        <item>Indicatie afleidbaar</item>
+                        <item>Nee</item>
+                     </part>
+                     <part type="CFG-DOC-UNITOFMEASURE">
+                        <item>Meeteenheid</item>
+                        <item>BRO</item>
+                     </part>
+                  </content>
+               </section>
+               <section name="bemonsteringspunt"
+                        type="DETAIL-ASSOCIATION"
+                        id="detail_association_Model_Grondwaterstandonderzoek_bemonsteringspunt"
+                        id-global="global_association_Model_Grondwaterstandonderzoek_bemonsteringspunt">
+                  <content approach="association">
+                     <part type="CFG-DOC-NAAM">
+                        <item>Naam</item>
+                        <item>bemonsteringspunt</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEKARDINALITEIT">
+                        <item>Indicatie kardinaliteit</item>
+                        <item>1</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEAUTHENTIEK">
+                        <item>Indicatie authentiek</item>
+                        <item>Authentiek</item>
+                     </part>
+                     <part type="CFG-DOC-GERELATEERDOBJECTTYPE">
+                        <item>Gerelateerd objecttype</item>
+                        <item>
+                           <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
+                        </item>
+                     </part>
+                  </content>
+                  <content approach="target">
+                     <part type="CFG-DOC-NAAM">
+                        <item>Naam</item>
+                        <item>bemonsteringspunt</item>
+                     </part>
+                     <part type="CFG-DOC-MOGELIJKGEENWAARDE">
+                        <item>Mogelijk geen waarde</item>
+                        <item>Nee</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEKARDINALITEIT">
+                        <item>Indicatie kardinaliteit</item>
+                        <item>1</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEAUTHENTIEK">
+                        <item>Indicatie authentiek</item>
+                        <item>Authentiek</item>
+                     </part>
+                     <part type="CFG-DOC-GERELATEERDOBJECTTYPE">
+                        <item>Gerelateerd objecttype</item>
+                        <item>
+                           <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
+                        </item>
+                     </part>
+                  </content>
+               </section>
+            </section>
+            <section name="GMW-buisverwijzing"
+                     type="OBJECTTYPE"
+                     id="detail_class_Model_GMWBuisverwijzing"
+                     id-global="global_class_Model_GMWBuisverwijzing">
+               <section name="BRO-ID"
+                        type="DETAIL-ATTRIBUTE"
+                        id="detail_attribute_Model_GMWBuisverwijzing_bROID"
+                        id-global="global_attribute_Model_GMWBuisverwijzing_bROID">
+                  <content>
+                     <part type="CFG-DOC-NAAM">
+                        <item>Naam</item>
+                        <item>BRO-ID</item>
+                     </part>
+                     <part type="CFG-DOC-HERKOMST">
+                        <item>Herkomst</item>
+                        <item>BRO</item>
+                     </part>
+                     <part type="CFG-DOC-DEFINITIE">
+                        <item>Definitie</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De identificatie van de <em>grondwatermonitoringput</em> in de basisregistratie ondergrond.</p>
+                        </item>
+                     </part>
+                     <part type="CFG-DOC-HERKOMSTDEFINITIE">
+                        <item>Herkomst definitie</item>
+                        <item>BRO</item>
+                     </part>
+                     <part type="CFG-DOC-MOGELIJKGEENWAARDE">
+                        <item>Mogelijk geen waarde</item>
+                        <item>Nee</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEMATERIELEHISTORIE">
+                        <item>Indicatie materiële historie</item>
+                        <item>Nee</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEFORMELEHISTORIE">
+                        <item>Indicatie formele historie</item>
+                        <item>Nee</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEKARDINALITEIT">
+                        <item>Indicatie kardinaliteit</item>
+                        <item>1</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEAUTHENTIEK">
+                        <item>Indicatie authentiek</item>
+                        <item>Authentiek</item>
+                     </part>
+                     <part type="CFG-DOC-FORMAAT">
+                        <item>Formaat</item>
+                        <item>Registratieobjectcode</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEAFLEIDBAAR">
+                        <item>Indicatie afleidbaar</item>
+                        <item>Nee</item>
+                     </part>
+                     <part type="CFG-DOC-UNITOFMEASURE">
+                        <item>Meeteenheid</item>
+                        <item>BRO</item>
+                     </part>
+                  </content>
+               </section>
+               <section name="buisnummer"
+                        type="DETAIL-ATTRIBUTE"
+                        id="detail_attribute_Model_GMWBuisverwijzing_buisnummer"
+                        id-global="global_attribute_Model_GMWBuisverwijzing_buisnummer">
+                  <content>
+                     <part type="CFG-DOC-NAAM">
+                        <item>Naam</item>
+                        <item>buisnummer</item>
+                     </part>
+                     <part type="CFG-DOC-HERKOMST">
+                        <item>Herkomst</item>
+                        <item>BRO</item>
+                     </part>
+                     <part type="CFG-DOC-DEFINITIE">
+                        <item>Definitie</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Het identificerende nummer van de monitoringbuis in de grondwatermonitoringput in de basisregistratie ondergrond.</p>
+                        </item>
+                     </part>
+                     <part type="CFG-DOC-HERKOMSTDEFINITIE">
+                        <item>Herkomst definitie</item>
+                        <item>BRO</item>
+                     </part>
+                     <part type="CFG-DOC-TOELICHTING">
+                        <item>Toelichting</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Type = Nummer3, maar werkt even niet.</p>
+                        </item>
+                     </part>
+                     <part type="CFG-DOC-MOGELIJKGEENWAARDE">
+                        <item>Mogelijk geen waarde</item>
+                        <item>Nee</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEMATERIELEHISTORIE">
+                        <item>Indicatie materiële historie</item>
+                        <item>Nee</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEFORMELEHISTORIE">
+                        <item>Indicatie formele historie</item>
+                        <item>Nee</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEKARDINALITEIT">
+                        <item>Indicatie kardinaliteit</item>
+                        <item>1</item>
+                     </part>
+                     <part type="CFG-DOC-INDICATIEAUTHENTIEK">
+                        <item>Indicatie authentiek</item>
+                        <item>Authentiek</item>
+                     </part>
+                     <part type="CFG-DOC-FORMAAT">
+                        <item>Formaat</item>
+                        <item>Nummer2</item>
                      </part>
                      <part type="CFG-DOC-INDICATIEAFLEIDBAAR">
                         <item>Indicatie afleidbaar</item>
