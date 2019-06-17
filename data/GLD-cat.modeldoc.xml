@@ -4,7 +4,7 @@
       type="BASISMODEL"
       id="EAPK_B8110702_E32D_436d_A462_87C8F17007D9"
       generator-version="1.53.1"
-      generator-date="2019-06-17T12:33:43Z">
+      generator-date="2019-06-17T13:23:40Z">
    <chapter title="CHAPTER-CATALOG" type="cat"><!--removed empty content-->
       <section type="DOMAIN" name="Model" id="global_package_Model">
          <section type="IMAGEMAPS" name="Model-imagemap" id="imagemap_package_Model">
@@ -38,14 +38,6 @@
                      <item>Herkomst</item>
                      <item>BRO</item>
                   </part>
-                  <part type="CFG-DOC-DEFINITIE">
-                     <item>Definitie</item>
-                     <item>
-                        <p xmlns="http://www.w3.org/1999/xhtml"
-                           xmlns:html="http://www.w3.org/1999/xhtml"
-                           xmlns:imvert="http://www.imvertor.org/schema/system">TODO</p>
-                     </item>
-                  </part>
                   <part type="CFG-DOC-HERKOMSTDEFINITIE">
                      <item>Herkomst definitie</item>
                      <item>BRO</item>
@@ -62,7 +54,11 @@
                         <item>
                            <item type="detail" idref="detail_attribute_Model_Registratieobject_bROID">BRO-ID</item>
                         </item>
-                        <item/>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De identificatie van het <em>grondwaterstandonderzoek</em> dat in de registratie ondergrond is opgenomen. </p>
+                        </item>
                         <item>
                            <item type="global" idref="global_class_RegistrationObjectCodeType">Registratieobjectcode</item>
                         </item>
@@ -144,6 +140,14 @@
                      <item>Herkomst</item>
                      <item>BRO</item>
                   </part>
+                  <part type="CFG-DOC-DEFINITIE">
+                     <item>Definitie</item>
+                     <item>
+                        <p xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:html="http://www.w3.org/1999/xhtml"
+                           xmlns:imvert="http://www.imvertor.org/schema/system">Een grondwaterstandonderzoek is een monitoringsactiviteit, waarbij herhaaldelijk de waterstand in een monitoringbuis van een grondwatermonitoringput wordt gemeten. Deze waterstand representeert de grondwaterstand en/of stijghoogte in de ondergrond ter plekke van het filter van deze monitoringbuis.</p>
+                     </item>
+                  </part>
                   <part type="CFG-DOC-HERKOMSTDEFINITIE">
                      <item>Herkomst definitie</item>
                      <item>BRO</item>
@@ -161,7 +165,11 @@
                            <item type="detail"
                                  idref="detail_attribute_Model_Grondwaterstandonderzoek_startOnderzoek">start onderzoek</item>
                         </item>
-                        <item/>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum waarop de eerste meting van het <em>grondwaterstandonderzoek</em> is uitgevoerd.</p>
+                        </item>
                         <item>
                            <item type="global" idref="global_class_xsdate">Datum</item>
                         </item>
@@ -172,11 +180,15 @@
                            <item type="detail"
                                  idref="detail_attribute_Model_Grondwaterstandonderzoek_eindOnderzoek">eind onderzoek</item>
                         </item>
-                        <item/>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum waarop de laatste meting van het <em>grondwaterstandonderzoek</em>is uitgevoerd.</p>
+                        </item>
                         <item>
                            <item type="global" idref="global_class_xsdate">Datum</item>
                         </item>
-                        <item>1</item>
+                        <item>0 .. 1</item>
                      </part>
                      <part type="COMPOSER">
                         <item>
@@ -384,7 +396,7 @@
                      </part>
                      <part type="COMPOSED">
                         <item>
-                           <item type="detail" idref="detail_attribute_Model_GMWBuisverwijzing_gMWBROID">GMW-BRO-ID</item>
+                           <item type="detail" idref="detail_attribute_Model_GMWBuisverwijzing_bROID">BRO-ID</item>
                         </item>
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
@@ -426,11 +438,7 @@
                               <item type="global" idref="global_class_Model_Registratieobject">Registratieobject</item>
                            </item>
                         </item>
-                        <item>
-                           <p xmlns="http://www.w3.org/1999/xhtml"
-                              xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">TODO</p>
-                        </item>
+                        <item/>
                      </part>
                   </content>
                   <content approach="target">
@@ -445,11 +453,7 @@
                               <item type="global" idref="global_class_Model_Registratieobject">Registratieobject</item>
                            </item>
                         </item>
-                        <item>
-                           <p xmlns="http://www.w3.org/1999/xhtml"
-                              xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">TODO</p>
-                        </item>
+                        <item/>
                      </part>
                   </content>
                </section>
@@ -493,9 +497,25 @@
                         <item>Herkomst</item>
                         <item>BRO</item>
                      </part>
+                     <part type="CFG-DOC-DEFINITIE">
+                        <item>Definitie</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De identificatie van het <em>grondwaterstandonderzoek</em> dat in de registratie ondergrond is opgenomen. </p>
+                        </item>
+                     </part>
                      <part type="CFG-DOC-HERKOMSTDEFINITIE">
                         <item>Herkomst definitie</item>
                         <item>BRO</item>
+                     </part>
+                     <part type="CFG-DOC-TOELICHTING">
+                        <item>Toelichting</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De basisregistratie ondergrond kent bij registratie automatisch de juiste waarde aan het object toe.</p>
+                        </item>
                      </part>
                      <part type="CFG-DOC-MOGELIJKGEENWAARDE">
                         <item>Mogelijk geen waarde</item>
@@ -1575,17 +1595,17 @@
                         <item>Authentiek</item>
                      </part>
                   </content>
-                  <section name="GMW-BRO-ID"
+                  <section name="BRO-ID"
                            type="DETAIL-COMPOSITE-ATTRIBUTE"
-                           id="detail_attribute_Model_GMWBuisverwijzing_gMWBROID"
-                           id-global="global_attribute_Model_GMWBuisverwijzing_gMWBROID">
+                           id="detail_attribute_Model_GMWBuisverwijzing_bROID"
+                           id-global="global_attribute_Model_GMWBuisverwijzing_bROID">
                      <content>
                         <part type="COMPOSER">
                            <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
                         </part>
                         <part type="CFG-DOC-NAAM">
                            <item>Naam</item>
-                           <item>GMW-BRO-ID</item>
+                           <item>BRO-ID</item>
                         </part>
                         <part type="CFG-DOC-HERKOMST">
                            <item>Herkomst</item>
@@ -1705,6 +1725,14 @@
                         <item>Herkomst</item>
                         <item>BRO</item>
                      </part>
+                     <part type="CFG-DOC-DEFINITIE">
+                        <item>Definitie</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum waarop de eerste meting van het <em>grondwaterstandonderzoek</em> is uitgevoerd.</p>
+                        </item>
+                     </part>
                      <part type="CFG-DOC-HERKOMSTDEFINITIE">
                         <item>Herkomst definitie</item>
                         <item>BRO</item>
@@ -1728,6 +1756,14 @@
                      <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                         <item>Indicatie authentiek</item>
                         <item>Authentiek</item>
+                     </part>
+                     <part type="CFG-DOC-REGELS">
+                        <item>Regels</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum ligt niet in de toekomst.</p>
+                        </item>
                      </part>
                      <part type="CFG-DOC-FORMAAT">
                         <item>Formaat</item>
@@ -1756,6 +1792,14 @@
                         <item>Herkomst</item>
                         <item>BRO</item>
                      </part>
+                     <part type="CFG-DOC-DEFINITIE">
+                        <item>Definitie</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum waarop de laatste meting van het <em>grondwaterstandonderzoek</em>is uitgevoerd.</p>
+                        </item>
+                     </part>
                      <part type="CFG-DOC-HERKOMSTDEFINITIE">
                         <item>Herkomst definitie</item>
                         <item>BRO</item>
@@ -1774,11 +1818,22 @@
                      </part>
                      <part type="CFG-DOC-INDICATIEKARDINALITEIT">
                         <item>Indicatie kardinaliteit</item>
-                        <item>1</item>
+                        <item>0 .. 1</item>
                      </part>
                      <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                         <item>Indicatie authentiek</item>
                         <item>Authentiek</item>
+                     </part>
+                     <part type="CFG-DOC-REGELS">
+                        <item>Regels</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum ligt niet in de toekomst.</p>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum ligt niet voor het gegeven <em>start onderzoek</em>.</p>
+                        </item>
                      </part>
                      <part type="CFG-DOC-FORMAAT">
                         <item>Formaat</item>
