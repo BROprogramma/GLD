@@ -4,7 +4,7 @@
       type="BASISMODEL"
       id="EAPK_B8110702_E32D_436d_A462_87C8F17007D9"
       generator-version="1.53.1"
-      generator-date="2019-06-19T12:52:01Z">
+      generator-date="2019-06-19T12:53:04Z">
    <chapter title="CHAPTER-CATALOG" type="cat"><!--removed empty content-->
       <section type="DOMAIN" name="Model" id="global_package_Model">
          <section type="IMAGEMAPS" name="Model-imagemap" id="imagemap_package_Model">
@@ -37,6 +37,14 @@
                   <part type="CFG-DOC-HERKOMST">
                      <item>Herkomst</item>
                      <item>BRO</item>
+                  </part>
+                  <part type="CFG-DOC-DEFINITIE">
+                     <item>Definitie</item>
+                     <item>
+                        <p xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:html="http://www.w3.org/1999/xhtml"
+                           xmlns:imvert="http://www.imvertor.org/schema/system">De algemene gegevens die voor ieder type registratieobject in de registratie ondergrond zijn of worden opgenomen.</p>
+                     </item>
                   </part>
                   <part type="CFG-DOC-HERKOMSTDEFINITIE">
                      <item>Herkomst definitie</item>
@@ -433,7 +441,11 @@
                               <item type="global" idref="global_class_Model_Registratieobject">Registratieobject</item>
                            </item>
                         </item>
-                        <item/>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De algemene gegevens die voor ieder type registratieobject in de registratie ondergrond zijn of worden opgenomen.</p>
+                        </item>
                      </part>
                      <part>
                         <item>
@@ -463,7 +475,11 @@
                               <item type="global" idref="global_class_Model_Registratieobject">Registratieobject</item>
                            </item>
                         </item>
-                        <item/>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De algemene gegevens die voor ieder type registratieobject in de registratie ondergrond zijn of worden opgenomen.</p>
+                        </item>
                      </part>
                      <part>
                         <item>
