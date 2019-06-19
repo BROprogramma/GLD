@@ -4,7 +4,7 @@
       type="BASISMODEL"
       id="EAPK_B8110702_E32D_436d_A462_87C8F17007D9"
       generator-version="1.53.1"
-      generator-date="2019-06-19T08:52:31Z">
+      generator-date="2019-06-19T09:00:28Z">
    <chapter title="CHAPTER-CATALOG" type="cat"><!--removed empty content-->
       <section type="DOMAIN" name="Model" id="global_package_Model">
          <section type="IMAGEMAPS" name="Model-imagemap" id="imagemap_package_Model">
@@ -466,7 +466,11 @@
                            </item>
                            <item>[ 1 ]</item>
                         </item>
-                        <item/>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Verwijzing naar een specifieke buis in een grondwatermonitoringput waarin de grondwaterstanden zijn gemeten.</p>
+                        </item>
                      </part>
                   </content>
                </section>
@@ -581,7 +585,11 @@
                            <item>GMW-buisverwijzing</item>
                            <item>[ 1 ]</item>
                         </item>
-                        <item/>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Verwijzing naar een specifieke buis in een grondwatermonitoringput waarin de grondwaterstanden zijn gemeten.</p>
+                        </item>
                      </part>
                   </content>
                </section>
@@ -1890,6 +1898,14 @@ In andere gevallen ontbreekt het gegeven.</p>
                         <item>Naam</item>
                         <item>bemonsteringspunt</item>
                      </part>
+                     <part type="CFG-DOC-DEFINITIE">
+                        <item>Definitie</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Verwijzing naar een specifieke buis in een grondwatermonitoringput waarin de grondwaterstanden zijn gemeten.</p>
+                        </item>
+                     </part>
                      <part type="CFG-DOC-MOGELIJKGEENWAARDE">
                         <item>Mogelijk geen waarde</item>
                         <item>Nee</item>
@@ -1998,14 +2014,6 @@ In andere gevallen ontbreekt het gegeven.</p>
                      <part type="CFG-DOC-HERKOMSTDEFINITIE">
                         <item>Herkomst definitie</item>
                         <item>BRO</item>
-                     </part>
-                     <part type="CFG-DOC-TOELICHTING">
-                        <item>Toelichting</item>
-                        <item>
-                           <p xmlns="http://www.w3.org/1999/xhtml"
-                              xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">Type = Nummer3 werkt nog niet, dus is voorlopig type = Nummer2 gekozen.</p>
-                        </item>
                      </part>
                      <part type="CFG-DOC-MOGELIJKGEENWAARDE">
                         <item>Mogelijk geen waarde</item>
