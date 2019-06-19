@@ -4,7 +4,7 @@
       type="BASISMODEL"
       id="EAPK_B8110702_E32D_436d_A462_87C8F17007D9"
       generator-version="1.53.1"
-      generator-date="2019-06-17T13:32:01Z">
+      generator-date="2019-06-19T08:52:31Z">
    <chapter title="CHAPTER-CATALOG" type="cat"><!--removed empty content-->
       <section type="DOMAIN" name="Model" id="global_package_Model">
          <section type="IMAGEMAPS" name="Model-imagemap" id="imagemap_package_Model">
@@ -43,12 +43,20 @@
                      <item>
                         <p xmlns="http://www.w3.org/1999/xhtml"
                            xmlns:html="http://www.w3.org/1999/xhtml"
-                           xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een registratieobject en dat in de registratie ondergrond is opgenomen.</p>
+                           xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een wandonderzoek dat vanuit een bepaalde opdracht is uitgevoerd door op een bepaald moment op een bepaalde locatie in Nederland een wand in de bodem te maken, de wand te beschrijven of te bemonsteren en de monsters te onderzoeken.</p>
                      </item>
                   </part>
                   <part type="CFG-DOC-HERKOMSTDEFINITIE">
                      <item>Herkomst definitie</item>
                      <item>BRO</item>
+                  </part>
+                  <part type="CFG-DOC-TOELICHTING">
+                     <item>Toelichting</item>
+                     <item>
+                        <p xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:html="http://www.w3.org/1999/xhtml"
+                           xmlns:imvert="http://www.imvertor.org/schema/system">De populatie wandonderzoeken in de registratie ondergrond omvat alleen de onderzoeken die vanuit het vakgebied van de bodemkunde worden uitgevoerd. De huidige gegevensdefinitie beperkt zich tot de wandbeschrijving.</p>
+                     </item>
                   </part>
                </content>
                <section type="SHORT-ATTRIBUTES">
@@ -80,7 +88,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">TODO</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Het KvK-nummer van de maatschappelijke activiteit van de publiekrechtelijke rechtspersoon die bronhouder is van de gegevens in de basisregistratie ondergrond.</p>
                         </item>
                         <item>
                            <item type="global" idref="global_class_OrganizationType">Organisatie</item>
@@ -110,7 +118,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">TODO</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Het KvK-nummer van de onderneming of de maatschappelijke activiteit van de rechtspersoon die het object aan de basisregistratie ondergrond heeft aangeleverd, of het equivalent daarvan in een handelsregister van een andere lidstaat van de Europese Unie dan Nederland.</p>
                         </item>
                         <item>
                            <item type="global" idref="global_class_OrganizationType">Organisatie</item>
@@ -218,7 +226,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop er voor het eerst gegevens van het object in de registratie ondergrond zijn opgenomen.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop voor het eerst gegevens van het object in de registratie ondergrond zijn opgenomen.</p>
                         </item>
                         <item>
                            <item type="global" idref="global_class_xsdateTime">DatumTijd</item>
@@ -233,7 +241,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">De actuele fase van registratie waarin het registratieobject zich bevindt.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De actuele fase van registratie waarin het object zich bevindt.</p>
                         </item>
                         <item>
                            <item type="global" idref="global_class_Model_Registratiestatus">Registratiestatus</item>
@@ -293,7 +301,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de laatste correctie in de gegevens van het registratieobject is doorgevoerd.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de laatste verbetering in de gegevens van het object is doorgevoerd.</p>
                         </item>
                         <item>
                            <item type="global" idref="global_class_xsdateTime">DatumTijd</item>
@@ -308,7 +316,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of het registratieobject door de registerbeheerder in onderzoek is genomen.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of het object door de registerbeheerder in onderzoek is genomen.</p>
                         </item>
                         <item>
                            <item type="global" idref="global_class_IndicationYesNoType">IndicatieJaNee</item>
@@ -323,7 +331,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de registerbeheerder het registratieobject in onderzoek heeft genomen.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de registerbeheerder het object in onderzoek heeft genomen.</p>
                         </item>
                         <item>
                            <item type="global" idref="global_class_xsdateTime">DatumTijd</item>
@@ -338,7 +346,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of de gegevens van het registratieobject door de registerbeheerder uit registratie zijn genomen.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of de gegevens van het object door de registerbeheerder uit registratie zijn genomen.</p>
                         </item>
                         <item>
                            <item type="global" idref="global_class_IndicationYesNoType">IndicatieJaNee</item>
@@ -353,7 +361,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop het registratieobject uit registratie is genomen.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop het object uit registratie is genomen.</p>
                         </item>
                         <item>
                            <item type="global" idref="global_class_xsdateTime">DatumTijd</item>
@@ -408,7 +416,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een registratieobject en dat in de registratie ondergrond is opgenomen.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een wandonderzoek dat vanuit een bepaalde opdracht is uitgevoerd door op een bepaald moment op een bepaalde locatie in Nederland een wand in de bodem te maken, de wand te beschrijven of te bemonsteren en de monsters te onderzoeken.</p>
                         </item>
                      </part>
                      <part>
@@ -442,7 +450,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een registratieobject en dat in de registratie ondergrond is opgenomen.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een wandonderzoek dat vanuit een bepaalde opdracht is uitgevoerd door op een bepaald moment op een bepaalde locatie in Nederland een wand in de bodem te maken, de wand te beschrijven of te bemonsteren en de monsters te onderzoeken.</p>
                         </item>
                      </part>
                      <part>
@@ -481,7 +489,7 @@
                      <item>
                         <p xmlns="http://www.w3.org/1999/xhtml"
                            xmlns:html="http://www.w3.org/1999/xhtml"
-                           xmlns:imvert="http://www.imvertor.org/schema/system">De gegevens die nodig zijn voor een verwijzing naar een specifieke buis in een grondwatermonitoringput waar het grondwater is bemonsterd. </p>
+                           xmlns:imvert="http://www.imvertor.org/schema/system">De gegevens die nodig zijn voor een verwijzing naar een specifieke buis in een grondwatermonitoringput. </p>
                      </item>
                   </part>
                   <part type="CFG-DOC-HERKOMSTDEFINITIE">
@@ -529,7 +537,7 @@
                               xmlns:imvert="http://www.imvertor.org/schema/system">Het identificerende nummer van de monitoringbuis in de grondwatermonitoringput in de basisregistratie ondergrond.</p>
                         </item>
                         <item>
-                           <item type="global" idref="global_class_xsinteger">Nummer2</item>
+                           <item type="global" idref="global_class_xsinteger">Nummer3</item>
                         </item>
                         <item>1</item>
                      </part>
@@ -593,7 +601,7 @@
                   <item>
                      <p xmlns="http://www.w3.org/1999/xhtml"
                         xmlns:html="http://www.w3.org/1999/xhtml"
-                        xmlns:imvert="http://www.imvertor.org/schema/system">De actuele fase van registratie waarin het registratieobject zich bevindt.</p>
+                        xmlns:imvert="http://www.imvertor.org/schema/system">Keuzelijst met de actuele fase van registratie waarin het object zich bevindt. De lijst met waarden is een uitbreidbare opsomming van waarden.</p>
                   </item>
                </part>
             </content>
@@ -657,6 +665,10 @@
                         <item>Indicatie authentiek</item>
                         <item>Authentiek</item>
                      </part>
+                     <part type="CFG-DOC-PATROON">
+                        <item>Patroon</item>
+                        <item>GLDNNNNNNNNNNNN</item>
+                     </part>
                      <part type="CFG-DOC-FORMAAT">
                         <item>Formaat</item>
                         <item>Registratieobjectcode</item>
@@ -685,12 +697,20 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">TODO</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Het KvK-nummer van de maatschappelijke activiteit van de publiekrechtelijke rechtspersoon die bronhouder is van de gegevens in de basisregistratie ondergrond.</p>
                         </item>
                      </part>
                      <part type="CFG-DOC-HERKOMSTDEFINITIE">
                         <item>Herkomst definitie</item>
                         <item>BRO</item>
+                     </part>
+                     <part type="CFG-DOC-TOELICHTING">
+                        <item>Toelichting</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is door de dataleverancier bij de overdracht meegegeven in het geval de dataleverancier niet de bronhouder is. </p>
+                        </item>
                      </part>
                      <part type="CFG-DOC-MOGELIJKGEENWAARDE">
                         <item>Mogelijk geen waarde</item>
@@ -710,7 +730,15 @@
                      </part>
                      <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                         <item>Indicatie authentiek</item>
-                        <item>Overig</item>
+                        <item>Authentiek</item>
+                     </part>
+                     <part type="CFG-DOC-REGELS">
+                        <item>Regels</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De organisatie moet binnen de basisregistratie ondergrond als bronhouder van <em>grondwaterstandonderzoeken</em> bekend zijn.</p>
+                        </item>
                      </part>
                      <part type="CFG-DOC-FORMAAT">
                         <item>Formaat</item>
@@ -773,7 +801,7 @@
                      </part>
                      <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                         <item>Indicatie authentiek</item>
-                        <item>Overig</item>
+                        <item>Basisgegeven</item>
                      </part>
                      <part type="CFG-DOC-FORMAAT">
                         <item>Formaat</item>
@@ -803,7 +831,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">TODO</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Het KvK-nummer van de onderneming of de maatschappelijke activiteit van de rechtspersoon die het object aan de basisregistratie ondergrond heeft aangeleverd, of het equivalent daarvan in een handelsregister van een andere lidstaat van de Europese Unie dan Nederland.</p>
                         </item>
                      </part>
                      <part type="CFG-DOC-HERKOMSTDEFINITIE">
@@ -836,7 +864,15 @@
                      </part>
                      <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                         <item>Indicatie authentiek</item>
-                        <item>Overig</item>
+                        <item>Basisgegeven</item>
+                     </part>
+                     <part type="CFG-DOC-REGELS">
+                        <item>Regels</item>
+                        <item>
+                           <p xmlns="http://www.w3.org/1999/xhtml"
+                              xmlns:html="http://www.w3.org/1999/xhtml"
+                              xmlns:imvert="http://www.imvertor.org/schema/system">De organisatie moet binnen de basisregistratie ondergrond als dataleverancier van <em>grondwaterstandonderzoek</em> bekend zijn.</p>
+                        </item>
                      </part>
                      <part type="CFG-DOC-FORMAAT">
                         <item>Formaat</item>
@@ -899,7 +935,7 @@
                      </part>
                      <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                         <item>Indicatie authentiek</item>
-                        <item>Overig</item>
+                        <item>Authentiek</item>
                      </part>
                      <part type="CFG-DOC-FORMAAT">
                         <item>Formaat</item>
@@ -976,7 +1012,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop er voor het eerst gegevens van het object in de registratie ondergrond zijn opgenomen.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop voor het eerst gegevens van het object in de registratie ondergrond zijn opgenomen.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-HERKOMSTDEFINITIE">
@@ -1001,7 +1037,7 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
                            <item>Formaat</item>
@@ -1030,7 +1066,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">De actuele fase van registratie waarin het registratieobject zich bevindt.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">De actuele fase van registratie waarin het object zich bevindt.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-HERKOMSTDEFINITIE">
@@ -1055,7 +1091,7 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
                            <item>Formaat</item>
@@ -1096,7 +1132,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is alleen aanwezig wanneer na de registratie van een deelonderzoek ander deelonderzoek is vastgelegd.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is alleen aanwezig wanneer na de initiële registratie van het object in de registratie ondergrond er aanvullende gegevens zijn vastgelegd.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-MOGELIJKGEENWAARDE">
@@ -1117,7 +1153,7 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
                            <item>Formaat</item>
@@ -1179,14 +1215,14 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-REGELS">
                            <item>Regels</item>
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is alleen aanwezig wanneer de <em>registratiestatus</em>de waarde <em>voltooid</em>heeft. </p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is alleen aanwezig wanneer de <em>registratiestatus</em>de waarde <em>voltooid</em> heeft. In andere gevallen ontbreekt het gegeven.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
@@ -1241,7 +1277,7 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
                            <item>Formaat</item>
@@ -1270,7 +1306,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de laatste correctie in de gegevens van het registratieobject is doorgevoerd.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de laatste verbetering in de gegevens van het object is doorgevoerd.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-HERKOMSTDEFINITIE">
@@ -1295,14 +1331,15 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-REGELS">
                            <item>Regels</item>
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het al dan niet aanwezig zijn van het gegeven wordt bepaald door de waarde van het attribuut <em>gecorrigeerd</em>. </p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is aanwezig wanneer de waarde van het attribuut <em>gecorrigeerd</em> gelijk is aan <em>ja</em>.
+In andere gevallen ontbreekt het gegeven.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
@@ -1332,7 +1369,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of het registratieobject door de registerbeheerder in onderzoek is genomen.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of het object door de registerbeheerder in onderzoek is genomen.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-HERKOMSTDEFINITIE">
@@ -1344,7 +1381,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">Wanneer een registratieobject in onderzoek is genomen betekent dit dat er bij de registerbeheerder gerede twijfel bestaat over de juistheid van de geregistreerde gegevens en dat er een onderzoek is gestart om vast te stellen wat de juiste gegevens zijn. Normaliter gaat hieraan een melding van derden vooraf. </p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">Wanneer een object in onderzoek is genomen betekent dit dat er bij de registerbeheerder gerede twijfel bestaat over de juistheid van de geregistreerde gegevens en dat er een onderzoek is gestart om vast te stellen wat de juiste gegevens zijn. Normaliter gaat hieraan een melding van derden vooraf.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-MOGELIJKGEENWAARDE">
@@ -1365,7 +1402,7 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
                            <item>Formaat</item>
@@ -1394,7 +1431,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de registerbeheerder het registratieobject in onderzoek heeft genomen.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de registerbeheerder het object in onderzoek heeft genomen.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-HERKOMSTDEFINITIE">
@@ -1419,14 +1456,15 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-REGELS">
                            <item>Regels</item>
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het al dan niet aanwezig zijn van het gegeven wordt bepaald door de waarde van het attribuut <em>in onderzoek</em>.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is aanwezig wanneer de waarde van het attribuut <em>in onderzoek</em> gelijk is aan <em>ja</em>.
+In andere gevallen ontbreekt het gegeven.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
@@ -1456,7 +1494,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of de gegevens van het registratieobject door de registerbeheerder uit registratie zijn genomen.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of de gegevens van het object door de registerbeheerder uit registratie zijn genomen.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-HERKOMSTDEFINITIE">
@@ -1468,7 +1506,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">Wanneer de registerbeheerder een registratieobject uit registratie heeft genomen, zijn de gegevens niet langer beschikbaar voor andere afnemers dan bronhouder en dataleverancier. De registerbeheerder zal een registratieobject alleen bij hoge uitzondering uit registratie nemen en alleen na akkoord van de bronhouder. Aan de beslissing gaat een proces van zorgvuldige afweging vooraf en dat komt tot uitdrukking in de regel dat een registratieobject slechts een keer uit registratie kan worden genomen.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">Wanneer de registerbeheerder een object uit registratie heeft genomen, zijn de gegevens niet langer beschikbaar voor andere afnemers dan bronhouder en dataleverancier. De registerbeheerder zal een object alleen bij hoge uitzondering uit registratie nemen en alleen na akkoord van de bronhouder. Aan de beslissing gaat een proces van zorgvuldige afweging vooraf en dat komt tot uitdrukking in de regel dat een object slechts een keer uit registratie kan worden genomen.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-MOGELIJKGEENWAARDE">
@@ -1489,7 +1527,7 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
                            <item>Formaat</item>
@@ -1518,7 +1556,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop het registratieobject uit registratie is genomen.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop het object uit registratie is genomen.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-HERKOMSTDEFINITIE">
@@ -1543,14 +1581,15 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-REGELS">
                            <item>Regels</item>
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het al dan niet aanwezig zijn van het gegeven wordt bepaald door de waarde van het attribuut <em>uit registratie genomen</em>. </p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is aanwezig wanneer de waarde van het attribuut <em>uit registratie genomen</em> gelijk is aan <em>ja</em>.
+In andere gevallen ontbreekt het gegeven.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
@@ -1592,7 +1631,7 @@
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">De registerbeheerder kan een registratieobject eenmalig uit registratie nemen, en die actie kan hij eenmalig ongedaan maken. Ook hiervoor geldt dat akkoord van de bronhouder vereist is.</p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">De registerbeheerder kan een object eenmalig uit registratie nemen, en die actie kan hij eenmalig ongedaan maken. Ook hiervoor geldt dat akkoord van de bronhouder vereist is.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-MOGELIJKGEENWAARDE">
@@ -1613,7 +1652,7 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
                            <item>Formaat</item>
@@ -1667,14 +1706,15 @@
                         </part>
                         <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                            <item>Indicatie authentiek</item>
-                           <item>Overig</item>
+                           <item>Authentiek</item>
                         </part>
                         <part type="CFG-DOC-REGELS">
                            <item>Regels</item>
                            <item>
                               <p xmlns="http://www.w3.org/1999/xhtml"
                                  xmlns:html="http://www.w3.org/1999/xhtml"
-                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het al dan niet aanwezig zijn van het gegeven wordt bepaald door de waarde van het attribuut <em>weer in registratie genomen</em>. </p>
+                                 xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is aanwezig wanneer de waarde van het attribuut <em>weer in registratie genomen</em> gelijk is aan <em>ja</em>.
+In andere gevallen ontbreekt het gegeven.</p>
                            </item>
                         </part>
                         <part type="CFG-DOC-FORMAAT">
@@ -1964,7 +2004,7 @@
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
                               xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">Type = Nummer3, maar werkt even niet.</p>
+                              xmlns:imvert="http://www.imvertor.org/schema/system">Type = Nummer3 werkt nog niet, dus is voorlopig type = Nummer2 gekozen.</p>
                         </item>
                      </part>
                      <part type="CFG-DOC-MOGELIJKGEENWAARDE">
@@ -1989,7 +2029,7 @@
                      </part>
                      <part type="CFG-DOC-FORMAAT">
                         <item>Formaat</item>
-                        <item>Nummer2</item>
+                        <item>Nummer3</item>
                      </part>
                      <part type="CFG-DOC-INDICATIEAFLEIDBAAR">
                         <item>Indicatie afleidbaar</item>
@@ -2023,7 +2063,7 @@
                   <item>
                      <p xmlns="http://www.w3.org/1999/xhtml"
                         xmlns:html="http://www.w3.org/1999/xhtml"
-                        xmlns:imvert="http://www.imvertor.org/schema/system">De actuele fase van registratie waarin het registratieobject zich bevindt.</p>
+                        xmlns:imvert="http://www.imvertor.org/schema/system">Keuzelijst met de actuele fase van registratie waarin het object zich bevindt. De lijst met waarden is een uitbreidbare opsomming van waarden.</p>
                   </item>
                </part>
             </content>
