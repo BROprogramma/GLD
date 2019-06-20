@@ -3,8 +3,8 @@
       subpath="Conceptual model/Grondwaterstandonderzoek (GLD)/20190617"
       type="BASISMODEL"
       id="EAPK_B8110702_E32D_436d_A462_87C8F17007D9"
-      generator-version="1.53.1"
-      generator-date="2019-06-19T14:21:58Z">
+      generator-version="1.53.2"
+      generator-date="2019-06-20T09:00:34Z">
    <chapter title="CHAPTER-CATALOG" type="cat"><!--removed empty content-->
       <section type="DOMAIN" name="Model" id="global_package_Model">
          <section type="IMAGEMAPS" name="Model-imagemap" id="imagemap_package_Model">
@@ -281,7 +281,7 @@
                               xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of er een verbetering in de gegevens van het object in de registratie ondergrond heeft plaatsgevonden.</p>
                         </item>
                         <item>
-                           <item type="global" idref="global_class_IndicationYesNoType">IndicatieJaNee</item>
+                           <item type="global" idref="global_class_IndicationYesNoEnumeration">IndicatieJaNee</item>
                         </item>
                         <item>1</item>
                      </part>
@@ -311,7 +311,7 @@
                               xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of het object door de registerbeheerder in onderzoek is genomen.</p>
                         </item>
                         <item>
-                           <item type="global" idref="global_class_IndicationYesNoType">IndicatieJaNee</item>
+                           <item type="global" idref="global_class_IndicationYesNoEnumeration">IndicatieJaNee</item>
                         </item>
                         <item>1</item>
                      </part>
@@ -341,7 +341,7 @@
                               xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of de gegevens van het object door de registerbeheerder uit registratie zijn genomen.</p>
                         </item>
                         <item>
-                           <item type="global" idref="global_class_IndicationYesNoType">IndicatieJaNee</item>
+                           <item type="global" idref="global_class_IndicationYesNoEnumeration">IndicatieJaNee</item>
                         </item>
                         <item>1</item>
                      </part>
@@ -371,7 +371,7 @@
                               xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of het object in de registratie ondergrond is opgenomen, nadat het eerder uit registratie was genomen.</p>
                         </item>
                         <item>
-                           <item type="global" idref="global_class_IndicationYesNoType">IndicatieJaNee</item>
+                           <item type="global" idref="global_class_IndicationYesNoEnumeration">IndicatieJaNee</item>
                         </item>
                         <item>1</item>
                      </part>
