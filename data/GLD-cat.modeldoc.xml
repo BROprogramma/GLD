@@ -4,7 +4,7 @@
       type="BASISMODEL"
       id="EAPK_B8110702_E32D_436d_A462_87C8F17007D9"
       generator-version="1.53.2"
-      generator-date="2019-06-20T09:00:34Z">
+      generator-date="2019-06-26T06:57:13Z">
    <chapter title="CHAPTER-CATALOG" type="cat"><!--removed empty content-->
       <section type="DOMAIN" name="Model" id="global_package_Model">
          <section type="IMAGEMAPS" name="Model-imagemap" id="imagemap_package_Model">
@@ -100,7 +100,7 @@
                         <item>
                            <item type="global" idref="global_class_xsstring">Tekst200</item>
                         </item>
-                        <item>1</item>
+                        <item>0 .. 1</item>
                      </part>
                      <part>
                         <item>
@@ -115,7 +115,7 @@
                         <item>
                            <item type="global" idref="global_class_OrganizationType">Organisatie</item>
                         </item>
-                        <item>1</item>
+                        <item>0 .. 1</item>
                      </part>
                      <part>
                         <item>
@@ -457,10 +457,10 @@
                            <item>[ 1 ]</item>
                            <item>
                               <item type="detail"
-                                    idref="detail_association_Model_Grondwaterstandonderzoek_bemonsteringspunt">bemonsteringspunt: bemonsteringspunt</item>
+                                    idref="detail_association_Model_Grondwaterstandonderzoek_monitoringpunt">monitoringpunt: monitoringpunt</item>
                            </item>
                            <item>
-                              <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
+                              <item type="global" idref="global_class_Model_GMWMonitoringbuis">GMW-monitoringbuis</item>
                            </item>
                            <item>[ 1 ]</item>
                         </item>
@@ -491,10 +491,10 @@
                            <item>[ 1 ]</item>
                            <item>
                               <item type="detail"
-                                    idref="detail_association_Model_Grondwaterstandonderzoek_bemonsteringspunt">bemonsteringspunt: bemonsteringspunt</item>
+                                    idref="detail_association_Model_Grondwaterstandonderzoek_monitoringpunt">monitoringpunt: monitoringpunt</item>
                            </item>
                            <item>
-                              <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
+                              <item type="global" idref="global_class_Model_GMWMonitoringbuis">GMW-monitoringbuis</item>
                            </item>
                            <item>[ 1 ]</item>
                         </item>
@@ -507,14 +507,14 @@
                   </content>
                </section>
             </section>
-            <section name="GMW-buisverwijzing"
+            <section name="GMW-monitoringbuis"
                      type="OBJECTTYPE"
-                     id="global_class_Model_GMWBuisverwijzing"
+                     id="global_class_Model_GMWMonitoringbuis"
                      uuid="EAID_3337CDCE_0A5D_4aee_AEB0_14AF7652B102">
                <content>
                   <part type="CFG-DOC-NAAM">
                      <item>Naam</item>
-                     <item>GMW-buisverwijzing</item>
+                     <item>GMW-monitoringbuis</item>
                   </part>
                   <part type="CFG-DOC-HERKOMST">
                      <item>Herkomst</item>
@@ -525,7 +525,7 @@
                      <item>
                         <p xmlns="http://www.w3.org/1999/xhtml"
                            xmlns:html="http://www.w3.org/1999/xhtml"
-                           xmlns:imvert="http://www.imvertor.org/schema/system">De gegevens die nodig zijn voor een verwijzing naar een specifieke buis in een grondwatermonitoringput. </p>
+                           xmlns:imvert="http://www.imvertor.org/schema/system">De gegevens die nodig zijn voor de unieke identificatie van een specifieke buis in een grondwatermonitoringput. </p>
                      </item>
                   </part>
                   <part type="CFG-DOC-HERKOMSTDEFINITIE">
@@ -550,7 +550,7 @@
                      <itemtype type="ATTRIBUTE-CARD"/>
                      <part>
                         <item>
-                           <item type="detail" idref="detail_attribute_Model_GMWBuisverwijzing_bROID">BRO-ID</item>
+                           <item type="detail" idref="detail_attribute_Model_GMWMonitoringbuis_bROID">BRO-ID</item>
                         </item>
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
@@ -565,7 +565,7 @@
                      <part>
                         <item>
                            <item type="detail"
-                                 idref="detail_attribute_Model_GMWBuisverwijzing_buisnummer">buisnummer</item>
+                                 idref="detail_attribute_Model_GMWMonitoringbuis_buisnummer">buisnummer</item>
                         </item>
                         <item>
                            <p xmlns="http://www.w3.org/1999/xhtml"
@@ -592,9 +592,9 @@
                            <item>[ 1 ]</item>
                            <item>
                               <item type="detail"
-                                    idref="detail_association_Model_Grondwaterstandonderzoek_bemonsteringspunt">bemonsteringspunt: bemonsteringspunt</item>
+                                    idref="detail_association_Model_Grondwaterstandonderzoek_monitoringpunt">monitoringpunt: monitoringpunt</item>
                            </item>
-                           <item>GMW-buisverwijzing</item>
+                           <item>GMW-monitoringbuis</item>
                            <item>[ 1 ]</item>
                         </item>
                         <item/>
@@ -612,9 +612,9 @@
                            <item>[ 1 ]</item>
                            <item>
                               <item type="detail"
-                                    idref="detail_association_Model_Grondwaterstandonderzoek_bemonsteringspunt">bemonsteringspunt: bemonsteringspunt</item>
+                                    idref="detail_association_Model_Grondwaterstandonderzoek_monitoringpunt">monitoringpunt: monitoringpunt</item>
                            </item>
-                           <item>GMW-buisverwijzing</item>
+                           <item>GMW-monitoringbuis</item>
                            <item>[ 1 ]</item>
                         </item>
                         <item>
@@ -837,7 +837,7 @@
                      </part>
                      <part type="CFG-DOC-INDICATIEKARDINALITEIT">
                         <item>Indicatie kardinaliteit</item>
-                        <item>1</item>
+                        <item>0 .. 1</item>
                      </part>
                      <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                         <item>Indicatie authentiek</item>
@@ -900,7 +900,7 @@
                      </part>
                      <part type="CFG-DOC-INDICATIEKARDINALITEIT">
                         <item>Indicatie kardinaliteit</item>
-                        <item>1</item>
+                        <item>0 .. 1</item>
                      </part>
                      <part type="CFG-DOC-INDICATIEAUTHENTIEK">
                         <item>Indicatie authentiek</item>
@@ -1856,17 +1856,6 @@ In andere gevallen ontbreekt het gegeven.</p>
                         <item>Herkomst definitie</item>
                         <item>BRO</item>
                      </part>
-                     <part type="CFG-DOC-TOELICHTING">
-                        <item>Toelichting</item>
-                        <item>
-                           <p xmlns="http://www.w3.org/1999/xhtml"
-                              xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">Als dit gegeven niet aanwezig is, dan krijgt het gegeven registratiestatus van de gegevensgroep Registratiegeschiedenis de waarde geregistreerd.</p>
-                           <p xmlns="http://www.w3.org/1999/xhtml"
-                              xmlns:html="http://www.w3.org/1999/xhtml"
-                              xmlns:imvert="http://www.imvertor.org/schema/system">Als dit gegeven aanwezig is of wordt toegevoegd, dan krijgt het gegeven registratiestatus van de gegevensgroep Registratiegeschiedenis de waarde voltooid.</p>
-                        </item>
-                     </part>
                      <part type="CFG-DOC-MOGELIJKGEENWAARDE">
                         <item>Mogelijk geen waarde</item>
                         <item>Nee</item>
@@ -2052,14 +2041,14 @@ In andere gevallen ontbreekt het gegeven.</p>
                      </content>
                   </section>
                </section>
-               <section name="bemonsteringspunt"
+               <section name="monitoringpunt"
                         type="DETAIL-ASSOCIATION"
-                        id="detail_association_Model_Grondwaterstandonderzoek_bemonsteringspunt"
-                        id-global="global_association_Model_Grondwaterstandonderzoek_bemonsteringspunt">
+                        id="detail_association_Model_Grondwaterstandonderzoek_monitoringpunt"
+                        id-global="global_association_Model_Grondwaterstandonderzoek_monitoringpunt">
                   <content approach="association">
                      <part type="CFG-DOC-NAAM">
                         <item>Naam</item>
-                        <item>bemonsteringspunt</item>
+                        <item>monitoringpunt</item>
                      </part>
                      <part type="CFG-DOC-INDICATIEKARDINALITEIT">
                         <item>Indicatie kardinaliteit</item>
@@ -2072,14 +2061,14 @@ In andere gevallen ontbreekt het gegeven.</p>
                      <part type="CFG-DOC-GERELATEERDOBJECTTYPE">
                         <item>Gerelateerd objecttype</item>
                         <item>
-                           <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
+                           <item type="global" idref="global_class_Model_GMWMonitoringbuis">GMW-monitoringbuis</item>
                         </item>
                      </part>
                   </content>
                   <content approach="target">
                      <part type="CFG-DOC-NAAM">
                         <item>Naam</item>
-                        <item>bemonsteringspunt</item>
+                        <item>monitoringpunt</item>
                      </part>
                      <part type="CFG-DOC-DEFINITIE">
                         <item>Definitie</item>
@@ -2104,20 +2093,20 @@ In andere gevallen ontbreekt het gegeven.</p>
                      <part type="CFG-DOC-GERELATEERDOBJECTTYPE">
                         <item>Gerelateerd objecttype</item>
                         <item>
-                           <item type="global" idref="global_class_Model_GMWBuisverwijzing">GMW-buisverwijzing</item>
+                           <item type="global" idref="global_class_Model_GMWMonitoringbuis">GMW-monitoringbuis</item>
                         </item>
                      </part>
                   </content>
                </section>
             </section>
-            <section name="GMW-buisverwijzing"
+            <section name="GMW-monitoringbuis"
                      type="OBJECTTYPE"
-                     id="detail_class_Model_GMWBuisverwijzing"
-                     id-global="global_class_Model_GMWBuisverwijzing">
+                     id="detail_class_Model_GMWMonitoringbuis"
+                     id-global="global_class_Model_GMWMonitoringbuis">
                <section name="BRO-ID"
                         type="DETAIL-ATTRIBUTE"
-                        id="detail_attribute_Model_GMWBuisverwijzing_bROID"
-                        id-global="global_attribute_Model_GMWBuisverwijzing_bROID">
+                        id="detail_attribute_Model_GMWMonitoringbuis_bROID"
+                        id-global="global_attribute_Model_GMWMonitoringbuis_bROID">
                   <content>
                      <part type="CFG-DOC-NAAM">
                         <item>Naam</item>
@@ -2175,8 +2164,8 @@ In andere gevallen ontbreekt het gegeven.</p>
                </section>
                <section name="buisnummer"
                         type="DETAIL-ATTRIBUTE"
-                        id="detail_attribute_Model_GMWBuisverwijzing_buisnummer"
-                        id-global="global_attribute_Model_GMWBuisverwijzing_buisnummer">
+                        id="detail_attribute_Model_GMWMonitoringbuis_buisnummer"
+                        id-global="global_attribute_Model_GMWMonitoringbuis_buisnummer">
                   <content>
                      <part type="CFG-DOC-NAAM">
                         <item>Naam</item>
