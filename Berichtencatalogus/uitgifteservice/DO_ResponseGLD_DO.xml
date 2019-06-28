@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dispatchDataResponse
+    xmlns="http://www.broservices.nl/xsd/dsgld/0.1"
+    xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/0.1"
+    xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/0.1 ..\..\XSD\dsgld-messages.xsd">
+  <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.
+       Het is niet gevalideert door de uitgifteservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
+  -->
+  <brocom:responseType>dispatch</brocom:responseType>
+  <brocom:requestReference>102</brocom:requestReference>
+  <brocom:dispatchTime>2019-06-28T10:08:17+02:00</brocom:dispatchTime>
+  <dispatchDocument>
+    <!-- Expect one of the following options
+    <BRO_DO gml:id="?">?</BRO_DO>
+    <GLD_O gml:id="?">?</GLD_O>
+    <GLD_O_DP gml:id="?">?</GLD_O_DP>
+    Aanvrager is niet bronhouder of dataleverancier dus is het uitgiftedocument GLD_O
+    -->
+    <GLD_O gml:id="SEQ_0001">
+       <brocom:broId>GLD123456789012</brocom:broId>
+       <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
+        <!-- optional. uitgiftedocument is GLD_O, dus is het gegeven afwezig
+       <brocom:objectIdAccountableParty>myId102989</brocom:objectIdAccountableParty>
+        -->
+        <!-- optional. uitgiftedocument is GLD_O, dus is het gegeven afwezig
+       <brocom:deliveryResponsibleParty>52766179</brocom:deliveryResponsibleParty>
+        -->
+       <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+       <registrationHistory>
+         <brocom:objectRegistrationTime>2019-06-27T10:31:00+02:00</brocom:objectRegistrationTime>
+         <brocom:registrationStatus codeSpace="urn:bro:RegistrationStatus">aangevuld</brocom:registrationStatus>
+         <brocom:latestAdditionTime>2019-06-27T10:33:00+02:00</brocom:latestAdditionTime>
+         <!-- optional. Nog niet voltooid dus afwezig
+         <brocom:registrationCompletionTime>2019-06-27T10:28:00+02:00</brocom:registrationCompletionTime>
+         -->
+         <brocom:corrected>nee</brocom:corrected>
+         <brocom:underReview>nee</brocom:underReview>
+         <brocom:deregistered>nee</brocom:deregistered>
+         <brocom:reregistered>nee</brocom:reregistered>
+       </registrationHistory>
+       <standardizedLocation>
+         <brocom:location srsName="urn:ogc:def:crs:EPSG::4258" gml:id="SEQ_0002">
+           <gml:pos>52.287820210 5.090415500</gml:pos>
+         </brocom:location>
+         <brocom:coordinateTransformation codeSpace="urn:bro:CoordinateTransformation">RDNAPTRANS2008</brocom:coordinateTransformation>
+       </standardizedLocation>
+        <monitoringPoint>
+          <gldcom:GMW_MonitoringTube gml:id="GMW123456789012_001">
+            <gldcom:broId>GMW123456789012</gldcom:broId>
+            <gldcom:tubeNumber>1</gldcom:tubeNumber>
+          </gldcom:GMW_MonitoringTube>
+        </monitoringPoint>
+        <researchStartDate>2018-01-01</researchStartDate>
+        <!-- optional. Nog niet voltooid dus afwezig
+        <researchEndDate>2020-03-31</researchEndDate>
+         -->
+         <!--1 or more repetitions: De voorbeeldberichten met de brondocumenten GLD_Start, GLD_Add_drie, GLD_Add_een en GLD_Add_nogeen zijn aangeboden dus zijn er 5 punten aanwezig -->
+        <point>
+          <gldcom:time>2018-01-15T09:01:52+01:00</gldcom:time>
+          <gldcom:value uom="m">-5.123</gldcom:value>
+        </point>
+        <point>
+          <gldcom:time>2018-04-15T06:14:38+02:00</gldcom:time>
+          <gldcom:value uom="m">-4.987</gldcom:value>
+        </point>
+        <point>
+          <gldcom:time>2018-07-15T14:44:25+02:00</gldcom:time>
+          <gldcom:value uom="m">-4.345</gldcom:value>
+        </point>
+        <point>
+          <gldcom:time>2018-10-15T08:18:41+02:00</gldcom:time>
+          <gldcom:value uom="m">-4.456</gldcom:value>
+        </point>
+        <point>
+          <gldcom:time>2019-01-15T09:01:52+01:00</gldcom:time>
+          <gldcom:value uom="m">-5.001</gldcom:value>
+        </point>
+    </GLD_O>
+  </dispatchDocument>
+</dispatchDataResponse>

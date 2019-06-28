@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registrationRequest 
+      xmlns="http://www.broservices.nl/xsd/isgld/0.1"
+      xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/0.1"
+      xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+      xmlns:gml="http://www.opengis.net/gml/3.2"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/0.1 ..\..\XSD\isgld-messages.xsd">
+
+  <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
+       Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
+  -->
+  <brocom:requestReference>BRO-GLD-1598</brocom:requestReference>
+  <!--Optional:-->
+  <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
+  <!--Optional: maar verplicht bij een GLD_Add brondocument -->
+  <brocom:broId>GLD123456789012</brocom:broId>
+  <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+  <!--Optional: maar niet toegestaan bij GLD
+  <brocom:underPrivilege>ja</brocom:underPrivilege>
+  -->
+  <sourceDocument>
+    <GLD_Add gml:id="SomeId_20190627">
+        <point>
+          <gldcom:time>2018-10-15T08:18:41+02:00</gldcom:time>
+          <gldcom:value uom="m">-4.456</gldcom:value>
+        </point>
+    </GLD_Add>
+  </sourceDocument>
+</registrationRequest>

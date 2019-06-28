@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/0.1"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:bro="http://www.broservices.nl/xsd/brocommon/3.0"
+           xmlns:gml="http://www.opengis.net/gml/3.2"
+           xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
+           targetNamespace="http://www.broservices.nl/xsd/gldcommon/0.1"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="0.1.0">
+
+   <xs:annotation>
+      <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
+         <gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
+
+   <xs:element name="GMW_MonitoringTube"
+               type="gldcom:GMW_MonitoringTubeType"
+               substitutionGroup="gml:AbstractFeature">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De gegevens die nodig zijn voor de unieke identificatie van een specifieke buis in een grondwatermonitoringput.
+Explanation: Het BRO-ID van de grondwatermonitoringput wordt opgenomen plus het volgnummer van de specifieke buis in de put.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GMW_MonitoringTubeType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="broId"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="bro:RegistrationObjectCodeType">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie van de grondwatermonitoringput in de basisregistratie ondergrond.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="tubeNumber" type="xs:integer" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het identificerende nummer van de monitoringbuis in de grondwatermonitoringput in de basisregistratie ondergrond.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GMW_MonitoringTubePropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="gldcom:GMW_MonitoringTube"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+
+   <xs:complexType name="MeasurementTVPType">
+      <xs:sequence>
+         <xs:element name="time" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het tijdstip waarop de grondwaterstand of stijghoogte is gemeten</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="value" type="gml:MeasureType" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De grondwaterstand of stijghoogte, in meter, ten opzichte van NAP (-5.12 is 5 meter en 12 centimeter onder NAP).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>
