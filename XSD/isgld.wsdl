@@ -12,9 +12,9 @@
     <wsdl:documentation>
         This  WSDL defines the webservice for the GLD intake webservice (GroundwaterLevelDossier)
         in the context of the baseregistry subsurface (Basisregistratie Ondergrond).
-        This is version 0.1.0
+        This is version 0.1.1
         Changes compared to Version:0.1.0:
-        -
+        - schemalocation van http://www.broservices.nl/xsd/isgld/0.1 gewijzigd in ../0/9/isgld-messages.xsd
     </wsdl:documentation>
 
     <wsdl:types>

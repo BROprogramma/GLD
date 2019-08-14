@@ -7,7 +7,7 @@
            targetNamespace="http://www.broservices.nl/xsd/gldcommon/0.1"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
-           version="0.1.0">
+           version="0.2.0">
 
    <xs:annotation>
       <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
@@ -50,6 +50,37 @@ Explanation: Het BRO-ID van de grondwatermonitoringput wordt opgenomen plus het 
    <xs:complexType name="GMW_MonitoringTubePropertyType">
       <xs:sequence minOccurs="0">
          <xs:element ref="gldcom:GMW_MonitoringTube"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+   </xs:complexType>
+
+   <xs:element name="GroundwaterMonitoringNet"
+               type="gldcom:GroundwaterMonitoringNetType"
+               substitutionGroup="gml:AbstractFeature">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het grondwatermonitoringnet waarin het grondwaterstandonderzoek wordt uitgevoerd.
+Explanation: Het registratieobject Grondwatermonitoringnet wordt in een aparte BRO gegevenscatalogus gedefinieerd.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GroundwaterMonitoringNetType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="broId"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="bro:RegistrationObjectCodeType">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie van het grondwatermonitoringnet in de basisregistratie ondergrond.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GroundwaterMonitoringNetPropertyType">
+      <xs:sequence minOccurs="0">
+         <xs:element ref="gldcom:GroundwaterMonitoringNet"/>
       </xs:sequence>
       <xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
    </xs:complexType>

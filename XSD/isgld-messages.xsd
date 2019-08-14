@@ -8,7 +8,7 @@
            targetNamespace="http://www.broservices.nl/xsd/isgld/0.1"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
-           version="0.1.0">
+           version="0.2.0">
 
    <xs:annotation>
       <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
@@ -27,7 +27,7 @@
                type="isgld:GLD_CompleteType"
                substitutionGroup="gml:AbstractFeature">
       <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer het grondwaterstandonderzoek in een keer volledig wordt vastgelegd en afgesloten. Het brondocument bevat de algemene gegevens, de meetreeks en een einddatum onderzoek.</xs:documentation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer het grondwaterstandonderzoek in een keer volledig wordt vastgelegd en afgesloten.</xs:documentation>
       </xs:annotation>
    </xs:element>
    <xs:complexType name="GLD_CompleteType">
@@ -41,15 +41,6 @@
                   <xs:annotation>
                      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
 Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
-                  </xs:annotation>
-               </xs:element>
-               <xs:element name="monitoringPoint"
-                           minOccurs="1"
-                           maxOccurs="1"
-                           nillable="false"
-                           type="gldcom:GMW_MonitoringTubePropertyType">
-                  <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De buis van een grondwatermonitoringput waarin de metingen zijn utgevoerd.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="researchStartDate"
@@ -68,15 +59,25 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum waarop de laatste meting van het grondwaterstandonderzoekis uitgevoerd.</xs:documentation>
                   </xs:annotation>
                </xs:element>
-               <xs:element name="point"
-                           minOccurs="1"
+               <xs:element minOccurs="1"
                            maxOccurs="unbounded"
+                           name="point"
                            nillable="false"
                            type="gldcom:MeasurementTVPType">
                   <xs:annotation>
                      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De reeks van waterstanden, gemeten in een monitoringbuis van een grondwatermonitoringput. Iedere waterstand representeert de grondwaterstand en/of stijghoogte in de ondergrond ter plekke van het filter van deze monitoringbuis.</xs:documentation>
                   </xs:annotation>
                </xs:element>
+               <xs:element minOccurs="1"
+                           maxOccurs="unbounded"
+                           name="groundwaterMonitoringNet"
+                           nillable="false"
+                           type="gldcom:GroundwaterMonitoringNetPropertyType"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="monitoringPoint"
+                           nillable="false"
+                           type="gldcom:GMW_MonitoringTubePropertyType"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -91,8 +92,8 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                type="isgld:GLD_StartType"
                substitutionGroup="gml:AbstractFeature">
       <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer het grondwaterstandonderzoek is gestart maar nog niet alle metingen bekend zijn.
-Explanation: Het brondocument bevat de algemene gegevens. De metingen in de meetreeks worden aangevuld met een .GLD_Add brondocument.</xs:documentation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden om aan te geven wanneer het grondwaterstandonderzoek is gestart of gaat starten.
+Explanation: De metingen in de meetreeks worden aangevuld met een .GLDAdd brondocument. Het grondwaterstandonderzoek wordt afgesloten met ene GLDEnd brondocument.</xs:documentation>
       </xs:annotation>
    </xs:element>
    <xs:complexType name="GLD_StartType">
@@ -108,15 +109,6 @@ Explanation: Het brondocument bevat de algemene gegevens. De metingen in de meet
 Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
                   </xs:annotation>
                </xs:element>
-               <xs:element name="monitoringPoint"
-                           minOccurs="1"
-                           maxOccurs="1"
-                           nillable="false"
-                           type="gldcom:GMW_MonitoringTubePropertyType">
-                  <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De buis van een grondwatermonitoringput waarin de metingen zijn utgevoerd.</xs:documentation>
-                  </xs:annotation>
-               </xs:element>
                <xs:element name="researchStartDate"
                            type="xs:date"
                            minOccurs="1"
@@ -125,6 +117,16 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum waarop de eerste meting van het grondwaterstandonderzoek is uitgevoerd.</xs:documentation>
                   </xs:annotation>
                </xs:element>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="monitoringPoint"
+                           nillable="false"
+                           type="gldcom:GMW_MonitoringTubePropertyType"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="unbounded"
+                           name="groundwaterMonitoringNet"
+                           nillable="false"
+                           type="gldcom:GroundwaterMonitoringNetPropertyType"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -139,7 +141,7 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                type="isgld:GLD_EndType"
                substitutionGroup="gml:AbstractFeature">
       <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer het grondwaterstandonderzoek wordt afgesloten. Hierna kunnen er geen metingen meer worden toegevoegd aan de meetreeks van het grondwaterstandonderzoek. Het brondocument bevat alleen een einddatum onderzoek.</xs:documentation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden om aan te geven dat het grondwaterstandonderzoek is afgesloten. Hierna kunnen er geen metingen meer worden toegevoegd aan de meetreeks van het grondwaterstandonderzoek.</xs:documentation>
       </xs:annotation>
    </xs:element>
    <xs:complexType name="GLD_EndType">
@@ -168,16 +170,16 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                type="isgld:GLD_AddType"
                substitutionGroup="gml:AbstractFeature">
       <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer er metingen moeten worden toegevoegd aan de meetreeks. Het brondocument bevat één of meer metingen.</xs:documentation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer er één of meerdere metingen moeten worden toegevoegd aan de meetreeks.</xs:documentation>
       </xs:annotation>
    </xs:element>
    <xs:complexType name="GLD_AddType">
       <xs:complexContent>
          <xs:extension base="gml:AbstractFeatureType">
             <xs:sequence>
-               <xs:element name="point"
-                           minOccurs="1"
+               <xs:element minOccurs="1"
                            maxOccurs="unbounded"
+                           name="point"
                            nillable="false"
                            type="gldcom:MeasurementTVPType">
                   <xs:annotation>
