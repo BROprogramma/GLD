@@ -5,7 +5,8 @@
     xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/0.1 ..\..\XSD\dsgld-messages.xsd">
+    xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/0.1 ../../XSD/dsgld-messages.xsd"
+    >
   <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.
        Het is niet gevalideert door de uitgifteervice en is vaktechnisch/inhoudelijk niet voorbeeldig.
   -->
@@ -27,6 +28,17 @@
       <researchStartDate>2018-01-01</researchStartDate>
       <!--Optional:-->
       <researchEndDate>2020-03-31</researchEndDate>
+        <groundwaterMonitoringNet>
+          <gldcom:GroundwaterMonitoringNet gml:id="GMN123456789012">
+            <gldcom:broId>GMN123456789012</gldcom:broId>
+          </gldcom:GroundwaterMonitoringNet>
+        </groundwaterMonitoringNet>
+        <monitoringPoint>
+          <gldcom:GMW_MonitoringTube gml:id="GMW123456789012_001">
+            <gldcom:broId>GMW123456789012</gldcom:broId>
+            <gldcom:tubeNumber>1</gldcom:tubeNumber>
+          </gldcom:GMW_MonitoringTube>
+        </monitoringPoint>
     </GLD_C>
   </dispatchDocument>
 </dispatchCharacteristicsResponse>

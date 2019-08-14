@@ -5,7 +5,7 @@
       xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
       xmlns:gml="http://www.opengis.net/gml/3.2"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/0.1 ..\..\XSD\isgld-messages.xsd">
+      xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/0.1 ../../XSD/isgld-messages.xsd">
 
   <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
        Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.

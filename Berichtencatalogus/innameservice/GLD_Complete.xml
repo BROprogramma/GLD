@@ -5,7 +5,7 @@
       xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
       xmlns:gml="http://www.opengis.net/gml/3.2"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/0.1 ..\..\XSD\isgld-messages.xsd">
+      xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/0.1 ../../XSD/isgld-messages.xsd">
 
   <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
        Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
@@ -23,12 +23,6 @@
   <sourceDocument>
     <GLD_Complete gml:id="SomeId_20190627">
         <objectIdAccountableParty>myId102989</objectIdAccountableParty>
-        <monitoringPoint>
-          <gldcom:GMW_MonitoringTube gml:id="GMW123456789012_001">
-            <gldcom:broId>GMW123456789012</gldcom:broId>
-            <gldcom:tubeNumber>1</gldcom:tubeNumber>
-          </gldcom:GMW_MonitoringTube>
-        </monitoringPoint>
         <researchStartDate>2018-01-01</researchStartDate>
         <researchEndDate>2020-03-31</researchEndDate>
         <point>
@@ -63,6 +57,17 @@
           <gldcom:time>2019-10-15T08:18:41+02:00</gldcom:time>
           <gldcom:value uom="m">-4.789</gldcom:value>
         </point>
+        <groundwaterMonitoringNet>
+          <gldcom:GroundwaterMonitoringNet gml:id="GMN123456789012">
+            <gldcom:broId>GMN123456789012</gldcom:broId>
+          </gldcom:GroundwaterMonitoringNet>
+        </groundwaterMonitoringNet>
+        <monitoringPoint>
+          <gldcom:GMW_MonitoringTube gml:id="GMW123456789012_001">
+            <gldcom:broId>GMW123456789012</gldcom:broId>
+            <gldcom:tubeNumber>1</gldcom:tubeNumber>
+          </gldcom:GMW_MonitoringTube>
+        </monitoringPoint>
     </GLD_Complete>
   </sourceDocument>
 </registrationRequest>
