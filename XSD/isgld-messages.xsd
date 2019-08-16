@@ -118,15 +118,15 @@ Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de b
                   </xs:annotation>
                </xs:element>
                <xs:element minOccurs="1"
-                           maxOccurs="1"
-                           name="monitoringPoint"
-                           nillable="false"
-                           type="gldcom:GMW_MonitoringTubePropertyType"/>
-               <xs:element minOccurs="1"
                            maxOccurs="unbounded"
                            name="groundwaterMonitoringNet"
                            nillable="false"
                            type="gldcom:GroundwaterMonitoringNetPropertyType"/>
+               <xs:element minOccurs="1"
+                           maxOccurs="1"
+                           name="monitoringPoint"
+                           nillable="false"
+                           type="gldcom:GMW_MonitoringTubePropertyType"/>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
