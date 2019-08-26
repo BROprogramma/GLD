@@ -14,7 +14,7 @@ var respecConfig = {
       url: "https://www.geonovum.nl", 
     },  
   ],
-  shortName: "bro-gld",
+  shortName: "gld",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GLD",
   //previousPublishDate: "2017-01-01",
