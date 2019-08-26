@@ -1,0 +1,2520 @@
+<!DOCTYPE html><html lang="nl"><head><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta content="text/html; charset=utf-8" http-equiv="content-type"><meta name="generator" content="ReSpec 24.5.2">
+  
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico">
+  <link rel="stylesheet" type="text/css" href="localstyle.css">
+  <title>BRO Gegevenscatalogus Grondwaterstandonderzoek</title>
+  
+  
+<style id="respec-mainstyle">/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* Override code highlighter background */
+.hljs {
+  background: transparent !important;
+}
+
+/* --- INLINES --- */
+h1 abbr,
+h2 abbr,
+h3 abbr,
+h4 abbr,
+h5 abbr,
+h6 abbr,
+a abbr {
+  border: none;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+a.internalDFN {
+  color: inherit;
+  border-bottom: 1px solid #99c;
+  text-decoration: none;
+}
+
+a.externalDFN {
+  color: inherit;
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+
+a.bibref {
+  text-decoration: none;
+}
+
+#references :target {
+  background: #eaf3ff;
+}
+
+cite .bibref {
+  font-style: normal;
+}
+
+code {
+  color: #c83500;
+}
+
+th code {
+  color: inherit;
+}
+
+/* --- TOC --- */
+
+.toc a,
+.tof a {
+  text-decoration: none;
+}
+
+a .secno,
+a .figno {
+  color: #000;
+}
+
+ul.tof,
+ol.tof {
+  list-style: none outside none;
+}
+
+.caption {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* --- TABLE --- */
+
+table.simple {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 3px solid #005a9c;
+}
+
+.simple th {
+  background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th[scope="row"] {
+  background: inherit;
+  color: inherit;
+  border-top: 1px solid #ddd;
+}
+
+.simple td {
+  padding: 3px 10px;
+  border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+  background: #f0f6ff;
+}
+
+/* --- DL --- */
+
+.section dd>p:first-child {
+  margin-top: 0;
+}
+
+.section dd>p:last-child {
+  margin-bottom: 0;
+}
+
+.section dd {
+  margin-bottom: 1em;
+}
+
+.section dl.attrs dd,
+.section dl.eldef dd {
+  margin-bottom: 0;
+}
+
+#issue-summary>ul,
+.respec-dfn-list {
+  column-count: 2;
+}
+
+#issue-summary li,
+.respec-dfn-list li {
+  list-style: none;
+}
+
+details.respec-tests-details {
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+details.respec-tests-details>* {
+  padding-right: 2em;
+}
+
+details.respec-tests-details[open] {
+  z-index: 999999;
+  position: absolute;
+  border: thin solid #cad3e2;
+  border-radius: 0.3em;
+  background-color: white;
+  padding-bottom: 0.5em;
+}
+
+details.respec-tests-details[open]>summary {
+  border-bottom: thin solid #cad3e2;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 2em;
+}
+
+details.respec-tests-details>ul {
+  width: 100%;
+  margin-top: -0.3em;
+}
+
+details.respec-tests-details>li {
+  padding-left: 1em;
+}
+
+a[href].self-link:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+aside.example .marker > a.self-link {
+  color: inherit;
+}
+
+h2>a.self-link,
+h3>a.self-link,
+h4>a.self-link,
+h5>a.self-link,
+h6>a.self-link {
+  border: none;
+  color: inherit;
+  font-size: 83%;
+  height: 2em;
+  left: -1.6em;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: opacity .2s;
+  width: 2em;
+}
+
+h2>a.self-link::before,
+h3>a.self-link::before,
+h4>a.self-link::before,
+h5>a.self-link::before,
+h6>a.self-link::before {
+  content: "§";
+  display: block;
+}
+
+@media (max-width: 767px) {
+  dd {
+    margin-left: 0;
+  }
+
+  /* Don't position self-link in headings off-screen */
+  h2>a.self-link,
+  h3>a.self-link,
+  h4>a.self-link,
+  h5>a.self-link,
+  h6>a.self-link {
+    left: auto;
+    top: auto;
+  }
+}
+
+@media print {
+  .removeOnSave {
+    display: none;
+  }
+}
+</style><link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/GN-WV.css"><link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico"><script id="initialUserConfig" type="application/json">{
+  "specStatus": "GN-WV",
+  "specType": "IM",
+  "maxTocLevel": 3,
+  "editors": [
+    {
+      "name": "TNO Geologische Dienst Nederland",
+      "url": "https://www.tno.nl/nl/"
+    },
+    {
+      "name": "Geonovum",
+      "url": "https://www.geonovum.nl"
+    }
+  ],
+  "shortName": "gld",
+  "pubDomain": "bro",
+  "github": "https://github.com/BROprogramma/GLD",
+  "publishISODate": "2019-08-26T00:00:00.000Z",
+  "generatedSubtitle": "Werkversie 26 augustus 2019"
+}</script><meta name="description" content="Samenvatting van informatiemodel."><script type="application/ld+json">{
+  "@context": [
+    "http://schema.org",
+    {
+      "@vocab": "http://schema.org/",
+      "@language": "nl",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "datePublished": {
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
+      },
+      "inLanguage": {
+        "@language": null
+      },
+      "isBasedOn": {
+        "@type": "@id"
+      },
+      "license": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "id": "https://broprogramma.github.io/GLD/",
+  "type": [
+    "TechArticle"
+  ],
+  "name": "BRO Gegevenscatalogus Grondwaterstandonderzoek",
+  "inLanguage": "nl",
+  "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "datePublished": "2019-08-26",
+  "copyrightHolder": {
+    "name": "Geonovum",
+    "url": "https://www.geonovum.nl/"
+  },
+  "discussionUrl": "https://github.com/BROprogramma/GLD/issues/",
+  "alternativeHeadline": "",
+  "description": "Samenvatting van informatiemodel.",
+  "editor": [
+    {
+      "type": "Person",
+      "name": "TNO Geologische Dienst Nederland",
+      "url": "https://www.tno.nl/nl/"
+    },
+    {
+      "type": "Person",
+      "name": "Geonovum",
+      "url": "https://www.geonovum.nl"
+    }
+  ],
+  "citation": []
+}</script></head>
+
+<body class="h-entry"><div class="head">
+  <a href="https://www.geonovum.nl/" class="logo"><img id="Geonovum" alt="Geonovum" width="132" height="67" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg"></a>
+  <h1 class="title p-name" id="title">BRO Gegevenscatalogus Grondwaterstandonderzoek</h1>
+  
+  <h2>Geonovum Informatiemodel<br>
+  Werkversie <time class="dt-published" datetime="2019-08-26">26 augustus 2019</time></h2>
+  <dl>
+    <dt>Deze versie:</dt><dd><a class="u-url" href="https://broprogramma.github.io/GLD/">https://broprogramma.github.io/GLD/</a></dd><dt>Laatst gepubliceerde versie:</dt><dd>geen</dd>
+    
+    
+    <dt>Laatste werkversie:</dt><dd><a href="https://broprogramma.github.io/GLD/">https://broprogramma.github.io/GLD/</a></dd>
+    <dt>Redacteurs:</dt>
+    <dd class="p-author h-card vcard"><a class="u-url url p-name fn" href="https://www.tno.nl/nl/">TNO Geologische Dienst Nederland</a></dd><dd class="p-author h-card vcard"><a class="u-url url p-name fn" href="https://www.geonovum.nl">Geonovum</a></dd>
+    
+    <dt>Doe mee:</dt><dd>
+      <a href="https://github.com/BROprogramma/GLD/">GitHub BROprogramma/GLD</a>
+    </dd><dd>
+      <a href="https://github.com/BROprogramma/GLD/issues/">Dien een melding in</a>
+    </dd><dd>
+      <a href="https://github.com/BROprogramma/GLD/commits/gh-pages">Revisiehistorie</a>
+    </dd><dd>
+      <a href="https://github.com/BROprogramma/GLD/pulls/">Pull requests</a>
+    </dd>
+  </dl>
+  
+  
+    <dl>
+          <dt>Rechtenbeleid:</dt>
+          <dd>
+            <div class="copyright" style="margin: 0.25em 0;">
+              <abbr title="Creative Commons Attribution 4.0 International Public License">
+              <a href="https://creativecommons.org/licenses/by/4.0/legalcode"><img width="115" height="40" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Creative Commons Attribution 4.0 International Public License"></a>
+            </abbr>
+              <div style="display:inline-block; vertical-align:top">
+                <p style="font-size: small;">Creative Commons Attribution 4.0 International Public License<br>(CC-BY)</p>
+              </div>
+            </div>
+          </dd>
+        </dl>
+  <hr title="Separator for header">
+</div>
+  <section id="abstract" class="introductory"><h2>Samenvatting</h2>
+    <p>Samenvatting van informatiemodel.</p>
+  </section>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>
+    <em>Deze paragraaf beschrijft de status van dit document ten tijde van publicatie. Het is mogelijk dat er actuelere versies van dit document bestaan. Een lijst van Geonovum publicaties en de laatste gepubliceerde versie van dit document zijn te vinden op <a href="https://www.geonovum.nl/geo-standaarden/alle-standaarden">https://www.geonovum.nl/geo-standaarden/alle-standaarden</a>.</em>
+  </p><p>
+
+
+  Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door de werkgroep goedgekeurde consultatieversie.
+
+
+
+
+
+
+
+</p>
+    <p>Dit is een werkversie van een standaard in ontwikkeling waarvan de inhoud onvolledig is, incorrect kan zijn en op elk moment kan wijzigen. Hoofdstuk vijf is automatisch gegenereerd uit een UML model dat nog in ontwikkeling is.</p>
+  </section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#inleiding"><span class="secno">1. </span>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doel-en-doelgroep"><span class="secno">1.1 </span>Doel en doelgroep</a></li><li class="tocline"><a class="tocxref" href="#samenhang-met-andere-documentatie"><span class="secno">1.2 </span>
+  Samenhang met andere documentatie</a></li><li class="tocline"><a class="tocxref" href="#leeswijzer"><span class="secno">1.3 </span>Leeswijzer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#algemene-kenmerken-en-begrippen"><span class="secno">2. </span>Algemene kenmerken en begrippen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#opzet-van-het-systeem"><span class="secno">2.1 </span>Opzet van het systeem</a></li><li class="tocline"><a class="tocxref" href="#registratieobject"><span class="secno">2.2 </span>Registratieobject</a></li><li class="tocline"><a class="tocxref" href="#registratiedomein"><span class="secno">2.3 </span>Registratiedomein</a></li><li class="tocline"><a class="tocxref" href="#kwaliteitsregime"><span class="secno">2.4 </span>Kwaliteitsregime</a></li><li class="tocline"><a class="tocxref" href="#formele-en-materiële-geschiedenis"><span class="secno">2.5 </span>Formele en materiële geschiedenis</a></li><li class="tocline"><a class="tocxref" href="#coördinaten-en-referentiestelsels"><span class="secno">2.6 </span>Coördinaten en referentiestelsels</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#referentiestelsels-voor-de-horizontale-positie"><span class="secno">2.6.1 </span>Referentiestelsels voor de horizontale positie</a></li><li class="tocline"><a class="tocxref" href="#referentiestelsels-voor-de-verticale-positie"><span class="secno">2.6.2 </span>Referentiestelsels voor de verticale positie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gegevens-op-land-en-op-zee"><span class="secno">2.7 </span>Gegevens op land en op zee</a></li><li class="tocline"><a class="tocxref" href="#nauwkeurigheid-van-meetwaarden"><span class="secno">2.8 </span>Nauwkeurigheid van meetwaarden</a></li><li class="tocline"><a class="tocxref" href="#authentiek-gegeven"><span class="secno">2.9 </span>Authentiek gegeven</a></li></ol></li><li class="tocline"><a class="tocxref" href="#grondwaterstandonderzoek"><span class="secno">3. </span>Grondwaterstandonderzoek</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro-monitoring"><span class="secno">3.1 </span>Grondwatermonitoring</a></li><li class="tocline"><a class="tocxref" href="#intro-Grondwaterdomein"><span class="secno">3.2 </span>Domein grondwatermonitoring in de BRO</a></li><li class="tocline"><a class="tocxref" href="#intro-GLD"><span class="secno">3.3 </span>Het grondwaterstandonderzoek</a></li></ol></li><li class="tocline"><a class="tocxref" href="#intro-catalogus"><span class="secno">4. </span>Introductie van de catalogus</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro-cat-inleiding"><span class="secno">4.1 </span>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#toelichting-domeinmodel"><span class="secno">4.2 </span>Toelichting domeinmodel</a></li><li class="tocline"><a class="tocxref" href="#type-domeinen"><span class="secno">4.3 </span>Type domeinen in de gegevensdefinitie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#enumeratie"><span class="secno">4.3.1 </span>Enumeratie</a></li><li class="tocline"><a class="tocxref" href="#codelijst"><span class="secno">4.3.2 </span>Codelijst</a></li><li class="tocline"><a class="tocxref" href="#tekst"><span class="secno">4.3.3 </span>Tekst</a></li><li class="tocline"><a class="tocxref" href="#code"><span class="secno">4.3.4 </span>Code</a></li><li class="tocline"><a class="tocxref" href="#meetwaarde"><span class="secno">4.3.5 </span>Meetwaarde</a></li><li class="tocline"><a class="tocxref" href="#datumtijd"><span class="secno">4.3.6 </span>Formaten voor datum en tijd</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#organisatie"><span class="secno">4.3.7 </span>Organisatie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#verplichte-gegevens-waarden"><span class="secno">4.4 </span>Verplichte gegevens, verplichte waarden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#cat"><span class="secno">5. </span>Gegevensdefinitie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#het-domeinmodel"><span class="secno">5.1 </span>Het domeinmodel </a></li><li class="tocline"><a class="tocxref" href="#global_class_Model_Registratieobject"><span class="secno">5.2 </span> Registratieobject</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_attribute_Model_Registratieobject_bROID"><span class="secno">5.2.1 </span> BRO-ID</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_Model_Registratieobject_bronhouder"><span class="secno">5.2.2 </span> bronhouder</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_Model_Registratieobject_objectIDBronhouder"><span class="secno">5.2.3 </span> object-ID bronhouder</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_Model_Registratieobject_dataleverancier"><span class="secno">5.2.4 </span> dataleverancier</a></li><li class="tocline"><a class="tocxref" href="#detail_attribute_Model_Registratieobject_kwaliteitsregime"><span class="secno">5.2.5 </span> kwaliteitsregime</a></li></ol></li><li class="tocline"><a class="tocxref" href="#entiteiten-en-attributen"><span class="secno">5.3 </span>Entiteiten en attributen </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#global_class_Model_Grondwaterstandonderzoek"><span class="secno">5.3.1 </span> Grondwaterstandonderzoek</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#global_class_Model_Grondwatermonitoringnet"><span class="secno">5.3.2 </span> Grondwatermonitoringnet</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#global_class_Model_GMWMonitoringbuis"><span class="secno">5.3.3 </span> GMW-monitoringbuis</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_Model_Registratiegeschiedenis"><span class="secno">5.3.4 </span> Registratiegeschiedenis</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#detail_class_Model_Tijdmeetwaarde"><span class="secno">5.3.5 </span> Tijdmeetwaarde</a><ol class="toc"></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#waardelijsten-uitbreidbaar"><span class="secno">5.4 </span>Waardelijsten uitbreidbaar </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#detail_class_Model_Registratiestatus"><span class="secno">5.4.1 </span> Registratiestatus</a></li></ol></li></ol></li></ol></nav>
+  <!-- hoofdstuk 1 -->
+  <section id="inleiding">
+    <!--OddPage--><h2 id="x1-inleiding"><span class="secno">1. </span>Inleiding</h2>
+    <section id="doel-en-doelgroep" class="generic">  <h3 id="x1-1-doel-en-doelgroep"><span class="secno">1.1 </span>Doel en doelgroep</h3>
+  <p>In de basisregistratie ondergrond (BRO) wordt een aantal typen gegevens geregistreerd, de
+    <i>registratieobjecten</i>. Voor elk van deze registratieobjecten wordt er een <i>catalogus</i> gepubliceerd.</p>
+  <p>De catalogus bestaat uit een inleiding over het specifieke registratieobject en de gegevensdefinitie voor het registratieobject.
+    De catalogus beschrijft welke gegevens over het registratieobject in de basisregistratie ondergrond zijn opgeslagen.
+    Het document is bedoeld voor alle gebruikers van de basisregistratie ondergrond en moet duidelijk maken welke gegevens er in
+    het systeem zitten. Aan aanleverende partijen moet het vertellen welke gegevens in de basisregistratie ondergrond moeten
+    komen, en aan afnemende partijen welke gegevens zij in de basisregistratie ondergrond mogen verwachten. Het document is voor
+    een breed publiek bedoeld en de informatie moet naast precies ook begrijpelijk zijn.</p>
+</section>
+    <section id="samenhang-met-andere-documentatie" class="generic"><h3 id="x1-2-samenhang-met-andere-documentatie"><span class="secno">1.2 </span>
+  Samenhang met andere documentatie</h3>
+<p>Voor ieder <i>registratieobject</i> worden de volgende beschrijvende documenten opgesteld:
+  </p><ul>
+    <li>de catalogus</li>
+    <li>de handboeken voor inname en uitgifte</li>
+    <li>de koppelvlakbeschrijvingen voor inname en uitgifte.</li>
+  </ul>
+<p></p>
+<p>De <i>catalogus</i> beschrijft de inhoud van de basisregistratie ondergrond en vormt de basis voor de andere beschrijvende documenten. In de catalogus staan de definities van de gegevens van het registratieobject, de entiteiten en attributen, met een beschrijving van de onderlinge samenhang. Bij de definitie worden de kardinaliteit (het aantal keer dat het gegeven voorkomt), de regels die in controles worden gebruikt en de waarden die zijn toegestaan vermeld.
+</p>
+<p>Een <i>handboek</i> voor inname of uitgifte beschrijft het proces dat bij inname of uitgifte van gegevens wordt doorlopen.
+  In een handboek worden ook de gegevens gedefinieerd die betrekking hebben op het proces van inname of uitgifte. Om te zien
+  wat er aangeleverd moet worden of wat er uitgeleverd kan worden, heeft men de catalogus nodig.</p>
+<p>De <i>koppelvlakbeschrijvingen</i> zijn geschreven voor softwareontwikkelaars. Op basis van de twee vorige typen documenten
+  staat hierin beschreven hoe het registratieobject en de bijbehorende transacties worden vertaald naar het technische koppelvlak
+  dat is gerealiseerd door middel van webservices. De koppelvlakbeschrijving gaat dus in op de technische realisatie van
+  de transacties waarbinnen gegevens van het registratieobject worden uitgewisseld.</p>
+</section>
+    <div id="inleiding-specifiek">
+      <p>Deze documenten hangen samen zoals hieronder afgebeeld.</p>
+      <p>TODO afbeelding opnemen</p>
+      <figure id="image001">
+        <img src="media/fig1.svg" width="600">
+        <figcaption>Figuur <span class="figno">1</span> <span class="fig-title">Samenhang tussen documentatie</span></figcaption>
+      </figure>
+      <p>Naast deze documenten is er een document dat het systeem van de BRO als geheel beschrijft met als titel <em>BRO-architectuur</em>. In dat document wordt het ontwerp en de algemene werking van de BRO beschreven. Het document BRO-architectuur is alleen nog in een eerste en prille versie beschikbaar.</p>
+    </div>
+    <section id="leeswijzer">
+      <h3 id="x1-3-leeswijzer"><span class="secno">1.3 </span>Leeswijzer</h3>
+      <p>De volgende hoofdstukken van dit document geven respectievelijk een algemene inleiding in kenmerken en begrippen uit de basisregistratie ondergrond, een inleiding in het begrip grondwater, een uitleg over de catalogus en tenslotte de catalogus zelf. </p>
+      <p>In de tekst zijn termen <em>cursief</em> weergegeven als het termen zijn die in hoofdstuk <a href="#cat" class="sec-ref"><span class="secno">§&nbsp;5.</span> <span class="sec-title">Gegevensdefinitie</span></a>, de gegevensdefinitie, zijn gedefinieerd. </p>
+    </section>
+  </section>
+  <!-- hoofdstuk 2 -->
+  <section id="algemene-kenmerken-en-begrippen" class="generic"><!--OddPage--><h2 id="x2-algemene-kenmerken-en-begrippen"><span class="secno">2. </span>Algemene kenmerken en begrippen</h2>
+<section id="opzet-van-het-systeem">
+    <h3 id="x2-1-opzet-van-het-systeem"><span class="secno">2.1 </span>Opzet van het systeem</h3>
+    <p>De basisregistratie ondergrond is een systeem dat een schakel vormt in een informatieketen. Aan het begin van de keten staan bestuursorganen die opdracht geven tot de productie van gegevens, of zelf gegevens produceren. Die bestuursorganen worden <i>bronhouders</i> genoemd. De geproduceerde gegevens worden door een <i>dataleverancier</i> geleverd aan de beheerder van het systeem, de <i>registerbeheerder</i>. De bronhouder is verantwoordelijk voor de levering van gegevens. Hij kan besluiten zelf dataleverancier te zijn of andere partijen een machtiging voor levering te verlenen. De beheerder van de basisregistratie ondergrond registreert de aangeleverde gegevens en levert ze voor (her)gebruik door aan allerlei afnemers.</p>
+    <p>De opzet van het systeem moet begrepen worden vanuit de verantwoordelijkheden die in de keten zijn belegd. De aangeleverde
+        gegevens vallen onder de verantwoordelijkheid van de bronhouder en de registerbeheerder mag die
+        gegevens niet veranderen. De registerbeheerder moet echter wel gegevens toevoegen om het systeem te kunnen beheren
+        en hij kan gegevens toevoegen om de afnemers goed van dienst te kunnen zijn.</p>
+    <p>Bij wet is geregeld dat de basisregistratie ondergrond zo wordt opgezet dat er onderscheid bestaat tussen de gegevens
+        die aan de registerbeheerder zijn aangeleverd en de gegevens die de registerbeheerder aan de afnemers verstrekt.
+        Het systeem valt uiteen in twee grote deelsystemen, het <i>register brondocumenten</i> en de <i>registratie
+          ondergrond</i> (zie <a href="#image002" class="fig-ref">figuur 2</a>).</p>
+    <figure id="image002"><img src="https://docs.geostandaarden.nl/bro/gen/media/image002.png" width="350">
+        <figcaption>Figuur <span class="figno">2</span> <span class="fig-title">De twee grote deelsystemen van de basisregistratie ondergrond.
+        </span></figcaption>
+    </figure>
+    <p>Een geheel van gegevens dat door of onder verantwoordelijkheid van een bronhouder wordt aangeleverd, wordt een <i>brondocument</i> genoemd. De brondocumenten worden in het <i>register brondocumenten ondergrond</i> opgeslagen.
+        De gegevens uit de brondocumenten worden samen met de gegevens die de registerbeheerder toevoegt in de <i>registratie
+        ondergrond</i> vastgelegd. De registratie ondergrond is het deelsysteem dat gebruikt wordt voor uitgifte.</p>
+    <p>Met deze opzet verkrijgt het systeem de nodige flexibiliteit. Zo kan een object in de registratie ondergrond gegevens
+        bevatten die uit meer dan één brondocument afkomstig zijn en bij uitgifte kunnen gegevens van verschillende objecten
+        met elkaar gecombineerd worden. Ook is het mogelijk met het brondocument gegevens op te slaan die alleen voor de
+        bronhouder en de aanleverende partij van belang zijn.</p>
+    <p>De gegevensdefinitie dekt alle gegevens die opgenomen zijn in de registratie ondergrond. Verreweg de meeste gegevens
+        komen uit de brondocumenten die de dataleverancier aanlevert en een paar gegevens komen voort uit de overdracht van
+        een brondocument aan de registerbeheerder. Aan de aangeleverde gegevens worden enkele gegevens door de registerbeheerder
+        toegevoegd. Als een gegeven is toegevoegd door de basisregistratie ondergrond wordt dat in de beschrijving expliciet vermeld.</p>
+    <p>Alle gegevens in de registratie ondergrond worden uitgegeven, maar niet alle afnemers kunnen alle gegevens geleverd krijgen.
+        De gegevens die niet aan alle afnemers worden uitgeleverd zijn de gegevens die alleen nodig zijn in de communicatie
+        tussen de registerbeheerder enerzijds en de dataleveranciers en bronhouders anderzijds.</p>
+</section>
+<section id="registratieobject">
+    <h3 id="x2-2-registratieobject"><span class="secno">2.2 </span>Registratieobject</h3>
+    <p>Het <i>registratieobject</i> is dé eenheid in de data-architectuur van de basisregistratie ondergrond. Voor de registerbeheerder
+        is het de elementaire bouwsteen van het systeem dat hij moet beheren.</p>
+    <p>Een <i>registratieobject</i> verwijst naar een eenheid van informatie die onder de verantwoordelijkheid van één bronhouder
+        valt en die met een bepaald doel is of wordt gemaakt. Het is in directe of indirecte zin gedefinieerd in de ruimte
+        en dat wil zeggen dat een registratieobject een plaats op het aardoppervlak heeft of dat het gekoppeld is aan een
+        ander type registratieobject met een plaats op het aardoppervlak.</p>
+    <p>Een <i>registratieobject</i> is niet alleen in de ruimte maar ook in de tijd gedefinieerd. Het leven van een registratieobject
+        begint op het moment dat de gegevens zijn geregistreerd en dat is zo kort mogelijk nadat de gegevens zijn geproduceerd.
+        De levensduur van een registratieobject, en de veranderlijkheid van de gegevens verschilt van object tot object.
+        Een grondwatermonitoringput kan tientallen jaren gebruikt worden voor het meten van grondwaterstanden
+        en in deze periode kunnen er nieuwe gegevens ontstaan. Dat betekent dat de gegevens van de put in de registratie ondergrond gedurende
+        zijn hele levensduur bijgewerkt moeten kunnen worden. Aan de andere kant van het spectrum staan de objecten waarvan
+        alle gegevens in een keer worden vastgelegd. Geotechnisch sondeeronderzoek is daar een voorbeeld van. Sondeeronderzoek
+        is eenmalig onderzoek en het resultaat ervan kan al na een of enkele dagen aan de bronhouder worden overhandigd.</p>
+</section>
+<section id="registratiedomein">
+    <h3 id="x2-3-registratiedomein"><span class="secno">2.3 </span>Registratiedomein</h3>
+    <p>Registratieobjecten worden in de basisregistratie ondergrond gegroepeerd in domeinen. Vooralsnog worden zes domeinen onderscheiden:
+        </p><ul>
+            <li>bodem- en grondonderzoek</li>
+            <li>bodemkwaliteit</li>
+            <li>grondwatermonitoring</li>
+            <li>grondwatergebruik</li>
+            <li>mijnbouwwet</li>
+            <li>modellen.</li>
+        </ul>
+    <p></p>
+    <p>De domeinen zijn vanuit het oogpunt van beheer van belang voor de ordening van het systeem. Daarnaast zijn zij nuttig
+        in de communicatie met de partijen die bij de realisatie van het systeem betrokken zijn.</p>
+</section>
+<section id="kwaliteitsregime">
+    <h3 id="x2-4-kwaliteitsregime"><span class="secno">2.4 </span>Kwaliteitsregime</h3>
+    <p>In de basisregistratie ondergrond worden niet alleen gegevens geregistreerd die dateren van na de datum waarop de wet
+        van kracht is geworden. Ook oudere gegevens zullen in de basisregistratie ondergrond worden opgenomen. De noodzaak
+        daartoe ligt in de wet verankerd. Die schrijft voor dat de gegevens uit de eerder bestaande systemen DINO en BIS
+        zo veel mogelijk naar de basisregistratie ondergrond moeten worden overgezet. Verder staat de wet toe dat bronhouders tot vijf jaar na de
+        inwerkingtreding van de wet historische gegevens ter registratie mogen aanbieden.
+    </p>
+    <p>Historische gegevens kunnen niet altijd voldoen aan de strikte regels die de basisregistratie ondergrond stelt. Zo kan het voorkomen dat voor
+        gegevens die volgens de strikte regels van de basisregistratie ondergrond verplicht zijn, geen waarde bekend is. Om de verwerking van de
+        twee categorieën gegevens naast elkaar mogelijk te maken, worden twee kwaliteitsregimes gehanteerd. Voor de aanlevering
+        van gegevens volgens de strikte regels geldt het IMBRO-regime. Bij de aanlevering van historische gegevens wordt
+        geaccepteerd dat een aantal formeel verplichte gegevens geen waarde heeft. Voor deze gegevens wordt het IMBRO/A-regime
+        gehanteerd en dat kent dus minder strikte regels.</p>
+    <p>De introductie van de twee kwaliteitsregimes geeft de bronhouder gedurende een bepaalde periode een zekere
+        mate van vrijheid. Het kan bijvoorbeeld praktisch blijken het IMBRO/A-regime te hanteren voor gegevens die weliswaar
+        pas na de datum waarop de wet in werking is getreden zijn geproduceerd maar die voortkomen uit opdrachten die al voor
+        die datum zijn gegeven. Ook kan het voorkomen dat historische gegevens wel aan alle strikte voorwaarden voldoen en
+        dan is het wenselijk de gegevens onder IMBRO-regime aan te leveren.
+    </p>
+    <p>De periode waarin de bronhouders die vrijheid hebben wordt de
+        <i>transitieperiode</i> genoemd. Over de duur van de transitieperiode zijn nog geen afspraken gemaakt. Na afloop van de transitieperiode kan alleen onder het strikte IMBRO-regime
+        worden aangeleverd.
+    </p>
+</section>
+<section id="formele-en-materiële-geschiedenis">
+    <h3 id="x2-5-formele-en-materiele-geschiedenis"><span class="secno">2.5 </span>Formele en materiële geschiedenis</h3>
+    <p>De basisregistratie ondergrond maakt deel uit van het stelsel van basisregistraties. Binnen het stelsel maakt men onderscheid tussen de materiële geschiedenis en de formele geschiedenis van
+        een object.</p>
+    <p>Het begrip <i>materiële geschiedenis</i> wordt gebruikt om de veranderingen van eigenschappen van een object in de werkelijkheid
+        aan te duiden. De materiële geschiedenis van een object wordt, voor zover relevant, in de registratie ondergrond
+        vastgelegd. Niet alle registratieobjecten hebben een materiële geschiedenis, alleen de objecten met een levensduur, zoals de grondwatermonitoringput.</p>
+    <p>Het begrip <i>formele geschiedenis</i> wordt gebruikt voor de veranderingen van eigenschappen van een object in de registratie zelf. De meeste van die veranderingen gaan terug op een verandering van eigenschappen in de werkelijkheid, en de formele geschiedenis geeft aan wanneer de veranderingen in het systeem geregistreerd zijn. De formele geschiedenis kent ook gebeurtenissen die niet het gevolg zijn van een verandering in de werkelijke eigenschappen van een object. Die gebeurtenissen hebben betrekking op correcties. Het kan gebeuren dat een bronhouder erachter komt dat er een onjuiste waarde was geregistreerd en dan zorgt hij ervoor dat die verbeterd wordt. De registratie van de verbetering is een formele gebeurtenis.
+    </p>
+    <p>Alle registratieobjecten hebben een formele geschiedenis en die wordt in de registratie ondergrond globaal vastgelegd in de <i>registratiegeschiedenis</i> van het object. Globaal wil zeggen dat de registratie ondergrond alleen een overzicht van de formele geschiedenis geeft. Voor de details moet het register brondocumenten ondergrond worden geraadpleegd.</p>
+    <p>Bij correctie wordt het betreffende gegeven in de registratie ondergrond overschreven en is de oude waarde van het gegeven niet meer direct beschikbaar voor de afnemers. 
+Zou een afnemer toch willen weten wat de eerdere foute waarde was, dan moet hij het register brondocumenten raadplegen.
+</p>
+</section>
+
+<section id="coördinaten-en-referentiestelsels">
+    <h3 id="x2-6-coordinaten-en-referentiestelsels"><span class="secno">2.6 </span>Coördinaten en referentiestelsels</h3>
+    <p>De registratieobjecten van de basisregistratie ondergrond zijn gedefinieerd in de ruimte en dat wil zeggen dat een object zelf een plaats op
+        het aardoppervlak, een locatie, heeft, of dat het gekoppeld is aan een ander type registratieobject met een locatie.
+        Afhankelijk van het type registratieobject, wordt de locatie geregistreerd als een punt, een lijn of een vlak.</p>
+    <p>De locatie is de horizontale positie van een object. Voor bepaalde objecten is het voldoende dat alleen die horizontale
+        positie wordt vastgelegd, maar voor veel objecten is ook de verticale positie van belang.</p>
+    <p>Posities worden vastgelegd in coördinaten en die zijn gedefinieerd in een bepaald referentiestelsel.</p>
+    <p>Er zijn verschillende typen referentiestelsels. Zo spreekt men van horizontale referentiestelsels (2D), verticale referentiestelsels (1D), gecombineerde referentiestelsels (2D, 1D) en werkelijke 3D referentiestelsels. In Nederland worden de horizontale
+        en de verticale component van een positie in een afzonderlijk stelsel uitgedrukt. Het is vandaag de dag mogelijk
+        met gps een positie in een 3D-referentiestelsel vast te leggen, maar de wens over te stappen op het gebruik
+        van 3D is nog door geen van de partijen die betrokken zijn bij de basisregistratie ondergrond naar voren gebracht.</p>
+    
+    <section id="referentiestelsels-voor-de-horizontale-positie">
+        <h4 id="x2-6-1-referentiestelsels-voor-de-horizontale-positie"><span class="secno">2.6.1 </span>Referentiestelsels voor de horizontale positie</h4>
+        <p>In Nederland zijn traditioneel verschillende referentiestelsels voor de horizontale positie in gebruik. In 2009,
+            bij de eerste voorbereidingen voor de totstandkoming van de basisregistratie ondergrond, is al vastgesteld dat de verscheidenheid aan
+            referentiestelsels de basisregistratie ondergrond voor problemen stelt omdat de registratie dan niet gemakkelijk op een eenduidige manier
+            bevraagd kan worden. In de registratie ondergrond worden namelijk zowel gegevens met een locatie op land als gegevens met een locatie
+            op zee geregistreerd. In de toenmalige praktijk werden op land en op zee verschillende stelsels gebruikt. Op
+            land werd RD gebruikt en op zee waren verschillende stelsels in gebruik, waarvan WGS84 de belangrijkste was.
+        </p>
+        <p>In 2009 was ook al bekend dat de Europese kaderrichtlijn INSPIRE de lidstaten vraagt de gegevens in Europa in één
+            referentiestelsel uit te gaan wisselen, te weten, in ETRS89. Met dat in gedachten, is het besluit genomen het BRO-systeem zo in te richten dat de registratie bevraagd gaat worden in ETRS89.</p>
+        <p>Het besluit wordt ondersteund door ontwikkelingen in Nederland. Sinds 2013 wordt er door de drie belangrijkste autoriteiten in Nederland op het gebied van referentiestelsels, het Kadaster, de Dienst der Hydrografie en Rijkswaterstaat, gewerkt aan de totstandkoming van nieuwe afspraken. Die afspraken moeten in lijn zijn met Europese afspraken en leiden tot heldere en eenduidige transformatieprocedures tussen referentiestelsels. Concreet betekent dit dat in Nederland op termijn het ETRS89-stelsel als standaard zal worden gehanteerd voor het uitwisselen van geo-informatie.
+        </p>
+        <p>Het besluit betekent niet dat
+            de gegevens ook in ETRS89 aangeleverd moeten worden. De basisregistratie ondergrond voorziet een periode van transitie waarin de aanleverende
+            partijen zelf bepalen wanneer zij overstappen op ETRS89. Die periode zal naar verwachting jaren duren. Om de
+            transitie te ondersteunen hanteert de basisregistratie ondergrond de volgende spelregels:
+            </p><ul>
+                <li>Gegevens mogen in een beperkt aantal referentiestelsels worden aangeleverd (RD, WGS84 en ETRS89).
+                    <ul>
+                        <li>Voor locaties op land wordt alleen RD of ETRS89 toegestaan.</li>
+                        <li>Voor locaties op zee wordt alleen WGS84 of ETRS89 toegestaan.</li>
+                    </ul>
+                </li>
+                <li>De aangeleverde coördinaten worden in de registratie opgeslagen.</li>
+                <li>De aangeleverde coördinaten worden door de basisregistratie ondergrond getransformeerd naar
+                    het ETRS89 referentiestelsel.</li>
+                <li>De getransformeerde coördinaten worden naast de aangeleverde coördinaten opgeslagen.
+                </li>
+                <li>Bij de getransformeerde coördinaten wordt ook een identificatie van de gebruikte transformatiemethode opgeslagen.
+                </li>
+                <li>Als de coördinaten in ETRS89 zijn aangeleverd, dan staat bij aangeleverde en getransformeerde positie dezelfde
+                    informatie. Voor de locatie worden de getransformeerde coördinaten en de aangeleverde coördinaten beide
+                    aan de afnemers verstrekt.
+                </li>
+            </ul>
+        <p></p>
+    </section>
+    <section id="referentiestelsels-voor-de-verticale-positie">
+        <h4 id="x2-6-2-referentiestelsels-voor-de-verticale-positie"><span class="secno">2.6.2 </span>Referentiestelsels voor de verticale positie</h4>
+        <p>In Nederland zijn voor verticale posities op land en zee verschillende referentiestelsels in gebruik. Op land wordt NAP gebruikt. Op zee is het in de voor de basisregistratie ondergrond relevante werkvelden gebruikelijk posities uit te drukken t.o.v. het gemiddeld zeeniveau (MSL, Mean Sea Level), maar posities t.o.v. LAT komen ook voor (Lowest Astronomical Tide). Dit laatstgenoemde stelsel wordt in de kaderrichtlijn INSPIRE genoemd als het stelsel van voorkeur voor het uitdrukken van verticale posities op zee. De basisregistratie ondergrond staat daarom op zee het gebruik van LAT naast MSL toe. Aangeleverde verticale posities worden door de basisregistratie ondergrond niet getransformeerd.</p>
+    </section>
+</section>
+<section id="gegevens-op-land-en-op-zee">
+    <h3 id="x2-7-gegevens-op-land-en-op-zee"><span class="secno">2.7 </span>Gegevens op land en op zee</h3>
+    <p>De basisregistratie ondergrond bevat gegevens over de ondergrond van Nederland en zijn zgn. Exclusieve Economische Zone
+        (EEZ). De EEZ is het gebied op de Noordzee waar Nederland economische rechten heeft. Voor de referentiestelsels die
+        bij aanlevering worden toegestaan, is het van belang te weten of de locatie van een object op zee of op land ligt.
+    </p>
+    <p>Als scheidingslijn tussen land en zee wordt in de basisregistratie ondergrond de UNCLOS-basislijn gehanteerd. Het beheer van de basislijn valt
+        onder de verantwoordelijkheid van de Dienst der Hydrografie van het ministerie van Defensie. Deze dienst voert die
+        taak uit op basis van het Zeerechtverdrag van de Verenigde Naties uit 1982, dat in het Engels de United Nations Convention
+        on the Law of the Sea (UNCLOS) heet. De basislijn is opgebouwd uit de nulmeterdieptelijn zoals weergegeven op de zeekaarten en enkele rechte basislijnen die
+        onder meer de monding van de Westerschelde en de wateren tussen de Waddeneilanden afsluiten.</p>
+    <p>De grens tussen land en zee is veranderlijk. De Dienst der Hydrografie stelt de grens opnieuw vast wanneer daartoe voldoende
+        aanleiding is. De basisregistratie ondergrond hanteert bij inname de meest recente versie van de UNCLOS-basislijn en controleert daarmee of de juiste referentiestelsels gebruikt worden.</p>
+    <p>Tussen het moment waarop de locatie van een object wordt bepaald en het moment waarop het gegeven in de basisregistratie
+        ondergrond wordt vastgelegd verloopt enige tijd. In die periode kan de positie van de UNCLOS-basislijn opnieuw zijn
+        vastgesteld, en dan ontstaat er een discrepantie die bij het aanleveren van gegevens tot problemen kan leiden. Wanneer
+        een dergelijk probleem zich voordoet, wordt de dataleverancier gevraagd contact op te nemen met de registratiebeheerder
+        om gezamenlijk tot een oplossing te komen.</p>
+    <p>Een soortgelijk probleem doet zich voor met betrekking tot de begrenzing van Nederland, met name van het Nederlands territoir. De grenzen van Nederland worden ieder jaar op 1 januari vastgesteld door het Kadaster en vastgelegd in de basisregistratie kadaster. De basisregistratie ondergrond controleert bij inname of een object in het gebied ligt dat Nederland en zijn Exclusieve Economische Zone omvat, en hanteert daarbij de actuele grenzen. Ook bij problemen die te herleiden zijn tot een verandering in de begrenzing van Nederland, wordt de dataleverancier gevraagd contact op te nemen met de registratiebeheerder om gezamenlijk tot een oplossing te komen.</p>
+</section>
+<section id="nauwkeurigheid-van-meetwaarden">
+    <h3 id="x2-8-nauwkeurigheid-van-meetwaarden"><span class="secno">2.8 </span>Nauwkeurigheid van meetwaarden</h3>
+    <p>Voor zinvol gebruik van gegevens met een gemeten, berekende of anderszins bepaalde waarde is het noodzakelijk dat de nauwkeurigheid van die gegevens bekend
+        is.
+    </p>
+    <p>Het begrip nauwkeurigheid laat zich in deze context het best omschrijven als de juistheid van een gemeten of berekende
+        waarde. In de meeste processen waarin de waarde van een gegeven wordt bepaald, kan de afwijking van de daadwerkelijke
+        waarde slechts via een kalibratie- of statistisch proces worden verkregen. Het resultaat omvat dan niet alleen een
+        van de mogelijke realisaties van een meetwaarde maar ook informatie over de mogelijke spreiding van de meetwaarden.</p>
+    <p>De basisregistratie ondergrond gaat ervan uit dat de producenten van gegevens de metingen en berekeningen uitvoeren binnen een stelsel van afspraken
+        dat binnen het desbetreffende werkveld is vastgelegd. Uitgangspunt is dat ook de eisen waaraan de gegevens op het
+        gebied van nauwkeurigheid moeten voldoen in afspraken zijn vastgelegd. Dat kunnen praktische werkafspraken zijn,
+        maar ook afspraken die vertaald zijn naar ISO- en NEN-normen. In de gegevensdefinitie wordt in beginsel verwezen
+        naar die normen. Waar deze normen niet voorzien in afspraken over de nauwkeurigheid, stelt de basisregistratie ondergrond hieraan specifieke
+        eisen. Deze zijn dan vermeld in de gegevensdefinitie.
+    </p>
+</section>
+<section id="authentiek-gegeven">
+    <h3 id="x2-9-authentiek-gegeven"><span class="secno">2.9 </span>Authentiek gegeven</h3>
+    <p>In de wet is een aantal gegevens expliciet als authentiek aangeduid. Dit wordt in de gegevensdefinitie nader uitgewerkt; verreweg de meeste gegevens zijn authentiek.</p>
+    <p>Met de aanduiding <i>authentiek</i> wordt, zoals geformuleerd in de memorie van toelichting op de wet, tot uitdrukking gebracht dat:
+        </p><ol type="a">
+            <li>Het gegeven in samenhang met andere gegevens door een groot aantal bestuursorganen in verschillende processen wordt gebruikt en derhalve bestemd is voor informatie-uitwisseling tussen bestuursorganen;</li>
+            <li>de verantwoordelijkheid voor betrouwbaarheid van het gegeven eenduidig geregeld is;
+            </li>
+            <li>het gegeven onderworpen is aan intern en extern kwaliteitsonderzoek, en</li>
+            <li>het gegeven zich leent voor verplicht gebruik door bestuursorganen en eenmalige verstrekking door burgers en bedrijven aan de overheid.</li>
+        </ol>
+    <p></p>
+    <p>In de praktijk mag een gebruiker van de gegevens ervan uitgaan dat alle gegevens correct zijn. De gegevensdefinitie moet de gebruiker alle informatie geven die voor een goed begrip daarvan nodig is. 
+Heeft een gebruiker echter gerede twijfel over de juistheid van een <i>authentiek</i> gegeven dan wordt verwacht dat hij de registerbeheerder daarvan op de hoogte brengt. Bestuursorganen zijn, bij gerede twijfel over de juistheid van een authentiek gegeven (of het ontbreken ervan), zelfs verplicht daarvan melding te maken.
+</p>
+<p>Voor alle gegevens is aangegeven of ze authentiek zijn. Ook is voor alle gegevens aangegeven of ze
+        een waarde moeten hebben. Dat laat zien dat er gegevens kunnen zijn die authentiek zijn maar geen waarde hoeven te hebben.
+        Juist omdat er verplichtingen gelden ten aanzien van authentieke gegevens, vraagt dit om een korte toelichting. Wanneer een authentiek gegeven geen waarde heeft moet de gebruiker ervan uitgaan dat het gegeven niet is geproduceerd. Dat geval kan zich uiteraard alleen voordoen wanneer er vrijheid van beslissen bestaat bij de bronhouder of de producent. 
+Voor de duidelijkheid, als er wel een waarde is dan moet die ook in de basisregistratie ondergrond worden opgenomen. Bij gerede twijfel over het ontbreken van een waarde, moet een bestuursorgaan dat melden.</p>
+</section>
+</section>
+  <!-- hoofdstuk 3 -->
+  <section id="grondwaterstandonderzoek">
+    <!--OddPage--><h2 id="x3-grondwaterstandonderzoek"><span class="secno">3. </span>Grondwaterstandonderzoek</h2>
+    <section id="intro-monitoring">
+      <h3 id="x3-1-grondwatermonitoring"><span class="secno">3.1 </span>Grondwatermonitoring</h3>
+      <p>Grondwater is een belangrijke bestaansbron. Door het verzamelen van meetgegevens over ons grondwatersysteem kunnen trends worden gesignaleerd en kan getoetst worden aan normen en streefbeelden. Deze informatie is belangrijk voor grondwaterbeheerders en beleidsmakers voor het formuleren en evalueren van het grondwaterbeleid. Meetgegevens worden ook gebruikt voor het maken van rapportages zodat getoetst kan worden of we (inter)nationale afspraken naleven.</p>
+      <p>Het grondwater wordt daarom in Nederland in de gaten gehouden en beheerd. Het beheer van het grondwater richt zich op de hoeveelheid bruikbaar grondwater en de kwaliteit ervan. Om dit beheer goed te kunnen uitvoeren, wordt in Nederland de toestand van het grondwater over langere tijd gevolgd. Dat heet grondwatermonitoring. Er wordt daarbij gekeken naar de grondwaterstand (kwantiteit), en naar de samenstelling van het grondwater (kwaliteit). Hiervoor worden periodiek grondwaterstandonderzoeken en grondwatersamenstellingsonderzoeken uitgevoerd.</p>
+      <p>In het domein grondwatermonitoring staan de grondwatermonitoringnetten centraal die zijn ingesteld om het grondwater in Nederland te kunnen beheren. Het doel waarvoor een monitoringnet is ingesteld, het monitoringdoel, beperkt zich in veel gevallen tot kwantiteit of kwaliteit, maar het komt ook voor dat onderzoek aan zowel de kwantiteit als de kwaliteit wordt gedaan binnen hetzelfde grondwatermonitoringnet.</p>
+      <p>Grondwatermonitoring houdt in dat de toestand van het grondwater in een bepaald gebied, of eigenlijk in een bepaald deel van de ondergrond, over langere tijd gevolgd wordt. Tijdelijke bewakingsmeetnetten rond bijvoorbeeld saneringslocaties of stortplaatsen vallen buiten het BRO-domein. De uitgestrektheid van het gebied en de diepte van monitoring verschillen per grondwatermonitoringnet. Ook de duur van monitoring wisselt sterk.</p>
+      <p>In het <a href="https://zoek.officielebekendmakingen.nl/stb-2017-421.html">Besluit basisregistratie ondergrond</a> is omschreven welke vormen van monitoring onder deze basisregistratie vallen. Het belangrijkste criterium is het type organisatie dat verantwoordelijk is voor het beheer van het grondwater: de grondwatermonitoring moet door of in opdracht van een bestuursorgaan, de bronhouder, worden uitgevoerd. Verder is er een beperking aan de tijdschaal gesteld. Wanneer een monitoringnet is ingesteld om de toestand van het grondwater over een periode van ten minste één jaar te volgen, dan valt het altijd onder de basisregistratie ondergrond. Voor monitoringnetten met een kortere duur maakt het bestuursorgaan zelf de afweging of de gegevens in de basisregistratie moeten worden opgenomen. De periode van een jaar is lang genoeg voor het uitfilteren van de effecten van kleinschalige en kortdurende invloeden, zodat de informatie die in de basisregistratie wordt vastgelegd blijvende gebruikswaarde heeft. Aan de ruimtelijke schaal van monitoring zijn voor de basisregistratie ondergrond geen grenzen gesteld.</p>
+      <p>In de <a href="https://zoek.officielebekendmakingen.nl/kst-33839-3.html">Regels omtrent de basisregistratie ondergrond</a> en het <a href="https://zoek.officielebekendmakingen.nl/stb-2017-421.html">Besluit basisregistratie ondergrond</a> staat dat de BRO “voorlopig” respectievelijk “vooralsnog” geen milieukwaliteit informatie bevat. Voor het grondwatermonitoringdomein zijn Grondwatersamenstellingsonderzoeksgegevens uit monitoringsnetten rondom milieu-hygiënische projecten, waarin het met name gaat om het monitoren van de verontreiniging van de bodem en het grondwater, daarmee voorlopig buiten scope geplaatst. Op 18 december 2018 is in de Tweede kamer een motie aangenomen waarin de regering wordt verzocht ‘om informatie over bodemverontreiniging in de basisregistratie ondergrond op te nemen’ (Kamerstuk Motie 34864-19). Momenteel is nog niet bekend wat de gevolgen van deze motie zullen zijn voor de scope van Grondwaterstandonderzoek.</p>
+      <p>De bestuursorganen die langdurig het grondwater (laten) monitoren op grondwaterkwantiteit, omdat zij daarin een wettelijke taak hebben zijn Rijksoverheidsorganisaties (Rijkswaterstaat, Ministerie van Defensie), Provincies, Waterschappen, Gemeentes en bestuurlijke samenwerkingsverbanden. Daarnaast zijn er (semi)private organisaties die vanuit vergunningsplicht het grondwater langdurig monitoren op grondwaterkwantiteit, in opdracht van bevoegd gezag en/of voor eigen doelen. Dit zijn Gasunie, Prorail, drinkwaterbedrijven, grondwateronttrekkende industrie, (ondiepe) bodemenergie exploitanten (bedrijven, ziekenhuizen, overige instellingen), natuurterreinbeheerorganisaties en exploitanten van ondiepe minerale delfstoffen. Deze organisaties doen periodiek grondwaterstandonderzoek en hebben daarvoor grondwatermonitoringnetten en meetplannen.</p>
+    </section>
+    <section id="intro-Grondwaterdomein">
+      <h3 id="x3-2-domein-grondwatermonitoring-in-de-bro"><span class="secno">3.2 </span>Domein grondwatermonitoring in de BRO</h3>
+      <p>Het domein grondwatermonitoring in de basisregistratie ondergrond (BRO) omvat de volgende vier registratieobjecten:</p>
+      <ul>
+          <li>Grondwatermonitoringnet;</li>
+          <li>Grondwatermonitoringput;</li>
+          <li>Grondwatersamenstellingsonderzoek (grondwaterkwaliteit);</li>
+          <li>Grondwaterstandonderzoek (grondwaterkwantiteit).</li>
+      </ul>
+      <p>In de voorliggende catalogus gaat het over het registratieobject Grondwaterstandonderzoek.</p>
+      <p>In de technische landelijke voorziening van de basisregistratie ondergrond worden Engelstalige benamingen gehanteerd voor de registratieobjecten. Omwille van de aansluiting hiermee worden voor de registratieobjecten Engelstalige afkortingen gebruikt. In deze catalogus worden alleen Engelstalige afkortingen en de Nederlandstalige termen gebruiken.</p>
+         <ul>
+          <li>Grondwatermonitoringnet wordt afgekort tot GMN (Groundwater Monitoring Network);</li>
+          <li>Grondwatermonitoringput wordt afgekort tot GMW (Groundwater Monitoring Well);</li>
+          <li>Grondwatersamenstellingsonderzoek wordt afgekort tot GAR (Groundwater Analysis Report);</li>
+          <li>Grondwaterstandonderzoek wordt afgekort tot GLD (Groundwater Level Dossier).</li>
+        </ul>
+      <figure id="image003">
+        <img src="./media/Grondwaterdomein_20190405.jpg" alt="Grondwaterdomein" width="600">
+        <figcaption>Figuur <span class="figno">3</span> <span class="fig-title">De samenhang tussen de vier registratieobjecten binnen het grondwatermonitoring domein.</span></figcaption>
+      </figure>
+      <p>Een grondwatermonitoringput betreft de putconstructie die gebruikt wordt om standen en/of de samenstelling van het grondwater te meten. Gewoonlijk bestaat een put uit een samenstel van buizen dat aan het oppervlak wordt beschermd tegen invloeden van buitenaf. Via de buizen wordt het grondwater dat zich op een bepaalde diepte bevindt ontsloten. Het deel van de buis waardoor het grondwater binnen kan komen is het filter. Elke buis heeft één filter. Een filter fungeert als meetpunt in de basisregistratie ondergrond.</p>
+      <p>Informatie over grondwatermonitoringput is beschreven in de <a href="https://www.basisregistratieondergrond.nl/documenten/publicaties/2017/06/27/catalogus-grondwatermonitoringput" target="_blank">Catalogus Grondwatermonitoringput</a>. Naast putten kunnen ook bronnen gebruikt worden in grondwaterkwaliteitsmonitoring. Een bron is een locatie waar het grondwater spontaan uittreedt aan het maaiveld. Op dit moment voorziet de basisregistratie het registreren van bronnen niet. Voorzien wordt dat de gegevensdefinitie van de grondwatermonitoringput aangepast wordt, zodat het mogelijk wordt om bronnen te registreren.</p>
+      <p>Binnen het grondwaterdomein in de basisregistratie ondergrond kent alleen de grondwatermonitoringput een fysieke locatie. De drie andere registratieobjecten zijn aan het registratieobject grondwatermonitoringsput gekoppeld en hebben daarmee indirect een locatie. Bij grondwaterstandonderzoeken en grondwatersamenstellingsonderzoeken ligt de verwijzing vast naar het filter in de grondwatermonitoringput waarin het onderzoek is uitgevoerd. Daarnaast ligt bij grondwaterstandonderzoeken en grondwatersamenstellingsonderzoeken de verwijzing vast naar één of meerdere grondwatermonitoringnetten ten behoeve waarvan het onderzoek is uitgevoerd.</p>
+  	  <p>Een grondwatermonitoringnet is een verzameling locaties waar periodiek onderzoek aan het grondwater op een bepaalde diepte wordt gedaan om de toestand van het grondwater vanuit een perspectief te kunnen bepalen en de eventuele veranderingen erin te kunnen volgen. Het grondwatermonitoringnet faciliteert daardoor de groepering van onderzoeksgegevens door bronhouder op basis van het doel van monitoring. Het registratieobject vergroot daarmee de hergebruikswaarde voor afnemers van de gegevens van de basisregistratie ondergrond.</p>
+      <p>Een grondwatermonitoringnet valt onder de verantwoordelijkheid van één bronhouder en heeft een vastgesteld monitoringdoel. In de praktijk komt het voor dat een grondwatersamenstellingsonderzoek ten behoeve van meer dan één doel wordt uitgevoerd. Een bronhouder kan bijvoorbeeld omwille van de efficiëntie besluiten om één grondwatersamenstellingsonderzoek te laten doen, en de resultaten ervan zowel voor de Kaderrichtlijn Waterverplichtingen als voor een eigen provinciaal monitoringdoel te gebruiken. Omdat er voor afzonderlijke monitoringdoelen verschillende grondwatermonitoringnetten zijn, betekent dit voor de basisregistratie ondergrond dat een grondwatersamenstellingsonderzoek kan toebehoren aan één of meerdere grondwatermonitoringnetten.</p>
+  	  <p>Een grondwaterstandonderzoek kan ook worden uitgevoerd ten behoeve van meerdere doelen van verschillende bestuursorganen. In dat geval is één van deze bestuursorganen de bronhouder van het grondwaterstandonderzoek. Deze bronhouder levert het grondwaterstandonderzoek aan de basisregistratie ondergrond aan, inclusief de koppeling aan alle grondwatermonitoringnetten waarvoor het onderzoek is uitgevoerd. De bronhouder is daarmee dus ook verantwoordelijk voor de koppeling van het grondwaterstandonderzoek aan een grondwatermonitoringnet van een ander bestuursorgaan.</p>
+  	</section>
+    <section id="intro-GLD">
+      <h3 id="x3-3-het-grondwaterstandonderzoek"><span class="secno">3.3 </span>Het grondwaterstandonderzoek</h3>
+        <p>TO DO</p>
+    </section>
+  </section>
+  <!-- hoofdstuk 4 -->
+  <section id="intro-catalogus">
+    <!--OddPage--><h2 id="x4-introductie-van-de-catalogus"><span class="secno">4. </span>Introductie van de catalogus</h2>
+    <section id="intro-cat-inleiding" class="generic"><h3 id="x4-1-inleiding"><span class="secno">4.1 </span>Inleiding</h3>
+<p><a href="#cat">De gegevensdefinitie</a> vormt het hart van de catalogus, het bevat de
+definities van de entiteiten waaruit het registratieobject is opgebouwd en van de eigenschappen van die entiteiten, de attributen. De entiteiten worden op volgorde behandeld. De volgende gegevens zijn vastgelegd:</p>
+<ul>
+    <li>De Nederlandse naam van de entiteit of het attribuut (naam).</li>
+    <li>De herkomst van de entiteit.</li>
+    <li>De definitie van de entiteit of het attribuut (definitie).</li>
+    <li>De herkomst van de definitie.</li>
+    <li>Eventueel een toelichting om zo nodig aanvullende informatie te geven over de herkomst van het gegeven, de reden waarom het is opgenomen of de betekenis van het gegeven (toelichting).</li>
+    <li>De aanduiding of een gegeven mogelijk geen waarde heeft. Wanneer hier ‘ nee’ is ingevuld, is het niet toegestaan dat het gegeven geen waarde heeft. Wanneer er ‘ja’ staat, mag de waarde ontbreken. De kardinaliteit in combinatie met de regels bepalen in welke gevallen de waarde mag ontbreken (zie <a href="#verplichte-gegevens-waarden">paragraaf 4.4</a>).</li>
+    <li>De aanduiding of er van het attribuut materiële historie wordt bijgehouden in de registratie ondergrond. Als dit het geval is dan wordt in de registratie ondergrond een tijdlijn bijgehouden met de waarde die het gegeven op elk moment had. Als dit niet het geval is, dan wordt in de registratie ondergrond alleen de actuele waarde van het gegeven bijgehouden.</li>
+    <li>Indicatie formele historie staat altijd op ‘nee’. De formele historie wordt vastgelegd in de entiteit <em>Registratiegeschiedenis</em>.</li>
+    <li>De kardinaliteit van het attribuut.</li>
+    <li>De aanduiding of een attribuut authentiek is of niet (authentiek).</li>
+    <li>Eventueel de regels die in aanvulling op de kardinaliteit en de bepalingen van het formaat gelden en door de basisregistratie ondergrond in controles zijn opgenomen, bijvoorbeeld om de consistentie van het brondocument vast te stellen (regels).</li>
+    <li>De naam van het formaat van de waarden van het attribuut met, afhankelijk van het type formaat, nadere informatie over de waarden:
+        <ul>
+            <li>Het patroon ofwel de opbouw van bijvoorbeeld een code of een datum.</li>
+            <li>De eenheid van een meetwaarde.</li>
+            <li>De minimum- en maximumwaarde van een meetwaarde.</li>
+        </ul>
+    </li>
+    <li>De aanduiding of een attribuut afleidbaar is.</li>
+</ul>
+<p>Voorafgaand aan de gegevensdefinitie wordt hieronder een toelichting gegeven die voor een goed begrip nodig is. Eerst wordt een toelichting gegeven op het domeinmodel, daarna wordt de typering van formaten behandeld en vervolgens de relatie tussen kardinaliteit en regels.</p>    
+</section>
+    <section class="generic" id="toelichting-domeinmodel"><h3 id="x4-2-toelichting-domeinmodel"><span class="secno">4.2 </span>Toelichting domeinmodel</h3>
+<p>Het registratieobject is in volledigheid beschreven en gemodelleerd. Dat laatste wil niet
+    anders zeggen dan dat het registratieobject op inzichtelijke en samenhangende manier is opgesplitst in delen om duidelijk te kunnen
+    maken waaruit de informatie is opgebouwd.</p>
+<p>Modellering van informatie kent verschillende invalshoeken. In de catalogus wordt het inhoudelijke perspectief gekozen omdat
+    dat met name waarde heeft in de communicatie tussen mensen. Zo’n model wordt in de basisregistratie ondergrond een <i>domeinmodel</i> genoemd. Uit het domeinmodel wordt een technisch model afgeleid dat ook meeweegt dat informatiesystemen efficiënt met
+    elkaar moeten kunnen spreken. Het meer technische model heet <i>productmodel</i> en dat staat aan de basis van de technische
+    documentatie.</p>
+<p>Een domeinmodel maakt niet alleen de definitie van de informatie-inhoud gemakkelijker, het dient ook om inzicht te geven
+    in de keuzen die gemaakt zijn bij het bepalen welke gegevens van belang worden geacht, en welke niet. Omdat het een
+    goed overzicht geeft, wordt het domeinmodel opgenomen in de gegevensdefinitie van een registratieobject. Voor het domeinmodel
+    wordt de UML notatie gebruikt. Met wat kennis van de gebruikte symbolen is het makkelijk te lezen. In <a href="#cat">hoofdstuk 5</a> worden
+    de gegevens in het model nader beschreven.</p>
+<p>Het domeinmodel (zie begin van <a href="#cat">hoofdstuk 5</a>) beschrijft het object zoals dat in de registratie ondergrond is vastgelegd. Het model beschrijft
+    een object dat voldoet aan het strikte kwaliteitsregime (IMBRO). Eventuele bijzonderheden voor IMBRO/A zijn niet in het
+    domeinmodel zichtbaar, maar worden bij de uitwerking in hoofdstuk 5 wel expliciet beschreven.</p>
+<p>Het domeinmodel laat ook zien welke gegevens alleen aan de dataleverancier en de bronhouder worden uitgeleverd, deze worden voorafgegaan door een -. Alle overige attributen worden uitgeleverd aan alle afnemers en worden aangegeven met een +.</p>
+<p>In het domeinmodel wordt de kardinaliteit van attributen en entiteiten gegeven. De kardinaliteit geeft aan hoe vaak een gegeven
+    voorkomt. De meeste gegevens hebben kardinaliteit 1 en dat betekent dat een gegeven precies een keer voorkomt. Sommige
+    gegevens mogen een of meer keer voorkomen, die hebben kardinaliteit 1..*. Een derde categorie vormen de gegevens die
+    kardinaliteit 0..1 hebben. Een dergelijk gegeven komt 1 keer voor of niet. De laatste categorie heeft kardinaliteit 0..*,
+    en een dergelijk gegeven kan 0, 1 of meer keren voorkomen.</p>
+<p>In het domeinmodel is de kardinaliteit van entiteiten consequent opgenomen; de vier varianten kunnen allemaal voor komen. Bij attributen is, om het geheel overzichtelijk te houden, de standaardwaarde kardinaliteit 1 niet opgenomen. De kardinaliteit is alleen opgenomen wanneer die ongelijk is aan 1.</p>
+<p>De kardinaliteit in het domeinmodel moet overigens altijd in samenhang met de regels die in de definitie van het gegeven
+    zijn opgenomen worden begrepen. De kardinaliteit en de regels bepalen samen of een gegeven al dan niet aanwezig is (zie <a href="#verplichte-gegevens-waarden">paragraaf 4.4</a>).</p>
+</section>
+    <section id="type-domeinen">
+      <h3 id="x4-3-type-domeinen-in-de-gegevensdefinitie"><span class="secno">4.3 </span>Type domeinen in de gegevensdefinitie</h3>
+      <!-- hier alleen de domeinuitleg includeren voor domeinen die in het registratieobject gebruikt worden -->
+      <p>Een domein beschrijft welke waarden een attribuut mag hebben. Domeinen zijn van een bepaald type en de typen die in de registratie ondergrond worden gebruikt worden hieronder toegelicht.</p>
+      <section id="enumeratie" class="generic"><h4 id="x4-3-1-enumeratie"><span class="secno">4.3.1 </span>Enumeratie</h4>
+<p>Een formaat van het type enumeratie is een limitatieve opsomming van waarden. Het is een keuzelijst met een bepaalde naam. Er wordt voor een enumeratie gekozen wanneer alle waarden bekend zijn en uitbreiding niet mogelijk is.</p>
+<p>Wanneer een attribuut een formaat van het type enumeratie heeft, wordt bij de beschrijving van het attribuut de naam van de lijst opgenomen. De inhoud van de lijst zelf wordt in hoofdstuk 6 beschreven. In het domeinmodel wordt het formaat aangeduid met zijn naam.</p>
+</section>
+      <section id="codelijst" class="generic"><h4 id="x4-3-2-codelijst"><span class="secno">4.3.2 </span>Codelijst</h4>
+<p>Een formaat van het type codelijst is een uitbreidbare opsomming van waarden. Het is een keuzelijst met een bepaalde naam. Er wordt voor een codelijst gekozen wanneer niet alle waarden bekend zijn en uitbreiding mogelijk moet zijn. Wanneer een attribuut een formaat van het type codelijst heeft, wordt bij de beschrijving van het attribuut de naam van de lijst opgenomen. De inhoud van de codelijst zelf wordt in hoofdstuk 6 beschreven. In het domeinmodel wordt het formaat aangeduid met zijn naam.</p>
+</section>
+      <section id="tekst" class="generic"><h4 id="x4-3-3-tekst"><span class="secno">4.3.3 </span>Tekst</h4>
+<p>Een formaat van het type tekst bestaat uit een stuk tekst van een bepaalde maximale lengte. De tekst mag alleen bestaan uit de tekens die voorkomen in de MES-1 set. De MES-1 set omvat 335 tekens en wordt gebruikt binnen de landen van de Europese Unie die een Latijns schrift kennen.</p>
+<p>Een formaat van het type tekst wordt volledig gespecificeerd door met de aanduiding tekst ook de maximale lengte mee te geven. In het domeinmodel wordt het formaat aangeduid als TekstN, waarbij N de maximale lengte aangeeft.</p>
+</section>
+      <section id="code" class="generic"><h4 id="x4-3-4-code"><span class="secno">4.3.4 </span>Code</h4>
+<p>Een formaat van het type code is een opeenvolging van cijfers, van letters of van cijfers en letters met een bepaald patroon en met een specifieke betekenis. Een code heeft gewoonlijk een betekenis die ook buiten de basisregistratie ondergrond geldt. Een code wordt uitgegeven door een verantwoordelijke instantie. Om het patroon van een code weer te geven wordt gebruik gemaakt van de letters C en N. De letter C staat voor character (Eng.) en duidt een letter aan, de letter N staat voor number (Eng.) en duidt een cijfer aan.</p>
+<p>Wanneer een attribuut een formaat van het type code heeft, wordt bij de beschrijving van het attribuut de naam van het formaat en het patroon opgenomen. Uit de definitie van het attribuut zelf moet blijken wat de specifieke betekenis is van de code. In het domeinmodel wordt het formaat aangeduid met zijn naam.</p>
+</section>
+      <section id="meetwaarde" class="generic"><h4 id="x4-3-5-meetwaarde"><span class="secno">4.3.5 </span>Meetwaarde</h4>
+<p>Het formaat meetwaarde wordt in de basisregistratie ondergrond gebruikt voor gegevens die gemeten, berekend of anderszins bepaald zijn. Het is een getal en bij het getal hoort een eenheid. De basisregistratie ondergrond gebruikt voor de eenheden de codes uit het UCUM (Unified Code for Units of Measure)-systeem. In bijzondere gevallen is de eenheid dimensieloos.</p>
+<p>Het getal is altijd een rationaal getal, een getal met een decimaal scheidingsteken. Door het scheidingteken krijgt het een patroon. Het aantal cijfers voor het scheidingsteken is variabel maar begrensd. Het aantal cijfers achter het scheidingsteken ligt vast.</p>
+<p>Gewoonlijk wordt niet alleen het patroon van het getal benoemd, maar wordt het formaat verder ingeperkt door een bereik te specificeren. Het bereik van het attribuut wordt weergegeven door de minimumwaarde en de maximumwaarde. Het kan ook voorkomen dat alleen de minimumwaarde of alleen de maximumwaarde is weergegeven.</p>
+<p>Wanneer een attribuut een formaat van het type meetwaarde heeft, wordt het patroon, de eenheid en indien van toepassing de minimumwaarde en maximumwaarde gegeven. Het patroon wordt aangeduid als N.N waarde. N staat voor het maximum aantal cijfers voor, resp. het aantal cijfers achter het scheidingsteken.</p>
+<h5 id="inname-van-meetwaarden">Inname van meetwaarden</h5>
+<p>In de praktijk is het moeilijk een meetwaarde zonder verandering van het ene systeem aan het andere door te geven. De basisregistratie ondergrond hanteert de definities binnen het systeem en bij uitgifte strikt om te borgen dat een meetwaarde zonder verandering kan worden doorgegeven.</p>
+<p>Bij het vastleggen van eigenschappen is het niet altijd nodig getallen zo strikt te definiëren als de basisregistratie vraagt. De uitvoerders weten wel wat een getal zou moeten voorstellen en kunnen bijvoorbeeld accepteren dat een meetwaarde er een decimale nul bij krijgt of dat een getal een onbepaald aantal decimalen heeft. Om de uitvoeringspraktijk niet nodeloos te frustreren door getallen die niet aan de strikte definitie te voldoen af te wijzen, hanteert de basisregistratie ondergrond bij het innemen van meetwaarden de volgende praktische regels:</p>
+<ul>
+    <li>Er zijn meer cijfers achter het scheidingsteken aanwezig dan gespecificeerd: het getal wordt afgekapt op het aantal dat in de gegevensdefinitie is gespecificeerd.</li>
+    <li>Er zijn minder cijfers achter het scheidingsteken aanwezig dan gespecificeerd: het getal wordt aangevuld met nullen tot het aantal dat in de gegevensdefinitie is gespecificeerd.</li>
+    <li>Er is geen scheidingsteken aanwezig: het scheidingsteken wordt toegevoegd en het getal wordt aangevuld met nullen tot het aantal dat in de gegevensdefinitie is gespecificeerd.</li>
+    <li>Het getal voor het scheidingsteken begint met een of meer nullen: de nullen worden genegeerd.</li>
+    <li>Er zijn meer cijfers vóór het scheidingsteken aanwezig dan gespecificeerd: de waarde wordt geweigerd.</li>
+</ul>
+</section>
+      <section id="datumtijd" class="generic"><h4 id="x4-3-6-formaten-voor-datum-en-tijd"><span class="secno">4.3.6 </span>Formaten voor datum en tijd</h4>
+<p>Voor gegevens die over tijd gaan, de temporele gegevens, worden twee formaten gebruikt. Een voor de tijd tot op de seconde nauwkeurig (DatumTijd), een voor de tijd tot op de dag nauwkeurig (Datum).</p>
+<p>In ieder formaat gaat het om de tijd gemeten volgens de Gregoriaanse kalender. Indien het formaat DatumTijd wordt gebruikt moet ook de tijdzone worden meegegeven. Voor de tijdzone is UTC de referentie. UTC is de mondiaal geaccepteerde standaardtijd en de opvolger van GMT (Greenwich Mean Time); de drie letters staan voor Coordinated Universal Time. Door de tijdzone mee te geven kan lokale tijd worden omgezet naar UTC.</p>
+<p>Het patroon van de twee formaten volgt dezelfde conventies. Het eerste element in het patroon staat voor het jaar, dan volgt de maand, enz., en het laatste element staat voor de tijdzone. Om de verschillende elementen aan te geven worden letters gebruikt: jaar (J), maand (M), dag (D), uur (U), minuut (M) en seconde (S), gevolgd door de tijdzone. Het aantal letters geeft de lengte aan.</p>
+<p>Voor de meest uitgebreide variant van het patroon, die van DatumTijd, wordt dit JJJJ-MM-DDTUU:MM:SS+UU:MM. De T is het teken dat de datum en het tijdstip op die datum scheidt. De + is het scheidingteken tussen het tijdstip en de tijdzone. Zoals uit het patroon blijkt wordt de tijdzone in uren en minuten gegeven. De meeste tijdzones zijn overigens uitgedrukt in gehele uren (UU:00). In Nederland geldt Centraal Europese Tijd (UTC+1:00) of Centraal Europese Zomertijd (UTC+2.00).</p>
+<section id="gen-datumtijd">
+    <h5 id="x4-3-6-1-datumtijd"><span class="secno">4.3.6.1 </span>DatumTijd</h5>
+    <p>Het formaat DatumTijd geeft een tijdstip volgens de Gregoriaanse kalender tot op de seconde nauwkeurig. Het patroon is JJJJ-MM-DDTUU:MM:SS+UU:MM.</p>
+</section>
+<section id="gen-datum">
+    <h5 id="x4-3-6-2-datum"><span class="secno">4.3.6.2 </span>Datum</h5>
+    <p>Het formaat Datum geeft een datum volgens de Gregoriaanse kalender tot op de dag nauwkeurig. Het patroon is JJJJ-MM-DD.</p>
+</section>
+<section id="gen-onvolledigedatum">
+    <h5 id="x4-3-6-3-onvolledigedatum"><span class="secno">4.3.6.3 </span>OnvolledigeDatum</h5>
+    <p>Voor gegevens die onder het kwaliteitsregime IMBRO/A aangeleverd worden, geldt een derde formaat met vier keuzemogelijkheden.</p>
+        <ul>
+            <li>De datum tot op de dag nauwkeurig, met als patroon JJJJ-MM-DD</li>
+            <li>De datum tot op de maand nauwkeurig, met als patroon JJJJ-MM</li> 
+            <li>De datum tot op het jaar nauwkeurig, met als patroon JJJJ</li>
+            <li>Geen datum bekend, met als vaste waarde onbekend.</li>
+        </ul>
+    <p>De keuze die gemaakt wordt is gebaseerd op de beschikbaarheid van gegevens. De gebruiker moet ervan uit gaan dat de informatie zo nauwkeurig mogelijk is opgenomen.</p>
+</section>
+<section id="gen-controletemporeel">
+    <h5 id="x4-3-6-4-controle-op-temporele-gegevens"><span class="secno">4.3.6.4 </span>Controle op temporele gegevens</h5>
+    <p>Bij inname wordt gewoonlijk gecontroleerd of een temporeel gegeven in een brondocument in een logische opeenvolging van gebeurtenissen past. Daartoe wordt de waarde vergeleken met een ander temporeel gegeven, de referentiedatum of het referentietijdstip. Er zijn vier uitwerkingen van de controle, en die worden als regel in de gegevensdefinitie benoemd:</p>
+    <ol>
+        <li>Er wordt gecontroleerd of het desbetreffende temporele gegeven <em>niet</em> na de referentiedatum of het referentietijdstip valt. Het desbetreffende gegeven moet dus altijd voor de referentie liggen of ermee samenvallen.</li>
+        <li>Er wordt gecontroleerd of het desbetreffende temporele gegeven <em>niet voor</em> de referentiedatum of het referentietijdstip valt. Het desbetreffende gegeven moet dus altijd na de referentie liggen of ermee samenvallen.</li>
+        <li>Er wordt gecontroleerd of het desbetreffende temporele gegeven na de referentiedatum of het referentietijdstip valt. Het desbetreffende gegeven moet dus altijd na de referentie liggen.</li>
+        <li>Er wordt gecontroleerd of het desbetreffende temporele gegeven voor de referentiedatum of het referentietijdstip valt. Het desbetreffende gegeven moet dus altijd voor de referentie liggen.</li>
+    </ol>
+</section>
+</section>
+      <section id="organisatie" class="generic"><h4 id="x4-3-7-organisatie"><span class="secno">4.3.7 </span>Organisatie</h4>
+<p>Het formaat organisatie wordt gebruikt bij partijen die een rol spelen in het proces rondom het registratieobject, en in die hoedanigheid vastgelegd worden. Dit geldt bijvoorbeeld voor bronhouders, dataleveranciers en uitvoerders van bepaalde (deel)activiteiten. Dit formaat heeft twee keuzemogelijkheden:</p>
+<ul>
+	<li>Het KvK-nummer wordt gebruikt bij organisaties die zijn ingeschreven in het Handelsregister. Het patroon is NNNNNNNN.</li>
+	<li>Het Europees handelsnummer wordt gebruikt bij organisaties die in een handelsregister van een andere lidstaat van de Europese Unie dan Nederland zijn ingeschreven. Er is geen patroon gespecificeerd. Dit formaat heeft het type tekst van maximaal 40 tekens.</li>
+</ul>
+</section>
+    </section>
+    <section id="verplichte-gegevens-waarden" class="generic"><h3 id="x4-4-verplichte-gegevens-verplichte-waarden"><span class="secno">4.4 </span>Verplichte gegevens, verplichte waarden</h3>
+<p>Bij de bespreking van het domeinmodel (zie <a href="#toelichting-domeinmodel">paragraaf 4.2</a>) is gesteld dat de kardinaliteit en de regels samen bepalen of een gegeven al dan niet aanwezig is. Voor een goed begrip van de gegevensdefinitie is dat nog niet zorgvuldig genoeg geformuleerd. In de praktijk van gegevensuitwisseling is het namelijk mogelijk een attribuut op te nemen zonder waarde. Verbijzonderd voor attributen is de juiste formulering daarom dat de kardinaliteit en de regels samen bepalen of een attribuut al dan niet aanwezig is en of een attribuut al dan niet een waarde heeft.</p>
+<p>Uitgangspunt is dat een attribuut dat aanwezig is een waarde heeft. Een attribuut wordt alleen bij uitzondering zonder waarde in de berichten opgenomen. Het onderstaande overzicht geeft de vier mogelijkheden die voorkomen. </p>
+<ul>
+    <li>De kardinaliteit= [1] en er is geen aanvullende regel opgenomen. Dit betekent dat het gegeven altijd aanwezig is en altijd een waarde heeft.</li>
+    <li>De kardinaliteit= [1] en er is een aanvullende regel opgenomen die aangeeft waarom een waarde toch mag ontbreken. Dit betekent dat het gegeven altijd aanwezig is maar bij uitzondering en om een specifieke reden geen waarde kan hebben.</li>
+    <li>De kardinaliteit= [0..1] en er zijn 1 of meer aanvullende regels opgenomen. Dit betekent dat de regels bepalen of het gegeven wel of niet voorkomt en bepalen of het gegeven wel of geen waarde heeft.</li>
+    <li>De kardinaliteit= [0..1] en er is geen aanvullende regel opgenomen. Dit betekent dat het gegeven alleen aanwezig is als het een waarde heeft.</li>
+</ul>
+</section>
+  </section>
+  <!-- hoofdstuk 5 en 6 -->
+  <section id="cat" class="normative" level="1">
+   <!--OddPage--><h2 id="x5-gegevensdefinitie"><span class="secno">5. </span>Gegevensdefinitie</h2>
+   <p><b>Deze tekst is normatief.</b>
+      <!--Conceptualmodel-GrondwaterstandonderzoekGLD-0.2-3-20190808-20190813-104030 imvertor 1.53.4--></p>
+   <section id="het-domeinmodel" level="3">
+      <h3 id="x5-1-het-domeinmodel"><span class="secno">5.1 </span>Het domeinmodel </h3>
+      <div class="imageinfo overview"><img src="data/Images/EAID_08E27657_5603_4b75_BB8B_47B282A97D63.png" usemap="#imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63" height="450" width="803"><map name="imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63">
+            <area shape="rect" coords="621,207,778,127" alt="" href="#graph_EAID_68FD3B87_BA7B_485e_A5DC_4804CB98C818">
+            <area shape="rect" coords="621,425,778,336" alt="" href="#graph_EAID_5FC959F0_5ED2_47e7_8C6C_68C408128425">
+            <area shape="rect" coords="25,410,261,191" alt="" href="#graph_EAID_0D009A59_1E9A_4fc2_867A_9006A9464AA7">
+            <area shape="rect" coords="621,316,778,227" alt="" href="#graph_EAID_3337CDCE_0A5D_4aee_AEB0_14AF7652B102">
+            <area shape="rect" coords="304,360,523,228" alt="" href="#graph_EAID_5876720F_795D_40b5_82B8_BC782B71FA3A">
+            <area shape="rect" coords="304,163,523,35" alt="" href="#graph_EAID_04FC4CF0_BE4E_421a_A62C_E3F00BED26A0"></map><p><b>Domeinmodel - overzicht</b></p>
+      </div>
+   </section><a class="anchor" name="graph_EAID_04FC4CF0_BE4E_421a_A62C_E3F00BED26A0"></a><a class="anchor" name="global_class_Model_Registratieobject"></a><section id="global_class_Model_Registratieobject" level="3">
+      <h3 id="x5-2-registratieobject"><span class="secno">5.2 </span> Registratieobject</h3>
+      <table>
+         <colgroup width="30%"></colgroup>
+         <colgroup width="70%"></colgroup>
+         <tbody>
+            <tr>
+               <th>Type gegeven</th>
+               <td>Entiteit</td>
+            </tr>
+            <tr>
+               <th>Definitie</th>
+               <td>
+                  
+                  <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De algemene gegevens die voor ieder type registratieobject in de registratie ondergrond
+                     zijn of worden opgenomen.
+                  </p>
+                  
+               </td>
+            </tr>
+         </tbody>
+      </table><a class="anchor" name="detail_attribute_Model_Registratieobject_bROID"></a><section id="detail_attribute_Model_Registratieobject_bROID" level="4">
+         <h4 id="x5-2-1-bro-id"><span class="secno">5.2.1 </span> BRO-ID</h4>
+         
+         <table>
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Attribuut</td>
+               </tr>
+               <tr>
+                  <th>Attribuut van</th>
+                  <td>Registratieobject</td>
+               </tr>
+               <tr>
+                  <th>Juridische status</th>
+                  <td>Authentiek</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De identificatie van het <em>grondwaterstandonderzoek</em> dat in de registratie ondergrond is opgenomen. 
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Kardinaliteit</th>
+                  <td>1</td>
+               </tr>
+               <tr>
+                  <th>Domein</th>
+                  <td></td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Naam</th>
+                  <td>Registratieobjectcode</td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Type</th>
+                  <td>Code</td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Opbouw</th>
+                  <td>GLDNNNNNNNNNNNN</td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De basisregistratie ondergrond kent bij registratie automatisch de juiste waarde aan
+                        het object toe.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Materiële geschiedenis</th>
+                  <td>Nee</td>
+               </tr>
+            </tbody>
+         </table>
+         
+      </section><a class="anchor" name="detail_attribute_Model_Registratieobject_bronhouder"></a><section id="detail_attribute_Model_Registratieobject_bronhouder" level="4">
+         <h4 id="x5-2-2-bronhouder"><span class="secno">5.2.2 </span> bronhouder</h4>
+         
+         <table>
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Attribuut</td>
+               </tr>
+               <tr>
+                  <th>Attribuut van</th>
+                  <td>Registratieobject</td>
+               </tr>
+               <tr>
+                  <th>Juridische status</th>
+                  <td>Authentiek</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het KvK-nummer van de maatschappelijke activiteit van de publiekrechtelijke rechtspersoon
+                        die bronhouder is van de gegevens in de basisregistratie ondergrond.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Kardinaliteit</th>
+                  <td>1</td>
+               </tr>
+               <tr>
+                  <th>Domein</th>
+                  <td></td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Naam</th>
+                  <td>Organisatie</td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Type</th>
+                  <td>Keuze</td>
+               </tr>
+               <tr>
+                  <th>Regels</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De organisatie moet binnen de basisregistratie ondergrond als bronhouder van <em>grondwaterstandonderzoeken</em> bekend zijn.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is door de dataleverancier bij de overdracht meegegeven in het geval de
+                        dataleverancier niet de bronhouder is. 
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Materiële geschiedenis</th>
+                  <td>Nee</td>
+               </tr>
+            </tbody>
+         </table>
+         
+      </section><a class="anchor" name="detail_attribute_Model_Registratieobject_objectIDBronhouder"></a><section id="detail_attribute_Model_Registratieobject_objectIDBronhouder" level="4">
+         <h4 id="x5-2-3-object-id-bronhouder"><span class="secno">5.2.3 </span> object-ID bronhouder</h4>
+         
+         <table>
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Attribuut</td>
+               </tr>
+               <tr>
+                  <th>Attribuut van</th>
+                  <td>Registratieobject</td>
+               </tr>
+               <tr>
+                  <th>Juridische status</th>
+                  <td>Basisgegeven (niet-authentiek)</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen
+                        administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie
+                        ondergrond.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Kardinaliteit</th>
+                  <td>0-1</td>
+               </tr>
+               <tr>
+                  <th>Domein</th>
+                  <td></td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Naam</th>
+                  <td>Tekst200</td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Type</th>
+                  <td>Waardelijst uitbreidbaar</td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het
+                        is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de
+                        bronhouder of dataleverancier te vergemakkelijken.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Materiële geschiedenis</th>
+                  <td>Nee</td>
+               </tr>
+            </tbody>
+         </table>
+         
+      </section><a class="anchor" name="detail_attribute_Model_Registratieobject_dataleverancier"></a><section id="detail_attribute_Model_Registratieobject_dataleverancier" level="4">
+         <h4 id="x5-2-4-dataleverancier"><span class="secno">5.2.4 </span> dataleverancier</h4>
+         
+         <table>
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Attribuut</td>
+               </tr>
+               <tr>
+                  <th>Attribuut van</th>
+                  <td>Registratieobject</td>
+               </tr>
+               <tr>
+                  <th>Juridische status</th>
+                  <td>Basisgegeven (niet-authentiek)</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het KvK-nummer van de onderneming of de maatschappelijke activiteit van de rechtspersoon
+                        die het object aan de basisregistratie ondergrond heeft aangeleverd, of het equivalent
+                        daarvan in een handelsregister van een andere lidstaat van de Europese Unie dan Nederland.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Kardinaliteit</th>
+                  <td>0-1</td>
+               </tr>
+               <tr>
+                  <th>Domein</th>
+                  <td></td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Naam</th>
+                  <td>Organisatie</td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Type</th>
+                  <td>Keuze</td>
+               </tr>
+               <tr>
+                  <th>Regels</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De organisatie moet binnen de basisregistratie ondergrond als dataleverancier van
+                        <em>grondwaterstandonderzoek</em> bekend zijn.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is door de dataleverancier bij de overdracht meegegeven. Het wordt alleen
+                        uitgeleverd aan de dataleverancier en de bronhouder.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Materiële geschiedenis</th>
+                  <td>Nee</td>
+               </tr>
+            </tbody>
+         </table>
+         
+      </section><a class="anchor" name="detail_attribute_Model_Registratieobject_kwaliteitsregime"></a><section id="detail_attribute_Model_Registratieobject_kwaliteitsregime" level="4">
+         <h4 id="x5-2-5-kwaliteitsregime"><span class="secno">5.2.5 </span> kwaliteitsregime</h4>
+         
+         <table>
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Attribuut</td>
+               </tr>
+               <tr>
+                  <th>Attribuut van</th>
+                  <td>Registratieobject</td>
+               </tr>
+               <tr>
+                  <th>Juridische status</th>
+                  <td>Authentiek</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding van de kwaliteitseis waaraan de gegevens van het object voldoen.</p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Kardinaliteit</th>
+                  <td>1</td>
+               </tr>
+               <tr>
+                  <th>Domein</th>
+                  <td></td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Naam</th>
+                  <td>Kwaliteitsregime</td>
+               </tr>
+               <tr>
+                  <th>&nbsp;&nbsp;Type</th>
+                  <td>Waardelijst niet uitbreidbaar</td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is door de dataleverancier bij de overdracht meegegeven.</p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Materiële geschiedenis</th>
+                  <td>Nee</td>
+               </tr>
+            </tbody>
+         </table>
+         
+      </section>
+   </section>
+   <section id="entiteiten-en-attributen" level="3">
+      <h3 id="x5-3-entiteiten-en-attributen"><span class="secno">5.3 </span>Entiteiten en attributen </h3><a class="anchor" name="graph_EAID_5876720F_795D_40b5_82B8_BC782B71FA3A"></a><a class="anchor" name="global_class_Model_Grondwaterstandonderzoek"></a><section id="global_class_Model_Grondwaterstandonderzoek" level="4">
+         <h4 id="x5-3-1-grondwaterstandonderzoek"><span class="secno">5.3.1 </span> Grondwaterstandonderzoek</h4>
+         <table>
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Entiteit</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Een grondwaterstandonderzoek is een monitoringsactiviteit, waarbij herhaaldelijk de
+                        waterstand in een monitoringbuis van een grondwatermonitoringput wordt gemeten. Deze
+                        waterstand representeert de grondwaterstand en/of stijghoogte in de ondergrond ter
+                        plekke van het filter van deze monitoringbuis.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Relaties met andere entiteiten</th>
+                  <td>Grondwaterstandonderzoek is specialisatie van 
+                     <a class="link" href="#global_class_Model_Registratieobject">Registratieobject</a>
+                     <br>Grondwaterstandonderzoek 
+                     gemeten ten behoeve van 1 of meer 
+                     <a class="link" href="#global_class_Model_Grondwatermonitoringnet">Grondwatermonitoringnet</a>
+                     <br>Grondwaterstandonderzoek 
+                     gemeten in 1 
+                     <a class="link" href="#global_class_Model_GMWMonitoringbuis">GMW-monitoringbuis</a>
+                     <br></td>
+               </tr>
+            </tbody>
+         </table><a class="anchor" name="detail_attribute_Model_Grondwaterstandonderzoek_startdatumOnderzoek"></a><section id="detail_attribute_Model_Grondwaterstandonderzoek_startdatumOnderzoek" level="5">
+            <h5 id="x5-3-1-1-startdatum-onderzoek"><span class="secno">5.3.1.1 </span> startdatum onderzoek</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Grondwaterstandonderzoek</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum waarop de eerste meting van het <em>grondwaterstandonderzoek</em> is uitgevoerd.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>Datum</td>
+                  </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum ligt niet in de toekomst.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Grondwaterstandonderzoek_einddatumOnderzoek"></a><section id="detail_attribute_Model_Grondwaterstandonderzoek_einddatumOnderzoek" level="5">
+            <h5 id="x5-3-1-2-einddatum-onderzoek"><span class="secno">5.3.1.2 </span> einddatum onderzoek</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Grondwaterstandonderzoek</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum waarop de laatste meting van het <em>grondwaterstandonderzoek</em>is uitgevoerd.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td>0-1</td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>Datum</td>
+                  </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum ligt niet in de toekomst.</p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum ligt niet voor het gegeven <em>startdatum onderzoek</em>.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section>
+      </section><a class="anchor" name="graph_EAID_68FD3B87_BA7B_485e_A5DC_4804CB98C818"></a><a class="anchor" name="global_class_Model_Grondwatermonitoringnet"></a><section id="global_class_Model_Grondwatermonitoringnet" level="4">
+         <h4 id="x5-3-2-grondwatermonitoringnet"><span class="secno">5.3.2 </span> Grondwatermonitoringnet</h4>
+         <table>
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Entiteit</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het grondwatermonitoringnet waarin het grondwaterstandonderzoek wordt uitgevoerd.</p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het registratieobject Grondwatermonitoringnet wordt in een aparte BRO gegevenscatalogus
+                        gedefinieerd.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Relaties met andere entiteiten</th>
+                  <td>
+                     <a class="link" href="#global_class_Model_Grondwaterstandonderzoek">Grondwaterstandonderzoek</a>
+                     
+                     gemeten ten behoeve van 1 of meer Grondwatermonitoringnet<br></td>
+               </tr>
+            </tbody>
+         </table><a class="anchor" name="detail_attribute_Model_Grondwatermonitoringnet_bROID"></a><section id="detail_attribute_Model_Grondwatermonitoringnet_bROID" level="5">
+            <h5 id="x5-3-2-1-bro-id"><span class="secno">5.3.2.1 </span> BRO-ID</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Grondwatermonitoringnet</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De identificatie van het <em>grondwatermonitoringnet</em> in de basisregistratie ondergrond.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>Registratieobjectcode</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Code</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Opbouw</th>
+                     <td>GMNNNNNNNNNNNNN</td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section>
+      </section><a class="anchor" name="graph_EAID_3337CDCE_0A5D_4aee_AEB0_14AF7652B102"></a><a class="anchor" name="global_class_Model_GMWMonitoringbuis"></a><section id="global_class_Model_GMWMonitoringbuis" level="4">
+         <h4 id="x5-3-3-gmw-monitoringbuis"><span class="secno">5.3.3 </span> GMW-monitoringbuis</h4>
+         <table>
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Entiteit</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De gegevens die nodig zijn voor de unieke identificatie van een specifieke buis in
+                        een grondwatermonitoringput. 
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het <em>BRO-ID</em> van de <em>grondwatermonitoringput</em> wordt opgenomen plus het volgnummer van de specifieke buis in de put.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Relaties met andere entiteiten</th>
+                  <td>
+                     <a class="link" href="#global_class_Model_Grondwaterstandonderzoek">Grondwaterstandonderzoek</a>
+                     
+                     gemeten in 1 GMW-monitoringbuis<br></td>
+               </tr>
+            </tbody>
+         </table><a class="anchor" name="detail_attribute_Model_GMWMonitoringbuis_bROID"></a><section id="detail_attribute_Model_GMWMonitoringbuis_bROID" level="5">
+            <h5 id="x5-3-3-1-bro-id"><span class="secno">5.3.3.1 </span> BRO-ID</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>GMW-monitoringbuis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De identificatie van de <em>grondwatermonitoringput</em> in de basisregistratie ondergrond.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>Registratieobjectcode</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Code</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Opbouw</th>
+                     <td>GMWNNNNNNNNNNNN</td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_GMWMonitoringbuis_buisnummer"></a><section id="detail_attribute_Model_GMWMonitoringbuis_buisnummer" level="5">
+            <h5 id="x5-3-3-2-buisnummer"><span class="secno">5.3.3.2 </span> buisnummer</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>GMW-monitoringbuis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het identificerende nummer van de monitoringbuis in de grondwatermonitoringput in
+                           de basisregistratie ondergrond.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>Nummer </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section>
+      </section><a class="anchor" name="graph_EAID_0D009A59_1E9A_4fc2_867A_9006A9464AA7"></a><a class="anchor" name="detail_class_Model_Registratiegeschiedenis"></a><section id="detail_class_Model_Registratiegeschiedenis" level="4">
+         <h4 id="x5-3-4-registratiegeschiedenis"><span class="secno">5.3.4 </span> Registratiegeschiedenis</h4>
+         <table>
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Entiteit</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De gegevens die de geschiedenis van het object in de registratie ondergrond markeren.</p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <th>Toelichting</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De gegevens staan niet in een brondocument maar worden automatisch door de basisregistratie
+                        ondergrond gegenereerd.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </tbody>
+         </table><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_tijdstipRegistratieObject"></a><section id="detail_attribute_Model_Registratiegeschiedenis_tijdstipRegistratieObject" level="5">
+            <h5 id="x5-3-4-1-tijdstip-registratie-object"><span class="secno">5.3.4.1 </span> tijdstip registratie object</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop voor het eerst gegevens van het object in de registratie
+                           ondergrond zijn opgenomen.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>DatumTijd</td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_registratiestatus"></a><section id="detail_attribute_Model_Registratiegeschiedenis_registratiestatus" level="5">
+            <h5 id="x5-3-4-2-registratiestatus"><span class="secno">5.3.4.2 </span> registratiestatus</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De actuele fase van registratie waarin het object zich bevindt.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>Registratiestatus</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Waardelijst uitbreidbaar</td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_tijdstipLaatsteAanvulling"></a><section id="detail_attribute_Model_Registratiegeschiedenis_tijdstipLaatsteAanvulling" level="5">
+            <h5 id="x5-3-4-3-tijdstip-laatste-aanvulling"><span class="secno">5.3.4.3 </span> tijdstip laatste aanvulling</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de laatste aanvulling op de gegevens in de registratie
+                           ondergrond is doorgevoerd.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>DatumTijd</td>
+                  </tr>
+                  <tr>
+                     <th>Toelichting</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is alleen aanwezig wanneer na de initiële registratie van het object in
+                           de registratie ondergrond er aanvullende gegevens zijn vastgelegd.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_tijdstipVoltooiingRegistratie"></a><section id="detail_attribute_Model_Registratiegeschiedenis_tijdstipVoltooiingRegistratie" level="5">
+            <h5 id="x5-3-4-4-tijdstip-voltooiing-registratie"><span class="secno">5.3.4.4 </span> tijdstip voltooiing registratie</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop alle gegevens van het object in de registratie ondergrond
+                           zijn opgenomen.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>DatumTijd</td>
+                  </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is alleen aanwezig wanneer de <em>registratiestatus</em>de waarde <em>voltooid</em> heeft. In andere gevallen ontbreekt het gegeven.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Toelichting</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is alleen aanwezig als alle aan te leveren gegevens zijn geregistreerd.
+                           Na dit tijdstip kunnen geen nieuwe gegevens meer ter registratie worden aangeboden.
+                           Wel kunnen fouten in de registratie worden verbeterd.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_gecorrigeerd"></a><section id="detail_attribute_Model_Registratiegeschiedenis_gecorrigeerd" level="5">
+            <h5 id="x5-3-4-5-gecorrigeerd"><span class="secno">5.3.4.5 </span> gecorrigeerd</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of er een verbetering in de gegevens van het object in
+                           de registratie ondergrond heeft plaatsgevonden.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>IndicatieJaNee</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Waardelijst niet uitbreidbaar</td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_tijdstipLaatsteCorrectie"></a><section id="detail_attribute_Model_Registratiegeschiedenis_tijdstipLaatsteCorrectie" level="5">
+            <h5 id="x5-3-4-6-tijdstip-laatste-correctie"><span class="secno">5.3.4.6 </span> tijdstip laatste correctie</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de laatste verbetering in de gegevens van het object
+                           is doorgevoerd.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>DatumTijd</td>
+                  </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is aanwezig wanneer de waarde van het attribuut <em>gecorrigeerd</em> gelijk is aan <em>ja</em>.
+                           In andere gevallen ontbreekt het gegeven.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_inOnderzoek"></a><section id="detail_attribute_Model_Registratiegeschiedenis_inOnderzoek" level="5">
+            <h5 id="x5-3-4-7-in-onderzoek"><span class="secno">5.3.4.7 </span> in onderzoek</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of het object door de registerbeheerder in onderzoek is
+                           genomen.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>IndicatieJaNee</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Waardelijst niet uitbreidbaar</td>
+                  </tr>
+                  <tr>
+                     <th>Toelichting</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Wanneer een object in onderzoek is genomen betekent dit dat er bij de registerbeheerder
+                           gerede twijfel bestaat over de juistheid van de geregistreerde gegevens en dat er
+                           een onderzoek is gestart om vast te stellen wat de juiste gegevens zijn. Normaliter
+                           gaat hieraan een melding van derden vooraf.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_inOnderzoekSinds"></a><section id="detail_attribute_Model_Registratiegeschiedenis_inOnderzoekSinds" level="5">
+            <h5 id="x5-3-4-8-in-onderzoek-sinds"><span class="secno">5.3.4.8 </span> in onderzoek sinds</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop de registerbeheerder het object in onderzoek heeft
+                           genomen.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>DatumTijd</td>
+                  </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is aanwezig wanneer de waarde van het attribuut <em>in onderzoek</em> gelijk is aan <em>ja</em>.
+                           In andere gevallen ontbreekt het gegeven.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_uitRegistratieGenomen"></a><section id="detail_attribute_Model_Registratiegeschiedenis_uitRegistratieGenomen" level="5">
+            <h5 id="x5-3-4-9-uit-registratie-genomen"><span class="secno">5.3.4.9 </span> uit registratie genomen</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of de gegevens van het object door de registerbeheerder
+                           uit registratie zijn genomen.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>IndicatieJaNee</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Waardelijst niet uitbreidbaar</td>
+                  </tr>
+                  <tr>
+                     <th>Toelichting</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Wanneer de registerbeheerder een object uit registratie heeft genomen, zijn de gegevens
+                           niet langer beschikbaar voor andere afnemers dan bronhouder en dataleverancier. De
+                           registerbeheerder zal een object alleen bij hoge uitzondering uit registratie nemen
+                           en alleen na akkoord van de bronhouder. Aan de beslissing gaat een proces van zorgvuldige
+                           afweging vooraf en dat komt tot uitdrukking in de regel dat een object slechts een
+                           keer uit registratie kan worden genomen.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_tijdstipUitRegistratieGenomen"></a><section id="detail_attribute_Model_Registratiegeschiedenis_tijdstipUitRegistratieGenomen" level="5">
+            <h5 id="x5-3-4-10-tijdstip-uit-registratie-genomen"><span class="secno">5.3.4.10 </span> tijdstip uit registratie genomen</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop het object uit registratie is genomen.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>DatumTijd</td>
+                  </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is aanwezig wanneer de waarde van het attribuut <em>uit registratie genomen</em> gelijk is aan <em>ja</em>.
+                           In andere gevallen ontbreekt het gegeven.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_weerInRegistratieGenomen"></a><section id="detail_attribute_Model_Registratiegeschiedenis_weerInRegistratieGenomen" level="5">
+            <h5 id="x5-3-4-11-weer-in-registratie-genomen"><span class="secno">5.3.4.11 </span> weer in registratie genomen</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De aanduiding die aangeeft of het object in de registratie ondergrond is opgenomen,
+                           nadat het eerder uit registratie was genomen.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>IndicatieJaNee</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Waardelijst niet uitbreidbaar</td>
+                  </tr>
+                  <tr>
+                     <th>Toelichting</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De registerbeheerder kan een object eenmalig uit registratie nemen, en die actie kan
+                           hij eenmalig ongedaan maken. Ook hiervoor geldt dat akkoord van de bronhouder vereist
+                           is.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Registratiegeschiedenis_tijdstipWeerInRegistratieGenomen"></a><section id="detail_attribute_Model_Registratiegeschiedenis_tijdstipWeerInRegistratieGenomen" level="5">
+            <h5 id="x5-3-4-12-tijdstip-weer-in-registratie-genomen"><span class="secno">5.3.4.12 </span> tijdstip weer in registratie genomen</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Registratiegeschiedenis</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum en het tijdstip waarop het object in de registratie ondergrond is opgenomen,
+                           nadat het uit registratie was genomen.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>DatumTijd</td>
+                  </tr>
+                  <tr>
+                     <th>Regels</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het gegeven is aanwezig wanneer de waarde van het attribuut <em>weer in registratie genomen</em> gelijk is aan <em>ja</em>.
+                           In andere gevallen ontbreekt het gegeven.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section>
+      </section><a class="anchor" name="graph_EAID_5FC959F0_5ED2_47e7_8C6C_68C408128425"></a><a class="anchor" name="detail_class_Model_Tijdmeetwaarde"></a><section id="detail_class_Model_Tijdmeetwaarde" level="4">
+         <h4 id="x5-3-5-tijdmeetwaarde"><span class="secno">5.3.5 </span> Tijdmeetwaarde</h4>
+         <table>
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Entiteit</td>
+               </tr>
+               <tr>
+                  <th>Definitie</th>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De reeks van waterstanden, gemeten in een monitoringbuis van een grondwatermonitoringput.
+                        Iedere waterstand representeert de grondwaterstand en/of stijghoogte in de ondergrond
+                        ter plekke van het filter van deze monitoringbuis.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </tbody>
+         </table><a class="anchor" name="detail_attribute_Model_Tijdmeetwaarde_tijdstip"></a><section id="detail_attribute_Model_Tijdmeetwaarde_tijdstip" level="5">
+            <h5 id="x5-3-5-1-tijdstip"><span class="secno">5.3.5.1 </span> tijdstip</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Tijdmeetwaarde</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het tijdstip waarop de grondwaterstand of stijghoogte is gemeten</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>DatumTijd</td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_Tijdmeetwaarde_waterstand"></a><section id="detail_attribute_Model_Tijdmeetwaarde_waterstand" level="5">
+            <h5 id="x5-3-5-2-waterstand"><span class="secno">5.3.5.2 </span> waterstand</h5>
+            
+            <table>
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut</td>
+                  </tr>
+                  <tr>
+                     <th>Attribuut van</th>
+                     <td>Tijdmeetwaarde</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De grondwaterstand of stijghoogte, in meter, ten opzichte van NAP (-5.12 is 5 meter
+                           en 12 centimeter onder NAP).
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>Meetwaarde</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Getal</td>
+                  </tr>
+                  <tr>
+                     <th>Materiële geschiedenis</th>
+                     <td>Nee</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section>
+      </section>
+   </section>
+   <section id="waardelijsten-uitbreidbaar" level="3">
+      <h3 id="x5-4-waardelijsten-uitbreidbaar"><span class="secno">5.4 </span>Waardelijsten uitbreidbaar </h3><a class="anchor" name="graph_EAID_740CAB3C_79DD_4730_9E98_E6FA02EB5243"></a><a class="anchor" name="detail_class_Model_Registratiestatus"></a><section id="detail_class_Model_Registratiestatus" level="4">
+         <h4 id="x5-4-1-registratiestatus"><span class="secno">5.4.1 </span> Registratiestatus</h4>
+         
+         <table>
+            <colgroup width="50%"></colgroup>
+            <colgroup width="50%"></colgroup>
+            <tbody>
+               <tr>
+                  <td>Definitie</td>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Keuzelijst met de actuele fase van registratie waarin het object zich bevindt. De
+                        lijst met waarden is een uitbreidbare opsomming van waarden.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         
+         <table>
+            <colgroup width="25%"></colgroup>
+            <colgroup width="25%"></colgroup>
+            <colgroup width="25%"></colgroup>
+            <colgroup width="25%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Naam</th>
+                  <th>IMBRO</th>
+                  <th>IMBRO/A</th>
+                  <th>Definitie</th>
+               </tr>
+               <tr>
+                  <td>geregistreerd</td>
+                  <td>✔</td>
+                  <td>✔</td>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het registeren van de gegevens van het object is gestart. De gegevens uit het eerste
+                        brondocument zijn in de registratie ondergrond vastgelegd. Er zijn daarna geen nieuwe
+                        gegevens geregistreerd.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <td>aangevuld</td>
+                  <td>✔</td>
+                  <td>✔</td>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het registeren van de gegevens van het object heeft na de start van de registratie
+                        een vervolg gekregen. De gegevens in de registratie ondergrond zijn minimaal een keer
+                        aangevuld met nieuwe gegevens.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <td>voltooid</td>
+                  <td>✔</td>
+                  <td>✔</td>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het registeren van de gegevens van het object is voltooid. Alle gegevens zijn in de
+                        registratie ondergrond vastgelegd en er kunnen geen nieuwe gegevens meer worden geregistreerd.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         
+      </section>
+   </section>
+</section>
+  <!-- hoofdstuk 6 
+  <section id="lists" data-include="data/GAR-lists.html" class="normative"></section>-->
+
+
+<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Naar begin">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
