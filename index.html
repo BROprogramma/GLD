@@ -21,8 +21,14 @@
   <!-- hoofdstuk 1 -->
   <section id='inleiding'>
     <h2>Inleiding</h2>
-    <section id='doel-en-doelgroep' class='generic' data-include='https://docs.geostandaarden.nl/bro/gen/doel-en-doelgroep.html'></section>
-    <section id='samenhang-met-andere-documentatie' class='generic' data-include='https://docs.geostandaarden.nl/bro/gen/samenhang-met-andere-documentatie.html'></section>
+<section id='inleiding'>
+    <h2>Inleiding</h2>
+    <section id='doel-en-doelgroep' class='generic' data-include='https://docs.geostandaarden.nl/bro/gen/doel-en-doelgroep.html'>
+    </section>
+    <section id='totstandkoming' class='generic' data-include='https://docs.geostandaarden.nl/bro/gen/totstandkoming.html'>
+    </section>
+    <section id='beheer' class='generic' data-include='https://docs.geostandaarden.nl/bro/gen/beheer.html'>
+    </section>
     <div id="inleiding-specifiek">
       <p>Deze documenten hangen samen zoals hieronder afgebeeld.</p>
       <p>TODO afbeelding opnemen</p>
@@ -33,11 +39,13 @@
       <p>Naast deze documenten is er een document dat het systeem van de BRO als geheel beschrijft met als titel <em>BRO-architectuur</em>. In dat document wordt het ontwerp en de algemene werking van de BRO beschreven. Het document BRO-architectuur is alleen nog in een eerste en prille versie beschikbaar.</p>
     </div>
     <section id="leeswijzer">
-      <h3>Leeswijzer</h3>
-      <p>De volgende hoofdstukken van dit document geven respectievelijk een algemene inleiding in kenmerken en begrippen uit de basisregistratie ondergrond, een inleiding in het begrip grondwater, een uitleg over de catalogus en tenslotte de catalogus zelf. </p>
-      <p>In de tekst zijn termen <em>cursief</em> weergegeven als het termen zijn die in hoofdstuk <a href="#cat"></a>, de gegevensdefinitie, zijn gedefinieerd. </p>
+    <section id="leeswijzer">
+    <h3>Leeswijzer</h3>
+	    <p><a href ="#inleiding">Hoofdstuk 1</a> geeft het doel en de doelgroep van een catalogus.</p>
+	    <p><a href ="#algemene-kenmerken-en-begrippen">Hoofdstuk 2</a> behandelt enkele algemene aspecten van het BRO-systeem en begrippen van algemene aard.</p>
+	    <p><a href ="#grondwaterstandonderzoek">Hoofdstuk 3</a> plaatst het object in de gegevenssystematiek van de basisregistratie ondergrond en vertelt wat de benadering is geweest bij het opstellen van de <a href="#cat">gegevensdefinitie</a>.</p>
+	    <p><a href ="#intro-gegevensdefinitie">Hoofdstuk 4</a> vertelt hoe de catalogus is opgebouwd en welke aspecten van de gegevens daarin worden beschreven.</p>
     </section>
-  </section>
   <!-- hoofdstuk 2 -->
   <section id='algemene-kenmerken-en-begrippen' data-include='https://docs.geostandaarden.nl/bro/gen/algemene-kenmerken-en-begrippen.html' class='generic'>
   </section>
@@ -145,23 +153,25 @@
   </section>
   <!-- hoofdstuk 4 -->
   <section id="intro-catalogus">
-    <h2>Introductie van de catalogus</h2>
-    <section id="intro-cat-inleiding" data-include="https://docs.geostandaarden.nl/bro/gen/intro-cat-inleiding.html" class="generic"></section>
-    <section data-include="https://docs.geostandaarden.nl/bro/gen/domeinmodel-gen.html" class="generic"></section>
-    <section id="type-domeinen">
-      <h3>Type domeinen in de gegevensdefinitie</h3>
+<section id="intro-gegevensdefinitie">
+     <h2>Introductie van de gegevensdefinitie</h2>
+     <section id="intro-cat-inleiding" data-include="https://docs.geostandaarden.nl/bro/gen/intro-cat-inleiding.html" class="generic"></section>
+     <section id="type-formaten">
+      <h3>Domeinen</h3>
       <!-- hier alleen de domeinuitleg includeren voor domeinen die in het registratieobject gebruikt worden -->
-      <p>Een domein beschrijft welke waarden een attribuut mag hebben. Domeinen zijn van een bepaald type en de typen die in de registratie ondergrond worden gebruikt worden hieronder toegelicht.</p>
+      <p>Een domein beschrijft welke waarden een attribuut mag hebben. Domeinen zijn van een bepaald type en de typen die in de catalogus worden gebruikt worden hieronder toegelicht. Sommige domeinen zijn samengesteld en die worden als laatste besproken.</p>
+      <section id="aantal" data-include="https://docs.geostandaarden.nl/bro/gen/aantal.html" class="generic"></section>
+      <section id="code" data-include="https://docs.geostandaarden.nl/bro/gen/code.html" class="generic"></section>
+      <section id="datumtijd" data-include="https://docs.geostandaarden.nl/bro/gen/datumtijd.html" class="generic"></section>
+      <section id="meetwaarde" data-include="https://docs.geostandaarden.nl/bro/gen/meetwaarde.html" class="generic"></section>
+      <section id="tekst" data-include="https://docs.geostandaarden.nl/bro/gen/tekst.html" class="generic"></section>
       <section id="enumeratie" data-include="https://docs.geostandaarden.nl/bro/gen/enumeratie.html" class="generic"></section>
       <section id="codelijst" data-include="https://docs.geostandaarden.nl/bro/gen/codelijst.html" class="generic"></section>
-      <section id="tekst" data-include="https://docs.geostandaarden.nl/bro/gen/tekst.html" class="generic"></section>
-      <section id="code" data-include="https://docs.geostandaarden.nl/bro/gen/code.html" class="generic"></section>
-      <section id="meetwaarde" data-include="https://docs.geostandaarden.nl/bro/gen/meetwaarde.html" class="generic"></section>
-      <section id="datumtijd" data-include="https://docs.geostandaarden.nl/bro/gen/datumtijd.html" class="generic"></section>
-      <section id="organisatie" data-include="https://docs.geostandaarden.nl/bro/gen/organisatie.html" class="generic"></section>
+      <section id="organisatie" data-include="https://docs.geostandaarden.nl/bro/gen/organisatie.html" class="generic"></section>    
     </section>
+    <section data-include="https://docs.geostandaarden.nl/bro/gen/domeinmodel-gen.html" class="generic"></section>
     <section id="verplichte-gegevens-waarden" data-include="https://docs.geostandaarden.nl/bro/gen/verplichte-gegevens-waarden.html" class="generic"></section>
-  </section>
+</section>
   <!-- hoofdstuk 5 en 6 -->
   <div data-include="data/GLD-cat.html" data-include-replace="true"></div>
   <!-- hoofdstuk 6 
