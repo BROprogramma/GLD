@@ -1,16 +1,17 @@
 <section id="cat" class="normative" level="1">
    <h2>Gegevensdefinitie</h2>
    <p><b>Deze tekst is normatief.</b>
-      <!--Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191004-164515 imvertor 1.55.1--></p>
+      <!--Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191007-115900 imvertor 1.55.2--></p>
    <section id="" level="3">
       <h3>Het domeinmodel   </h3>
       <div class="imageinfo overview"><img src="data/Images/EAID_08E27657_5603_4b75_BB8B_47B282A97D63.png" usemap="#imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63"><map name="imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63">
+            <area shape="rect" coords="419,550,681,448" alt="" href="#graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE">
             <area shape="rect" coords="840,299,1009,219" alt="" href="#graph_EAID_68FD3B87_BA7B_485e_A5DC_4804CB98C818">
             <area shape="rect" coords="848,552,1005,463" alt="" href="#graph_EAID_5FC959F0_5ED2_47e7_8C6C_68C408128425">
             <area shape="rect" coords="25,417,301,198" alt="" href="#graph_EAID_0D009A59_1E9A_4fc2_867A_9006A9464AA7">
             <area shape="rect" coords="841,401,1010,312" alt="" href="#graph_EAID_3337CDCE_0A5D_4aee_AEB0_14AF7652B102">
             <area shape="rect" coords="419,367,681,248" alt="" href="#graph_EAID_5876720F_795D_40b5_82B8_BC782B71FA3A">
-            <area shape="rect" coords="437,163,656,35" alt="" href="#graph_EAID_04FC4CF0_BE4E_421a_A62C_E3F00BED26A0"></map><p><b>Domeinmodel - overzicht</b></p>
+            <area shape="rect" coords="437,163,656,35" alt="" href="#graph_EAID_04FC4CF0_BE4E_421a_A62C_E3F00BED26A0"></map><p><b>Domeinmodel</b></p>
       </div>
    </section><a class="anchor" name="graph_EAID_04FC4CF0_BE4E_421a_A62C_E3F00BED26A0"></a><a class="anchor" name="global_class_Model_Registratieobject"></a><section id="global_class_Model_Registratieobject" level="3">
       <h3>   Registratieobject</h3>
@@ -66,9 +67,7 @@
                </tr>
                <tr>
                   <th>Relaties met andere entiteiten</th>
-                  <td>Grondwaterstandonderzoek is specialisatie van 
-                     <a class="link" href="#global_class_Model_Registratieobject">Registratieobject</a>
-                     <br>Grondwaterstandonderzoek 
+                  <td>Grondwaterstandonderzoek 
                      gemeten ten behoeve van 1 of meer 
                      <a class="link" href="#global_class_Model_Grondwatermonitoringnet">Grondwatermonitoringnet</a>
                      <br>Grondwaterstandonderzoek 
@@ -76,10 +75,12 @@
                      <a class="link" href="#global_class_Model_GMWMonitoringbuis">GMW-monitoringbuis</a>
                      <br>Grondwaterstandonderzoek 
                      meting 0, 1 of meer 
-                     MeasurementTimeseriesTVPObservation
+                     <a class="link" href="#global_class_Model_MeetwaardeTijdReeksMeting">MeetwaardeTijdReeksMeting</a>
                      <br>Grondwaterstandonderzoek 
                      registratiegeschiedenis 1 
                      <a class="link" href="#global_class_Model_Registratiegeschiedenis">Registratiegeschiedenis</a>
+                     <br>Grondwaterstandonderzoek is specialisatie van 
+                     <a class="link" href="#global_class_Model_Registratieobject">Registratieobject</a>
                      <br></td>
                </tr>
             </tbody>
@@ -127,10 +128,6 @@
                         
                      </td>
                   </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
-                  </tr>
                </tbody>
             </table>
             
@@ -160,7 +157,7 @@
                   </tr>
                   <tr>
                      <th>Kardinaliteit</th>
-                     <td>0-1</td>
+                     <td>0 .. 1</td>
                   </tr>
                   <tr>
                      <th>Domein</th>
@@ -180,10 +177,6 @@
                         </p>
                         
                      </td>
-                  </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
                   </tr>
                </tbody>
             </table>
@@ -262,10 +255,6 @@
                      <th>&nbsp;&nbsp;Naam</th>
                      <td>DatumTijd</td>
                   </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
-                  </tr>
                </tbody>
             </table>
             
@@ -308,10 +297,6 @@
                      <th>&nbsp;&nbsp;Type</th>
                      <td>Waardelijst uitbreidbaar</td>
                   </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
-                  </tr>
                </tbody>
             </table>
             
@@ -342,7 +327,7 @@
                   </tr>
                   <tr>
                      <th>Kardinaliteit</th>
-                     <td>0-1</td>
+                     <td>0 .. 1</td>
                   </tr>
                   <tr>
                      <th>Domein</th>
@@ -361,10 +346,6 @@
                         </p>
                         
                      </td>
-                  </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
                   </tr>
                </tbody>
             </table>
@@ -396,7 +377,7 @@
                   </tr>
                   <tr>
                      <th>Kardinaliteit</th>
-                     <td>0-1</td>
+                     <td>0 .. 1</td>
                   </tr>
                   <tr>
                      <th>Domein</th>
@@ -425,10 +406,6 @@
                         </p>
                         
                      </td>
-                  </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
                   </tr>
                </tbody>
             </table>
@@ -474,10 +451,6 @@
                      <th>&nbsp;&nbsp;Type</th>
                      <td>Waardelijst niet uitbreidbaar</td>
                   </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
-                  </tr>
                </tbody>
             </table>
             
@@ -508,7 +481,7 @@
                   </tr>
                   <tr>
                      <th>Kardinaliteit</th>
-                     <td>0-1</td>
+                     <td>0 .. 1</td>
                   </tr>
                   <tr>
                      <th>Domein</th>
@@ -527,10 +500,6 @@
                         </p>
                         
                      </td>
-                  </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
                   </tr>
                </tbody>
             </table>
@@ -588,10 +557,6 @@
                         
                      </td>
                   </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
-                  </tr>
                </tbody>
             </table>
             
@@ -622,7 +587,7 @@
                   </tr>
                   <tr>
                      <th>Kardinaliteit</th>
-                     <td>0-1</td>
+                     <td>0 .. 1</td>
                   </tr>
                   <tr>
                      <th>Domein</th>
@@ -641,10 +606,6 @@
                         </p>
                         
                      </td>
-                  </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
                   </tr>
                </tbody>
             </table>
@@ -704,10 +665,6 @@
                         
                      </td>
                   </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
-                  </tr>
                </tbody>
             </table>
             
@@ -736,7 +693,7 @@
                   </tr>
                   <tr>
                      <th>Kardinaliteit</th>
-                     <td>0-1</td>
+                     <td>0 .. 1</td>
                   </tr>
                   <tr>
                      <th>Domein</th>
@@ -755,10 +712,6 @@
                         </p>
                         
                      </td>
-                  </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
                   </tr>
                </tbody>
             </table>
@@ -815,10 +768,6 @@
                         
                      </td>
                   </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
-                  </tr>
                </tbody>
             </table>
             
@@ -849,7 +798,7 @@
                   </tr>
                   <tr>
                      <th>Kardinaliteit</th>
-                     <td>0-1</td>
+                     <td>0 .. 1</td>
                   </tr>
                   <tr>
                      <th>Domein</th>
@@ -868,10 +817,6 @@
                         </p>
                         
                      </td>
-                  </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
                   </tr>
                </tbody>
             </table>
@@ -957,10 +902,6 @@
                      <th>&nbsp;&nbsp;Opbouw</th>
                      <td>GMNNNNNNNNNNNNN</td>
                   </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
-                  </tr>
                </tbody>
             </table>
             
@@ -1022,10 +963,6 @@
                      <th>&nbsp;&nbsp;Naam</th>
                      <td>DatumTijd</td>
                   </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
-                  </tr>
                </tbody>
             </table>
             
@@ -1073,10 +1010,6 @@
                   <tr>
                      <th>&nbsp;&nbsp;Eenheid</th>
                      <td>m (meter)</td>
-                  </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
                   </tr>
                </tbody>
             </table>
@@ -1163,10 +1096,6 @@
                      <th>&nbsp;&nbsp;Opbouw</th>
                      <td>GMWNNNNNNNNNNNN</td>
                   </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
-                  </tr>
                </tbody>
             </table>
             
@@ -1207,9 +1136,190 @@
                      <th>&nbsp;&nbsp;Naam</th>
                      <td>Nummer 3</td>
                   </tr>
+               </tbody>
+            </table>
+            
+         </section>
+      </section><a class="anchor" name="graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE"></a><a class="anchor" name="global_class_Model_MeetwaardeTijdReeksMeting"></a><section id="global_class_Model_MeetwaardeTijdReeksMeting" level="4">
+         <h4>   MeetwaardeTijdReeksMeting</h4>
+         <table width="100%">
+            <colgroup width="30%"></colgroup>
+            <colgroup width="70%"></colgroup>
+            <tbody>
+               <tr>
+                  <th>Type gegeven</th>
+                  <td>Entiteit</td>
+               </tr>
+               <tr>
+                  <th>Relaties met andere entiteiten</th>
+                  <td>MeetwaardeTijdReeksMeting 
+                     relatedObservation 0, 1 of meer 
+                     <a class="link" href="#global_class_Model_MeetwaardeTijdReeksMeting">MeetwaardeTijdReeksMeting</a>
+                     <br>
+                     <a class="link" href="#global_class_Model_Grondwaterstandonderzoek">Grondwaterstandonderzoek</a>
+                     
+                     meting 0, 1 of meer MeetwaardeTijdReeksMeting<br></td>
+               </tr>
+            </tbody>
+         </table><a class="anchor" name="detail_attribute_Model_MeetwaardeTijdReeksMeting_type"></a><section id="detail_attribute_Model_MeetwaardeTijdReeksMeting_type" level="5">
+            <h5>  type</h5>
+            
+            <table width="100%">
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
                   <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Nee</td>
+                     <th>Type gegeven</th>
+                     <td>Attribuut van MeetwaardeTijdReeksMeting</td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td>0 .. 1</td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>CHARACTERSTRING</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Waardelijst uitbreidbaar</td>
+                  </tr>
+                  <tr>
+                     <th>Toelichting</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Eigenlijk is het type gml;Reference, maar dat zit niet in het BRO-GML-profiel. Oplossing
+                           ontstaat vanzelf als we een BRO-profiel opstellen voor WaterML, want dan is dit attribuut
+                           niet meer expliciet gemodelleerd.
+                        </p>
+                        
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_MeetwaardeTijdReeksMeting_phenomenonTime"></a><section id="detail_attribute_Model_MeetwaardeTijdReeksMeting_phenomenonTime" level="5">
+            <h5>  phenomenonTime</h5>
+            
+            <table width="100%">
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut van MeetwaardeTijdReeksMeting</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">The attribute <em>phenomenonTime:TM_Object</em> shall describe the time that the result (6.2.2.9) applies to the property of the
+                           feature-of-interest (6.2.2.7). This is often the time of interaction by a sampling
+                           procedure (8.2) or observation procedure (6.2.2.10) with a real-world feature. 
+                        </p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">NOTE 1 The phenomenon time is the temporal parameter normally used in geospatial analysis
+                           of the result. 
+                        </p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">NOTE 2 If the observedProperty of an observation is ‘occurrence time’ then the result
+                           should be the same as the phenomenonTime
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>TM_Period</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Waardelijst uitbreidbaar</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </section><a class="anchor" name="detail_attribute_Model_MeetwaardeTijdReeksMeting_resultTime"></a><section id="detail_attribute_Model_MeetwaardeTijdReeksMeting_resultTime" level="5">
+            <h5>  resultTime</h5>
+            
+            <table width="100%">
+               <colgroup width="30%"></colgroup>
+               <colgroup width="70%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Type gegeven</th>
+                     <td>Attribuut van MeetwaardeTijdReeksMeting</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">The attribute <em>resultTime:TM_Instant</em> shall describe the time when the result became available, typically when the procedure
+                           (6.2.2.10) associated with the observation was completed For some observations this
+                           is identical to the phenomenonTime. However, there are important cases where they
+                           differ. 
+                        </p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">EXAMPLE 1 Where a measurement is made on a specimen in a laboratory, the phenomenonTime
+                           is the time the specimen was retrieved from its host, while the resultTime is the
+                           time the laboratory procedure was applied. 
+                        </p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">EXAMPLE 2 The resultTime also supports disambiguation of repeat measurements made
+                           of the same property of a feature using the same procedure. 
+                        </p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">EXAMPLE 3 Where sensor observation results are post-processed, the resultTime is the
+                           post-processing time, while the phenomenonTime is the time of initial interaction
+                           with the world. 
+                        </p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">EXAMPLE 4 Simulations may be used to estimate the values for phenomena in the future
+                           or past. The phenomenonTime is the time that the result applies to, while the resultTime
+                           is the time that the simulation was executed. 
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Juridische status</th>
+                     <td>Authentiek</td>
+                  </tr>
+                  <tr>
+                     <th>Kardinaliteit</th>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <th>Domein</th>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam</th>
+                     <td>TM_Instant</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Type</th>
+                     <td>Waardelijst uitbreidbaar</td>
                   </tr>
                </tbody>
             </table>
@@ -1218,12 +1328,11 @@
       </section>
    </section>
    <section id="" level="3">
-      <h3>Beschrijving van uitbreidbare waardelijsten   </h3><a class="anchor" name="graph_EAID_C1938740_1AAD_4428_B8DA_39982D330092"></a><a class="anchor" name="detail_class_Model_Beoordelingsprocedure"></a><section id="detail_class_Model_Beoordelingsprocedure" level="4">
+      <h3>Uitbreidbare waardelijsten   </h3><a class="anchor" name="graph_EAID_C1938740_1AAD_4428_B8DA_39982D330092"></a><a class="anchor" name="detail_class_Model_Beoordelingsprocedure"></a><section id="detail_class_Model_Beoordelingsprocedure" level="4">
          <h4>  Beoordelingsprocedure</h4>
          
-         <table width="100%">
-            <colgroup width="50%"></colgroup>
-            <colgroup width="50%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
             <tbody>
                <tr>
                   <td>Definitie</td>
@@ -1238,11 +1347,10 @@
             </tbody>
          </table>
          
-         <table width="100%">
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
+            <colgroup width="5%"></colgroup>
+            <colgroup width="5%"></colgroup>
             <tbody>
                <tr>
                   <th>Waarde</th>
@@ -1258,20 +1366,6 @@
                      
                      <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De beoordeling is gedaan volgens het QC-protocol van de gezamenlijke provincies (versie
                         2.0).
-                     </p>
-                     
-                  </td>
-               </tr>
-               <tr>
-                  <td>handboekProvinciesRIVM2017</td>
-                  <td>✔</td>
-                  <td>✔</td>
-                  <td>
-                     
-                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het Handboek Platform Meetnetbeheerders Monitoring Bodem- en Grondwaterkwaliteit.
-                        Deel 1 - Handboek Monitoring Grondwaterkwaliteit KRW provincies en RIVM, vastgesteld
-                        door Platform Meetnetbeheerders 06/04/2017. Bijlage 3: validatieprotocol versie 0.3
-                        d.d. 23-06-2016 bevat de beoordelingsprocedure.
                      </p>
                      
                   </td>
@@ -1302,9 +1396,8 @@
       </section><a class="anchor" name="graph_EAID_CA611E25_48FA_47dc_9BE7_7927499562B2"></a><a class="anchor" name="detail_class_Model_Meetprocedure"></a><section id="detail_class_Model_Meetprocedure" level="4">
          <h4>  Meetprocedure</h4>
          
-         <table width="100%">
-            <colgroup width="50%"></colgroup>
-            <colgroup width="50%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
             <tbody>
                <tr>
                   <td>Definitie</td>
@@ -1313,11 +1406,10 @@
             </tbody>
          </table>
          
-         <table width="100%">
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
+            <colgroup width="5%"></colgroup>
+            <colgroup width="5%"></colgroup>
             <tbody>
                <tr>
                   <th>Waarde</th>
@@ -1335,15 +1427,28 @@
                      
                   </td>
                </tr>
+               <tr>
+                  <td>handboekProvinciesRIVM2017</td>
+                  <td>✔</td>
+                  <td>✔</td>
+                  <td>
+                     
+                     <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het Handboek Platform Meetnetbeheerders Monitoring Bodem- en Grondwaterkwaliteit.
+                        Deel 1 - Handboek Monitoring Grondwaterkwaliteit KRW provincies en RIVM, vastgesteld
+                        door Platform Meetnetbeheerders 06/04/2017. Bijlage 3: validatieprotocol versie 0.3
+                        d.d. 23-06-2016 bevat de beoordelingsprocedure.
+                     </p>
+                     
+                  </td>
+               </tr>
             </tbody>
          </table>
          
       </section><a class="anchor" name="graph_EAID_740CAB3C_79DD_4730_9E98_E6FA02EB5243"></a><a class="anchor" name="detail_class_Model_Registratiestatus"></a><section id="detail_class_Model_Registratiestatus" level="4">
          <h4>  Registratiestatus</h4>
          
-         <table width="100%">
-            <colgroup width="50%"></colgroup>
-            <colgroup width="50%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
             <tbody>
                <tr>
                   <td>Definitie</td>
@@ -1358,11 +1463,10 @@
             </tbody>
          </table>
          
-         <table width="100%">
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
+            <colgroup width="5%"></colgroup>
+            <colgroup width="5%"></colgroup>
             <tbody>
                <tr>
                   <th>Waarde</th>
@@ -1414,9 +1518,8 @@
       </section><a class="anchor" name="graph_EAID_904B7118_5289_464d_94E5_8DE8364F662B"></a><a class="anchor" name="detail_class_Model_StatusKwaliteitscontrole"></a><section id="detail_class_Model_StatusKwaliteitscontrole" level="4">
          <h4>  StatusKwaliteitscontrole</h4>
          
-         <table width="100%">
-            <colgroup width="50%"></colgroup>
-            <colgroup width="50%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
             <tbody>
                <tr>
                   <td>Definitie</td>
@@ -1431,11 +1534,10 @@
             </tbody>
          </table>
          
-         <table width="100%">
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
+            <colgroup width="5%"></colgroup>
+            <colgroup width="5%"></colgroup>
             <tbody>
                <tr>
                   <th>Waarde</th>
@@ -1498,9 +1600,8 @@
       </section><a class="anchor" name="graph_EAID_7103622C_FD3F_47c3_B8FD_D7C5DF0547B0"></a><a class="anchor" name="detail_class_Model_StatusCode"></a><section id="detail_class_Model_StatusCode" level="4">
          <h4>  StatusCode</h4>
          
-         <table width="100%">
-            <colgroup width="50%"></colgroup>
-            <colgroup width="50%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
             <tbody>
                <tr>
                   <td>Definitie</td>
@@ -1509,11 +1610,10 @@
             </tbody>
          </table>
          
-         <table width="100%">
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
+            <colgroup width="5%"></colgroup>
+            <colgroup width="5%"></colgroup>
             <tbody>
                <tr>
                   <th>Waarde</th>
@@ -1547,9 +1647,8 @@
       </section><a class="anchor" name="graph_EAID_82DDDED9_0AFA_4c80_8432_9FFEF525CD55"></a><a class="anchor" name="detail_class_Model_TypeLuchtdrukcompensatie"></a><section id="detail_class_Model_TypeLuchtdrukcompensatie" level="4">
          <h4>  TypeLuchtdrukcompensatie</h4>
          
-         <table width="100%">
-            <colgroup width="50%"></colgroup>
-            <colgroup width="50%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
             <tbody>
                <tr>
                   <td>Definitie</td>
@@ -1558,11 +1657,10 @@
             </tbody>
          </table>
          
-         <table width="100%">
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
+            <colgroup width="5%"></colgroup>
+            <colgroup width="5%"></colgroup>
             <tbody>
                <tr>
                   <th>Waarde</th>
@@ -1648,9 +1746,8 @@
       </section><a class="anchor" name="graph_EAID_3E1F9120_9A8F_4a98_8FEA_9844C823AE5A"></a><a class="anchor" name="detail_class_Model_TypeMeetinstrument"></a><section id="detail_class_Model_TypeMeetinstrument" level="4">
          <h4>  TypeMeetinstrument</h4>
          
-         <table width="100%">
-            <colgroup width="50%"></colgroup>
-            <colgroup width="50%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
             <tbody>
                <tr>
                   <td>Definitie</td>
@@ -1659,11 +1756,10 @@
             </tbody>
          </table>
          
-         <table width="100%">
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
+            <colgroup width="5%"></colgroup>
+            <colgroup width="5%"></colgroup>
             <tbody>
                <tr>
                   <th>Waarde</th>
@@ -1782,9 +1878,8 @@
       </section><a class="anchor" name="graph_EAID_8828060E_83FC_49d1_A60B_D3F7FA560565"></a><a class="anchor" name="detail_class_Model_TypeMeetreeks"></a><section id="detail_class_Model_TypeMeetreeks" level="4">
          <h4>  TypeMeetreeks</h4>
          
-         <table width="100%">
-            <colgroup width="50%"></colgroup>
-            <colgroup width="50%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
             <tbody>
                <tr>
                   <td>Definitie</td>
@@ -1793,11 +1888,10 @@
             </tbody>
          </table>
          
-         <table width="100%">
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
-            <colgroup width="25%"></colgroup>
+         <table width="100%" class="list">
+            <colgroup width="20%"></colgroup>
+            <colgroup width="5%"></colgroup>
+            <colgroup width="5%"></colgroup>
             <tbody>
                <tr>
                   <th>Waarde</th>
