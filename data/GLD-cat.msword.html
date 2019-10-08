@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191003</p>
       <p>Imvertor: 1.55.2</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191008-130733</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191008-141448</p>
       <hr>
       <section id="global_class_Model_Registratieobject" level="3">
          <h1>Artikel 1     Registratieobject</h1>
@@ -1818,6 +1818,16 @@
                         <th>&nbsp;&nbsp;Eenheid</th>
                         <td>m (meter)</td>
                      </tr>
+                     <tr>
+                        <th>Regels</th>
+                        <td>Het gegeven heeft geen waarde als het gegeven redenCensurering van de entiteit TijdMeetwaardepaar
+                           metadata aanwezig is.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th>Mogelijk geen waarde</th>
+                        <td>Ja</td>
+                     </tr>
                   </tbody>
                </table>
                
@@ -1848,7 +1858,51 @@
                         metadata 0 .. 1 TijdMeetwaardepaar metadata<br></td>
                   </tr>
                </tbody>
-            </table><a class="anchor" name="detail_attribute_Model_TijdMeetwaardepaarMetadata_interpolatieCode"></a><section id="detail_attribute_Model_TijdMeetwaardepaarMetadata_interpolatieCode" level="5">
+            </table><a class="anchor" name="detail_attribute_Model_TijdMeetwaardepaarMetadata_redenCensurering"></a><section id="detail_attribute_Model_TijdMeetwaardepaarMetadata_redenCensurering" level="5">
+               <h3>  redenCensurering</h3>
+               
+               <table width="100%">
+                  <colgroup width="30%"></colgroup>
+                  <colgroup width="70%"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Type gegeven</th>
+                        <td>Attribuut van TijdMeetwaardepaar metadata</td>
+                     </tr>
+                     <tr>
+                        <th>Definitie</th>
+                        <td>
+                           
+                           <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Used to indicate the reason the value has been censored (e.g. below a threshold).
+                              
+                           </p>
+                           
+                        </td>
+                     </tr>
+                     <tr>
+                        <th>Juridische status</th>
+                        <td>Authentiek</td>
+                     </tr>
+                     <tr>
+                        <th>Kardinaliteit</th>
+                        <td>0 .. 1</td>
+                     </tr>
+                     <tr>
+                        <th>Domein</th>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <th>&nbsp;&nbsp;Naam</th>
+                        <td><a class="link" href="#detail_class_Model_RedenCensurering">RedenCensurering</a></td>
+                     </tr>
+                     <tr>
+                        <th>&nbsp;&nbsp;Type</th>
+                        <td>Waardelijst uitbreidbaar</td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+            </section><a class="anchor" name="detail_attribute_Model_TijdMeetwaardepaarMetadata_interpolatieCode"></a><section id="detail_attribute_Model_TijdMeetwaardepaarMetadata_interpolatieCode" level="5">
                <h3>  interpolatie code</h3>
                
                <table width="100%">
@@ -2420,6 +2474,101 @@
                </tbody>
             </table>
             
+         </section><a class="anchor" name="graph_EAID_F3C368A0_6853_40e1_B51B_63D9C97545B3"></a><a class="anchor" name="detail_class_Model_RedenCensurering"></a><section id="detail_class_Model_RedenCensurering" level="4">
+            <h2>  RedenCensurering</h2>
+            
+            <table width="100%" class="list">
+               <colgroup width="20%"></colgroup>
+               <tbody>
+                  <tr>
+                     <td>Definitie</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De reden waarom de meetwaarde is gecensureerd (het gegeven waterstand is aanwezig
+                           maar heeft geen waarde).
+                        </p>
+                        
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <table width="100%" class="list">
+               <colgroup width="20%"></colgroup>
+               <colgroup width="5%"></colgroup>
+               <colgroup width="5%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Waarde</th>
+                     <th>IMBRO</th>
+                     <th>IMBRO/A</th>
+                     <th>Omschrijving</th>
+                  </tr>
+                  <tr>
+                     <td>peilbuisOvergelopen</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De meetwaarde is gecensureerd omdat de peilbuis (zonder drukdop) is overgelopen.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>peilfilterDrooggevallen</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De meetwaarde is gecensureerd omdat het peilfilter is dropggevallen.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>sensorDrooggevallen</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De meetwaarde is gecensureerd omdat de sensor is dropggevallen.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>sensorMaximumOverschreden</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De meetwaarde is gecensureerd omdat het maximaal meetbereik van de sensor is overschreden.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>sensorMinimumOnderschreden</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De meetwaarde is gecensureerd omdat het minimaal meetbereik van de sensor is onderschreden
+                           (reflectiesensor).
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>onbekend</td>
+                     <td></td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het is onbekend waarom de meetwaarde is gecensureerd.</p>
+                        
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            
          </section><a class="anchor" name="graph_EAID_740CAB3C_79DD_4730_9E98_E6FA02EB5243"></a><a class="anchor" name="detail_class_Model_Registratiestatus"></a><section id="detail_class_Model_Registratiestatus" level="4">
             <h2>  Registratiestatus</h2>
             
@@ -2573,109 +2722,6 @@
                </tbody>
             </table>
             
-         </section><a class="anchor" name="graph_EAID_82DDDED9_0AFA_4c80_8432_9FFEF525CD55"></a><a class="anchor" name="detail_class_Model_TypeLuchtdrukcompensatie"></a><section id="detail_class_Model_TypeLuchtdrukcompensatie" level="4">
-            <h2>  TypeLuchtdrukcompensatie</h2>
-            
-            <table width="100%" class="list">
-               <colgroup width="20%"></colgroup>
-               <tbody>
-                  <tr>
-                     <td>Definitie</td>
-                     <td>
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">TODO</p>
-                        
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-            
-            <table width="100%" class="list">
-               <colgroup width="20%"></colgroup>
-               <colgroup width="5%"></colgroup>
-               <colgroup width="5%"></colgroup>
-               <tbody>
-                  <tr>
-                     <th>Waarde</th>
-                     <th>IMBRO</th>
-                     <th>IMBRO/A</th>
-                     <th>Omschrijving</th>
-                  </tr>
-                  <tr>
-                     <td>luchtCapillair</td>
-                     <td>✔</td>
-                     <td>✔</td>
-                     <td>
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Fysiek, door toevoer van lucht in de sensor via een capillair.</p>
-                        
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>putlocatiemeting</td>
-                     <td>✔</td>
-                     <td>✔</td>
-                     <td>
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Rekenkundig, met behulp van een op de putlocatie aanwezige druksensor.</p>
-                        
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>monitoringnetmeting</td>
-                     <td>✔</td>
-                     <td>✔</td>
-                     <td>
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Rekenkundig, met behulp van een in het monitoringnet aanwezige druksensor.</p>
-                        
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>gecorrigeerdeMeting</td>
-                     <td>✔</td>
-                     <td>✔</td>
-                     <td>
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Rekenkundig, met behulp van een druksensor waarvan de metingen gecorrigeerd worden
-                           aan de hand van die van het KNMI.
-                        </p>
-                        
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>KNMImeting</td>
-                     <td>✔</td>
-                     <td>✔</td>
-                     <td>
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Rekenkundig, met behulp van een digitale barometer van het KNMI.</p>
-                        
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>nietVanToepassing</td>
-                     <td>✔</td>
-                     <td>✔</td>
-                     <td>
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De meting is niet gebaseerd op een drukmeting; luchtdrukcompensatie is niet van toepassing.</p>
-                        
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>onbekend</td>
-                     <td></td>
-                     <td>✔</td>
-                     <td>
-                        
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het is onbekend volgens welke methode de luchtdrukcompensatie heeft plaatsgevonden.</p>
-                        
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-            
          </section><a class="anchor" name="graph_EAID_3E1F9120_9A8F_4a98_8FEA_9844C823AE5A"></a><a class="anchor" name="detail_class_Model_TypeMeetinstrument"></a><section id="detail_class_Model_TypeMeetinstrument" level="4">
             <h2>  TypeMeetinstrument</h2>
             
@@ -2812,6 +2858,109 @@
                </tbody>
             </table>
             
+         </section><a class="anchor" name="graph_EAID_82DDDED9_0AFA_4c80_8432_9FFEF525CD55"></a><a class="anchor" name="detail_class_Model_TypeLuchtdrukcompensatie"></a><section id="detail_class_Model_TypeLuchtdrukcompensatie" level="4">
+            <h2>  TypeLuchtdrukcompensatie</h2>
+            
+            <table width="100%" class="list">
+               <colgroup width="20%"></colgroup>
+               <tbody>
+                  <tr>
+                     <td>Definitie</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">TODO</p>
+                        
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <table width="100%" class="list">
+               <colgroup width="20%"></colgroup>
+               <colgroup width="5%"></colgroup>
+               <colgroup width="5%"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Waarde</th>
+                     <th>IMBRO</th>
+                     <th>IMBRO/A</th>
+                     <th>Omschrijving</th>
+                  </tr>
+                  <tr>
+                     <td>luchtCapillair</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Fysiek, door toevoer van lucht in de sensor via een capillair.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>putlocatiemeting</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Rekenkundig, met behulp van een op de putlocatie aanwezige druksensor.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>monitoringnetmeting</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Rekenkundig, met behulp van een in het monitoringnet aanwezige druksensor.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>gecorrigeerdeMeting</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Rekenkundig, met behulp van een druksensor waarvan de metingen gecorrigeerd worden
+                           aan de hand van die van het KNMI.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>KNMImeting</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Rekenkundig, met behulp van een digitale barometer van het KNMI.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>nietVanToepassing</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De meting is niet gebaseerd op een drukmeting; luchtdrukcompensatie is niet van toepassing.</p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>onbekend</td>
+                     <td></td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het is onbekend volgens welke methode de luchtdrukcompensatie heeft plaatsgevonden.</p>
+                        
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            
          </section>
       </section>
       <section id="" level="3">
@@ -2819,7 +2968,7 @@
          <div class="imageinfo overview"><img src="Images/EAID_08E27657_5603_4b75_BB8B_47B282A97D63.png" usemap="#imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63"><map name="imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63">
                <area shape="rect" coords="25,715,301,565" alt="" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33">
                <area shape="rect" coords="786,497,1009,395" alt="" href="#graph_EAID_2931B2EB_8861_47e1_B587_ADACE12C97F7">
-               <area shape="rect" coords="786,806,1009,717" alt="" href="#graph_EAID_734CD3EC_5E0A_4b12_89F5_AF8104ECF41F">
+               <area shape="rect" coords="786,812,1009,710" alt="" href="#graph_EAID_734CD3EC_5E0A_4b12_89F5_AF8104ECF41F">
                <area shape="rect" coords="419,671,681,565" alt="" href="#graph_EAID_590167CC_D7A2_4abb_8672_8592B1DF1842">
                <area shape="rect" coords="419,519,681,374" alt="" href="#graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE">
                <area shape="rect" coords="840,245,1009,171" alt="" href="#graph_EAID_68FD3B87_BA7B_485e_A5DC_4804CB98C818">
