@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191003</p>
       <p>Imvertor: 1.55.2</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191014-153124</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191014-160357</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -899,7 +899,7 @@
                               relatedObservation 0.. * 
                               <a class="link" href="#global_class_Model_Observatie">Observatie</a>
                               <br>Observatie 
-                              metadata 0.. 1 
+                              metadata observatie 0.. 1 
                               <a class="link" href="#global_class_Model_MetadataObservatie">Metadata observatie</a>
                               <br>
                               <a class="link" href="#global_class_Model_Grondwaterstandonderzoek">Grondwaterstandonderzoek</a>
@@ -972,8 +972,9 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De periode tussen de eerste en de laatste meting. Deze periode wordt gevormd door
-                                    de datum van de eerste meting en de datum van de laatste meting van de reeks.
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De periode tussen de eerste en de laatste meting van de reeks die het resultaat is
+                                    van de observatie. Deze periode wordt gevormd door de datum van de eerste meting en
+                                    de datum van de laatste meting van de reeks.
                                  </p>
                                  
                               </td>
@@ -998,6 +999,16 @@
                               <th>&nbsp;&nbsp;Type</th>
                               <td>Waardelijst uitbreidbaar</td>
                            </tr>
+                           <tr>
+                              <th>Toelichting</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum van de eerste meting kan afgeleid wordt van de eerste meting uit de reeks
+                                    en de laatste van de laatste meting. Het gegeven staan in een brondocument.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
                         </tbody>
                      </table>
                      
@@ -1016,30 +1027,7 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">The attribute <em>resultTime:TM_Instant</em> shall describe the time when the result became available, typically when the procedure
-                                    (6.2.2.10) associated with the observation was completed For some observations this
-                                    is identical to the phenomenonTime. However, there are important cases where they
-                                    differ. 
-                                 </p>
-                                 
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">EXAMPLE 1 Where a measurement is made on a specimen in a laboratory, the phenomenonTime
-                                    is the time the specimen was retrieved from its host, while the resultTime is the
-                                    time the laboratory procedure was applied. 
-                                 </p>
-                                 
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">EXAMPLE 2 The resultTime also supports disambiguation of repeat measurements made
-                                    of the same property of a feature using the same procedure. 
-                                 </p>
-                                 
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">EXAMPLE 3 Where sensor observation results are post-processed, the resultTime is the
-                                    post-processing time, while the phenomenonTime is the time of initial interaction
-                                    with the world. 
-                                 </p>
-                                 
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">EXAMPLE 4 Simulations may be used to estimate the values for phenomena in the future
-                                    or past. The phenomenonTime is the time that the result applies to, while the resultTime
-                                    is the time that the simulation was executed. 
-                                 </p>
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het tijdstip waarop het eindresultaat van de tijd-meetwaarde reeks tot stand is gekomen.</p>
                                  
                               </td>
                            </tr>
@@ -1062,6 +1050,19 @@
                            <tr>
                               <th>&nbsp;&nbsp;Type</th>
                               <td>Waardelijst uitbreidbaar</td>
+                           </tr>
+                           <tr>
+                              <th>Toelichting</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Dit is het tijdstip waarop het laatste proces voor het berekenen van de waterstand
+                                    is afgerond. Bij controle metingen is dit het tijdstip waarop de omrekening voor het
+                                    eindresultaat van de meting is afgerond. Bij een volledig beoordeelde meetreeks is
+                                    dit het tijdstip waarop de beoordeling is afgerond. Niet bedoelt wordt het tijdstip
+                                    waarop de resultaten worden aangeboden bij het bronhouderportaal of de LV-BRO.
+                                 </p>
+                                 
+                              </td>
                            </tr>
                         </tbody>
                      </table>
@@ -1293,7 +1294,7 @@
                            <td>
                               <a class="link" href="#global_class_Model_Observatie">Observatie</a>
                               
-                              metadata 0.. 1 Metadata observatie<br></td>
+                              metadata observatie 0.. 1 Metadata observatie<br></td>
                         </tr>
                      </tbody>
                   </table><a class="anchor" name="detail_attribute_Model_MetadataObservatie_datum"></a><section id="detail_attribute_Model_MetadataObservatie_datum" level="5">
