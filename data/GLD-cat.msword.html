@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191003</p>
       <p>Imvertor: 1.55.2</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191015-112030</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191015-123157</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -502,7 +502,7 @@
                            </tr>
                            <tr>
                               <th>Kardinaliteit</th>
-                              <td>0.. 1</td>
+                              <td>1</td>
                            </tr>
                            <tr>
                               <th>Domein</th>
@@ -588,7 +588,7 @@
                            </tr>
                            <tr>
                               <th>Kardinaliteit</th>
-                              <td>1</td>
+                              <td>0.. 1</td>
                            </tr>
                            <tr>
                               <th>Domein</th>
@@ -668,9 +668,9 @@
                               <th>Toelichting</th>
                               <td>
                                  
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">In alle gevallen is er bij de bepaling van de waterstand t.o.v. NAP sprake van een
-                                    berekening daarom wordt in dit (WaterML standaard) attribuut de vaste waarde 'algoritme'
-                                    ingevuld.
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">In alle gevallen is er bij de bepaling van de waterstand ten opzichte van NAP sprake
+                                    van een berekening daarom wordt in dit (WaterML standaard) attribuut de vaste waarde
+                                    algoritme ingevuld.
                                  </p>
                                  
                               </td>
@@ -751,7 +751,7 @@
                            </tr>
                            <tr>
                               <th>Kardinaliteit</th>
-                              <td>0.. 1</td>
+                              <td>1</td>
                            </tr>
                            <tr>
                               <th>Domein</th>
@@ -2220,7 +2220,7 @@
                            </tr>
                            <tr>
                               <th>&nbsp;&nbsp;Naam</th>
-                              <td>Meetwaarde </td>
+                              <td>Meetwaarde 2.2</td>
                            </tr>
                            <tr>
                               <th>&nbsp;&nbsp;Type</th>
@@ -2232,8 +2232,12 @@
                            </tr>
                            <tr>
                               <th>Regels</th>
-                              <td>Het gegeven heeft geen waarde als het gegeven redenCensurering van de entiteit TijdMeetwaardepaar
-                                 metadata aanwezig is.
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Reden geen waarde: De waarde mag ontbreken wanneer het attribuut censuurreden van
+                                    de entiteit Metadata tijdmeetwaardepaar aanwezig is.
+                                 </p>
+                                 
                               </td>
                            </tr>
                            <tr>
@@ -2241,8 +2245,12 @@
                               <td>
                                  
                                  <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het apparaat meet een druk, een lengte of een reistijd van een signaal. Dit wordt
-                                    omgerekend naar een waterstand ten opzichten van NAP. Een waarde -5.12 is 5 meter
-                                    en 12 centimeter onder NAP.
+                                    omgerekend naar een waterstand ten opzichte van NAP. Een waarde -5.12 is 5 meter en
+                                    12 centimeter onder NAP.
+                                 </p>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De waarde mag ontbreken wanneer een limietwaarde wordt onder- of overschreden. Bijvoorbeeld
+                                    waneer de peilbuis is overgelopen of de sensor is drooggevallen.
                                  </p>
                                  
                               </td>
@@ -3101,7 +3109,7 @@
       <section id="" level="3">
          <h1>Artikel 3 Het domeinmodel</h1>
          <div class="imageinfo overview"><img src="Images/EAID_08E27657_5603_4b75_BB8B_47B282A97D63.png" usemap="#imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63"><map name="imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63">
-               <area shape="rect" coords="25,520,318,370" alt="" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33">
+               <area shape="rect" coords="25,520,344,370" alt="" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33">
                <area shape="rect" coords="771,818,1040,703" alt="" href="#graph_EAID_734CD3EC_5E0A_4b12_89F5_AF8104ECF41F">
                <area shape="rect" coords="404,671,666,565" alt="" href="#graph_EAID_590167CC_D7A2_4abb_8672_8592B1DF1842">
                <area shape="rect" coords="404,519,666,374" alt="" href="#graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE">
