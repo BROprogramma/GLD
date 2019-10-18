@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191003</p>
       <p>Imvertor: 1.55.2</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191017-152336</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191018-154506</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -37,11 +37,16 @@
                         <th>Definitie</th>
                         <td>
                            
-                           <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De algemene gegevens die voor ieder type registratieobject in de registratie ondergrond
-                              zijn of worden opgenomen.
+                           <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het geheel van gegevens dat betrekking heeft op een grondwaterstandonderzoek dat vanuit
+                              een bepaalde opdracht is uitgevoerd door herhaaldelijk op een bepaalde locatie in
+                              Nederland de waterstand in een monitoringbuis van een grondwatermonitoringput te meten.
                            </p>
                            
                         </td>
+                     </tr>
+                     <tr>
+                        <th>Populatie</th>
+                        <td>zie scope document</td>
                      </tr>
                   </tbody>
                </table>
@@ -1055,7 +1060,7 @@
                         <area shape="rect" coords="25,165,158,107" alt="" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33">
                         <area shape="rect" coords="271,321,404,263" alt="" href="#graph_EAID_590167CC_D7A2_4abb_8672_8592B1DF1842">
                         <area shape="rect" coords="517,165,650,107" alt="" href="#graph_EAID_2931B2EB_8861_47e1_B587_ADACE12C97F7">
-                        <area shape="rect" coords="227,205,448,67" alt="" href="#graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE"></map><p><b>Observatie</b></p>
+                        <area shape="rect" coords="227,205,459,67" alt="" href="#graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE"></map><p><b>Observatie</b></p>
                   </div>
                   <table width="100%">
                      <colgroup width="30%"></colgroup>
@@ -1143,8 +1148,8 @@
                         </tbody>
                      </table>
                      
-                  </section><a class="anchor" name="detail_attribute_Model_Observatie_waarnemingsperiode"></a><section id="detail_attribute_Model_Observatie_waarnemingsperiode" level="5">
-                     <h4>  waarnemingsperiode</h4>
+                  </section><a class="anchor" name="detail_attribute_Model_Observatie_observatieperiode"></a><section id="detail_attribute_Model_Observatie_observatieperiode" level="5">
+                     <h4>  observatieperiode</h4>
                      
                      <table width="100%">
                         <colgroup width="30%"></colgroup>
@@ -1241,11 +1246,11 @@
                               <th>Toelichting</th>
                               <td>
                                  
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Dit is het tijdstip waarop het laatste proces voor het berekenen van de waterstand
-                                    is afgerond. Bij controle metingen is dit het tijdstip waarop de omrekening voor het
-                                    eindresultaat van de meting is afgerond. Bij een volledig beoordeelde meetreeks is
-                                    dit het tijdstip waarop de beoordeling is afgerond. Niet bedoeld wordt het tijdstip
-                                    waarop de resultaten worden aangeboden bij het bronhouderportaal of de LV-BRO.
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Bij een controlemeting, is dit het tijdstip waarop de meting plaats vond. Bij reguliere
+                                    meetreeks met een mate beoordeling: voorlopig, is dit het tijdstip van de laatste
+                                    meting van de reeks. Bij een volledig beoordeelde meetreeks is dit het tijdstip waarop
+                                    de beoordeling is afgerond. Niet bedoeld wordt het tijdstip waarop de resultaten worden
+                                    aangeboden bij het bronhouderportaal of de LV-BRO.
                                  </p>
                                  
                               </td>
@@ -1285,8 +1290,8 @@
                               metadata observatie 1 Metadata observatie<br></td>
                         </tr>
                      </tbody>
-                  </table><a class="anchor" name="detail_attribute_Model_MetadataObservatie_datum"></a><section id="detail_attribute_Model_MetadataObservatie_datum" level="5">
-                     <h4>  datum</h4>
+                  </table><a class="anchor" name="detail_attribute_Model_MetadataObservatie_datumMetadata"></a><section id="detail_attribute_Model_MetadataObservatie_datumMetadata" level="5">
+                     <h4>  datum metadata</h4>
                      
                      <table width="100%">
                         <colgroup width="30%"></colgroup>
@@ -1326,59 +1331,6 @@
                                  
                                  <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De waarde van dit gegeven is gelijk aan het datumdeel van het gegeven tijdstip resultaat
                                     van de entiteit Observatie.
-                                 </p>
-                                 
-                              </td>
-                           </tr>
-                        </tbody>
-                     </table>
-                     
-                  </section><a class="anchor" name="detail_attribute_Model_MetadataObservatie_mateBeoordeling"></a><section id="detail_attribute_Model_MetadataObservatie_mateBeoordeling" level="5">
-                     <h4>  mate beoordeling</h4>
-                     
-                     <table width="100%">
-                        <colgroup width="30%"></colgroup>
-                        <colgroup width="70%"></colgroup>
-                        <tbody>
-                           <tr>
-                              <th>Type gegeven</th>
-                              <td>Attribuut van Metadata observatie</td>
-                           </tr>
-                           <tr>
-                              <th>Definitie</th>
-                              <td>
-                                 
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De mate waarin een beoordeling heeft plaatsgehad.</p>
-                                 
-                              </td>
-                           </tr>
-                           <tr>
-                              <th>Juridische status</th>
-                              <td>Authentiek</td>
-                           </tr>
-                           <tr>
-                              <th>Kardinaliteit</th>
-                              <td>1</td>
-                           </tr>
-                           <tr>
-                              <th>Domein</th>
-                              <td></td>
-                           </tr>
-                           <tr>
-                              <th>&nbsp;&nbsp;Naam</th>
-                              <td><a class="link" href="#detail_class_Model_MateVanBeoordeling">MateVanBeoordeling</a></td>
-                           </tr>
-                           <tr>
-                              <th>&nbsp;&nbsp;Type</th>
-                              <td>Waardelijst uitbreidbaar</td>
-                           </tr>
-                           <tr>
-                              <th>Toelichting</th>
-                              <td>
-                                 
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Actuele waarnemingen die in de basisregistratie ondergrond worden opgenomen zijn vaak
-                                    nog niet, of nog niet volledig beoordeeld. Afhankelijk van de gevolgde procedure vindt
-                                    bijvoorbeeld na een jaar een volledige beoordeling plaats.
                                  </p>
                                  
                               </td>
@@ -1428,11 +1380,130 @@
                         </tbody>
                      </table>
                      
+                  </section><a class="anchor" name="detail_attribute_Model_MetadataObservatie_mateBeoordeling"></a><section id="detail_attribute_Model_MetadataObservatie_mateBeoordeling" level="5">
+                     <h4>  mate beoordeling</h4>
+                     
+                     <table width="100%">
+                        <colgroup width="30%"></colgroup>
+                        <colgroup width="70%"></colgroup>
+                        <tbody>
+                           <tr>
+                              <th>Type gegeven</th>
+                              <td>Attribuut van Metadata observatie</td>
+                           </tr>
+                           <tr>
+                              <th>Definitie</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De mate waarin een beoordeling heeft plaatsgehad.</p>
+                                 
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>Juridische status</th>
+                              <td>Authentiek</td>
+                           </tr>
+                           <tr>
+                              <th>Kardinaliteit</th>
+                              <td>0.. 1</td>
+                           </tr>
+                           <tr>
+                              <th>Domein</th>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <th>&nbsp;&nbsp;Naam</th>
+                              <td><a class="link" href="#detail_class_Model_MateBeoordeling">MateBeoordeling</a></td>
+                           </tr>
+                           <tr>
+                              <th>&nbsp;&nbsp;Type</th>
+                              <td>Waardelijst uitbreidbaar</td>
+                           </tr>
+                           <tr>
+                              <th>Regels</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut observatietype
+                                    gelijk is aan reguliere meting.
+                                    Het attribuut mag niet aanwezig zijn wanneer de waarde van het attribuut observatietype
+                                    gelijk is aan controlemeting.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>Toelichting</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Actuele, reguliere metingen die in de basisregistratie ondergrond worden opgenomen
+                                    zijn vaak nog niet, of nog niet volledig beoordeeld. Afhankelijk van de gevolgde procedure
+                                    vindt bijvoorbeeld na een jaar een volledige beoordeling plaats.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     
+                  </section><a class="anchor" name="detail_attribute_Model_MetadataObservatie_bronhouder"></a><section id="detail_attribute_Model_MetadataObservatie_bronhouder" level="5">
+                     <h4>  bronhouder</h4>
+                     
+                     <table width="100%">
+                        <colgroup width="30%"></colgroup>
+                        <colgroup width="70%"></colgroup>
+                        <tbody>
+                           <tr>
+                              <th>Type gegeven</th>
+                              <td>Attribuut van Metadata observatie</td>
+                           </tr>
+                           <tr>
+                              <th>Definitie</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het KvK-nummer van de maatschappelijke activiteit van de publiekrechtelijke rechtspersoon
+                                    die bronhouder is van de gegevens in de basisregistratie ondergrond.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>Juridische status</th>
+                              <td>Authentiek</td>
+                           </tr>
+                           <tr>
+                              <th>Kardinaliteit</th>
+                              <td>1</td>
+                           </tr>
+                           <tr>
+                              <th>Domein</th>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <th>&nbsp;&nbsp;Naam</th>
+                              <td>Organisatie</td>
+                           </tr>
+                           <tr>
+                              <th>&nbsp;&nbsp;Type</th>
+                              <td>Keuze</td>
+                           </tr>
+                           <tr>
+                              <th>Toelichting</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Dit in WaterML verplichte attribuut is gelijk aan en wordt afgeleid van het attribuut
+                                    bronhouder van de entiteit Registratieobject.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     
                   </section>
                </section><a class="anchor" name="graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33"></a><a class="anchor" name="global_class_Model_Observatieproces"></a><section id="global_class_Model_Observatieproces" level="4">
                   <h3>   Observatieproces</h3>
                   <div class="imageinfo "><img src="Images/EAID_BAD34A77_EDEF_4343_933E_1F8FA3DE5E0A.png" usemap="#imagemap-EAID_BAD34A77_EDEF_4343_933E_1F8FA3DE5E0A"><map name="imagemap-EAID_BAD34A77_EDEF_4343_933E_1F8FA3DE5E0A">
-                        <area shape="rect" coords="25,200,319,35" alt="" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33"></map><p><b>Observatieproces</b></p>
+                        <area shape="rect" coords="25,200,344,35" alt="" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33"></map><p><b>Observatieproces</b></p>
                   </div>
                   <table width="100%">
                      <colgroup width="30%"></colgroup>
@@ -1826,7 +1897,7 @@
                   <h3>   Tijdmeetwaardereeks</h3>
                   <div class="imageinfo "><img src="Images/EAID_7BBC6F4A_9E99_4559_998B_307FADCFC4E5.png" usemap="#imagemap-EAID_7BBC6F4A_9E99_4559_998B_307FADCFC4E5"><map name="imagemap-EAID_7BBC6F4A_9E99_4559_998B_307FADCFC4E5">
                         <area shape="rect" coords="352,129,498,57" alt="" href="#graph_EAID_5FC959F0_5ED2_47e7_8C6C_68C408128425">
-                        <area shape="rect" coords="25,152,261,35" alt="" href="#graph_EAID_590167CC_D7A2_4abb_8672_8592B1DF1842"></map><p><b>Tijdmeetwaardereeks</b></p>
+                        <area shape="rect" coords="25,152,281,35" alt="" href="#graph_EAID_590167CC_D7A2_4abb_8672_8592B1DF1842"></map><p><b>Tijdmeetwaardereeks</b></p>
                   </div>
                   <table width="100%">
                      <colgroup width="30%"></colgroup>
@@ -1911,7 +1982,7 @@
                </section><a class="anchor" name="graph_EAID_5FC959F0_5ED2_47e7_8C6C_68C408128425"></a><a class="anchor" name="global_class_Model_Tijdmeetwaardepaar"></a><section id="global_class_Model_Tijdmeetwaardepaar" level="4">
                   <h3>   Tijdmeetwaardepaar</h3>
                   <div class="imageinfo "><img src="Images/EAID_DF204560_A53B_41de_9E25_4B2A3F3BE7F0.png" usemap="#imagemap-EAID_DF204560_A53B_41de_9E25_4B2A3F3BE7F0"><map name="imagemap-EAID_DF204560_A53B_41de_9E25_4B2A3F3BE7F0">
-                        <area shape="rect" coords="25,178,325,35" alt="" href="#graph_EAID_5FC959F0_5ED2_47e7_8C6C_68C408128425"></map><p><b>Tijdmeetwaardepaar</b></p>
+                        <area shape="rect" coords="25,178,353,35" alt="" href="#graph_EAID_5FC959F0_5ED2_47e7_8C6C_68C408128425"></map><p><b>Tijdmeetwaardepaar</b></p>
                   </div>
                   <table width="100%">
                      <colgroup width="30%"></colgroup>
@@ -1933,9 +2004,8 @@
                            <th>Toelichting</th>
                            <td>
                               
-                              <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De combinatie van tijdstip meting en waterstand, zoals gemeten in een monitoringbuis
-                                 van een grondwatermonitoringput. Iedere waterstand representeert de grondwaterstand
-                                 en/of stijghoogte in de ondergrond ter plekke van het filter van deze monitoringbuis.
+                              <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De combinatie van tijdstip meting en waterstand, zoals berekend uit een gemeten waarde
+                                 in een monitoringbuis van een grondwatermonitoringput.
                               </p>
                               
                            </td>
@@ -2022,7 +2092,7 @@
                            </tr>
                            <tr>
                               <th>&nbsp;&nbsp;Naam</th>
-                              <td>Meetwaarde 2.2</td>
+                              <td>Meetwaarde 3.3</td>
                            </tr>
                            <tr>
                               <th>&nbsp;&nbsp;Type</th>
@@ -2224,7 +2294,7 @@
                            </tr>
                            <tr>
                               <th>&nbsp;&nbsp;Naam</th>
-                              <td>Meetwaarde 2.2</td>
+                              <td>Meetwaarde 3.3</td>
                            </tr>
                            <tr>
                               <th>&nbsp;&nbsp;Type</th>
@@ -2859,8 +2929,8 @@
             </table>
             
          </section>
-         <section id="detail_class_Model_MateVanBeoordeling" level="4">
-            <h3>  MateVanBeoordeling</h3>
+         <section id="detail_class_Model_MateBeoordeling" level="4">
+            <h3>  MateBeoordeling</h3>
             
             <table width="100%" class="list">
                <colgroup width="20%"></colgroup>
@@ -3033,8 +3103,8 @@
                      <td>✔</td>
                      <td>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Er is reden om dit gegeven als onjuist te beschouwen. De waarde kon niet geverifieerd
-                           worden op basis van de gehanteerde beoordelingsprocedure.
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Er is reden om dit gegeven als onjuist te beschouwen op basis van de gehanteerde beoordelingsprocedure.
+                           De werkelijke waarde kan niet achterhaald worden
                         </p>
                         
                      </td>
@@ -3162,14 +3232,14 @@
       <section id="" level="3">
          <h1>Artikel 3 Het domeinmodel</h1>
          <div class="imageinfo overview"><img src="Images/EAID_08E27657_5603_4b75_BB8B_47B282A97D63.png" usemap="#imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63"><map name="imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63">
-               <area shape="rect" coords="25,516,318,366" alt="" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33">
+               <area shape="rect" coords="25,516,344,366" alt="" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33">
                <area shape="rect" coords="771,816,1040,697" alt="" href="#graph_EAID_734CD3EC_5E0A_4b12_89F5_AF8104ECF41F">
                <area shape="rect" coords="404,667,666,561" alt="" href="#graph_EAID_590167CC_D7A2_4abb_8672_8592B1DF1842">
                <area shape="rect" coords="404,515,666,370" alt="" href="#graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE">
                <area shape="rect" coords="817,246,996,157" alt="" href="#graph_EAID_68FD3B87_BA7B_485e_A5DC_4804CB98C818">
                <area shape="rect" coords="405,816,734,697" alt="" href="#graph_EAID_5FC959F0_5ED2_47e7_8C6C_68C408128425">
                <area shape="rect" coords="25,309,301,90" alt="" href="#graph_EAID_0D009A59_1E9A_4fc2_867A_9006A9464AA7">
-               <area shape="rect" coords="771,493,994,391" alt="" href="#graph_EAID_2931B2EB_8861_47e1_B587_ADACE12C97F7">
+               <area shape="rect" coords="771,506,994,391" alt="" href="#graph_EAID_2931B2EB_8861_47e1_B587_ADACE12C97F7">
                <area shape="rect" coords="817,351,996,262" alt="" href="#graph_EAID_3337CDCE_0A5D_4aee_AEB0_14AF7652B102">
                <area shape="rect" coords="404,309,665,182" alt="" href="#graph_EAID_5876720F_795D_40b5_82B8_BC782B71FA3A">
                <area shape="rect" coords="426,153,644,25" alt="" href="#graph_EAID_04FC4CF0_BE4E_421a_A62C_E3F00BED26A0"></map><p><b>Domeinmodel</b></p>
