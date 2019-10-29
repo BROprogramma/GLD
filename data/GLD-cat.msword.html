@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191003</p>
       <p>Imvertor: 1.55.2</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191029-112145</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191029-164304</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -169,8 +169,8 @@
                         </tbody>
                      </table>
                      
-                  </section><a class="anchor" name="detail_attribute_Model_Grondwaterstandonderzoek_datumLaatsteMeting"></a><section id="detail_attribute_Model_Grondwaterstandonderzoek_datumLaatsteMeting" level="5">
-                     <h4>  datum laatste meting</h4>
+                  </section><a class="anchor" name="detail_attribute_Model_Grondwaterstandonderzoek_datumRecentsteMeting"></a><section id="detail_attribute_Model_Grondwaterstandonderzoek_datumRecentsteMeting" level="5">
+                     <h4>  datum recentste meting</h4>
                      
                      <table width="100%">
                         <colgroup width="30%"></colgroup>
@@ -184,7 +184,7 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum van de laatste meting die beschikbaar is van het <em>grondwaterstandonderzoek</em>.
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De datum van de recentste meting die beschikbaar is van het <em>grondwaterstandonderzoek</em>.
                                  </p>
                                  
                               </td>
@@ -1513,7 +1513,7 @@
                               <td>
                                  
                                  <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Dit in WaterML verplichte attribuut is gelijk aan en kan worden afgeleid van het attribuut
-                                    bronhouder van de entiteit Registratieobject. Het gegeven staan in een brondocument.
+                                    bronhouder van de entiteit Registratieobject. Het gegeven staat in een brondocument.
                                  </p>
                                  
                               </td>
@@ -2293,6 +2293,10 @@
                                  
                               </td>
                            </tr>
+                           <tr>
+                              <th>Mogelijk geen waarde</th>
+                              <td>Ja</td>
+                           </tr>
                         </tbody>
                      </table>
                      
@@ -2353,16 +2357,6 @@
                               </td>
                            </tr>
                            <tr>
-                              <th>Regels IMBRO/A</th>
-                              <td>
-                                 
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Het attribuut mag geen waarde hebben wanneer het attribuut censuurreden een waarde
-                                    heeft.
-                                 </p>
-                                 
-                              </td>
-                           </tr>
-                           <tr>
                               <th>Toelichting</th>
                               <td>
                                  
@@ -2377,6 +2371,14 @@
                            <tr>
                               <th>Mogelijk geen waarde</th>
                               <td>Ja</td>
+                           </tr>
+                           <tr>
+                              <th>Reden geen waarde</th>
+                              <td>Voor IMBRO/A gegevens ontbreekt de waarde wanneer het attribuut censuurreden de waarde
+                                 *onbekend* heeft.
+                                 Voor IMBRO/A-gegevens mag de waarde ontbreken wanneer het attribuut censuurreden de
+                                 waarde *groterDanLimietwaarde* of *kleinerDanLimietwaarde* heeft.
+                              </td>
                            </tr>
                         </tbody>
                      </table>
@@ -2638,8 +2640,8 @@
                      <td>Definitie</td>
                      <td>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De lijst van mogelijke meetinstrumenten waarmee de hoogte van de waterspiegel in de
-                           monitoringbuis bepaald is.
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De lijst van mogelijke meetinstrumenten waarmee de waterstand in de monitoringbuis
+                           is bepaald.
                         </p>
                         
                      </td>
@@ -2711,7 +2713,7 @@
                      <td>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">Meetlint met elektronisch dompelklokje, dat een licht- en/of geluidssignaal afgeeft
-                           bij het raken van de waterspiegel.
+                           bij het raken van water.
                         </p>
                         
                      </td>
@@ -3085,8 +3087,8 @@
                      <td>✔</td>
                      <td>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De observatie heeft geleid tot een onafhankelijke, handmatige meting, eventueel een
-                           reeks metingen, die gebruikt wordt om de reguliere (sensor) metingen te controleren.
+                        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De observatie heeft geleid tot een onafhankelijke, veelal handmatige meting, eventueel
+                           een reeks metingen, die gebruikt wordt om de reguliere (sensor) metingen te controleren.
                         </p>
                         
                      </td>
@@ -3098,7 +3100,7 @@
                      <td>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De observatie heeft geleid tot een (reeks) sensorische of handmatige meting(en) die
-                           zijn gedaan conform het doel van de meting.
+                           zijn gedaan conform het doel van de monitoring.
                         </p>
                         
                      </td>
