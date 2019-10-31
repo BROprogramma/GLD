@@ -28,5 +28,12 @@ var respecConfig = {
       "publisher": "Open Geospatial Consortium",
       "id": "10-126r4"
     },
+    "GLDScope": {
+      "href": "https://basisregistratieondergrond.nl/publish/library/265/20190901scopedocument_grondwaterstandonderzoek_1_1.pdf",
+      "title": "Scopedocument Grondwaterstandonderzoek (GLD) V1.1",
+      "authors": ["E. Simmelink", "J. von Asmuth", "M. Jeurink", "L. van den Brink", "A. Vijverberg"],
+      "date": "01 september 2019",
+      "publisher": "Programmabureau Basisregistratie Ondergrond, Ministerie van BZK"
+    }
   },
 };
