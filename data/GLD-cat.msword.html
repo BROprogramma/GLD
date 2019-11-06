@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191003</p>
       <p>Imvertor: 1.55.2</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191106-123515</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.9-3-20191003-20191106-170306</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -1448,6 +1448,14 @@
                               <td>Tekst 40</td>
                            </tr>
                            <tr>
+                              <th>Regels</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De waarde is uniek binnen het Grondwaterstandonderzoek.</p>
+                                 
+                              </td>
+                           </tr>
+                           <tr>
                               <th>Toelichting</th>
                               <td>
                                  
@@ -1501,6 +1509,30 @@
                               <td>Waardelijst uitbreidbaar</td>
                            </tr>
                            <tr>
+                              <th>Regels</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De<em>observatieperiode</em> overlapt niet met de <em>observatieperiode</em> van andere entiteiten <em>Observatie</em> uit hetzelfde Grondwaterstandonderzoek waarvoor geldt:
+                                 </p>
+                                 
+                                 <ul xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">
+                                    
+                                    <li>dat de waarde van het attribuut <em>type observatie</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit EN
+                                    </li>
+                                    
+                                    <li>dat de waarde van het attribuut <em>mate</em> 
+                                       <em>beoordeling</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit.
+                                    </li>
+                                    
+                                 </ul>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De waarde van de <em>begindatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het eerste <em>Tijdmeetwaardepaar</em> in de bij de observatie horende <em>Tijdmeetwaardereeks</em>.
+                                    De waarde van de <em>einddatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de bij de observatie horende <em>Tijdmeetwaardereeks</em>.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                           <tr>
                               <th>Toelichting</th>
                               <td>
                                  
@@ -1550,6 +1582,29 @@
                            <tr>
                               <th>&nbsp;&nbsp;Naam</th>
                               <td>DatumTijd</td>
+                           </tr>
+                           <tr>
+                              <th>Regels</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De waarde van dit gegeven is gelijk aan het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de bij de observatie horende <em>Tijdmeetwaardereeks</em> wanneer: 
+                                 </p>
+                                 
+                                 <ul xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">
+                                    
+                                    <li>het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>controlemeting</em> of
+                                    </li>
+                                    
+                                    <li>het attribuut <em>observatietype</em> van de entiteit<em>Metadata observatie</em> gelijk is aan <em>reguliere meting</em> EN het attribuut <em>mate beoordeling</em> gelijk is aan <em>voorlopig</em>.
+                                    </li>
+                                    
+                                 </ul>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De waarde van dit attribuut moet liggen na de waarde van het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de bij de observatie horende <em>Tijdmeetwaardereeks</em> wanneer het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>reguliere meting</em> EN het attribuut <em>mate beoordeling</em> gelijk is aan <em>volledig beoordeeld.</em>
+                                    
+                                 </p>
+                                 
+                              </td>
                            </tr>
                            <tr>
                               <th>Toelichting</th>
@@ -1639,11 +1694,10 @@
                               <td>Datum</td>
                            </tr>
                            <tr>
-                              <th>Toelichting</th>
+                              <th>Regels</th>
                               <td>
                                  
-                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De waarde van dit gegeven is gelijk aan het datumdeel van het attribuut tijdstip resultaat
-                                    van de entiteit Observatie.
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De waarde van dit gegeven is gelijk aan het datumdeel van het attribuut <em>tijdstip resultaat</em> van de entiteit <em>Observatie</em>.
                                  </p>
                                  
                               </td>
@@ -1971,6 +2025,14 @@
                            <tr>
                               <th>&nbsp;&nbsp;Naam</th>
                               <td>Tekst 40</td>
+                           </tr>
+                           <tr>
+                              <th>Regels</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De waarde is uniek binnen het Grondwaterstandonderzoek.</p>
+                                 
+                              </td>
                            </tr>
                            <tr>
                               <th>Toelichting</th>
@@ -2311,6 +2373,14 @@
                            <tr>
                               <th>&nbsp;&nbsp;Naam</th>
                               <td>Tekst 40</td>
+                           </tr>
+                           <tr>
+                              <th>Regels</th>
+                              <td>
+                                 
+                                 <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">De waarde is uniek binnen het Grondwaterstandonderzoek.</p>
+                                 
+                              </td>
                            </tr>
                            <tr>
                               <th>Toelichting</th>
