@@ -16,6 +16,6 @@ Deze standaard heeft binnen de BRO (en het stelsel van basisregistraties) de pri
 We maken u er op attent dat met de standaard Grondwaterstandonderzoek er gegevens geregistreerd gaan worden met een verschillende mate van beoordeling: voorlopige en volledige beoordeelde gegevens. Hiermee onstaat een hiërarchie in de gebruiksplicht van de verschillende tupe gegevens.  Dit wordt in de catalogus toegelicht in H3.6
 
 [1]: https://github.com/BROprogramma/GLD/raw/gh-pages/20190711%20catalogus%20grondwaterstandonderzoek%200-9.pdf
-[2]: 
+[2]: https://github.com/BROprogramma/GLD/blob/gh-pages/consultatie-instructie.md
 [3]: https://github.com/BROprogramma/GLD/raw/gh-pages/20190711%20inleiding%20op%20catalogus%20grondwaterstandonderzoek%200-9.pdf
 
