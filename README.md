@@ -1,5 +1,5 @@
 # Grondwaterstandonderzoek (GLD)
-Repository voor het ontwikkelen van de BRO gegevenscatalogus Grondwaterstandonderzoek (GLD). De werkversie van deze gegevenscatalogus is hier te bekijken:  https://broprogramma.github.io/GLD
+Repository voor het ontwikkelen van de BRO gegevenscatalogus Grondwaterstandonderzoek (GLD). De werkversie van deze gegevenscatalogus is hier te bekijken:  https://broprogramma.github.io/GLD (niet gebruiken voor publieke consultatie)
 
 ## Publieke Consultatie
 Op donderdag 7 november start de publieke consultatie voor de standaard [Grondwaterstandonderzoek][1]. De publieke consultatie loopt tot en met 22 december 2019. De catalogus wordt geconsulteerd in de vorm zoals hij in de ministeriële regeling verschijnt. Gebruik daarvoor [de hier gelinkte PDF versie catalogus][1].
