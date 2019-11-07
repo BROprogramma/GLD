@@ -9,10 +9,13 @@ Het is ook mogelijk te reageren via een webformulier: https://basisregistratieon
 
 Voor het goed begrijpen van de catalogus zoals hij in de ministeriële regeling verschijnt raden we u ten sterkste aan eerst het [achtergrond document][3] te lezen. U kunt niet op dit inleidend document reageren, maar het geeft wel een goede inleiding waarmee de catalogus beter begrepen kan worden.
 
-Een boormonsteranalyse onderzoekt boormonsters door er metingen aan te doen. Dit gebeurt eigenlijk altijd in een laboratorium. Bodemkundige analyses worden gedaan om meer te weten te komen over de samenstelling, opbouw en vorming van bodem. De bodemkundige boormonsteranalyse komt qua laboratorium proeven (bepalingen) volledig overeen met de proeven(bepalingen) van de bodemkundige wandmonsteranalyse. Het is afdoende om van een van beide catalogi de uitbreiding te beoordelen. Het onderhoud op het bestaande deel van de catalogi verschilt wel kijk hier voor beide catalogi dus kritisch naar. 
+Het monitoren van de grondwaterstand en grondwaterstijghoogte gebeurt al lange tijd, op vele locaties in ons land. Met deze gegevens  van grondwaterstandonderzoek is het mogelijk om trendmatige veranderingen te analyseren,  karakteristieke kenmerken van de beweging van het grondwater vast te stellen, en ruimtelijke patronen te herkennen. Tijdens het standaardisatietraject is met het werkveld besloten dat grondwaterstandonderzoek ‘beoordeelde’ meetgegevens omvat, die zijn voorzien van een kwaliteitstatus. 
 
+Deze standaard heeft binnen de BRO (en het stelsel van basisregistraties) de primeur dat er in dit registratieobject sensorgegevens zullen worden geregistreerd. Hiermee is het mogelijk  om (quasi) actuele gegevens in de BRO te registreren. Dit is een nieuw paradigma wat vraagt om een extra kritische blik op de standaard. 
 
-[1]: 
+We maken u er op attent dat met de standaard Grondwaterstandonderzoek er gegevens geregistreerd gaan worden met een verschillende mate van beoordeling: voorlopige en volledige beoordeelde gegevens. Hiermee onstaat een hiërarchie in de gebruiksplicht van de verschillende tupe gegevens.  Dit wordt in de catalogus toegelicht in H3.6
+
+[1]: https://github.com/BROprogramma/GLD/raw/gh-pages/20190711%20catalogus%20grondwaterstandonderzoek%200-9.pdf
 [2]: 
-[3]: 
-[4]: 
+[3]: https://github.com/BROprogramma/GLD/raw/gh-pages/20190711%20inleiding%20op%20catalogus%20grondwaterstandonderzoek%200-9.pdf
+
