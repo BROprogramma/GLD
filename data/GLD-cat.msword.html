@@ -1,7 +1,7 @@
 <html>
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Conceptual model/Grondwaterstandonderzoek (GLD)/20191111</title><style>
+      <title>Domein model/Grondwaterstandonderzoek (GLD)/20191111</title><style>
                     table tbody tr th,
                     table tbody tr td {text-align: left; vertical-align: top;} 
                     
@@ -11,9 +11,9 @@
                     table.list tbody tr td {border: 1px solid black;}
                 </style></head>
    <body>
-      <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191111</p>
+      <p>Domein model/Grondwaterstandonderzoek (GLD)/20191111</p>
       <p>Imvertor: 1.56.1</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20191112-130440</p>
+      <p>Model release: Domeinmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20191112-171413</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -1200,6 +1200,9 @@
                         <tr>
                            <th>Relaties met andere entiteiten</th>
                            <td>Observatie 
+                              metadata observatie 1 
+                              <a class="link" href="#global_class_Model_MetadataObservatie">Metadata observatie</a>
+                              <br>Observatie 
                               gerelateerd aan 0..* 
                               <a class="link" href="#global_class_Model_Observatie">Observatie</a>
                               <br>Observatie 
@@ -1254,6 +1257,164 @@
                      </table>
                      
                   </section>
+                  <section id="detail_attribute_Model_Observatie_observatieperiode">
+                     <h4>  observatieperiode</h4>
+                     
+                     <table style="width: 100%;">
+                        <colgroup style="width: 30%;"></colgroup>
+                        <colgroup style="width: 70%;"></colgroup>
+                        <tbody>
+                           <tr>
+                              <th>Type gegeven</th>
+                              <td>Attribuut van Observatie</td>
+                           </tr>
+                           <tr>
+                              <th>Definitie</th>
+                              <td>
+                                 
+                                 <p>De periode waarover de tijd-meetwaardereeks, die het resultaat is van de observatie,
+                                    van toepassing is. Deze periode wordt gevormd door de datum van de eerste meting en
+                                    de datum van de laatste meting van de reeks.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>Juridische status</th>
+                              <td>Authentiek</td>
+                           </tr>
+                           <tr>
+                              <th>Kardinaliteit</th>
+                              <td>1</td>
+                           </tr>
+                           <tr>
+                              <th>Domein</th>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <th>&nbsp;&nbsp;Naam</th>
+                              <td>
+                                 Datuminterval
+                                 
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>&nbsp;&nbsp;Type</th>
+                              <td>
+                                 Datuminterval
+                                 
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>Regels</th>
+                              <td>
+                                 
+                                 <p>De<em>observatieperiode</em> overlapt niet met de <em>observatieperiode</em> van andere entiteiten <em>Observatie</em> uit hetzelfde Grondwaterstandonderzoek waarvoor geldt:
+                                 </p>
+                                 
+                                 <ul>
+                                    
+                                    <li>dat de waarde van het attribuut <em>type observatie</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit EN
+                                    </li>
+                                    
+                                    <li>dat de waarde van het attribuut <em>mate</em> 
+                                       <em>beoordeling</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit.
+                                    </li>
+                                    
+                                 </ul>
+                                 
+                                 <p>De waarde van de <em>begindatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het eerste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em>.
+                                 </p>
+                                 
+                                 <p>De waarde van de <em>einddatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em>.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>Toelichting</th>
+                              <td>
+                                 
+                                 <p>Het datatype bestaat uit een begin- en een einddatum. De datum van de eerste meting
+                                    kan afgeleid worden van de eerste meting uit de reeks en de datum van de laatste meting
+                                    van de laatste meting. Het gegeven staan in een brondocument.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     
+                  </section>
+                  <section id="detail_attribute_Model_Observatie_tijdstipResultaat">
+                     <h4>  tijdstip resultaat</h4>
+                     
+                     <table style="width: 100%;">
+                        <colgroup style="width: 30%;"></colgroup>
+                        <colgroup style="width: 70%;"></colgroup>
+                        <tbody>
+                           <tr>
+                              <th>Type gegeven</th>
+                              <td>Attribuut van Observatie</td>
+                           </tr>
+                           <tr>
+                              <th>Definitie</th>
+                              <td>
+                                 
+                                 <p>De datum en het tijdstip waarop het eindresultaat van de tijd-meetwaardereeks tot
+                                    stand is gekomen.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>Juridische status</th>
+                              <td>Authentiek</td>
+                           </tr>
+                           <tr>
+                              <th>Kardinaliteit</th>
+                              <td>1</td>
+                           </tr>
+                           <tr>
+                              <th>Regels</th>
+                              <td>
+                                 
+                                 <p>De waarde van dit attribuut is gelijk aan het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em> wanneer: 
+                                 </p>
+                                 
+                                 <ul>
+                                    
+                                    <li>het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>controlemeting</em> of
+                                    </li>
+                                    
+                                    <li>het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>reguliere meting</em> EN het attribuut <em>mate beoordeling</em> gelijk is aan <em>voorlopig</em>.
+                                    </li>
+                                    
+                                 </ul>
+                                 
+                                 <p>De waarde van dit attribuut moet liggen na de waarde van het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em> wanneer het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>reguliere meting</em> EN het attribuut <em>mate beoordeling</em> gelijk is aan <em>volledig beoordeeld.</em>
+                                    
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>Toelichting</th>
+                              <td>
+                                 
+                                 <p>Bij een controlemeting, is dit het tijdstip waarop de meting is uitgevoerd. Bij een
+                                    reguliere meetreeks met een mate beoordeling: voorlopig, is dit het tijdstip van de
+                                    laatste meting van de reeks. Bij een volledig beoordeelde meetreeks is dit het tijdstip
+                                    waarop de beoordeling is afgerond. Niet bedoeld wordt het tijdstip waarop de resultaten
+                                    worden aangeboden bij het bronhouderportaal of de LV-BRO.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     
+                  </section>
                </section><a class="anchor" id="graph_EAID_2931B2EB_8861_47e1_B587_ADACE12C97F7"></a><section id="global_class_Model_MetadataObservatie">
                   <h3>   Metadata observatie</h3>
                   <div class="imageinfo "><img src="Images/EAID_AABBF7FC_969A_409b_AC51_3C2592E5F205.png" usemap="#imagemap-EAID_AABBF7FC_969A_409b_AC51_3C2592E5F205" alt="Diagram "><map name="imagemap-EAID_AABBF7FC_969A_409b_AC51_3C2592E5F205">
@@ -1283,7 +1444,10 @@
                            <td>Metadata observatie 
                               uitvoerder 1 
                               <a class="link" href="#global_class_Model_Organisatiegegevens">Organisatiegegevens</a>
-                              <br></td>
+                              <br>
+                              <a class="link" href="#global_class_Model_Observatie">Observatie</a>
+                              
+                              metadata observatie 1 Metadata observatie<br></td>
                         </tr>
                      </tbody>
                   </table>
