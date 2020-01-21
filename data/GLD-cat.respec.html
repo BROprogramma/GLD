@@ -1,7 +1,7 @@
 <section id="cat" class="normative">
    <h2>Gegevensdefinitie</h2>
    <p><b>Deze tekst is normatief.</b>
-      <!--Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20191223-105815 imvertor 1.56.2--></p>
+      <!--Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200121-173503 imvertor 1.57.1--></p>
    <section id="">
       <h3>Het domeinmodel   </h3>
       <div class="imageinfo overview"><img src="data/Images/EAID_08E27657_5603_4b75_BB8B_47B282A97D63.png" usemap="#imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63" alt="Diagram "><map name="imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63">
@@ -1518,8 +1518,7 @@
                            <li>dat de waarde van het attribuut <em>type observatie</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit EN
                            </li>
                            
-                           <li>dat de waarde van het attribuut <em>mate</em> 
-                              <em>beoordeling</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit.
+                           <li>dat de waarde van het attribuut <em>mate beoordeling</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit.
                            </li>
                            
                         </ul>
@@ -1527,7 +1526,7 @@
                         <p>De waarde van de <em>begindatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het eerste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em>.
                         </p>
                         
-                        <p>De waarde van de <em>einddatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em>.
+                        <p>De waarde van de <em>einddatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em>. 
                         </p>
                         
                      </td>
@@ -1536,9 +1535,9 @@
                      <th>Toelichting</th>
                      <td>
                         
-                        <p>Het datatype bestaat uit een begin- en een einddatum. De datum van de eerste meting
-                           kan afgeleid worden van de eerste meting uit de reeks en de datum van de laatste meting
-                           van de laatste meting. Het gegeven staan in een brondocument.
+                        <p>Het datatype bestaat uit een begin- en een einddatum. De bronhouder of dataleverancier
+                           kan de begindatum afleiden van de eerste meting uit de reeks en de einddatum van de
+                           laatste meting uit de reeks. Het gegeven staat in een brondocument. 
                         </p>
                         
                      </td>
@@ -1588,21 +1587,20 @@
                      <th>Regels</th>
                      <td>
                         
-                        <p>De waarde van dit attribuut is gelijk aan het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em> wanneer: 
+                        <p>De waarde van dit attribuut is gelijk aan het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em> wanneer:
                         </p>
                         
                         <ul>
                            
-                           <li>het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>controlemeting</em> of
+                           <li>het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan controlemeting of
                            </li>
                            
-                           <li>het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>reguliere meting</em> EN het attribuut <em>mate beoordeling</em> gelijk is aan <em>voorlopig</em>.
+                           <li>het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan reguliere meting EN het attribuut mate beoordeling gelijk is aan voorlopig.
                            </li>
                            
                         </ul>
                         
-                        <p>De waarde van dit attribuut moet liggen na de waarde van het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em> wanneer het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>reguliere meting</em> EN het attribuut <em>mate beoordeling</em> gelijk is aan <em>volledig beoordeeld.</em>
-                           
+                        <p>De waarde van dit attribuut moet liggen na de waarde van het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em> wanneer het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>reguliere meting</em> EN het attribuut <em>mate beoordeling</em> gelijk is aan <em>volledig beoordeeld</em>.
                         </p>
                         
                      </td>
@@ -1615,7 +1613,7 @@
                            reguliere meetreeks met een mate beoordeling: voorlopig, is dit het tijdstip van de
                            laatste meting van de reeks. Bij een volledig beoordeelde meetreeks is dit het tijdstip
                            waarop de beoordeling is afgerond. Niet bedoeld wordt het tijdstip waarop de resultaten
-                           worden aangeboden bij het bronhouderportaal of de LV-BRO.
+                           worden aangeboden bij het bronhouderportaal of de LV-BRO. 
                         </p>
                         
                      </td>
@@ -2070,7 +2068,7 @@
                      <td>
                         
                         <p>De procedure of het werkvoorschrift dat aangeeft onder welke afspraken de observatie
-                           is uitgevoerd. 
+                           is uitgevoerd.
                         </p>
                         
                      </td>
