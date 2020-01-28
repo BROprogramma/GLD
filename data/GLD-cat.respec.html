@@ -1,7 +1,7 @@
 <section id="cat" class="normative">
    <h2>Gegevensdefinitie</h2>
    <p><b>Deze tekst is normatief.</b>
-      <!--Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200121-173503 imvertor 1.57.1--></p>
+      <!--Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200128-134351 imvertor 1.57.1--></p>
    <section id="">
       <h3>Het domeinmodel   </h3>
       <div class="imageinfo overview"><img src="data/Images/EAID_08E27657_5603_4b75_BB8B_47B282A97D63.png" usemap="#imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63" alt="Diagram "><map name="imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63">
@@ -436,14 +436,10 @@
                      <td>
                         
                         <p>Het gegeven staat niet in een brondocument, maar wordt automatisch door de basisregistratie
-                           ondergrond afgeleid van het tijdstip van de eerste meting.
+                           ondergrond afgeleid van de begindatum van de <em>observatieperiode</em> van de entiteit <em>Observatie</em> behorende bij de observatie met de oudste begindatum.
                         </p>
                         
                      </td>
-                  </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Ja</td>
                   </tr>
                </tbody>
             </table>
@@ -490,14 +486,10 @@
                      <td>
                         
                         <p>Het gegeven staat niet in een brondocument, maar wordt automatisch door de basisregistratie
-                           ondergrond afgeleid van het tijdstip van de recentste meting.
+                           ondergrond afgeleid van de einddatum van de <em>observatieperiode</em> van de entiteit <em>Observatie</em> behorende bij de observatie met de meest recente einddatum.
                         </p>
                         
                      </td>
-                  </tr>
-                  <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Ja</td>
                   </tr>
                </tbody>
             </table>
@@ -2682,8 +2674,17 @@
                      </td>
                   </tr>
                   <tr>
-                     <th>Mogelijk geen waarde</th>
-                     <td>Ja</td>
+                     <th>Toelichting</th>
+                     <td>
+                        
+                        <p>De term gecensureerde waarde heeft in de statistiek een specifieke betekenis. Het
+                           geeft aan dat de waarde van een variabele niet exact bekend is of niet exact bepaald
+                           kon worden, maar dat wel duidelijk is dat deze zich boven of juist beneden een bepaalde
+                           limiet bevindt. Dit is bijvoorbeeld het geval als de waarde buiten bereik van het
+                           meetinstrument of de meetopstelling ligt.
+                        </p>
+                        
+                     </td>
                   </tr>
                </tbody>
             </table>
