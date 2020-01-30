@@ -1,7 +1,7 @@
 <section id="cat" class="normative">
    <h2>Gegevensdefinitie</h2>
    <p><b>Deze tekst is normatief.</b>
-      <!--Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200128-134351 imvertor 1.57.1--></p>
+      <!--Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200130-095336 imvertor 1.57.1--></p>
    <section id="">
       <h3>Het domeinmodel   </h3>
       <div class="imageinfo overview"><img src="data/Images/EAID_08E27657_5603_4b75_BB8B_47B282A97D63.png" usemap="#imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63" alt="Diagram "><map name="imagemap-EAID_08E27657_5603_4b75_BB8B_47B282A97D63">
@@ -2177,8 +2177,8 @@
                      <th>Regels</th>
                      <td>
                         
-                        <p>Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut <em>type meetinstrument</em> gelijk is aan <em>absoluteDruksensor</em>.
-                           Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut <em>type meetinstrument</em> gelijk is aan <em>stereoAbsoluteDruksensor</em>.
+                        <p>Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut <em>type meetinstrument</em> gelijk is aan <em>druksensor</em>.
+                           Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut <em>type meetinstrument</em> gelijk is aan <em>stereoDruksensor</em>.
                            In alle andere gevallen mag het attribuut niet aanwezig zijn.
                         </p>
                         
@@ -2188,7 +2188,7 @@
                      <th>Toelichting</th>
                      <td>
                         
-                        <p>Deze compensatie wordt alleen toegepast bij absolute druksensoren.</p>
+                        <p>Deze compensatie wordt alleen toegepast bij druksensoren.</p>
                         
                      </td>
                   </tr>
@@ -3053,18 +3053,6 @@
                   <th>Omschrijving</th>
                </tr>
                <tr>
-                  <td>absoluteDruksensor</td>
-                  <td>✔</td>
-                  <td>✔</td>
-                  <td>
-                     
-                     <p>Sensor die de druk meet die wordt uitgeoefend door de water- en luchtkolom boven de
-                        sensor. De meetwaarde dient rekenkundig gecompenseerd te worden voor luchtdruk.
-                     </p>
-                     
-                  </td>
-               </tr>
-               <tr>
                   <td>akoestischeSensor</td>
                   <td>✔</td>
                   <td>✔</td>
@@ -3095,6 +3083,19 @@
                   <td>
                      
                      <p>Meetlint met een analoog dompelklokje, dat geluid maakt bij het raken van het water.</p>
+                     
+                  </td>
+               </tr>
+               <tr>
+                  <td>druksensor</td>
+                  <td>✔</td>
+                  <td>✔</td>
+                  <td>
+                     
+                     <p>Sensor die de druk meet die wordt uitgeoefend door de (lucht- en) waterkolom boven
+                        de sensor. De meting is fysiek gecompenseerd voor luchtdruk via een capillair of de
+                        meting is rekenkundig gecompenseerd voor luchtdruk.
+                     </p>
                      
                   </td>
                </tr>
@@ -3133,25 +3134,15 @@
                   </td>
                </tr>
                <tr>
-                  <td>relatieveDruksensor</td>
+                  <td>stereoDruksensor</td>
                   <td>✔</td>
                   <td>✔</td>
                   <td>
                      
-                     <p>Sensor die de druk meet die wordt uitgeoefend door de waterkolom boven de sensor.
-                        De meting is fysiek gecompenseerd voor luchtdruk via een capillair.
-                     </p>
-                     
-                  </td>
-               </tr>
-               <tr>
-                  <td>stereoAbsoluteDruksensor</td>
-                  <td>✔</td>
-                  <td>✔</td>
-                  <td>
-                     
-                     <p>Apparaat of opstelling met twee absolute druksensoren die de afstand tot de waterspiegel
-                        in tweevoud bepalen, en combineren tot een enkele meetreeks met verhoogde betrouwbaarheid.
+                     <p>Apparaat of opstelling met twee druksensoren die de afstand tot de waterspiegel in
+                        tweevoud bepalen, en combineren tot een enkele meetreeks met verhoogde betrouwbaarheid.
+                        De metingen zijn fysiek gecompenseerd voor luchtdruk via een capillair of de metingen
+                        zijn rekenkundig gecompenseerd voor luchtdruk.
                      </p>
                      
                   </td>
@@ -3163,19 +3154,6 @@
                   <td>
                      
                      <p>Het is onbekend met welk meetinstrument de meting gedaan is (IMBRO/A kwaliteitsregime).</p>
-                     
-                  </td>
-               </tr>
-               <tr>
-                  <td>onbekendDruksensor</td>
-                  <td></td>
-                  <td>✔</td>
-                  <td>
-                     
-                     <p>Sensor die de druk meet die wordt uitgeoefend door de waterkolom en eventueel ook
-                        de luchtkolom boven de sensor. Het is onbekend of er fysiek of rekenkundig gecompenseerd
-                        is voor de luchtdruk. (IMBRO/A kwaliteitsregime).
-                     </p>
                      
                   </td>
                </tr>
@@ -3215,13 +3193,25 @@
                   <th>Omschrijving</th>
                </tr>
                <tr>
+                  <td>capilair</td>
+                  <td>✔</td>
+                  <td>✔</td>
+                  <td>
+                     
+                     <p>Fysieke compensatie voor luchtdruk via een capillair waardoor de sensor uitsluitend
+                        de waterdruk meet.
+                     </p>
+                     
+                  </td>
+               </tr>
+               <tr>
                   <td>gecorrigeerdLokaleMeting</td>
                   <td>✔</td>
                   <td>✔</td>
                   <td>
                      
                      <p>Rekenkundige compensatie, waarbij lokale luchtdrukmetingen gecorrigeerd worden aan
-                        de hand van die van het KNMI.
+                        de hand van luchtdrukmetingen van het KNMI.
                      </p>
                      
                   </td>
@@ -3255,7 +3245,8 @@
                   <td>
                      
                      <p>Rekenkundige compensatie, met behulp van een op de putlocatie aanwezige druksensor
-                        die de luchtdruk meet.
+                        die de luchtdruk meet. Deze luchtdruksensor kan geïntegreerd zijn in één apparaat
+                        met de druksensor, maar dit hoeft niet. 
                      </p>
                      
                   </td>
