@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191111</p>
       <p>Imvertor: 1.57.1</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200203-112512</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200203-152242</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -1416,6 +1416,9 @@
                         <tr>
                            <th>Relaties met andere entiteiten</th>
                            <td>Observatie 
+                              observatieperiode 1 
+                              
+                              <br>Observatie 
                               metadata observatie 1 
                               <a class="link" href="#global_class_Model_MetadataObservatie">Metadata observatie</a>
                               <br>Observatie 
@@ -1474,85 +1477,6 @@
                               <td>
                                  
                                  <p>De waarde van het attribuut moet uniek zijn binnen het Grondwaterstandonderzoek.</p>
-                                 
-                              </td>
-                           </tr>
-                        </tbody>
-                     </table>
-                     
-                  </section>
-                  <section id="detail_attribute_Model_Observatie_observatieperiode">
-                     <h4>  observatieperiode</h4>
-                     
-                     <table style="width: 100%;">
-                        <colgroup style="width: 30%;"></colgroup>
-                        <colgroup style="width: 70%;"></colgroup>
-                        <tbody>
-                           <tr>
-                              <th>Type gegeven</th>
-                              <td>Attribuut van Observatie</td>
-                           </tr>
-                           <tr>
-                              <th>Definitie</th>
-                              <td>
-                                 
-                                 <p>De periode waarover de tijd-meetwaardereeks, die het resultaat is van de observatie,
-                                    van toepassing is. Deze periode wordt gevormd door de datum van de eerste meting en
-                                    de datum van de laatste meting van de reeks.
-                                 </p>
-                                 
-                              </td>
-                           </tr>
-                           <tr>
-                              <th>Juridische status</th>
-                              <td>Authentiek</td>
-                           </tr>
-                           <tr>
-                              <th>Kardinaliteit</th>
-                              <td>1</td>
-                           </tr>
-                           <tr>
-                              <th>Domein</th>
-                              <td></td>
-                           </tr>
-                           <tr>
-                              <th>&nbsp;&nbsp;Naam</th>
-                              <td>Datuminterval</td>
-                           </tr>
-                           <tr>
-                              <th>Regels</th>
-                              <td>
-                                 
-                                 <p>De <em>observatieperiode</em> overlapt niet met de <em>observatieperiode</em> van andere entiteiten <em>Observatie</em> uit hetzelfde Grondwaterstandonderzoek waarvoor geldt:
-                                 </p>
-                                 
-                                 <ul>
-                                    
-                                    <li>dat de waarde van het attribuut <em>type observatie</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit EN
-                                    </li>
-                                    
-                                    <li>dat de waarde van het attribuut <em>mate beoordeling</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit.
-                                    </li>
-                                    
-                                 </ul>
-                                 
-                                 <p>De waarde van de <em>begindatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het eerste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em>.
-                                 </p>
-                                 
-                                 <p>De waarde van de <em>einddatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em>. 
-                                 </p>
-                                 
-                              </td>
-                           </tr>
-                           <tr>
-                              <th>Toelichting</th>
-                              <td>
-                                 
-                                 <p>Het datatype bestaat uit een begin- en een einddatum. De bronhouder of dataleverancier
-                                    kan de begindatum afleiden van de eerste meting uit de reeks en de einddatum van de
-                                    laatste meting uit de reeks. Het gegeven staat in een brondocument. Dit is in WaterML
-                                    een verplicht attribuut.
-                                 </p>
                                  
                               </td>
                            </tr>
