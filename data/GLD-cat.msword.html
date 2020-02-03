@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191111</p>
       <p>Imvertor: 1.57.1</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200131-154106</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200203-112512</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -1550,7 +1550,8 @@
                                  
                                  <p>Het datatype bestaat uit een begin- en een einddatum. De bronhouder of dataleverancier
                                     kan de begindatum afleiden van de eerste meting uit de reeks en de einddatum van de
-                                    laatste meting uit de reeks. Het gegeven staat in een brondocument. 
+                                    laatste meting uit de reeks. Het gegeven staat in een brondocument. Dit is in WaterML
+                                    een verplicht attribuut.
                                  </p>
                                  
                               </td>
@@ -1626,7 +1627,8 @@
                                     reguliere meetreeks met een mate beoordeling: voorlopig, is dit het tijdstip van de
                                     laatste meting van de reeks. Bij een volledig beoordeelde meetreeks is dit het tijdstip
                                     waarop de beoordeling is afgerond. Niet bedoeld wordt het tijdstip waarop de resultaten
-                                    worden aangeboden bij het bronhouderportaal of de LV-BRO. 
+                                    worden aangeboden bij het bronhouderportaal of de LV-BRO. Dit is in WaterML een verplicht
+                                    attribuut.
                                  </p>
                                  
                               </td>
@@ -2263,8 +2265,8 @@
                               <td>
                                  
                                  <p>In alle gevallen is er bij de bepaling van de waterstand ten opzichte van NAP sprake
-                                    van een berekening. Daarom wordt in dit (WaterML standaard) attribuut de vaste waarde
-                                    <em>algoritme</em> ingevuld.
+                                    van een berekening. Daarom wordt in dit (in WaterML verplichte) attribuut de vaste
+                                    waarde <em>algoritme</em> ingevuld.
                                  </p>
                                  
                               </td>
@@ -2840,9 +2842,10 @@
                               <th>Toelichting</th>
                               <td>
                                  
-                                 <p>De feitelijke waarnemingen worden in de basisregistratie ondergrond vastgelegd. Daarom
-                                    wordt hier de vaste waarde, discontinu ingevuld. Het is aan de gebruiker te beoordelen
-                                    of er mogelijk sprake is van een continue reeks.
+                                 <p>Dit is in WaterML een verplicht attribuut. De feitelijke waarnemingen worden in de
+                                    basisregistratie ondergrond vastgelegd. Daarom wordt hier de vaste waarde, discontinu
+                                    ingevuld. Het is aan de gebruiker te beoordelen of er mogelijk sprake is van een continue
+                                    reeks.
                                  </p>
                                  
                               </td>
