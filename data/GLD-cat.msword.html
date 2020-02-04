@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191111</p>
       <p>Imvertor: 1.57.1</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200203-153351</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200204-161509</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -2170,8 +2170,8 @@
                               <th>Definitie</th>
                               <td>
                                  
-                                 <p>Het type compensatie dat is gebruikt bij het corrigeren van de drukmeting naar een
-                                    drukmeting van de waterkolom in de monitoringbuis, exclusief de luchtdruk. 
+                                 <p>Methode waarmee druksensormetingen voor luchtdruk gecompenseerd zijn, inclusief oorsprong
+                                    van de daarbij gebruikte luchtdruk in geval van rekenkundige compensatie. 
                                  </p>
                                  
                               </td>
@@ -2200,7 +2200,7 @@
                               <th>Regels</th>
                               <td>
                                  
-                                 <p>Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut <em>type meetinstrument</em> gelijk is aan <em>druksensor</em>.
+                                 <p>Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut <em>type meetinstrument</em> gelijk is aan <em>druksensor</em>.<br clear="none">
                                     Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut <em>type meetinstrument</em> gelijk is aan <em>stereoDruksensor</em>.
                                     In alle andere gevallen mag het attribuut niet aanwezig zijn.
                                  </p>
@@ -2618,7 +2618,7 @@
                                  
                                  <p>Het eindoordeel van de bronhouder over de kwaliteit van een individuele meting van
                                     het grondwaterstandonderzoek op basis van een, voor het hele onderzoek gebruikte,
-                                    beoordelingsprocedure. 
+                                    beoordelingsprocedure.
                                  </p>
                                  
                               </td>
@@ -2642,6 +2642,16 @@
                            <tr>
                               <th>&nbsp;&nbsp;Type</th>
                               <td>Waardelijst uitbreidbaar</td>
+                           </tr>
+                           <tr>
+                              <th>Regels</th>
+                              <td>
+                                 
+                                 <p>De waarde van het attribuut mag niet gelijk zijn aan <em>nogNietBeoordeeld</em> wanneer de waarde van het attribuut <em>mate beoordeling</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>volledig beoordeeld.</em> 
+                                    
+                                 </p>
+                                 
+                              </td>
                            </tr>
                         </tbody>
                      </table>
@@ -3121,9 +3131,8 @@
                      <td>✔</td>
                      <td>
                         
-                        <p>Sensor die de druk meet die wordt uitgeoefend door de (lucht- en) waterkolom boven
-                           de sensor. De meting is fysiek gecompenseerd voor luchtdruk via een capillair of de
-                           meting is rekenkundig gecompenseerd voor luchtdruk.
+                        <p>Sensor die in het water in de monitoringbuis hangt en de plaatselijke druk meet. Bij
+                           dit type meetinstrument moet het type luchtdrukcompensatie worden vermeld.
                         </p>
                         
                      </td>
@@ -3168,10 +3177,9 @@
                      <td>✔</td>
                      <td>
                         
-                        <p>Apparaat of opstelling met twee druksensoren die de afstand tot de waterspiegel in
-                           tweevoud bepalen, en combineren tot een enkele meetreeks met verhoogde betrouwbaarheid.
-                           De metingen zijn fysiek gecompenseerd voor luchtdruk via een capillair of de metingen
-                           zijn rekenkundig gecompenseerd voor luchtdruk.
+                        <p>Apparaat of opstelling met twee druksensoren die de druk in tweevoud bepalen, en combineren
+                           tot een enkele meetreeks met verhoogde betrouwbaarheid. Bij dit type meetinstrument
+                           moet het type luchtdrukcompensatie worden vermeld.
                         </p>
                         
                      </td>
@@ -3201,8 +3209,9 @@
                      <td>Definitie</td>
                      <td>
                         
-                        <p>De lijst van mogelijke methoden waarmee drukmetingen voor luchtdruk gecompenseerd
-                           zijn, en/of de oorsprong van de daarbij gebruikte luchtdrukmetingen.
+                        <p>De lijst van mogelijke methoden waarmee druksensormetingen voor luchtdruk gecompenseerd
+                           zijn, inclusief de oorsprong van de daarbij gebruikte luchtdrukreeks in geval van
+                           rekenkundige compensatie.
                         </p>
                         
                      </td>
@@ -3223,7 +3232,7 @@
                      <th>Omschrijving</th>
                   </tr>
                   <tr>
-                     <td>capilair</td>
+                     <td>capillair</td>
                      <td>✔</td>
                      <td>✔</td>
                      <td>
@@ -3618,6 +3627,18 @@
                         
                         <p>Er is reden om dit gegeven als onjuist te beschouwen op basis van de gehanteerde beoordelingsprocedure.
                            De werkelijke waarde kan niet achterhaald worden
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>nogNietBeoordeeld</td>
+                     <td>✔</td>
+                     <td>✔</td>
+                     <td>
+                        
+                        <p>Er is nog geen beoordeling gedaan van de kwaliteit. De beoordeling zal later plaats
+                           vinden.
                         </p>
                         
                      </td>
