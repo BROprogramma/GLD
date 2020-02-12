@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191111</p>
       <p>Imvertor: 1.59.0</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200211-131848</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200212-155821</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -1499,22 +1499,17 @@
                               <th>Regels</th>
                               <td>
                                  
-                                 <p>De <em>observatieperiode</em> overlapt niet met de <em>observatieperiode</em> van andere entiteiten <em>Observatie</em> uit hetzelfde Grondwaterstandonderzoek waarvoor geldt:<br clear="none">
+                                 <p>De begindatum van <em>observatieperiode</em> is later of gelijk aan de einddatum van <em>observatieperiode</em> van andere entiteiten <em>Observatie</em> uit hetzelfde Grondwaterstandonderzoek waarvan de begindatum eerder is of gelijk
+                                    is aan de begindatum van <em>observatieperiode</em> EN<br clear="none">
+                                    De einddatum van <em>observatieperiode</em> is eerder of gelijk aan de begindatum van <em>observatieperiode</em> van andere entiteiten <em>Observatie</em> uit hetzelfde Grondwaterstandonderzoek waarvan de einddatum later is of gelijk is
+                                    aan de einddatum van <em>observatieperiode</em> wanneer geldt dat<br clear="none">
+                                    de waarde van het attribuut <em>type observatie</em> gelijk is aan <em>reguliere meting</em> EN  de waarde van het attribuut <em>mate beoordeling</em> gelijk is aan <em>volledig beoordeeld</em>
                                     
                                  </p>
                                  
-                                 <ul>
-                                    
-                                    <li>dat de waarde van het attribuut <em>type observatie</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit EN<br clear="none">
-                                       
-                                    </li>
-                                    
-                                    <li>dat de waarde van het attribuut <em>mate beoordeling</em> gelijk is aan de waarde van ditzelfde attribuut in de huidige entiteit.<br clear="none">
-                                       De waarde van de <em>begindatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het eerste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em>.<br clear="none">
-                                       De waarde van de <em>einddatum</em> is gelijk aan het datumdeel van het <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em>. 
-                                    </li>
-                                    
-                                 </ul>
+                                 <p>De waarde van de <em>begindatum</em> is gelijk aan het datumdeel van <em>tijdstip meting</em> van het eerste <em>Tijdmeetwaardepaar</em> van de entiteit <em>Tijdmeetwaardereeks</em> behorende bij de observatie.<br clear="none">
+                                    De waarde van de <em>einddatum</em> is gelijk aan het datumdeel van <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> van de entiteit <em>Tijdmeetwaardereeks</em> behorende bij de observatie.
+                                 </p>
                                  
                               </td>
                            </tr>
