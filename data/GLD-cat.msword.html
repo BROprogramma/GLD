@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191111</p>
       <p>Imvertor: 1.59.1</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200221-131527</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200221-171822</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -2514,7 +2514,8 @@
                               <th>Reden geen waarde</th>
                               <td>
                                  
-                                 <p>De waarde mag ontbreken wanneer het attribuut <em>censuurreden</em> van de entiteit <em>Metadata tijdmeetwaardepaar</em> aanwezig is.
+                                 <p>De waarde moet ontbreken wanneer het attribuut <em>censuurreden</em> van de entiteit <em>Metadata tijdmeetwaardepaar</em> aanwezig is.<br clear="none">
+                                    De eenheid behorende bij de waarde moet ontbreken wanneer de waarde ontbreekt
                                  </p>
                                  
                               </td>
@@ -2529,8 +2530,7 @@
                                  </p>
                                  
                                  <p>De waarde mag ontbreken wanneer een limietwaarde wordt onder- of overschreden. Bijvoorbeeld
-                                    wanneer de peilbuis is overgelopen of de sensor is drooggevallen. Wanneer de waarde
-                                    ontbreekt, ontbreekt ook de eenheid.
+                                    wanneer de peilbuis is overgelopen of de sensor is drooggevallen.
                                  </p>
                                  
                               </td>
@@ -2615,6 +2615,8 @@
                               <td>
                                  
                                  <p>De waarde van het attribuut mag niet gelijk zijn aan <em>nogNietBeoordeeld</em> wanneer de waarde van het attribuut <em>mate beoordeling</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>volledig beoordeeld.</em> 
+                                    De waarde van het attribuut mag niet gelijk zijn aan <em>nogNietBeoordeeld</em> wanneer de waarde van het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>controlemeting.</em>
+                                    <br clear="none">
                                     
                                  </p>
                                  
@@ -2770,6 +2772,7 @@
                                  
                                  <p>Voor IMBRO/A gegevens ontbreekt de waarde wanneer het attribuut <em>censuurreden</em> de waarde <em>onbekend</em> heeft.
                                     Voor IMBRO/A-gegevens mag de waarde ontbreken wanneer het attribuut <em>censuurreden</em> de waarde <em>groterDanLimietwaarde</em> of <em>kleinerDanLimietwaarde</em> heeft.
+                                    Wanneer de waarde ontbreekt, moet ook de eenheid ontbreken.
                                  </p>
                                  
                               </td>
@@ -2782,8 +2785,6 @@
                                     sensor), wordt hier de inhangdiepte van de sensor in meter ten opzichte van NAP geregistreerd.
                                     Het gegeven <em>censuurreden</em> heeft in dit geval de waarde <em>kleinerDanLimietwaarde</em> en het gegeven <em>waterstand</em> van de entiteit <em>Tijdmeetwaardepaar</em> heeft geen waarde.
                                  </p>
-                                 
-                                 <p>Wanneer voor IMBRO/A gegevens de waarde ontbreekt, ontbreekt ook de eenheid.</p>
                                  
                               </td>
                            </tr>
@@ -2964,7 +2965,8 @@
                      <td>
                         
                         <p>Nederlandse norm 5120 Geotechniek - Bepaling van stijghoogten van grondwater door
-                           middel van peilbuizen. Deze norm is ingetrokken en vervangen door NEN 22475-1, 2006.
+                           middel van peilbuizen. Deze norm is ingetrokken en vervangen door NEN-EN-ISO22475,
+                           2006
                         </p>
                         
                      </td>
