@@ -13,7 +13,7 @@
    <body>
       <p>Conceptual model/Grondwaterstandonderzoek (GLD)/20191111</p>
       <p>Imvertor: 1.59.1</p>
-      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200221-172724</p>
+      <p>Model release: Conceptualmodel-GrondwaterstandonderzoekGLD-0.91-3-20191111-20200226-160942</p>
       <hr>
       <section>
          <h1>Artikel 1 Definitie van registratieobject, entiteiten en attributen</h1>
@@ -1370,10 +1370,10 @@
                </section><a class="anchor" id="graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE"></a><a class="anchor" id="global_class_Model_Observatie"></a><section id="global_class_Model_Observatie">
                   <h3>   Observatie</h3>
                   <div class="imageinfo "><img src="Images/EAID_FFE0225E_BCD2_4577_80E8_F7BE7B9C534D.png" usemap="#imagemap-EAID_FFE0225E_BCD2_4577_80E8_F7BE7B9C534D" alt="Diagram "><map name="imagemap-EAID_FFE0225E_BCD2_4577_80E8_F7BE7B9C534D">
-                        <area shape="rect" alt="Observatieproces" coords="25,123,158,171" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33">
-                        <area shape="rect" alt="Tijdmeetwaardereeks" coords="299,263,431,314" href="#graph_EAID_590167CC_D7A2_4abb_8672_8592B1DF1842">
-                        <area shape="rect" alt="Metadata observatie" coords="547,124,680,170" href="#graph_EAID_2931B2EB_8861_47e1_B587_ADACE12C97F7">
-                        <area shape="rect" alt="Observatie" coords="248,90,482,202" href="#graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE"></map><p><b></b></p>
+                        <area shape="rect" alt="Observatieproces" coords="25,114,158,162" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33">
+                        <area shape="rect" alt="Tijdmeetwaardereeks" coords="299,254,431,305" href="#graph_EAID_590167CC_D7A2_4abb_8672_8592B1DF1842">
+                        <area shape="rect" alt="Metadata observatie" coords="547,115,680,161" href="#graph_EAID_2931B2EB_8861_47e1_B587_ADACE12C97F7">
+                        <area shape="rect" alt="Observatie" coords="248,81,482,193" href="#graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE"></map><p><b></b></p>
                   </div>
                   <table style="width: 100%;">
                      <colgroup style="width: 30%;"></colgroup>
@@ -1450,7 +1450,7 @@
                               <th>Regels</th>
                               <td>
                                  
-                                 <p>De waarde van het attribuut moet uniek zijn binnen het Grondwaterstandonderzoek.</p>
+                                 <p>De waarde van het attribuut moet uniek zijn binnen het grondwaterstandonderzoek.</p>
                                  
                               </td>
                            </tr>
@@ -1499,16 +1499,16 @@
                               <th>Regels</th>
                               <td>
                                  
-                                 <p>De begindatum van <em>observatieperiode</em> is later of gelijk aan de einddatum van <em>observatieperiode</em> van andere entiteiten <em>Observatie</em> uit hetzelfde Grondwaterstandonderzoek waarvan de begindatum eerder is of gelijk
-                                    is aan de begindatum van <em>observatieperiode</em> EN<br clear="none">
-                                    De einddatum van <em>observatieperiode</em> is eerder of gelijk aan de begindatum van <em>observatieperiode</em> van andere entiteiten <em>Observatie</em> uit hetzelfde Grondwaterstandonderzoek waarvan de einddatum later is of gelijk is
-                                    aan de einddatum van <em>observatieperiode</em> wanneer geldt dat<br clear="none">
-                                    de waarde van het attribuut <em>type observatie</em> gelijk is aan <em>reguliere meting</em> EN  de waarde van het attribuut <em>mate beoordeling</em> gelijk is aan <em>volledig beoordeeld</em>
+                                 <p>De begindatum van <em>observatieperiode moet</em> liggen na of gelijk zijn aan de einddatum van <em>observatieperiode</em> van andere <em>Observaties</em> uit hetzelfde grondwaterstandonderzoek waarvan de begindatum gelijk is aan of voor
+                                    de begindatum ligt van <em>observatieperiode</em> EN<br clear="none">
+                                    De einddatum van <em>observatieperiode</em> moet liggen voor of gelijk zijn aan de begindatum van <em>observatieperiode</em> van andere <em>Observaties</em> uit hetzelfde grondwaterstandonderzoek waarvan de einddatum gelijk is aan of na de
+                                    einddatum ligt van <em>observatieperiode,</em> wanneer geldt dat<br clear="none">
+                                    de waarde van het attribuut <em>type observatie</em> gelijk is aan <em>reguliere meting</em> EN  de waarde van het attribuut <em>mate beoordeling</em> gelijk is aan <em>volledig beoordeeld.</em>
                                     
                                  </p>
                                  
-                                 <p>De waarde van de <em>begindatum</em> is gelijk aan het datumdeel van <em>tijdstip meting</em> van het eerste <em>Tijdmeetwaardepaar</em> van de entiteit <em>Tijdmeetwaardereeks</em> behorende bij de observatie.<br clear="none">
-                                    De waarde van de <em>einddatum</em> is gelijk aan het datumdeel van <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> van de entiteit <em>Tijdmeetwaardereeks</em> behorende bij de observatie.
+                                 <p>De waarde van <em>begindatum</em> moet gelijk zijn aan het datumdeel van <em>tijdstip meting</em> van het eerste <em>Tijdmeetwaardepaar</em> van de entiteit <em>Tijdmeetwaardereeks</em> behorende bij de observatie.<br clear="none">
+                                    De waarde van <em>einddatum</em> moet gelijk zijn aan het datumdeel van <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> van de entiteit <em>Tijdmeetwaardereeks</em> behorende bij de observatie.
                                  </p>
                                  
                               </td>
@@ -1569,7 +1569,7 @@
                               <th>Regels</th>
                               <td>
                                  
-                                 <p>De waarde van dit attribuut is gelijk aan het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em> wanneer:<br clear="none">
+                                 <p>De waarde van dit attribuut moet gelijk zijn aan het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> van de entiteit <em>Tijdmeetwaardereeks</em>, behorende bij de observatie wanneer:<br clear="none">
                                     
                                  </p>
                                  
@@ -1580,10 +1580,13 @@
                                     </li>
                                     
                                     <li>het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan reguliere meting EN het attribuut mate beoordeling gelijk is aan voorlopig.<br clear="none">
-                                       De waarde van dit attribuut moet liggen na de waarde van het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> in de, bij de observatie horende entiteit <em>Tijdmeetwaardereeks</em> wanneer het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>reguliere meting</em> EN het attribuut <em>mate beoordeling</em> gelijk is aan <em>volledig beoordeeld</em>.
+                                       
                                     </li>
                                     
                                  </ul>
+                                 
+                                 <p>De waarde van dit attribuut moet liggen na de waarde van het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> van de entiteit <em>Tijdmeetwaardereeks</em>, behorende bij de observatie wanneer het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>reguliere meting</em> EN het attribuut <em>mate beoordeling</em> gelijk is aan <em>volledig beoordeeld</em>.
+                                 </p>
                                  
                               </td>
                            </tr>
@@ -1681,6 +1684,14 @@
                                  
                                  <p>De waarde van dit attribuut moet gelijk zijn aan het datumdeel van het attribuut <em>tijdstip resultaat</em> van de entiteit <em>Observatie</em>.
                                  </p>
+                                 
+                              </td>
+                           </tr>
+                           <tr>
+                              <th>Toelichting</th>
+                              <td>
+                                 
+                                 <p>Dit is in WaterML een verplicht attribuut. </p>
                                  
                               </td>
                            </tr>
@@ -2021,7 +2032,7 @@
                               <th>Regels</th>
                               <td>
                                  
-                                 <p>De waarde van het attribuut moet uniek zijn binnen het Grondwaterstandonderzoek.</p>
+                                 <p>De waarde van het attribuut moet uniek zijn binnen het grondwaterstandonderzoek.</p>
                                  
                               </td>
                            </tr>
@@ -2160,7 +2171,7 @@
                               <td>
                                  
                                  <p>Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut <em>type meetinstrument</em> gelijk is aan <em>druksensor</em>.<br clear="none">
-                                    Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut <em>type meetinstrument</em> gelijk is aan <em>stereoDruksensor</em>.
+                                    Het attribuut moet aanwezig zijn wanneer de waarde van het attribuut <em>type meetinstrument</em> gelijk is aan <em>stereoDruksensor</em>.<br clear="none">
                                     In alle andere gevallen mag het attribuut niet aanwezig zijn.
                                  </p>
                                  
@@ -2374,7 +2385,7 @@
                               <th>Regels</th>
                               <td>
                                  
-                                 <p>De waarde van het attribuut moet uniek zijn binnen het Grondwaterstandonderzoek.</p>
+                                 <p>De waarde van het attribuut moet uniek zijn binnen het grondwaterstandonderzoek.</p>
                                  
                               </td>
                            </tr>
@@ -2515,7 +2526,7 @@
                               <td>
                                  
                                  <p>De waarde moet ontbreken wanneer het attribuut <em>censuurreden</em> van de entiteit <em>Metadata tijdmeetwaardepaar</em> aanwezig is.<br clear="none">
-                                    De eenheid behorende bij de waarde moet ontbreken wanneer de waarde ontbreekt
+                                    De eenheid behorende bij de waarde moet ontbreken wanneer de waarde ontbreekt.
                                  </p>
                                  
                               </td>
@@ -2614,7 +2625,8 @@
                               <th>Regels</th>
                               <td>
                                  
-                                 <p>De waarde van het attribuut mag niet gelijk zijn aan <em>nogNietBeoordeeld</em> wanneer de waarde van het attribuut <em>mate beoordeling</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>volledig beoordeeld.</em> 
+                                 <p>De waarde van het attribuut mag niet gelijk zijn aan <em>nogNietBeoordeeld</em> wanneer de waarde van het attribuut <em>mate beoordeling</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>volledig beoordeeld</em>.<br clear="none">
+                                    <em> </em> 
                                     De waarde van het attribuut mag niet gelijk zijn aan <em>nogNietBeoordeeld</em> wanneer de waarde van het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>controlemeting.</em>
                                     <br clear="none">
                                     
@@ -2757,7 +2769,8 @@
                               <td>
                                  
                                  <p>Het attribuut moet aanwezig zijn en een waarde hebben wanneer het attribuut <em>censuurreden</em> een waarde heeft.<br clear="none">
-                                    In alle andere gevallen ontbreekt het attribuut.
+                                    In alle andere gevallen ontbreekt het attribuut.<br clear="none">
+                                    De eenheid behorende bij de waarde moet ontbreken wanneer de waarde ontbreekt 
                                  </p>
                                  
                               </td>
@@ -2771,8 +2784,7 @@
                               <td>
                                  
                                  <p>Voor IMBRO/A gegevens ontbreekt de waarde wanneer het attribuut <em>censuurreden</em> de waarde <em>onbekend</em> heeft.<br clear="none">
-                                    Voor IMBRO/A-gegevens mag de waarde ontbreken wanneer het attribuut <em>censuurreden</em> de waarde <em>groterDanLimietwaarde</em> of <em>kleinerDanLimietwaarde</em> heeft.<br clear="none">
-                                    Wanneer de waarde ontbreekt, moet ook de eenheid ontbreken.
+                                    Voor IMBRO/A-gegevens mag de waarde ontbreken wanneer het attribuut <em>censuurreden</em> de waarde <em>groterDanLimietwaarde</em> of <em>kleinerDanLimietwaarde</em> heeft.
                                  </p>
                                  
                               </td>
