@@ -1313,10 +1313,10 @@
       </section><a class="anchor" id="graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE"></a><a class="anchor" id="global_class_Model_Observatie"></a><section id="global_class_Model_Observatie">
          <h3>   Observatie</h3>
          <div class="imageinfo "><img src="data/Images/EAID_FFE0225E_BCD2_4577_80E8_F7BE7B9C534D.png" usemap="#imagemap-EAID_FFE0225E_BCD2_4577_80E8_F7BE7B9C534D" alt="Diagram "><map name="imagemap-EAID_FFE0225E_BCD2_4577_80E8_F7BE7B9C534D">
-               <area shape="rect" alt="Observatieproces" coords="25,116,158,164" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33">
-               <area shape="rect" alt="Tijdmeetwaardereeks" coords="299,256,431,307" href="#graph_EAID_590167CC_D7A2_4abb_8672_8592B1DF1842">
-               <area shape="rect" alt="Metadata observatie" coords="547,117,680,163" href="#graph_EAID_2931B2EB_8861_47e1_B587_ADACE12C97F7">
-               <area shape="rect" alt="Observatie" coords="248,83,482,195" href="#graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE"></map><p><b></b></p>
+               <area shape="rect" alt="Observatieproces" coords="25,114,158,162" href="#graph_EAID_60FD1126_3C17_4798_955B_1E516F7A0B33">
+               <area shape="rect" alt="Tijdmeetwaardereeks" coords="299,254,431,305" href="#graph_EAID_590167CC_D7A2_4abb_8672_8592B1DF1842">
+               <area shape="rect" alt="Metadata observatie" coords="547,115,680,161" href="#graph_EAID_2931B2EB_8861_47e1_B587_ADACE12C97F7">
+               <area shape="rect" alt="Observatie" coords="248,81,482,193" href="#graph_EAID_665112EA_A39D_4ff0_BC95_CDDD3C5314EE"></map><p><b></b></p>
          </div>
          <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
@@ -1492,6 +1492,10 @@
                      <td>DatumTijd</td>
                   </tr>
                   <tr>
+                     <th>&nbsp;&nbsp;Naam IMBRO/A</th>
+                     <td>OnvolledigeDatum</td>
+                  </tr>
+                  <tr>
                      <th>Regels</th>
                      <td>
                         
@@ -1512,6 +1516,16 @@
                         </ul>
                         
                         <p>De waarde van dit attribuut moet liggen na de waarde van het attribuut <em>tijdstip meting</em> van het laatste <em>Tijdmeetwaardepaar</em> van de entiteit <em>Tijdmeetwaardereeks</em>, behorende bij de observatie wanneer het attribuut <em>observatietype</em> van de entiteit <em>Metadata observatie</em> gelijk is aan <em>reguliere meting</em> EN het attribuut <em>mate beoordeling</em> gelijk is aan <em>volledig beoordeeld</em>.
+                        </p>
+                        
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Regels IMBRO/A</th>
+                     <td>
+                        
+                        <p>Onder kwaliteitsregime IMBRO/A mag een waarde van het type DatumTijd, of mag een waarde
+                           van het type OnvolledigeDatum gebruikt worden.
                         </p>
                         
                      </td>
@@ -1593,6 +1607,10 @@
                   <tr>
                      <th>&nbsp;&nbsp;Naam</th>
                      <td>Datum</td>
+                  </tr>
+                  <tr>
+                     <th>&nbsp;&nbsp;Naam IMBRO/A</th>
+                     <td>OnvolledigeDatum</td>
                   </tr>
                   <tr>
                      <th>Regels</th>
@@ -2220,10 +2238,7 @@
                      <td>
                         
                         <p>De waarde van het attribuut moet gelijk zijn aan onbekend wanneer de waarde van het
-                           attribuut <em>mate beoordeling</em> van de entiteit <em>Metadata observatie</em> gelijk is aan onbekend.<br clear="none">
-                           De waarde van het attribuut mag niet gelijk zijn aan onbekend wanneer de waarde van
-                           het attribuut <em>mate beoordeling</em> van de entiteit <em>Metadata observatie</em> gelijk is aan voorlopig of gelijk is aan volledigBeoordeeld.<br clear="none">
-                           
+                           attribuut <em>mate beoordeling</em> van de entiteit <em>Metadata observatie</em> gelijk is aan onbekend.
                         </p>
                         
                      </td>
@@ -2547,14 +2562,7 @@
                      <td>
                         
                         <p>De waarde van het attribuut moet gelijk zijn aan onbekend wanneer de waarde van het
-                           attribuut <em>mate beoordeling</em> van de entiteit <em>Metadata observatie</em> gelijk is aan onbekend.<br clear="none">
-                           De waarde van het attribuut mag niet gelijk zijn aan onbekend wanneer de waarde van
-                           het attribuut <em>mate beoordeling</em> van de entiteit <em>Metadata observatie</em> gelijk is aan voorlopig of gelijk is aan volledigBeoordeeld. 
-                        </p>
-                        
-                        <p>De waarde van het attribuut moet gelijk zijn aan onbekend wanneer de waarde van het
-                           attribuut <em>beoordelingsprocedure</em> van de entiteit <em>Observatieproces</em> gelijk is aan onbekend.<br clear="none">
-                           In alle andere gevallen mag de waarde van het attribuut niet gelijk zijn aan onbekend.
+                           attribuut <em>mate beoordeling</em> van de entiteit <em>Metadata observatie</em> gelijk is aan onbekend.
                         </p>
                         
                      </td>
