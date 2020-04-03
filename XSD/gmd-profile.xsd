@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    targetNamespace="http://www.isotc211.org/2005/gmd"
+    elementFormDefault="qualified"
+    version="1.0.0">
+  <!-- ===================================================================== -->
+	<annotation>
+		<documentation>Geographic MetaData (GMD) profile for BRO.</documentation>
+		<documentation>
+      Geographic MetaData (GMD) extensible markup language is a component of the
+      XML Schema Implementation of Geographic Information Metadata documented in
+      ISO/TS 19139:2007. GMD includes all the definitions
+      of http://www.isotc211.org/2005/gmd namespace.
+		</documentation>
+		<documentation>Revision history
+			1.0.0: Orignal version of the BRO profile, extracted from:
+      - http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd
+      - http://schemas.opengis.net/iso/19139/20060504/gmd/metadataApplication.xsd
+      - http://schemas.opengis.net/iso/19139/20060504/gmd/metadataEntity.xsd
+      - http://schemas.opengis.net/iso/19139/20060504/gmd/identification.xsd
+      - http://schemas.opengis.net/iso/19139/20060504/gmd/citation.xsd
+
+      - http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd
+      - http://schemas.opengis.net/iso/19139/20070417/gmd/metadataApplication.xsd
+      - http://schemas.opengis.net/iso/19139/20070417/gmd/metadataEntity.xsd
+      - http://schemas.opengis.net/iso/19139/20070417/gmd/identification.xsd
+      - http://schemas.opengis.net/iso/19139/20070417/gmd/citation.xsd
+		</documentation>
+	</annotation>
+	<!-- ===================================================================== -->
+	<!-- 
+  <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="https://schema.broservices.nl/profile/gco/1.0/gco-profile.xsd"/>
+    -->
+  <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="gco-profile.xsd"/>
+	<!-- ===================================================================== -->
+  <!-- ====================== from citation.xsd ============================ -->
+  <!-- ===================================================================== -->
+  <!-- ===================== CI_ResponsibleParty =========================== -->
+  <complexType name="CI_ResponsibleParty_Type">
+    <annotation>
+      <documentation>
+        Identification of, and means of communication with, person(s) and organisations associated with the dataset
+      </documentation>
+    </annotation>
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence>
+          <!-- BRO commented out:
+          <element name="individualName" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+          -->
+          <element name="organisationName" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+          <!-- BRO commented out:
+          <element name="positionName" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+          <element name="contactInfo" type="gmd:CI_Contact_PropertyType" minOccurs="0"/>
+          -->
+          <element name="role" type="gmd:CI_RoleCode_PropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ..................................................................... -->
+  <element name="CI_ResponsibleParty" type="gmd:CI_ResponsibleParty_Type"/>
+  <!-- ..................................................................... -->
+  <complexType name="CI_ResponsibleParty_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="gmd:CI_ResponsibleParty"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- ========================= CI_RoleCode =============================== -->
+  <element name="CI_RoleCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
+  <!-- ..................................................................... -->
+  <complexType name="CI_RoleCode_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="gmd:CI_RoleCode"/>
+    </sequence>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- ===================================================================== -->
+  <!-- =================== from identification.xsd ========================= -->
+  <!-- ===================================================================== -->
+  <!-- ================ AbstractMD_Identification_Type ===================== -->
+  <complexType name="AbstractMD_Identification_Type" abstract="true">
+    <annotation>
+      <documentation>Basic information about data</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence>
+          <!-- TODO element name="citation" type="gmd:CI_Citation_PropertyType"/-->
+          <element name="abstract" type="gco:CharacterString_PropertyType"/>
+          <!-- BRO commented out:
+          <element name="purpose" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+          <element name="credit" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="status" type="gmd:MD_ProgressCode_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          -->
+          <element name="pointOfContact" type="gmd:CI_ResponsibleParty_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <!-- BRO commented out:
+          <element name="resourceMaintenance" type="gmd:MD_MaintenanceInformation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="graphicOverview" type="gmd:MD_BrowseGraphic_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="resourceFormat" type="gmd:MD_Format_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="descriptiveKeywords" type="gmd:MD_Keywords_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="resourceSpecificUsage" type="gmd:MD_Usage_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="resourceConstraints" type="gmd:MD_Constraints_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="aggregationInfo" type="gmd:MD_AggregateInformation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          -->
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ..................................................................... -->
+  <element name="AbstractMD_Identification" type="gmd:AbstractMD_Identification_Type" abstract="true"/>
+  <!-- ========================= MD_Identification ========================= -->
+  <element name="MD_Identification" type="gmd:MD_IdentificationType"/>
+  <!-- ..................................................................... -->
+  <complexType name="MD_IdentificationType">
+    <complexContent>
+      <extension base="gmd:AbstractMD_Identification_Type">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ..................................................................... -->
+  <complexType name="MD_Identification_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="gmd:MD_Identification"/>
+    </sequence>
+    <attributeGroup ref="gco:ObjectReference"/>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- ===================================================================== -->
+  <!-- =================== from metadataEntity.xsd ========================= -->
+  <!-- ===================================================================== -->
+  <!-- ========================= MD_Metadata =============================== -->
+  <complexType name="MD_Metadata_Type">
+    <annotation>
+      <documentation>Information about the metadata</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="gco:AbstractObject_Type">
+        <sequence>
+          <!-- BRO commented out:
+					<element name="fileIdentifier" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+					<element name="language" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+					<element name="characterSet" type="gmd:MD_CharacterSetCode_PropertyType" minOccurs="0"/>
+					<element name="parentIdentifier" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+					<element name="hierarchyLevel" type="gmd:MD_ScopeCode_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="hierarchyLevelName" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					-->
+          <element name="contact" type="gmd:CI_ResponsibleParty_PropertyType" maxOccurs="unbounded"/>
+          <element name="dateStamp" type="gco:Date_PropertyType"/>
+          <!-- BRO commented out:
+					<element name="metadataStandardName" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+					<element name="metadataStandardVersion" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+					<element name="dataSetURI" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+					<element name="locale" type="gmd:PT_Locale_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="spatialRepresentationInfo" type="gmd:MD_SpatialRepresentation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="referenceSystemInfo" type="gmd:MD_ReferenceSystem_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="metadataExtensionInfo" type="gmd:MD_MetadataExtensionInformation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					-->
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ..................................................................... -->
+  <element name="MD_Metadata" type="gmd:MD_Metadata_Type"/>
+  <!-- ..................................................................... -->
+  <complexType name="MD_Metadata_PropertyType">
+    <sequence>
+      <element ref="gmd:MD_Metadata"/>
+    </sequence>
+    <!-- BRO changed minOccurs from 0 to 1 -->
+    <!-- BRO commented out:
+		<attributeGroup ref="gco:ObjectReference"/>
+		<attribute ref="gco:nilReason"/>
+		-->
+  </complexType>
+  <!-- ===================================================================== -->
+</schema>

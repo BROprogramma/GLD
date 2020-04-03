@@ -1,0 +1,735 @@
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:swe="http://www.opengis.net/swe/2.0"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  targetNamespace="http://www.opengis.net/swe/2.0"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified"
+  version="2.1.0">
+  <annotation>
+    <documentation>SWE Common profile for BRO.</documentation>
+  </annotation>
+  <!--
+	<import namespace="http://www.w3.org/1999/xlink" schemaLocation="https://schema.broservices.nl/profile/xlink/1.0/xlink-profile.xsd"/>
+	-->
+  <import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlink-profile.xsd"/>
+  <!-- ================================================= -->
+  <element name="AbstractSWE" type="swe:AbstractSWEType" abstract="true"/>
+  <!-- ================================================= -->
+  <complexType name="AbstractSWEType">
+    <attribute name="id" type="ID" use="optional"/>
+    <!-- TODO: check
+		<sequence>
+			<element name="extension" type="anyType" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+		-->
+  </complexType>
+  <!-- ================================================= -->
+  <element name="AbstractSWEIdentifiable" type="swe:AbstractSWEIdentifiableType" abstract="true" substitutionGroup="swe:AbstractSWE"/>
+  <complexType name="AbstractSWEIdentifiableType">
+    <complexContent>
+      <extension base="swe:AbstractSWEType">
+        <sequence>
+          <element name="identifier" type="anyURI" minOccurs="0"/>
+          <element name="label" type="string" minOccurs="0"/>
+          <element name="description" type="string" minOccurs="0"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="UnitReference">
+    <attribute name="code" type="swe:UomSymbol" use="optional"/>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <simpleType name="UomSymbol">
+    <restriction base="string">
+      <pattern value="[^: \n\r\t]+"/>
+    </restriction>
+  </simpleType>
+  <!-- ================================================= -->
+  <complexType name="NilValue">
+    <simpleContent>
+      <extension base="token">
+        <attribute name="reason" type="anyURI" use="required"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <!-- ================================================= -->
+  <!-- TODO: check -->
+  <complexType name="EncodedValuesPropertyType">
+    <complexContent>
+      <extension base="anyType">
+        <attributeGroup ref="swe:AssociationAttributeGroup"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <!-- TODO: check -->
+  <simpleType name="TokenPair">
+    <restriction>
+      <simpleType>
+        <list itemType="string"/>
+      </simpleType>
+      <length value="2"/>
+    </restriction>
+  </simpleType>
+  <!-- ================================================= -->
+  <!-- TODO: check -->
+  <simpleType name="IntegerPair">
+    <restriction>
+      <simpleType>
+        <list itemType="integer"/>
+      </simpleType>
+      <length value="2"/>
+    </restriction>
+  </simpleType>
+  <!-- ================================================= -->
+  <!-- TODO: check -->
+  <simpleType name="RealPair">
+    <restriction>
+      <simpleType>
+        <list itemType="double"/>
+      </simpleType>
+      <length value="2"/>
+    </restriction>
+  </simpleType>
+  <!-- ================================================= -->
+  <!-- TODO: check -->
+  <simpleType name="TimePair">
+    <restriction>
+      <simpleType>
+        <list itemType="swe:TimePosition"/>
+      </simpleType>
+      <length value="2"/>
+    </restriction>
+  </simpleType>
+  <!-- ================================================= -->
+  <simpleType name="TimePosition">
+    <union memberTypes="double swe:TimeIso8601"/>
+  </simpleType>
+  <!-- ================================================= -->
+  <simpleType name="TimeIso8601">
+    <union memberTypes="date time dateTime swe:TimeIndeterminateValue"/>
+  </simpleType>
+  <!-- ================================================= -->
+  <simpleType name="TimeIndeterminateValue">
+    <restriction base="string">
+      <enumeration value="now"/>
+    </restriction>
+  </simpleType>
+  <!-- ================================================= -->
+  <attributeGroup name="AssociationAttributeGroup">
+    <attributeGroup ref="xlink:simpleAttrs"/>
+  </attributeGroup>
+  <!-- ================================================= -->
+  <complexType name="Reference">
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="DataRecord" type="swe:DataRecordType" substitutionGroup="swe:AbstractDataComponent"/>
+  <!-- ================================================= -->
+  <complexType name="DataRecordType">
+    <complexContent>
+      <extension base="swe:AbstractDataComponentType">
+        <sequence>
+          <element name="field" minOccurs="1" maxOccurs="unbounded">
+            <complexType>
+              <complexContent>
+                <extension base="swe:AbstractDataComponentPropertyType">
+                  <attribute name="name" type="NCName" use="required"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="DataRecordPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:DataRecord"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="DataRecordPropertyByValueType">
+    <sequence>
+      <element ref="swe:DataRecord"/>
+    </sequence>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="Vector" type="swe:VectorType" substitutionGroup="swe:AbstractDataComponent"/>
+  <!-- ================================================= -->
+  <complexType name="VectorType">
+    <complexContent>
+      <extension base="swe:AbstractDataComponentType">
+        <sequence>
+          <element name="coordinate" minOccurs="1" maxOccurs="unbounded">
+            <complexType>
+              <complexContent>
+                <extension base="swe:AnyNumericalPropertyType">
+                  <attribute name="name" type="NCName" use="required"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+        </sequence>
+        <attribute name="referenceFrame" type="anyURI" use="required"/>
+        <attribute name="localFrame" type="anyURI" use="optional"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="VectorPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:Vector"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="VectorPropertyByValueType">
+    <sequence>
+      <element ref="swe:Vector"/>
+    </sequence>
+  </complexType>
+  <!-- ================================================= -->
+  <!-- TODO: AbstractDataComponent -->
+  <element name="Count" type="swe:CountType" substitutionGroup="swe:AbstractSimpleComponent"/>
+  <!-- ================================================= -->
+  <complexType name="CountType">
+    <complexContent>
+      <extension base="swe:AbstractSimpleComponentType">
+        <sequence>
+          <element name="constraint" type="swe:AllowedValuesPropertyType" minOccurs="0" maxOccurs="1"/>
+          <element name="value" type="integer" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="CountPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:Count"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <!-- TODO: AbstractDataComponent -->
+  <element name="CategoryRange" type="swe:CategoryRangeType" substitutionGroup="swe:AbstractSimpleComponent"/>
+  <!-- ================================================= -->
+  <complexType name="CategoryRangeType">
+    <complexContent>
+      <extension base="swe:AbstractSimpleComponentType">
+        <sequence>
+          <element name="codeSpace" type="swe:Reference" minOccurs="0" maxOccurs="1"/>
+          <element name="constraint" type="swe:AllowedTokensPropertyType" minOccurs="0" maxOccurs="1"/>
+          <element name="value" type="swe:TokenPair" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="CategoryRangePropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:CategoryRange"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <!-- TODO: AbstractDataComponent -->
+  <element name="AbstractSimpleComponent" type="swe:AbstractSimpleComponentType" abstract="true" substitutionGroup="swe:AbstractDataComponent"/>
+  <!-- ================================================= -->
+  <complexType name="AbstractSimpleComponentType" abstract="true">
+    <complexContent>
+      <extension base="swe:AbstractDataComponentType">
+        <sequence>
+          <element name="quality" type="swe:QualityPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="nilValues" type="swe:NilValuesPropertyType" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+        <attribute name="referenceFrame" type="anyURI" use="optional"/>
+        <attribute name="axisID" type="string" use="optional"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="AbstractSimpleComponentPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:AbstractSimpleComponent"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="QuantityRange" type="swe:QuantityRangeType" substitutionGroup="swe:AbstractSimpleComponent"/>
+  <!-- ================================================= -->
+  <complexType name="QuantityRangeType">
+    <complexContent>
+      <extension base="swe:AbstractSimpleComponentType">
+        <sequence>
+          <element name="uom" type="swe:UnitReference"/>
+          <element name="constraint" type="swe:AllowedValuesPropertyType" minOccurs="0" maxOccurs="1"/>
+          <element name="value" type="swe:RealPair" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="QuantityRangePropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:QuantityRange"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="Time" type="swe:TimeType" substitutionGroup="swe:AbstractSimpleComponent"/>
+  <!-- ================================================= -->
+  <complexType name="TimeType">
+    <complexContent>
+      <extension base="swe:AbstractSimpleComponentType">
+        <sequence>
+          <element name="uom" type="swe:UnitReference"/>
+          <element name="constraint" type="swe:AllowedTimesPropertyType" minOccurs="0" maxOccurs="1"/>
+          <element name="value" type="swe:TimePosition" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+        <attribute name="referenceTime" type="dateTime" use="optional"/>
+        <attribute name="localFrame" type="anyURI" use="optional"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="TimePropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:Time"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="TimeRange" type="swe:TimeRangeType" substitutionGroup="swe:AbstractSimpleComponent"/>
+  <!-- ================================================= -->
+  <complexType name="TimeRangeType">
+    <complexContent>
+      <extension base="swe:AbstractSimpleComponentType">
+        <sequence>
+          <element name="uom" type="swe:UnitReference"/>
+          <element name="constraint" type="swe:AllowedTimesPropertyType" minOccurs="0" maxOccurs="1"/>
+          <element name="value" type="swe:TimePair" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+        <attribute name="referenceTime" type="dateTime" use="optional"/>
+        <attribute name="localFrame" type="anyURI" use="optional"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="TimeRangePropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:TimeRange"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="Boolean" type="swe:BooleanType" substitutionGroup="swe:AbstractSimpleComponent"/>
+  <!-- ================================================= -->
+  <complexType name="BooleanType">
+    <complexContent>
+      <extension base="swe:AbstractSimpleComponentType">
+        <sequence>
+          <element name="value" type="boolean" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="BooleanPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:Boolean"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="Text" type="swe:TextType" substitutionGroup="swe:AbstractSimpleComponent"/>
+  <!-- ================================================= -->
+  <complexType name="TextType">
+    <complexContent>
+      <extension base="swe:AbstractSimpleComponentType">
+        <sequence>
+          <element name="constraint" type="swe:AllowedTokensPropertyType" minOccurs="0" maxOccurs="1"/>
+          <element name="value" type="string" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="TextPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:Text"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="Category" type="swe:CategoryType" substitutionGroup="swe:AbstractSimpleComponent"/>
+  <!-- ================================================= -->
+  <complexType name="CategoryType">
+    <complexContent>
+      <extension base="swe:AbstractSimpleComponentType">
+        <sequence>
+          <element name="codeSpace" type="swe:Reference" minOccurs="0" maxOccurs="1"/>
+          <element name="constraint" type="swe:AllowedTokensPropertyType" minOccurs="0" maxOccurs="1"/>
+          <element name="value" type="string" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="CategoryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:Category"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="Quantity" type="swe:QuantityType" substitutionGroup="swe:AbstractSimpleComponent"/>
+  <!-- ================================================= -->
+  <complexType name="QuantityType">
+    <complexContent>
+      <extension base="swe:AbstractSimpleComponentType">
+        <sequence>
+          <element name="uom" type="swe:UnitReference"/>
+          <element name="constraint" type="swe:AllowedValuesPropertyType" minOccurs="0" maxOccurs="1"/>
+          <element name="value" type="double" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="QuantityPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:Quantity"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="AbstractDataComponent" type="swe:AbstractDataComponentType" abstract="true" substitutionGroup="swe:AbstractSWEIdentifiable"/>
+  <!-- ================================================= -->
+  <complexType name="AbstractDataComponentType" abstract="true">
+    <complexContent>
+      <extension base="swe:AbstractSWEIdentifiableType">
+        <attribute name="updatable" type="boolean" use="optional"/>
+        <attribute name="optional" type="boolean" use="optional" default="false"/>
+        <attribute name="definition" type="anyURI" use="optional"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="AbstractDataComponentPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:AbstractDataComponent"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="CountRange" type="swe:CountRangeType" substitutionGroup="swe:AbstractSimpleComponent"/>
+  <!-- ================================================= -->
+  <complexType name="CountRangeType">
+    <complexContent>
+      <extension base="swe:AbstractSimpleComponentType">
+        <sequence>
+          <element name="constraint" type="swe:AllowedValuesPropertyType" minOccurs="0" maxOccurs="1"/>
+          <element name="value" type="swe:IntegerPair" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="CountRangePropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:CountRange"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="NilValues" type="swe:NilValuesType" substitutionGroup="swe:AbstractSWE"/>
+  <!-- ================================================= -->
+  <complexType name="NilValuesType">
+    <complexContent>
+      <extension base="swe:AbstractSWEType">
+        <sequence>
+          <element name="nilValue" type="swe:NilValue" minOccurs="1" maxOccurs="unbounded"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="NilValuesPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:NilValues"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="AllowedTokens" type="swe:AllowedTokensType" substitutionGroup="swe:AbstractSWE"/>
+  <!-- ================================================= -->
+  <complexType name="AllowedTokensType">
+    <complexContent>
+      <extension base="swe:AbstractSWEType">
+        <sequence>
+          <element name="value" type="string" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="pattern" type="string" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="AllowedTokensPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:AllowedTokens"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="AllowedTokensPropertyByValueType">
+    <sequence>
+      <element ref="swe:AllowedTokens"/>
+    </sequence>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="AllowedValues" type="swe:AllowedValuesType" substitutionGroup="swe:AbstractSWE"/>
+  <!-- ================================================= -->
+  <complexType name="AllowedValuesType">
+    <complexContent>
+      <extension base="swe:AbstractSWEType">
+        <sequence>
+          <element name="value" type="double" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="interval" type="swe:RealPair" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="significantFigures" type="integer" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="AllowedValuesPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:AllowedValues"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="AllowedValuesPropertyByValueType">
+    <sequence>
+      <element ref="swe:AllowedValues"/>
+    </sequence>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="AllowedTimes" type="swe:AllowedTimesType" substitutionGroup="swe:AbstractSWE"/>
+  <!-- ================================================= -->
+  <complexType name="AllowedTimesType">
+    <complexContent>
+      <extension base="swe:AbstractSWEType">
+        <sequence>
+          <element name="value" type="swe:TimePosition" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="interval" type="swe:TimePair" minOccurs="0" maxOccurs="unbounded"/>
+          <element name="significantFigures" type="integer" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="AllowedTimesPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:AllowedTimes"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="AllowedTimesPropertyByValueType">
+    <sequence>
+      <element ref="swe:AllowedTimes"/>
+    </sequence>
+  </complexType>
+  <!-- ================================================= -->
+  <group name="Quality">
+    <choice>
+      <element ref="swe:Quantity"/>
+      <element ref="swe:QuantityRange"/>
+      <element ref="swe:Category"/>
+      <element ref="swe:Text"/>
+    </choice>
+  </group>
+  <!-- ================================================= -->
+  <complexType name="QualityPropertyType">
+    <sequence minOccurs="0">
+      <group ref="swe:Quality"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <group name="AnyRange">
+    <annotation>
+      <documentation>Re-usable group providing a choice of range data components</documentation>
+    </annotation>
+    <choice>
+      <element ref="swe:QuantityRange"/>
+      <element ref="swe:TimeRange"/>
+      <element ref="swe:CountRange"/>
+      <element ref="swe:CategoryRange"/>
+    </choice>
+  </group>
+  <!-- ================================================= -->
+  <complexType name="AnyRangePropertyType">
+    <sequence minOccurs="0">
+      <group ref="swe:AnyRange"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <group name="AnyNumerical">
+    <annotation>
+      <documentation>Re-usable group providing a choice of numeric data components</documentation>
+    </annotation>
+    <choice>
+      <element ref="swe:Count"/>
+      <element ref="swe:Quantity"/>
+      <element ref="swe:Time"/>
+    </choice>
+  </group>
+  <!-- ================================================= -->
+  <complexType name="AnyNumericalPropertyType">
+    <sequence minOccurs="0">
+      <group ref="swe:AnyNumerical"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <group name="AnyScalar">
+    <annotation>
+      <documentation>Re-usable group providing a choice of scalar data components</documentation>
+    </annotation>
+    <choice>
+      <element ref="swe:Boolean"/>
+      <element ref="swe:Count"/>
+      <element ref="swe:Quantity"/>
+      <element ref="swe:Time"/>
+      <element ref="swe:Category"/>
+      <element ref="swe:Text"/>
+    </choice>
+  </group>
+  <!-- ================================================= -->
+  <complexType name="AnyScalarPropertyType">
+    <sequence minOccurs="0">
+      <group ref="swe:AnyScalar"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="DataArray" type="swe:DataArrayType" substitutionGroup="swe:AbstractDataComponent"/>
+  <!-- ================================================= -->
+  <complexType name="DataArrayType">
+    <complexContent>
+      <extension base="swe:AbstractDataComponentType">
+        <sequence>
+          <element name="elementCount" type="swe:CountPropertyType"/>
+          <element name="elementType">
+            <complexType>
+              <complexContent>
+                <extension base="swe:AbstractDataComponentPropertyType">
+                  <attribute name="name" type="NCName" use="required"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+          <element name="encoding" minOccurs="0" maxOccurs="1">
+            <complexType>
+              <sequence>
+                <element ref="swe:AbstractEncoding"/>
+              </sequence>
+            </complexType>
+          </element>
+          <element name="values" type="swe:EncodedValuesPropertyType" minOccurs="0" maxOccurs="1"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="DataArrayPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:DataArray"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="DataArrayPropertyByValueType">
+    <sequence>
+      <element ref="swe:DataArray"/>
+    </sequence>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="AbstractEncoding" type="swe:AbstractEncodingType" abstract="true" substitutionGroup="swe:AbstractSWE"/>
+  <!-- ================================================= -->
+  <complexType name="AbstractEncodingType" abstract="true">
+    <complexContent>
+      <extension base="swe:AbstractSWEType"/>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="AbstractEncodingPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:AbstractEncoding"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="AbstractEncodingPropertyByValueType" abstract="true">
+    <sequence>
+      <element ref="swe:AbstractEncoding"/>
+    </sequence>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="XMLEncoding" type="swe:XMLEncodingType" substitutionGroup="swe:AbstractEncoding"/>
+  <!-- ================================================= -->
+  <complexType name="XMLEncodingType">
+    <complexContent>
+      <extension base="swe:AbstractEncodingType"/>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="XMLEncodingPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:XMLEncoding"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="XMLEncodingPropertyByValueType">
+    <sequence>
+      <element ref="swe:XMLEncoding"/>
+    </sequence>
+  </complexType>
+  <!-- ================================================= -->
+  <element name="TextEncoding" type="swe:TextEncodingType" substitutionGroup="swe:AbstractEncoding"/>
+  <!-- ================================================= -->
+  <complexType name="TextEncodingType">
+    <complexContent>
+      <extension base="swe:AbstractEncodingType">
+        <attribute name="collapseWhiteSpaces" type="boolean" use="optional" default="true"/>
+        <attribute name="decimalSeparator" type="string" use="optional" default="."/>
+        <attribute name="tokenSeparator" type="string" use="required"/>
+        <attribute name="blockSeparator" type="string" use="required"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="TextEncodingPropertyType">
+    <sequence minOccurs="0">
+      <element ref="swe:TextEncoding"/>
+    </sequence>
+    <attributeGroup ref="swe:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ================================================= -->
+  <complexType name="TextEncodingPropertyByValueType">
+    <sequence>
+      <element ref="swe:TextEncoding"/>
+    </sequence>
+  </complexType>
+  <!-- ================================================= -->
+</schema>

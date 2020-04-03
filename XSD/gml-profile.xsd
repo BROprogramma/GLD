@@ -6,10 +6,15 @@
     elementFormDefault="qualified" 
     targetNamespace="http://www.opengis.net/gml/3.2">
     <annotation>
-        <documentation>GML 3.2.1 profile for BRO.
-        Based on: gml:AbstractFeature, gml:ReferenceType, gml:PointPropertyType, gml:EnvelopeType, gml:MeasureType, gml:TimeInstantPropertyType, (gml:CodeWithAuthorityType)
-        0.0.2: anyURI toegevoegd aan TimePositionUnion</documentation>
+      <documentation>GML 3.2.1 profile for BRO.</documentation>
+      <documentation>Based on: gml:AbstractFeature, gml:ReferenceType, gml:PointPropertyType, gml:EnvelopeType, gml:MeasureType, gml:TimeInstantPropertyType, (gml:CodeWithAuthorityType)</documentation>
+      <documentation>Revision history:
+        0.0.2: anyURI toegevoegd aan TimePositionUnion
+      </documentation>
     </annotation>
+    <!--
+    <import namespace="http://www.w3.org/1999/xlink" schemaLocation="https://schema.broservices.nl/profile/xlink/1.0/xlink-profile.xsd"/>
+    -->
     <import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlink-profile.xsd"/>
     <!-- ================================================= -->
     <element name="AbstractFeature" type="gml:AbstractFeatureType" abstract="true" substitutionGroup="gml:AbstractGML">
