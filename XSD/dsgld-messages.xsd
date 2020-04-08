@@ -12,140 +12,122 @@
     terzake tussen de partijen gesloten overeenkomst.
 
 -->
-<xs:schema xmlns:dsgld="http://www.broservices.nl/xsd/dsgld/1.0"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-           xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/1.0"
-           xmlns:om="http://www.opengis.net/om/2.0"
-           xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
-           targetNamespace="http://www.broservices.nl/xsd/dsgld/1.0"
-           elementFormDefault="qualified"
-           attributeFormDefault="unqualified"
-           version="0.3.0">
-
-   <xs:annotation>
-      <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
-         <gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
-      </xs:appinfo>
-   </xs:annotation>
-
-   <!--
+<xs:schema xmlns:dsgld="http://www.broservices.nl/xsd/dsgld/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0" xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/1.0" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0" targetNamespace="http://www.broservices.nl/xsd/dsgld/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.3.0">
+  <xs:annotation>
+    <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
+      <gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
+    </xs:appinfo>
+  </xs:annotation>
+  <!--
    <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
    <xs:import namespace="http://www.broservices.nl/xsd/gldcommon/1.0" schemaLocation="https://schema.broservices.nl/xsd/gldcommon/1.0/gldcommon.xsd"/>
    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
    -->
-	<xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
-	<xs:import namespace="http://www.broservices.nl/xsd/gldcommon/1.0" schemaLocation="gldcommon.xsd"/>
-	<xs:import namespace="http://www.opengis.net/om/2.0" schemaLocation="om-profile.xsd"/>
-	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
-
-   <xs:element name="parseFault" type="brocom:ParseFaultType" />
-
-   <xs:element name="dispatchDataRequest" type="dsgld:DispatchDataRequestType">
-      <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het DispatchDataRequest is een specialisatie van de abstract klasse Dispatch­Data­Request in de package brocommon, waaraan het een element dataToBeDelivered toevoegt.</xs:documentation>
-      </xs:annotation>
-   </xs:element>
+  <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
+  <xs:import namespace="http://www.broservices.nl/xsd/gldcommon/1.0" schemaLocation="gldcommon.xsd"/>
+  <xs:import namespace="http://www.opengis.net/om/2.0" schemaLocation="om-profile.xsd"/>
+  <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
+  <xs:element name="parseFault" type="brocom:ParseFaultType"/>
+  <xs:element name="dispatchDataRequest" type="dsgld:DispatchDataRequestType">
+    <xs:annotation>
+      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het DispatchDataRequest is een specialisatie van de abstract klasse Dispatch­Data­Request in de package brocommon, waaraan het een element dataToBeDelivered toevoegt.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
    <xs:complexType name="DispatchDataRequestType">
       <xs:complexContent>
-         <xs:extension base="brocom:DispatchDataRequestType"/>
-      </xs:complexContent>
-   </xs:complexType>
-
-   <xs:element name="dispatchDataResponse" type="dsgld:DispatchDataResponseType">
-      <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht DispatchDataResponse is een specialisatie van DispatchResponse in de package brocommon, waaraan het een element dispatchDocument toevoegt.</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="DispatchDataResponseType">
-      <xs:complexContent>
-         <xs:extension base="brocom:DispatchResponseType">
+         <xs:extension base="brocom:DispatchDataRequestType">
             <xs:sequence>
-               <xs:element minOccurs="0"
-                           maxOccurs="1"
-                           name="dispatchDocument"
+               <xs:element name="observationPeriod"
+                           type="brocom:DatePeriodType"
                            nillable="false"
-                           type="brocom:AbstractRegistrationObjectPropertyType"/>
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het datuminterval waarbinnen de observatieperiode van een observatie geheel of gedeeltelijk ligt.
+Explanation: Een Grondwaterstandonderzoek kan meerdere observaties bevatten, die ieder, onder anderen, een observatieperiode en een tijdmeetwaardereeks van tijdmeetwaardeparen hebben. Zo'n observatie wordt in haar geheel opgenomen in het uitgiftedodument als observatieperiode van de observatie geheel of gedeeltelijk valt binnen de periode van monitoring in het uitgifteverzoek, tenzij dit wordt verhinderd door andere filter gegevens in het uitgifteverzoek.
+
+Als dit gegeven ontbreekt, dan wordt het aantal observaties in het uitgiftedocument zodanig beperkt, dat als er één observatie minder uitgeleverd zou worden er dan minder dan 1000 meetwaardeparen zouden worden uitgeleverd.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="filtered"
+                           type="brocom:IndicationYesNoType"
+                           minOccurs="0"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding of de te leveren gegevens gefiltered moeten worden volgens de juridische gebruiksplicht of niet.
+Explanation: Er worden in het grondwaterstandonderzoek volledig beoordeelde gegevens vastgelegd, voorlopige gegevens en gegevens over controlemetingen. Een volledig beoordeelde meetwaarde heeft alle in het beoordelingsprocedure vermelde controles ondergaan en is daardoor, in samenhang met het attribuut status kwaliteitscontrole, betrouwbaarder dan een voorlopige meetwaarde die geen of niet alle controles heeft ondergaan. Als het gegeven gefilterd de waarde ja heeft, dan worden de geleverde gegevens beperkt conform de hiërarchie van de juridische gebruiksplicht. Dat wil zeggen, indien geregistreerd worden de volledig beoordeelde gegevens uitgeleverd, zo niet de voorlopige gegevens en anders de ruwe meetgegevens (maken nu geen deel uit van de basisregistratie ondergrond), tenzij dit wordt verhinderd door andere filter gegevens in het uitgifteverzoek. Als het gegeven gefilterd de waarde nee heeft, dan worden alle geregistreerde gegevens uitgeleverd, tenzij dit wordt verhinderd door andere filter gegevens in het uitgifteverzoek.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-
-   <xs:element name="GLD_O"
-               type="dsgld:GLD_OType"
-               substitutionGroup="brocom:RegistrationObject">
-      <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het uitgiftedocument dat de gegevens van een grondwaterstandonderzoek dat niet uit registratie is genomen bevat die voor een standaard afnemer beschikbaar zijn.</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="GLD_OType">
-      <xs:complexContent>
-         <xs:extension base="brocom:RegistrationObjectType">
-            <xs:sequence>
-               <xs:element minOccurs="1"
-                           maxOccurs="1"
-                           name="registrationHistory"
-                           nillable="false"
-                           type="brocom:RegistrationHistoryType">
-                  <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De gegevens die de geschiedenis van het object in de registratie ondergrond markeren.
+  <xs:element name="dispatchDataResponse" type="dsgld:DispatchDataResponseType">
+    <xs:annotation>
+      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht DispatchDataResponse is een specialisatie van DispatchResponse in de package brocommon, waaraan het een element dispatchDocument toevoegt.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DispatchDataResponseType">
+    <xs:complexContent>
+      <xs:extension base="brocom:DispatchResponseType">
+        <xs:sequence>
+          <xs:element name="dispatchDocument" type="brocom:AbstractRegistrationObjectPropertyType" nillable="false" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GLD_O" type="dsgld:GLD_OType" substitutionGroup="brocom:RegistrationObject">
+    <xs:annotation>
+      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het uitgiftedocument dat de gegevens van een grondwaterstandonderzoek dat niet uit registratie is genomen bevat die voor een standaard afnemer beschikbaar zijn.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GLD_OType">
+    <xs:complexContent>
+      <xs:extension base="brocom:RegistrationObjectType">
+        <xs:sequence>
+          <xs:element name="registrationHistory" type="brocom:RegistrationHistoryType" nillable="false" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De gegevens die de geschiedenis van het object in de registratie ondergrond markeren.
                         Explanation: De gegevens staan niet in een brondocument, maar worden automatisch door de basisregistratie ondergrond gegenereerd.</xs:documentation>
-                  </xs:annotation>
-               </xs:element>
-               <xs:element name="researchFirstDate"
-                           type="xs:date"
-                           minOccurs="0"
-                           maxOccurs="1">
-                  <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum waarop de eerste meting van het grondwaterstandonderzoek is uitgevoerd.
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="researchFirstDate" type="xs:date" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum waarop de eerste meting van het grondwaterstandonderzoek is uitgevoerd.
                         Explanation: Het gegeven staat niet in een brondocument, maar wordt automatisch door de basisregistratie ondergrond afgeleid van de begindatum van de observatieperiode van de entiteit Observatie behorende bij de observatie met de oudste begindatum.</xs:documentation>
-                  </xs:annotation>
-               </xs:element>
-               <xs:element name="researchLastDate"
-                           type="xs:date"
-                           minOccurs="0"
-                           maxOccurs="1">
-                  <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum van de recentste meting die beschikbaar is van het grondwaterstandonderzoek.
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="researchLastDate" type="xs:date" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De datum van de recentste meting die beschikbaar is van het grondwaterstandonderzoek.
                         Explanation: Het gegeven staat niet in een brondocument, maar wordt automatisch door de basisregistratie ondergrond afgeleid van de einddatum van de observatieperiode van de entiteit Observatie behorende bij de observatie met de meest recente einddatum.</xs:documentation>
-                  </xs:annotation>
-               </xs:element>
-               <xs:element minOccurs="1"
-                           maxOccurs="unbounded"
-                           name="groundwaterMonitoringNet"
-                           nillable="false"
-                           type="gldcom:GroundwaterMonitoringNetPropertyType"/>
-               <xs:element minOccurs="1"
-                           maxOccurs="1"
-                           name="monitoringPoint"
-                           nillable="false"
-                           type="gldcom:GroundwaterMonitoringTubePropertyType"/>
-               <xs:element name="observation" type="om:OM_ObservationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GLD_OPropertyType">
-      <xs:sequence minOccurs="1">
-         <xs:element ref="dsgld:GLD_O"/>
-      </xs:sequence>
-   </xs:complexType>
-
-   <xs:element name="GLD_O_DP"
-               type="dsgld:GLD_O_DPType"
-               substitutionGroup="dsgld:GLD_O">
-      <xs:annotation>
-         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het uitgiftedocument dat de gegevens van een grondwaterstandonderzoek dat niet uit registratie is genomen bevat die voor dataleverancier en bronhouder beschikbaar zijn.</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:complexType name="GLD_O_DPType">
-      <xs:complexContent>
-         <xs:extension base="dsgld:GLD_OType"/>
-      </xs:complexContent>
-   </xs:complexType>
-   <xs:complexType name="GLD_O_DPPropertyType">
-      <xs:sequence minOccurs="1">
-         <xs:element ref="dsgld:GLD_O_DP"/>
-      </xs:sequence>
-   </xs:complexType>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="groundwaterMonitoringNet" type="gldcom:GroundwaterMonitoringNetPropertyType" nillable="false" minOccurs="1" maxOccurs="unbounded"/>
+          <xs:element name="monitoringPoint" type="gldcom:GroundwaterMonitoringTubePropertyType" nillable="false" minOccurs="1" maxOccurs="1"/>
+          <xs:element name="observation" type="om:OM_ObservationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GLD_OPropertyType">
+    <xs:sequence minOccurs="1">
+      <xs:element ref="dsgld:GLD_O"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GLD_O_DP" type="dsgld:GLD_O_DPType" substitutionGroup="dsgld:GLD_O">
+    <xs:annotation>
+      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het uitgiftedocument dat de gegevens van een grondwaterstandonderzoek dat niet uit registratie is genomen bevat die voor dataleverancier en bronhouder beschikbaar zijn.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GLD_O_DPType">
+    <xs:complexContent>
+      <xs:extension base="dsgld:GLD_OType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GLD_O_DPPropertyType">
+    <xs:sequence minOccurs="1">
+      <xs:element ref="dsgld:GLD_O_DP"/>
+    </xs:sequence>
+  </xs:complexType>
 </xs:schema>

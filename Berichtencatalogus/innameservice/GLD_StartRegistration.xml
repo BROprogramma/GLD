@@ -49,7 +49,7 @@
       </monitoringPoint>
       <!-- 0 or more repetitions -->
       <observation>
-        <om:OM_Observation gml:id="id_0005">
+        <om:OM_Observation gml:id="_09722017-d5be-4d47-b966-4dda6abfa02b">
           <om:type xlink:href="http://www.opengis.net/def/observationType/waterml/2.0/MeasurementTimeseriesTVPObservation"/>
           <om:metadata>
             <wml2:ObservationMetadata>
@@ -111,13 +111,13 @@
             </om:ObservationContext>
           </om:relatedObservation>
           <om:phenomenonTime>
-            <gml:TimePeriod gml:id="id_0006">
+            <gml:TimePeriod gml:id="id_0005">
               <gml:beginPosition>2018-01-07T07:14:38+01:00</gml:beginPosition>
               <gml:endPosition>2018-01-28T15:58:07+01:00</gml:endPosition>
             </gml:TimePeriod>
           </om:phenomenonTime>
           <om:resultTime>
-            <gml:TimeInstant gml:id="id_0007">
+            <gml:TimeInstant gml:id="id_0006">
               <!--You have a CHOICE of the next 5 value ranges for this item at this level-->
               <!--
               <gml:timePosition>2018-02-04T09:01:52+01:00</gml:timePosition>
@@ -130,21 +130,21 @@
             </gml:TimeInstant>
           </om:resultTime>
           <om:procedure>
-            <wml2:ObservationProcess gml:id="id_0008">
+            <wml2:ObservationProcess gml:id="e1821667-0704-47c0-ade5-5fda651f0895">
               <wml2:processType xlink:href="http://www.opengis.net/def/waterml/2.0/processType/Algorithm"/>
               <wml2:processReference xlink:href="urn:bro:gld:ProcessReference:NEN5120v1991"/>
               <wml2:parameter>
                 <om:NamedValue>
-                  <om:name xlink:href="measementInstrument"/>
-                  <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:MeasementInstrument">akoestischeSensor</om:value>
+                  <om:name xlink:href="measurementInstrument"/>
+                  <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:MeasurementInstrumentType">akoestischeSensor</om:value>
                 </om:NamedValue>
               </wml2:parameter>
               <!-- optional -->
               <!--
               <wml2:parameter>
                 <om:NamedValue>
-                  <om:name xlink:href="airPressureCompensation"/>
-                  <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:AirPressureCompensation">KNMImeting</om:value>
+                  <om:name xlink:href="airPressureCompensationType"/>
+                  <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:AirPressureCompensationType">KNMImeting</om:value>
                 </om:NamedValue>
               </wml2:parameter>
               -->
@@ -159,7 +159,7 @@
           <om:observedProperty/>
           <om:featureOfInterest/>
           <om:result>
-            <wml2:MeasurementTimeseries gml:id="id_0009">
+            <wml2:MeasurementTimeseries gml:id="_53387174-d17e-4aeb-90c2-13c50c4b83a9">
               <!-- 1 or more repetitions -->
               <wml2:point>
                 <wml2:MeasurementTVP>
@@ -173,7 +173,23 @@
                           <swe:value>goedgekeurd</swe:value>
                         </swe:Category>
                       </wml2:qualifier>
+                      <!-- optional
+                      <wml2:qualifier>
+                        <swe:Quantity definition="http://www.example.com/sensors/lower_threshold">
+                          <swe:description>Onderste limietwaarde van de sensor</swe:description>
+                          <swe:uom code="m"/>
+                          <swe:value>-5.123</swe:value>
+                        </swe:Quantity>
+                      </wml2:qualifier>
+                      -->
                       <wml2:interpolationType xlink:href="http://www.opengis.net/def/waterml/2.0/interpolationType/Discontinuous"/>
+                      <!-- optional; 1 of the 3 acceptable values below -->
+                      <!-- gldcom:censoredReason codeSpace="urn:bro:gld:CensoredReasonCode">groterDanLimietwaarde</gldcom:censoredReason -->
+                      <!-- gldcom:censoredReason codeSpace="urn:bro:gld:CensoredReasonCode">kleinerDanLimietwaarde</gldcom:censoredReason -->
+                      <!-- gldcom:censoredReason codeSpace="urn:bro:gld:CensoredReasonCode">onbekend</gldcom:censoredReason -->
+                      <!-- wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/AboveDetectionRange"/ -->
+                      <!-- wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/BelowDetectionRange"/ -->
+                      <!-- wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/unknown"/ -->
                     </wml2:TVPMeasurementMetadata>
                   </wml2:metadata>
                 </wml2:MeasurementTVP>
@@ -217,7 +233,12 @@
                       </wml2:qualifier>
                       <wml2:interpolationType xlink:href="http://www.opengis.net/def/waterml/2.0/interpolationType/Discontinuous"/>
                       <!-- optional -->
+                      <!-- gldcom:censoredReason codeSpace="urn:bro:gld:CensoredReasonCode">groterDanLimietwaarde</gldcom:censoredReason -->
                       <!-- gldcom:censoredReason codeSpace="urn:bro:gld:CensoredReasonCode">kleinerDanLimietwaarde</gldcom:censoredReason -->
+                      <!-- gldcom:censoredReason codeSpace="urn:bro:gld:CensoredReasonCode">onbekend</gldcom:censoredReason -->
+                      <!-- wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/AboveDetectionRange"/ -->
+                      <!-- wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/BelowDetectionRange"/ -->
+                      <!-- wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/unknown"/ -->
                       <wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/BelowDetectionRange"/>
                     </wml2:TVPMeasurementMetadata>
                   </wml2:metadata>
