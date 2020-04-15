@@ -26,42 +26,37 @@
   <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
   <xs:import namespace="http://www.broservices.nl/xsd/gldcommon/1.0" schemaLocation="gldcommon.xsd"/>
   <xs:import namespace="http://www.opengis.net/om/2.0" schemaLocation="om-profile.xsd"/>
-  <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
   <xs:element name="parseFault" type="brocom:ParseFaultType"/>
   <xs:element name="dispatchDataRequest" type="dsgld:DispatchDataRequestType">
     <xs:annotation>
-      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het DispatchDataRequest is een specialisatie van de abstract klasse Dispatch­Data­Request in de package brocommon, waaraan het een element dataToBeDelivered toevoegt.</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het DispatchDataRequest is een specialisatie van de abstract klasse Dispatch­Data­Request in de package brocommon, waaraan het twee optionele filtergegevens toevoegt.</xs:documentation>
     </xs:annotation>
   </xs:element>
-   <xs:complexType name="DispatchDataRequestType">
-      <xs:complexContent>
-         <xs:extension base="brocom:DispatchDataRequestType">
-            <xs:sequence>
-               <xs:element name="observationPeriod"
-                           type="brocom:DatePeriodType"
-                           nillable="false"
-                           minOccurs="0"
-                           maxOccurs="1">
-                  <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het datuminterval waarbinnen de observatieperiode van een observatie geheel of gedeeltelijk ligt.
-Explanation: Een Grondwaterstandonderzoek kan meerdere observaties bevatten, die ieder, onder anderen, een observatieperiode en een tijdmeetwaardereeks van tijdmeetwaardeparen hebben. Zo'n observatie wordt in haar geheel opgenomen in het uitgiftedodument als observatieperiode van de observatie geheel of gedeeltelijk valt binnen de periode van monitoring in het uitgifteverzoek, tenzij dit wordt verhinderd door andere filter gegevens in het uitgifteverzoek.
-
-Als dit gegeven ontbreekt, dan wordt het aantal observaties in het uitgiftedocument zodanig beperkt, dat als er één observatie minder uitgeleverd zou worden er dan minder dan 1000 meetwaardeparen zouden worden uitgeleverd.</xs:documentation>
-                  </xs:annotation>
-               </xs:element>
-               <xs:element name="filtered"
-                           type="brocom:IndicationYesNoType"
-                           minOccurs="0"
-                           maxOccurs="1">
-                  <xs:annotation>
-                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding of de te leveren gegevens gefiltered moeten worden volgens de juridische gebruiksplicht of niet.
-Explanation: Er worden in het grondwaterstandonderzoek volledig beoordeelde gegevens vastgelegd, voorlopige gegevens en gegevens over controlemetingen. Een volledig beoordeelde meetwaarde heeft alle in het beoordelingsprocedure vermelde controles ondergaan en is daardoor, in samenhang met het attribuut status kwaliteitscontrole, betrouwbaarder dan een voorlopige meetwaarde die geen of niet alle controles heeft ondergaan. Als het gegeven gefilterd de waarde ja heeft, dan worden de geleverde gegevens beperkt conform de hiërarchie van de juridische gebruiksplicht. Dat wil zeggen, indien geregistreerd worden de volledig beoordeelde gegevens uitgeleverd, zo niet de voorlopige gegevens en anders de ruwe meetgegevens (maken nu geen deel uit van de basisregistratie ondergrond), tenzij dit wordt verhinderd door andere filter gegevens in het uitgifteverzoek. Als het gegeven gefilterd de waarde nee heeft, dan worden alle geregistreerde gegevens uitgeleverd, tenzij dit wordt verhinderd door andere filter gegevens in het uitgifteverzoek.</xs:documentation>
-                  </xs:annotation>
-               </xs:element>
-            </xs:sequence>
-         </xs:extension>
-      </xs:complexContent>
-   </xs:complexType>
+  <xs:complexType name="DispatchDataRequestType">
+    <xs:complexContent>
+      <xs:extension base="brocom:DispatchDataRequestType">
+        <xs:sequence>
+          <xs:element name="observationPeriod" type="brocom:DatePeriodType" nillable="false" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het datuminterval waarbinnen de observatieperiode van een observatie geheel of gedeeltelijk ligt.
+Explanation: Een Grondwaterstandonderzoek kan meerdere observaties bevatten, die ieder, onder anderen, een observatieperiode en een tijdmeetwaardereeks van tijdmeetwaardeparen hebben.
+Zo'n observatie wordt in haar geheel opgenomen in het uitgiftedodument als de observatieperiode van de observatie geheel of gedeeltelijk valt binnen de periode van monitoring in het uitgifteverzoek, tenzij dit wordt verhinderd door andere filtergegevens in het uitgifteverzoek.
+Als dit gegeven ontbreekt, dan wordt het aantal observaties in het uitgiftedocument zodanig beperkt, dat als er één observatie minder uitgeleverd zou worden er dan minder dan 2500 meetwaardeparen zouden worden uitgeleverd.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="filtered" type="brocom:IndicationYesNoType" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Aanduiding of de te leveren gegevens gefiltered moeten worden volgens de juridische gebruiksplicht of niet.
+Explanation: Er worden in het grondwaterstandonderzoek volledig beoordeelde gegevens vastgelegd, voorlopige gegevens en gegevens over controlemetingen.
+Een volledig beoordeelde meetwaarde heeft alle in het beoordelingsprocedure vermelde controles ondergaan en is daardoor, in samenhang met het attribuut status kwaliteitscontrole, betrouwbaarder dan een voorlopige meetwaarde die geen of niet alle controles heeft ondergaan.
+Als het gegeven gefilterd de waarde ja heeft, dan worden de geleverde gegevens beperkt conform de hiërarchie van de juridische gebruiksplicht. Dat wil zeggen, indien geregistreerd worden de volledig beoordeelde gegevens uitgeleverd, zo niet de voorlopige gegevens en anders de ruwe meetgegevens (maken nu geen deel uit van de basisregistratie ondergrond), tenzij dit wordt verhinderd door andere filtergegevens in het uitgifteverzoek.
+Als het gegeven gefilterd de waarde nee heeft, dan worden alle geregistreerde gegevens uitgeleverd (volledig beoordeelde gegevens, voorlopige gegevens en controlemetingen), tenzij dit wordt verhinderd door andere filtergegevens in het uitgifteverzoek.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element name="dispatchDataResponse" type="dsgld:DispatchDataResponseType">
     <xs:annotation>
       <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht DispatchDataResponse is een specialisatie van DispatchResponse in de package brocommon, waaraan het een element dispatchDocument toevoegt.</xs:documentation>
