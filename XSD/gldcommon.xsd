@@ -13,15 +13,14 @@
 
 -->
 <xs:schema
-	xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/1.0"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:gml="http://www.opengis.net/gml/3.2"
-	xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-	xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
-	targetNamespace="http://www.broservices.nl/xsd/gldcommon/1.0"
-	elementFormDefault="qualified"
-	attributeFormDefault="unqualified"
-	version="0.3.0">
+				xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/1.0"
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:gml="http://www.opengis.net/gml/3.2"
+				xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+				xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
+				targetNamespace="http://www.broservices.nl/xsd/gldcommon/1.0"
+				elementFormDefault="qualified"
+				version="0.3.0">
 
 	<xs:annotation>
 		<xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
@@ -29,7 +28,7 @@
 		</xs:appinfo>
 	</xs:annotation>
 
-	<!--
+  <!--
   <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
   -->
@@ -37,10 +36,10 @@
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
 
 	<xs:element name="GroundwaterMonitoringNet" type="gldcom:GroundwaterMonitoringNetType" substitutionGroup="gml:AbstractFeature">
-	<xs:annotation>
-    <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het grondwatermonitoringnet waarin het grondwaterstandonderzoek wordt uitgevoerd.
-      Explanation: Het registratieobject Grondwatermonitoringnet wordt in een aparte BRO gegevenscatalogus gedefinieerd.</xs:documentation>
-    </xs:annotation>
+		<xs:annotation>
+			<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het grondwatermonitoringnet waarin het grondwaterstandonderzoek wordt uitgevoerd.
+				Explanation: Het registratieobject Grondwatermonitoringnet wordt in een aparte BRO gegevenscatalogus gedefinieerd.</xs:documentation>
+		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="GroundwaterMonitoringNetType">
 		<xs:complexContent>
@@ -64,7 +63,7 @@
 	<xs:element name="GroundwaterMonitoringTube" type="gldcom:GroundwaterMonitoringTubeType" substitutionGroup="gml:AbstractFeature">
 		<xs:annotation>
 			<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De gegevens die nodig zijn voor de unieke identificatie van een specifieke monitoringbuis in een grondwatermonitoringput.
-            Explanation: Het BRO-ID van de grondwatermonitoringput wordt opgenomen plus het volgnummer van de specifieke monitoringbuis in de put.</xs:documentation>
+				Explanation: Het BRO-ID van de grondwatermonitoringput wordt opgenomen plus het volgnummer van de specifieke monitoringbuis in de put.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:complexType name="GroundwaterMonitoringTubeType">

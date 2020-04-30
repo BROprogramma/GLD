@@ -13,156 +13,156 @@
 
 -->
 <xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:isgld="http://www.broservices.nl/xsd/isgld/1.0"
-	xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/1.0"
-  xmlns:wml2="http://www.opengis.net/waterml/2.0"
-	xmlns:om="http://www.opengis.net/om/2.0"
-	xmlns:gml="http://www.opengis.net/gml/3.2"
-	xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-	xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
-	targetNamespace="http://www.broservices.nl/xsd/isgld/1.0"
-  elementFormDefault="qualified"
-  attributeFormDefault="unqualified"
-	version="0.3.0">
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:isgld="http://www.broservices.nl/xsd/isgld/1.0"
+        xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/1.0"
+        xmlns:wml2="http://www.opengis.net/waterml/2.0"
+        xmlns:om="http://www.opengis.net/om/2.0"
+        xmlns:gml="http://www.opengis.net/gml/3.2"
+        xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+        xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
+        targetNamespace="http://www.broservices.nl/xsd/isgld/1.0"
+        elementFormDefault="qualified"
+        version="0.3.0">
 
-	<xs:annotation>
-		<xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
-			<gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
-		</xs:appinfo>
-	</xs:annotation>
+   <xs:annotation>
+      <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
+         <gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
+      </xs:appinfo>
+   </xs:annotation>
 
-	<!-- 
-	<xs:import namespace="http://www.broservices.nl/xsd/gldcommon/1.0" schemaLocation="https://schema.broservices.nl/xsd/gldcommon/1.0/gldcommon.xsd"/>
-	<xs:import namespace="http://www.opengis.net/om/2.0" schemaLocation="https://schema.broservices.nl/profile/om/1.0/om-profile.xsd"/>
-	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
-	<xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
-    -->
-	<xs:import namespace="http://www.opengis.net/waterml/2.0" schemaLocation="wml-profile.xsd"/>
-	<xs:import namespace="http://www.broservices.nl/xsd/gldcommon/1.0" schemaLocation="gldcommon.xsd"/>
-	<xs:import namespace="http://www.opengis.net/om/2.0" schemaLocation="om-profile.xsd"/>
-	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
-	<xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
+   <!--
+   <xs:import namespace="http://www.opengis.net/waterml/2.0" schemaLocation="https://schema.broservices.nl/profile/wml/1.0/wml-profile.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/gldcommon/1.0" schemaLocation="https://schema.broservices.nl/xsd/gldcommon/1.0/gldcommon.xsd"/>
+   <xs:import namespace="http://www.opengis.net/om/2.0" schemaLocation="https://schema.broservices.nl/profile/om/1.0/om-profile.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
+   -->
+   <xs:import namespace="http://www.opengis.net/waterml/2.0" schemaLocation="wml-profile.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/gldcommon/1.0" schemaLocation="gldcommon.xsd"/>
+   <xs:import namespace="http://www.opengis.net/om/2.0" schemaLocation="om-profile.xsd"/>
+   <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
+   <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
 
-	<xs:element name="intakeResponse" type="brocom:IntakeResponseType"/>
-	<xs:element name="parseFault" type="brocom:ParseFaultType"/>
-	<xs:element name="registrationRequest" type="isgld:RegistrationRequestType">
-		<xs:annotation>
-			<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht RegistrationRequest is een specialisatie van de abstract klasse RegistrationRequest uit de package brocommon, waaraan het een sourceDocument toevoegt. Met dit bericht kan een nog niet geregistreerd grondwaterstandonderzoek in de BRO worden opgenomen of kan een een geregistreerd grondwaterstandonderzoek aangevuld of voltooid worden.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="RegistrationRequestType">
-		<xs:complexContent>
-			<xs:extension base="brocom:RegistrationRequestType">
-				<xs:sequence>
-					<xs:element name="sourceDocument" type="isgld:SourceDocumentType" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het element sourceDocument bevat gegevens die in het BRO-systeem geregistreerd zullen worden en die in de catalogus van het registratieobject zijn gespecificeerd, met uitzondering van de gegevens die door het BRO-systeem worden gegenereerd of afgeleid uit het innameverzoek.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="GLD_Addition" type="isgld:GLD_AdditionType" substitutionGroup="gml:AbstractFeature">
-		<xs:annotation>
-			<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer nieuwe observaties beschikbaar komen. De registratie is met dit brondocument aangevuld.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="GLD_AdditionType">
-		<xs:complexContent>
-			<xs:extension base="gml:AbstractFeatureType">
-				<xs:sequence>
-					<xs:element name="observation" type="om:OM_ObservationPropertyType" nillable="false" minOccurs="1" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="GLD_AdditionPropertyType">
-		<xs:sequence minOccurs="1">
-			<xs:element ref="isgld:GLD_Addition"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="GLD_Closure" type="isgld:GLD_ClosureType" substitutionGroup="gml:AbstractFeature">
-		<xs:annotation>
-			<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer een grondwaterstandonderzoek wordt afgesloten. De registratie is met dit brondocument voltooid en het registratieobject kan niet meer worden aangevuld.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="GLD_ClosureType">
-		<xs:complexContent>
-			<xs:extension base="gml:AbstractFeatureType"/>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="GLD_ClosurePropertyType">
-		<xs:sequence minOccurs="1">
-			<xs:element ref="isgld:GLD_Closure"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="GLD_Complete" type="isgld:GLD_CompleteType" substitutionGroup="gml:AbstractFeature">
-		<xs:annotation>
-			<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer een grondwaterstandonderzoek in zijn geheel in één keer wordt aangeleverd. De registratie is met dit brondocument voltooid en het registratieobject kan niet meer worden aangevuld.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="GLD_CompleteType">
-		<xs:complexContent>
-			<xs:extension base="gml:AbstractFeatureType">
-				<xs:sequence>
-					<xs:element name="objectIdAccountableParty" type="xs:string" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
+   <xs:element name="intakeResponse" type="brocom:IntakeResponseType"/>
+   <xs:element name="parseFault" type="brocom:ParseFaultType"/>
+   <xs:element name="registrationRequest" type="isgld:RegistrationRequestType">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het bericht RegistrationRequest is een specialisatie van de abstract klasse RegistrationRequest uit de package brocommon, waaraan het een sourceDocument toevoegt. Met dit bericht kan een nog niet geregistreerd grondwaterstandonderzoek in de BRO worden opgenomen of kan een een geregistreerd grondwaterstandonderzoek aangevuld of voltooid worden.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="RegistrationRequestType">
+      <xs:complexContent>
+         <xs:extension base="brocom:RegistrationRequestType">
+            <xs:sequence>
+               <xs:element name="sourceDocument" type="isgld:SourceDocumentType" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het element sourceDocument bevat gegevens die in het BRO-systeem geregistreerd zullen worden en die in de catalogus van het registratieobject zijn gespecificeerd, met uitzondering van de gegevens die door het BRO-systeem worden gegenereerd of afgeleid uit het innameverzoek.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="GLD_Addition" type="isgld:GLD_AdditionType" substitutionGroup="gml:AbstractFeature">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer nieuwe observaties beschikbaar komen. De registratie is met dit brondocument aangevuld.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GLD_AdditionType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="observation" type="om:OM_ObservationPropertyType" nillable="false" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GLD_AdditionPropertyType">
+      <xs:sequence minOccurs="1">
+         <xs:element ref="isgld:GLD_Addition"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="GLD_Closure" type="isgld:GLD_ClosureType" substitutionGroup="gml:AbstractFeature">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer een grondwaterstandonderzoek wordt afgesloten. De registratie is met dit brondocument voltooid en het registratieobject kan niet meer worden aangevuld.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GLD_ClosureType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType"/>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GLD_ClosurePropertyType">
+      <xs:sequence minOccurs="1">
+         <xs:element ref="isgld:GLD_Closure"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="GLD_Complete" type="isgld:GLD_CompleteType" substitutionGroup="gml:AbstractFeature">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer een grondwaterstandonderzoek in zijn geheel in één keer wordt aangeleverd. De registratie is met dit brondocument voltooid en het registratieobject kan niet meer worden aangevuld.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GLD_CompleteType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="objectIdAccountableParty" type="xs:string" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
                         Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="groundwaterMonitoringNet" type="gldcom:GroundwaterMonitoringNetPropertyType" nillable="false" minOccurs="1" maxOccurs="unbounded"/>
-					<xs:element name="monitoringPoint" type="gldcom:GroundwaterMonitoringTubePropertyType" nillable="false" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="observation" type="om:OM_ObservationPropertyType" nillable="false" minOccurs="1" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="GLD_CompletePropertyType">
-		<xs:sequence minOccurs="1">
-			<xs:element ref="isgld:GLD_Complete"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="GLD_StartRegistration" type="isgld:GLD_StartRegistrationType" substitutionGroup="gml:AbstractFeature">
-		<xs:annotation>
-			<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer er een nieuw grondwaterstandonderzoek wordt gestart. Het GLD kan met of zonder observaties gestart worden. De registratie is met dit brondocument gestart.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="GLD_StartRegistrationType">
-		<xs:complexContent>
-			<xs:extension base="gml:AbstractFeatureType">
-				<xs:sequence>
-					<xs:element name="objectIdAccountableParty" type="xs:string" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="groundwaterMonitoringNet" type="gldcom:GroundwaterMonitoringNetPropertyType" nillable="false" minOccurs="1" maxOccurs="unbounded"/>
+               <xs:element name="monitoringPoint" type="gldcom:GroundwaterMonitoringTubePropertyType" nillable="false" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="observation" type="om:OM_ObservationPropertyType" nillable="false" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GLD_CompletePropertyType">
+      <xs:sequence minOccurs="1">
+         <xs:element ref="isgld:GLD_Complete"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="GLD_StartRegistration" type="isgld:GLD_StartRegistrationType" substitutionGroup="gml:AbstractFeature">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: Het brondocument wordt aangeboden wanneer er een nieuw grondwaterstandonderzoek wordt gestart. Het GLD kan met of zonder observaties gestart worden. De registratie is met dit brondocument gestart.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="GLD_StartRegistrationType">
+      <xs:complexContent>
+         <xs:extension base="gml:AbstractFeatureType">
+            <xs:sequence>
+               <xs:element name="objectIdAccountableParty" type="xs:string" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition: De identificatie die door of voor de bronhouder is gebruikt om het object in de eigen administratie te kunnen vinden, voordat het was geregistreerd in de basisregistratie ondergrond.
                         Explanation: Het gegeven wordt alleen uitgeleverd aan de dataleverancier en de bronhouder. Het is in de registratie opgenomen om de communicatie tussen de registerbeheerder en de bronhouder of dataleverancier te vergemakkelijken.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="groundwaterMonitoringNet" type="gldcom:GroundwaterMonitoringNetPropertyType" nillable="false" minOccurs="1" maxOccurs="unbounded"/>
-					<xs:element name="monitoringPoint" type="gldcom:GroundwaterMonitoringTubePropertyType" nillable="false" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="observation" type="om:OM_ObservationPropertyType" nillable="false" minOccurs="0" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="GLD_StartRegistrationPropertyType">
-		<xs:sequence minOccurs="1">
-			<xs:element ref="isgld:GLD_StartRegistration"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="SourceDocument" type="isgld:SourceDocumentType">
-		<xs:annotation>
-			<xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het datatype sourceDocument biedt de keuze uit een aantal verschillende typen brondocumenten, waarvan er één opgenomen is in een registratieverzoek.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="SourceDocumentType">
-		<xs:choice minOccurs="1" maxOccurs="1">
-			<xs:element ref="isgld:GLD_Complete"/>
-			<xs:element ref="isgld:GLD_StartRegistration"/>
-			<xs:element ref="isgld:GLD_Addition"/>
-			<xs:element ref="isgld:GLD_Closure"/>
-		</xs:choice>
-	</xs:complexType>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="groundwaterMonitoringNet" type="gldcom:GroundwaterMonitoringNetPropertyType" nillable="false" minOccurs="1" maxOccurs="unbounded"/>
+               <xs:element name="monitoringPoint" type="gldcom:GroundwaterMonitoringTubePropertyType" nillable="false" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="observation" type="om:OM_ObservationPropertyType" nillable="false" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GLD_StartRegistrationPropertyType">
+      <xs:sequence minOccurs="1">
+         <xs:element ref="isgld:GLD_StartRegistration"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="SourceDocument" type="isgld:SourceDocumentType">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/model-info/technical-documentation">Definition:   Het datatype sourceDocument biedt de keuze uit een aantal verschillende typen brondocumenten, waarvan er één opgenomen is in een registratieverzoek.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="SourceDocumentType">
+      <xs:choice minOccurs="1" maxOccurs="1">
+         <xs:element ref="isgld:GLD_Complete"/>
+         <xs:element ref="isgld:GLD_StartRegistration"/>
+         <xs:element ref="isgld:GLD_Addition"/>
+         <xs:element ref="isgld:GLD_Closure"/>
+      </xs:choice>
+   </xs:complexType>
 </xs:schema>
