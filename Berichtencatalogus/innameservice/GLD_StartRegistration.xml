@@ -61,26 +61,26 @@
                     <gco:CharacterString>Meten is ons vak</gco:CharacterString>
                   </gmd:organisationName>
                   <gmd:role>
-                    <gmd:CI_RoleCode codeList="urn:ISO:19115:CI_RoleCode" codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
+                    <gmd:CI_RoleCode 
+                      codeList="urn:ISO:19115:CI_RoleCode" 
+                      codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
                   </gmd:role>
                 </gmd:CI_ResponsibleParty>
               </gmd:contact>
               <!-- gmd:dateStamp gco:nilReason="unknown"/ -->
               <gmd:dateStamp>
-                <!-- You have a CHOICE of the next 5 items at this level -->
+                <!-- You have a CHOICE of the next 3 items at this level -->
                 <!--
-                <gco:DateTime>2018-02-04T09:01:52+01:00</gco:DateTime>
-                <gco:DateTime>2018-02-04T09:01:52</gco:DateTime>
                 <gco:Date>2018-02-04</gco:Date>
                 <gco:Date>2018-02</gco:Date>
                 <gco:Date>2018</gco:Date>
                 -->
-                <gco:DateTime>2018-02-04T09:01:52</gco:DateTime>
+                <gco:Date>2018-02-04</gco:Date>
               </gmd:dateStamp>
               <wml2:status xlink:href="urn:bro:gld:StatusCode:voorlopig"/>
               <wml2:parameter>
                 <om:NamedValue>
-                  <om:name xlink:href="principalInvestigator"/>
+                  <om:name xlink:href="urn:bro:gld:ObservationMetadata:principalInvestigator"/>
                   <om:value xsi:type="brocom:OrganizationType">
                     <!-- You have a CHOICE of the next 2 pair of items at this level -->
                     <!--
@@ -93,7 +93,7 @@
               </wml2:parameter>
               <wml2:parameter>
                 <om:NamedValue>
-                  <om:name xlink:href="observationType"/>
+                  <om:name xlink:href="urn:bro:gld:ObservationMetadata:observationType"/>
                   <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:ObservationType">reguliereMeting</om:value>
                 </om:NamedValue>
               </wml2:parameter>
@@ -135,25 +135,25 @@
             <wml2:ObservationProcess gml:id="_e1821667-0704-47c0-ade5-5fda651f0895">
               <wml2:processType xlink:href="http://www.opengis.net/def/waterml/2.0/processType/Algorithm"/>
               <wml2:processReference xlink:href="urn:bro:gld:ProcessReference:NEN5120v1991"/>
-              <wml2:parameter>
-                <om:NamedValue>
-                  <om:name xlink:href="measurementInstrument"/>
-                  <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:MeasurementInstrumentType">akoestischeSensor</om:value>
-                </om:NamedValue>
-              </wml2:parameter>
               <!-- optional -->
               <!--
               <wml2:parameter>
                 <om:NamedValue>
-                  <om:name xlink:href="airPressureCompensationType"/>
+                  <om:name xlink:href="urn:bro:gld:ObservationProcess:airPressureCompensationType"/>
                   <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:AirPressureCompensationType">KNMImeting</om:value>
                 </om:NamedValue>
               </wml2:parameter>
               -->
               <wml2:parameter>
                 <om:NamedValue>
-                  <om:name xlink:href="evaluationProcedure"/>
+                  <om:name xlink:href="urn:bro:gld:ObservationProcess:evaluationProcedure"/>
                   <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:EvaluationProcedure">oordeelDeskundige</om:value>
+                </om:NamedValue>
+              </wml2:parameter>
+              <wml2:parameter>
+                <om:NamedValue>
+                  <om:name xlink:href="urn:bro:gld:ObservationProcess:measurementInstrumentType"/>
+                  <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:MeasurementInstrumentType">akoestischeSensor</om:value>
                 </om:NamedValue>
               </wml2:parameter>
             </wml2:ObservationProcess>
@@ -177,8 +177,7 @@
                       </wml2:qualifier>
                       <!-- optional
                       <wml2:qualifier>
-                        <swe:Quantity definition="http://www.example.com/sensors/lower_threshold">
-                          <swe:description>Onderste limietwaarde van de sensor</swe:description>
+                        <swe:Quantity definition="urn:bro:gld:PointMetadata:censoringLimitvalue">
                           <swe:uom code="m"/>
                           <swe:value>-5.123</swe:value>
                         </swe:Quantity>
@@ -224,8 +223,7 @@
                       </wml2:qualifier>
                       <!-- optional -->
                       <wml2:qualifier>
-                        <swe:Quantity definition="http://www.example.com/sensors/lower_threshold">
-                          <swe:description>Onderste limietwaarde van de sensor</swe:description>
+                        <swe:Quantity definition="urn:bro:gld:PointMetadata:censoringLimitvalue">
                           <swe:uom code="m"/>
                           <!-- optional, missing element represents void value -->
                           <swe:value>-5.123</swe:value>
@@ -233,9 +231,6 @@
                       </wml2:qualifier>
                       <wml2:interpolationType xlink:href="http://www.opengis.net/def/waterml/2.0/interpolationType/Discontinuous"/>
                       <!-- optional -->
-                      <!-- wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/AboveDetectionRange"/ -->
-                      <!-- wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/BelowDetectionRange"/ -->
-                      <!-- wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/unknown"/ -->
                       <wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/BelowDetectionRange"/>
                     </wml2:TVPMeasurementMetadata>
                   </wml2:metadata>
