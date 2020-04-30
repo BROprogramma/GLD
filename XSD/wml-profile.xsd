@@ -14,12 +14,12 @@
     <documentation>
       OGC WaterML2.0 is designed as an extensible schema to allow encoding of
       data to be used in a variety of exchange scenarios. Example areas of usage are:
-      exchange of data for operational hydrological monitoring programs;
-      supporting operation of infrastructure (e.g. dams, supply systems);
-      cross-border exchange of observational data;
-      release of data for public dissemination;
-      enhancing disaster management through data exchange;
-      and exchange in support of national reporting.
+      - exchange of data for operational hydrological monitoring programs;
+      - supporting operation of infrastructure (e.g. dams, supply systems);
+      - cross-border exchange of observational data;
+      - release of data for public dissemination;
+      - enhancing disaster management through data exchange;
+      - exchange in support of national reporting.
       The core aspect of the model is in the correct, precise description of
       time series. Interpretation of time series relies on understanding the
       nature of the process that generated them. This standard provides the
@@ -31,8 +31,8 @@
       Copyright (c) 2012,2014 Open Geospatial Consortium.
       To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
     </documentation>
-    <documentation>Revision history
-      2.0.0: Orignal version of the BRO profile, extracted from:
+    <documentation>BRO wml-profile revision history:
+      2.0.0: Orignal version of the BRO wml-profile, extracted from:
       - http://schemas.opengis.net/waterml/2.0/waterml2.xsd
       - http://schemas.opengis.net/waterml/2.0/observationProcess.xsd
       - http://schemas.opengis.net/waterml/2.0/timeseriesObservationMetadata.xsd

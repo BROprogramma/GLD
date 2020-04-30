@@ -26,7 +26,6 @@
   attributeFormDefault="unqualified"
 	version="0.3.0">
 
-	<!-- http://schemas.opengis.net/waterml/2.0/waterml2.xsd -->
 	<xs:annotation>
 		<xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
 			<gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
