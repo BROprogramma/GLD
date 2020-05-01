@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <soap:Fault>
+      <faultcode>soap:Client</faultcode>
+      <faultstring>Het verzoek voldoet niet aan het schema.</faultstring>
+      <detail>
+        <gld:parseFault
+            xmlns:gld="http://www.broservices.nl/xsd/dsgld/1.0"
+            xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+            xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/1.0 ../../XSD/dsgld-messages.xsd">
+          <brocom:abortTime>2020-08-15T13:16:17+02:00</brocom:abortTime>
+          <brocom:abortReason>
+            <brocom:sequenceNumber>1</brocom:sequenceNumber>
+            <brocom:specification>regel: 12, kolom: 8, offset: -1, boodschap: 'cvc-complex-type.2.4.a: Invalid content was found starting with element 'brocom:deliveryAccountableParty'. One of '{"http://www.broservices.nl/xsd/brocommon/3.0":broId>}' is expected.'</brocom:specification>
+          </brocom:abortReason>
+          <brocom:abortReason>
+            <brocom:sequenceNumber>2</brocom:sequenceNumber>
+            <brocom:specification>regel: 12, kolom: 8, offset: -1, boodschap: 'unexpected element (uri:"http://www.broservices.nl/xsd/brocommon/3.0", local:"deliveryAccountableParty"). Expected elements are &lt;{http://www.broservices.nl/xsd/brocommon/3.0}broId>'</brocom:specification>
+          </brocom:abortReason>
+        </gld:parseFault>
+      </detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
