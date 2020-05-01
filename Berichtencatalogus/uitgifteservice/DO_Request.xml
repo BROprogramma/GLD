@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dispatchDataRequest
-    xmlns="http://www.broservices.nl/xsd/dsgld/0.1"
+    xmlns="http://www.broservices.nl/xsd/dsgld/1.0"
     xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/0.1 ../../XSD/dsgld-messages.xsd"
+    xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/1.0 ../../XSD/dsgld-messages.xsd"
     >
   <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.
        Het is niet gevalideert door de uitgifteservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
