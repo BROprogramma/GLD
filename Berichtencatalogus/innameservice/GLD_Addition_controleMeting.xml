@@ -53,6 +53,7 @@
               <gmd:dateStamp>
                 <gco:Date>2018-04-15</gco:Date>
               </gmd:dateStamp>
+              <gmd:identificationInfo gco:nilReason="unknown"/>
               <!-- Optional; niet aanwezig bij een controlemeting
               <wml2:status xlink:href="urn:bro:gld:StatusCode:volledigBeoordeeld"/>
               -->

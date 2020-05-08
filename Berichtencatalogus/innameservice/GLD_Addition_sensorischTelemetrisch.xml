@@ -53,6 +53,7 @@
               <gmd:dateStamp>
                 <gco:Date>2019-01-15</gco:Date>
               </gmd:dateStamp>
+              <gmd:identificationInfo gco:nilReason="unknown"/>
               <wml2:status xlink:href="urn:bro:gld:StatusCode:voorlopig"/>
               <wml2:parameter>
                 <om:NamedValue>

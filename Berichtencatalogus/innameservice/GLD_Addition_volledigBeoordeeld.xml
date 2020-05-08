@@ -54,6 +54,7 @@
               <gmd:dateStamp>
                 <gco:Date>2019-03-29</gco:Date>
               </gmd:dateStamp>
+              <gmd:identificationInfo gco:nilReason="unknown"/>
               <wml2:status xlink:href="urn:bro:gld:StatusCode:volledigBeoordeeld"/>
               <wml2:parameter>
                 <om:NamedValue>

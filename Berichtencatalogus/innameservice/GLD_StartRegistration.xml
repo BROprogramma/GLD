@@ -69,9 +69,9 @@
                     <gco:CharacterString>Meten is ons vak</gco:CharacterString>
                   </gmd:organisationName>
                   <gmd:role>
-                    <gmd:CI_RoleCode 
-                      codeList="urn:ISO:19115:CI_RoleCode" 
-                      codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
+                    <gmd:CI_RoleCode
+                            codeList="urn:ISO:19115:CI_RoleCode"
+                            codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
                   </gmd:role>
                 </gmd:CI_ResponsibleParty>
               </gmd:contact>
@@ -85,6 +85,7 @@
                 -->
                 <gco:Date>2018-01-28</gco:Date>
               </gmd:dateStamp>
+              <gmd:identificationInfo gco:nilReason="unknown"/>
               <wml2:status xlink:href="urn:bro:gld:StatusCode:voorlopig"/>
               <wml2:parameter>
                 <om:NamedValue>
