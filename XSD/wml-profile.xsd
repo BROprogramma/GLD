@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema
-        xmlns="http://www.w3.org/2001/XMLSchema"
-        xmlns:wml2="http://www.opengis.net/waterml/2.0"
-        xmlns:om="http://www.opengis.net/om/2.0"
-        xmlns:gmd="http://www.isotc211.org/2005/gmd"
-        xmlns:gml="http://www.opengis.net/gml/3.2"
-        xmlns:swe="http://www.opengis.net/swe/2.0"
-        targetNamespace="http://www.opengis.net/waterml/2.0"
-        elementFormDefault="qualified"
-        version="2.0.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wml2="http://www.opengis.net/waterml/2.0" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:swe="http://www.opengis.net/swe/2.0" targetNamespace="http://www.opengis.net/waterml/2.0" elementFormDefault="qualified" version="2.0.0">
   <annotation>
     <documentation>WaterML (WML) profile for BRO.</documentation>
     <documentation>
@@ -90,6 +81,7 @@
               </documentation>
             </annotation>
           </element>
+          <!-- BRO commented out:
           <element name="originatingProcess" type="gml:ReferenceType" minOccurs="0">
             <annotation>
               <documentation>
@@ -111,7 +103,6 @@
               </documentation>
             </annotation>
           </element>
-          <!-- BRO commented out:
           <element name="verticalDatum" type="gml:VerticalDatumPropertyType" minOccurs="0">
             <annotation>
               <documentation>
@@ -121,7 +112,6 @@
               </documentation>
             </annotation>
           </element>
-          -->
           <element name="comment" type="string" minOccurs="0" maxOccurs="unbounded">
             <annotation>
               <documentation>
@@ -129,11 +119,13 @@
               </documentation>
             </annotation>
           </element>
+          -->
           <element name="processReference" type="gml:ReferenceType" minOccurs="0">
             <annotation>
               <documentation>Reference to an external process definition.</documentation>
             </annotation>
           </element>
+          <!-- BRO commented out:
           <element name="input" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded">
             <annotation>
               <documentation>
@@ -143,6 +135,7 @@
               </documentation>
             </annotation>
           </element>
+          -->
           <element name="parameter" type="om:NamedValuePropertyType" minOccurs="0" maxOccurs="unbounded">
             <annotation>
               <documentation>
@@ -193,16 +186,19 @@
     <complexContent>
       <extension base="gmd:MD_Metadata_Type">
         <sequence>
+          <!-- BRO commented out:
           <element name="intendedObservationSpacing" type="duration" minOccurs="0">
             <annotation>
               <documentation>Defines the expected interval in which observations can be expected. e.g. daily.</documentation>
             </annotation>
           </element>
+          -->
           <element name="status" type="gml:ReferenceType" minOccurs="0">
             <annotation>
               <documentation>Indicates the statues of the observation. E.g. unreleased, verified etc.</documentation>
             </annotation>
           </element>
+          <!-- BRO commented out:
           <element name="sampledMedium" type="gml:ReferenceType" minOccurs="0">
             <annotation>
               <documentation>Indicates the medium that was sampled. E.g. water, air, etc.</documentation>
@@ -213,6 +209,7 @@
               <documentation>Defines the allowed gap between series when joining this time series with another.</documentation>
             </annotation>
           </element>
+          -->
           <element name="parameter" type="om:NamedValuePropertyType" minOccurs="0" maxOccurs="unbounded">
             <annotation>
               <documentation>A soft-typed parameter to allow extension through name-value pairs.</documentation>
@@ -224,12 +221,12 @@
   </complexType>
   <!-- ..................................................................... -->
   <complexType name="ObservationMetadataPropertyType">
+    <!-- BRO changed sequence minOccurs from 0 to 1 -->
     <sequence>
       <element ref="wml2:ObservationMetadata"/>
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <!-- BRO changed sequence minOccurs from 0 to 1 -->
-    <!-- BROHW commented out:
+    <!-- BRO commented out:
 		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
 		-->
   </complexType>
@@ -242,6 +239,7 @@
   <!-- ..................................................................... -->
   <complexType name="TVPMetadataType">
     <sequence>
+      <!-- BRO commented out:
       <element name="quality" type="gml:ReferenceType" minOccurs="0">
         <annotation>
           <documentation>
@@ -272,6 +270,7 @@
           </documentation>
         </annotation>
       </element>
+      -->
       <element name="qualifier" type="swe:QualityPropertyType" minOccurs="0" maxOccurs="unbounded">
         <annotation>
           <documentation>
@@ -280,6 +279,7 @@
           </documentation>
         </annotation>
       </element>
+      <!-- BRO commented out:
       <element name="processing" type="gml:ReferenceType" minOccurs="0">
         <annotation>
           <documentation>
@@ -299,7 +299,15 @@
           </documentation>
         </annotation>
       </element>
+      -->
     </sequence>
+  </complexType>
+  <!-- ..................................................................... -->
+  <complexType name="TVPMetadataPropertyType">
+    <sequence>
+      <element ref="wml2:TVPMetadata"/>
+    </sequence>
+    <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
   </complexType>
   <!-- ====================== TVPMeasurementMetadata ======================= -->
   <element name="TVPMeasurementMetadata" type="wml2:TVPMeasurementMetadataType" substitutionGroup="wml2:TVPMetadata"/>
@@ -308,6 +316,7 @@
     <complexContent>
       <extension base="wml2:TVPMetadataType">
         <sequence>
+          <!-- BRO commented out:
           <element name="uom" type="swe:UnitReference" minOccurs="0">
             <annotation>
               <documentation>
@@ -316,6 +325,7 @@
               </documentation>
             </annotation>
           </element>
+          -->
           <element name="interpolationType" type="gml:ReferenceType" minOccurs="0">
             <annotation>
               <documentation>
@@ -333,6 +343,7 @@
               </documentation>
             </annotation>
           </element>
+          <!-- BRO commented out:
           <element name="accuracy" type="swe:QuantityPropertyType" minOccurs="0">
             <annotation>
               <documentation>Used to specify the accuracy of a single value. </documentation>
@@ -345,122 +356,79 @@
               </documentation>
             </annotation>
           </element>
+          -->
         </sequence>
       </extension>
     </complexContent>
   </complexType>
   <!-- ..................................................................... -->
-  <complexType name="TVPMetadataPropertyType">
-    <sequence>
-      <element ref="wml2:TVPMetadata"/>
-    </sequence>
-    <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
-  </complexType>
-  <!-- ================ TVPMeasurementMetadataPropertyType ================= -->
   <complexType name="TVPMeasurementMetadataPropertyType">
     <sequence>
       <element ref="wml2:TVPMeasurementMetadata"/>
     </sequence>
     <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
   </complexType>
+  <!-- ====================== Default point metadata ======================= -->
+  <!-- Measurement uses the same TVP types;   -->
+  <!-- Categorical uses extended version of base TVP metadata, adding codeSpace -->
+  <!-- BRO: commented out:
+  <element name="DefaultTVPMetadata" type="wml2:TVPMetadataType"/>
+  -->
   <!-- ..................................................................... -->
+  <!-- BRO: commented out:
+  <element name="DefaultTVPMeasurementMetadata" type="wml2:TVPMeasurementMetadataType" substitutionGroup="wml2:DefaultTVPMetadata"/>
+  -->
+  <!-- ..................................................................... -->
+  <!-- BRO: commented out:
+  <element name="DefaultTVPCategoricalMetadata" type="wml2:DefaultCategoricalTVPMetadataType" substitutionGroup="wml2:DefaultTVPMetadata"/>
+  -->
+  <!-- ..................................................................... -->
+  <!-- BRO: commented out:
+  <complexType name="DefaultCategoricalTVPMetadataType">
+    <complexContent>
+      <extension base="wml2:TVPMetadataType">
+        <sequence>
+          <element name="codeSpace" type="anyURI" minOccurs="0">
+            <annotation>
+              <documentation>
+                Defines the default codeSpace for the category timeseries
+              </documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  -->
+  <!-- ..................................................................... -->
+  <!-- BRO: commented out:
+  <complexType name="DefaultTVPMetadataPropertyType">
+    <sequence minOccurs="0">
+      <element ref="wml2:DefaultTVPMetadata"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+  -->
+    <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
+  <!-- BRO: commented out:
+  </complexType>
+  -->
+  <!-- ======================== TVPDefaultMetadata ========================= -->
+  <!-- BRO: commented out:
   <complexType name="TVPDefaultMetadataPropertyType">
     <sequence>
       <element ref="wml2:DefaultTVPMetadata"/>
     </sequence>
+  -->
     <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
+  <!-- BRO: commented out:
   </complexType>
-  <!-- ============================= Timeseries ============================ -->
-  <element name="Timeseries" type="wml2:TimeseriesType" substitutionGroup="gml:AbstractFeature">
-    <annotation>
-      <documentation>
-        Describes a time series as a collection of time-value pairs (implements
-        TimeseriesTVP model type). A time series is a also a realisation of a
-        discrete time coverage as defined by ISO19123 - Coverages.
-      </documentation>
-    </annotation>
-  </element>
-  <!-- ..................................................................... -->
-  <complexType name="TimeseriesType" abstract="true">
-    <complexContent>
-      <extension base="gml:AbstractFeatureType">
-        <sequence>
-          <element name="metadata" type="wml2:TimeseriesMetadataPropertyType" minOccurs="0"/>
-          <element name="defaultPointMetadata" type="wml2:TVPDefaultMetadataPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <!--
-	The point element is directly restricted using XML schema types. The metadata
-  (wml2:Timeseries/wml2:metadata) is restricted using schematron. This is done
-  to maintain element ordering for the metadata element, but schema is used for
-  the point tp provide better integration with XML tools (and it won't affect
-  element ordering.
-	-->
-  <!-- ======================= MeasurementTimeseries ======================= -->
-  <element name="MeasurementTimeseries" type="wml2:MeasurementTimeseriesType" substitutionGroup="wml2:Timeseries">
-    <annotation>
-      <documentation>
-        Describes a time series as a collection of time-value pairs where the
-        value-type is a measurement and associated metadata is specific to
-        measurement types.
-      </documentation>
-    </annotation>
-  </element>
-  <!-- ..................................................................... -->
-  <complexType name="MeasurementTimeseriesType">
-    <complexContent>
-      <extension base="wml2:TimeseriesType">
-        <sequence>
-          <element name="point" minOccurs="0" maxOccurs="unbounded">
-            <complexType>
-              <sequence>
-                <element ref="wml2:MeasurementTVP"/>
-              </sequence>
-            </complexType>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <!-- ..................................................................... -->
-  <element name="CategoricalTimeseries" type="wml2:CategoricalTimeseriesType" substitutionGroup="wml2:Timeseries">
-    <annotation>
-      <documentation>
-        Describes a time series as a collection of time-value pairs where the
-        value-type is a category and associated metadata is specific to
-        categorical types.
-      </documentation>
-    </annotation>
-  </element>
-  <!-- ===================== CategoricalTimeseriesType ===================== -->
-  <complexType name="CategoricalTimeseriesType">
-    <complexContent>
-      <extension base="wml2:TimeseriesType">
-        <sequence minOccurs="0">
-          <element name="point" minOccurs="0" maxOccurs="unbounded">
-            <complexType>
-              <sequence>
-                <element ref="wml2:CategoricalTVP"/>
-              </sequence>
-            </complexType>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <!-- ======================= TimeseriesPropertyType ====================== -->
-  <complexType name="TimeseriesPropertyType">
-    <sequence minOccurs="0">
-      <element ref="wml2:Timeseries"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
-  </complexType>
+  -->
   <!-- ======================== TimeseriesMetadata ========================= -->
+  <!-- BRO: commented out:
   <element name="TimeseriesMetadata" type="wml2:TimeseriesMetadataType"/>
+  -->
   <!-- ..................................................................... -->
+  <!-- BRO: commented out:
   <complexType name="TimeseriesMetadataType">
     <sequence>
       <element name="temporalExtent" type="gml:TimePeriodPropertyType">
@@ -505,16 +473,22 @@
       </element>
     </sequence>
   </complexType>
+  -->
   <!-- ..................................................................... -->
+  <!-- BRO: commented out:
   <complexType name="TimeseriesMetadataPropertyType">
     <sequence>
       <element ref="wml2:TimeseriesMetadata"/>
     </sequence>
-    <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
+  -->
   <!-- =================== MeasurementTimeseriesMetadata =================== -->
+  <!-- BRO: commented out:
   <element name="MeasurementTimeseriesMetadata" type="wml2:MeasurementTimeseriesMetadataType" substitutionGroup="wml2:TimeseriesMetadata"/>
+  -->
   <!-- ..................................................................... -->
+  <!-- BRO: commented out:
   <complexType name="MeasurementTimeseriesMetadataType">
     <complexContent>
       <extension base="wml2:TimeseriesMetadataType">
@@ -556,45 +530,112 @@
       </extension>
     </complexContent>
   </complexType>
+  -->
   <!-- ..................................................................... -->
+  <!-- BRO: commented out:
   <complexType name="MeasurementTSMetadataPropertyType">
     <sequence>
       <element ref="wml2:MeasurementTimeseriesMetadata"/>
     </sequence>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  -->
+  <!-- ============================= Timeseries ============================ -->
+  <element name="Timeseries" type="wml2:TimeseriesType" substitutionGroup="gml:AbstractFeature">
+    <annotation>
+      <documentation>
+        Describes a time series as a collection of time-value pairs (implements
+        TimeseriesTVP model type). A time series is a also a realisation of a
+        discrete time coverage as defined by ISO19123 - Coverages.
+      </documentation>
+    </annotation>
+  </element>
+  <!-- ..................................................................... -->
+  <complexType name="TimeseriesType" abstract="true">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <!-- TODO default metadata wel of niet gebruiken in de BRO? -->
+          <!-- BRO: commented out:
+          <element name="metadata" type="wml2:TimeseriesMetadataPropertyType" minOccurs="0"/>
+          <element name="defaultPointMetadata" type="wml2:TVPDefaultMetadataPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+          -->
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- ..................................................................... -->
+  <complexType name="TimeseriesPropertyType">
+    <sequence minOccurs="0">
+      <element ref="wml2:Timeseries"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
     <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
   </complexType>
-  <!-- ====================== Default point metadata ======================= -->
-  <!-- Measurement uses the same TVP types;   -->
-  <!-- Categorical uses extended version of base TVP metadata, adding codeSpace -->
-  <element name="DefaultTVPMetadata" type="wml2:TVPMetadataType"/>
+  <!-- ======================= MeasurementTimeseries ======================= -->
+  <!--
+	The point element is directly restricted using XML schema types. The metadata
+  (wml2:Timeseries/wml2:metadata) is restricted using schematron. This is done
+  to maintain element ordering for the metadata element, but schema is used for
+  the point to provide better integration with XML tools (and it won't affect
+  element ordering.
+	-->
+  <element name="MeasurementTimeseries" type="wml2:MeasurementTimeseriesType" substitutionGroup="wml2:Timeseries">
+    <annotation>
+      <documentation>
+        Describes a time series as a collection of time-value pairs where the
+        value-type is a measurement and associated metadata is specific to
+        measurement types.
+      </documentation>
+    </annotation>
+  </element>
   <!-- ..................................................................... -->
-  <element name="DefaultTVPMeasurementMetadata" type="wml2:TVPMeasurementMetadataType" substitutionGroup="wml2:DefaultTVPMetadata"/>
-  <!-- ..................................................................... -->
-  <element name="DefaultTVPCategoricalMetadata" type="wml2:DefaultCategoricalTVPMetadataType" substitutionGroup="wml2:DefaultTVPMetadata"/>
-  <!-- ..................................................................... -->
-  <complexType name="DefaultCategoricalTVPMetadataType">
+  <complexType name="MeasurementTimeseriesType">
     <complexContent>
-      <extension base="wml2:TVPMetadataType">
+      <extension base="wml2:TimeseriesType">
         <sequence>
-          <element name="codeSpace" type="anyURI" minOccurs="0">
-            <annotation>
-              <documentation>
-                Defines the default codeSpace for the category timeseries
-              </documentation>
-            </annotation>
+          <element name="point" minOccurs="0" maxOccurs="unbounded">
+            <complexType>
+              <sequence>
+                <element ref="wml2:MeasurementTVP"/>
+              </sequence>
+            </complexType>
           </element>
         </sequence>
       </extension>
     </complexContent>
   </complexType>
   <!-- ..................................................................... -->
-  <complexType name="DefaultTVPMetadataPropertyType">
-    <sequence minOccurs="0">
-      <element ref="wml2:DefaultTVPMetadata"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
+  <!-- ===================== CategoricalTimeseriesType ===================== -->
+  <!-- BRO: commented out:
+  <element name="CategoricalTimeseries" type="wml2:CategoricalTimeseriesType" substitutionGroup="wml2:Timeseries">
+    <annotation>
+      <documentation>
+        Describes a time series as a collection of time-value pairs where the
+        value-type is a category and associated metadata is specific to
+        categorical types.
+      </documentation>
+    </annotation>
+  </element>
+  -->
+  <!-- ..................................................................... -->
+  <!-- BRO: commented out:
+  <complexType name="CategoricalTimeseriesType">
+    <complexContent>
+      <extension base="wml2:TimeseriesType">
+        <sequence minOccurs="0">
+          <element name="point" minOccurs="0" maxOccurs="unbounded">
+            <complexType>
+              <sequence>
+                <element ref="wml2:CategoricalTVP"/>
+              </sequence>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
   </complexType>
+  -->
   <!-- ===================== Time value pair base type ===================== -->
   <!-- The value type is not restricted here but by the sub types for -->
   <!-- the required series types: e..g measures.                      -->
@@ -629,8 +670,11 @@
     </complexContent>
   </complexType>
   <!-- ..................................................................... -->
+  <!-- BRO: commented out:
   <element name="CategoricalTVP" type="wml2:CategoricalTVPType" substitutionGroup="wml2:TimeValuePair"/>
+  -->
   <!-- ..................................................................... -->
+  <!-- BRO: commented out:
   <complexType name="CategoricalTVPType">
     <complexContent>
       <extension base="wml2:TimeValuePairType">
@@ -645,9 +689,13 @@
       </extension>
     </complexContent>
   </complexType>
+  -->
   <!-- =========== Comment blocks (temporally bounded comments) ============ -->
+  <!-- BRO: commented out:
   <element name="CommentBlock" type="wml2:CommentBlockType" substitutionGroup="gml:AbstractObject"/>
+  -->
   <!-- ..................................................................... -->
+  <!-- BRO: commented out:
   <complexType name="CommentBlockType">
     <sequence>
       <element name="applicablePeriod" type="gml:TimePeriodPropertyType">
@@ -662,18 +710,23 @@
       </element>
     </sequence>
   </complexType>
+  -->
   <!-- ..................................................................... -->
+  <!-- BRO: commented out:
   <complexType name="CommentBlockPropertyType">
     <sequence>
       <element ref="wml2:CommentBlock"/>
     </sequence>
-    <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
+  -->
   <!-- ================== WML2 definition of measure type ================== -->
   <!-- gml:MeasureType is not used as it has as a mandatory attribute uom  -->
   <!-- which means defaulting for uom may not be used. This type also adds -->
   <!-- the censorReason for censored values.                               -->
+  <!-- BRO: commented out:
   <element name="value" type="wml2:MeasureType"/>
+  -->
   <!-- ..................................................................... -->
   <complexType name="MeasureType">
     <annotation>
@@ -691,8 +744,10 @@
         <attribute name="uom" type="swe:UomSymbol"/>
       </extension>
       <!-- Nil reason and censored reason are captured in point/metadata -->
-      <!-- attribute name="nilReason" type="gml:NilReasonType"/    -->
-      <!-- attribute name="censorReason" type="gml:NilReasonType"/ -->
+      <!-- BRO: commented out:
+      <attribute name="nilReason" type="gml:NilReasonType"/>
+      <attribute name="censorReason" type="gml:NilReasonType"/>
+      -->
     </simpleContent>
   </complexType>
   <!-- ===================================================================== -->
