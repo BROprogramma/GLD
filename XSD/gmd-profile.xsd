@@ -30,8 +30,18 @@
   -->
   <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="gco-profile.xsd"/>
   <!-- ===================================================================== -->
-  <!-- =================== from identification.xsd ========================= -->
+  <!-- =================== CI_RoleCode_PropertyType ======================== -->
   <!-- ===================================================================== -->
+  <!-- =============== MD_Identification_PropertyType ====================== -->
+  <element name="CI_RoleCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
+  <!-- ..................................................................... -->
+  <complexType name="CI_RoleCode_PropertyType">
+    <sequence minOccurs="0">
+      <element ref="gmd:CI_RoleCode"/>
+    </sequence>
+    <attribute ref="gco:nilReason"/>
+  </complexType>
+  <!-- =================== from identification.xsd ========================= -->
   <complexType name="MD_Identification_PropertyType">
     <!-- BRO commented out:
     <sequence minOccurs="0">
@@ -45,11 +55,8 @@
   <!-- ====================== from citation.xsd ============================ -->
   <!-- ===================================================================== -->
   <!-- ===================== CI_ResponsibleParty =========================== -->
-  <!-- BRO commented out:
   <element name="CI_ResponsibleParty" type="gmd:CI_ResponsibleParty_Type"/>
-  -->
   <!-- ..................................................................... -->
-  <!-- BRO commented out:
   <complexType name="CI_ResponsibleParty_Type">
     <annotation>
       <documentation>
@@ -59,22 +66,26 @@
     <complexContent>
       <extension base="gco:AbstractObject_Type">
         <sequence>
+          <!-- BRO commented out:
           <element name="individualName" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+          -->
           <element name="organisationName" type="gco:CharacterString_PropertyType" minOccurs="0"/>
+          <!-- BRO commented out:
           <element name="positionName" type="gco:CharacterString_PropertyType" minOccurs="0"/>
           <element name="contactInfo" type="gmd:CI_Contact_PropertyType" minOccurs="0"/>
+          -->
           <element name="role" type="gmd:CI_RoleCode_PropertyType"/>
         </sequence>
       </extension>
     </complexContent>
   </complexType>
-  -->
   <!-- ..................................................................... -->
   <complexType name="CI_ResponsibleParty_PropertyType">
-    <!-- BRO commented out:
-    <sequence minOccurs="0">
+    <!-- BRO changed sequence minOccurs from 0 to 1 -->
+    <sequence minOccurs="1">
       <element ref="gmd:CI_ResponsibleParty"/>
     </sequence>
+    <!-- BRO commented out:
     <attributeGroup ref="gco:ObjectReference"/>
     -->
     <attribute ref="gco:nilReason"/>
