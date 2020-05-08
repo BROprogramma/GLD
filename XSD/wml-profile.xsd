@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wml2="http://www.opengis.net/waterml/2.0" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:swe="http://www.opengis.net/swe/2.0" targetNamespace="http://www.opengis.net/waterml/2.0" elementFormDefault="qualified" version="2.0.0">
+<schema
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:wml2="http://www.opengis.net/waterml/2.0"
+    xmlns:om="http://www.opengis.net/om/2.0"
+    xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:swe="http://www.opengis.net/swe/2.0"
+    targetNamespace="http://www.opengis.net/waterml/2.0"
+    elementFormDefault="qualified"
+    version="2.0.0">
   <annotation>
     <documentation>WaterML (WML) profile for BRO.</documentation>
     <documentation>
@@ -408,7 +417,7 @@
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
   -->
-    <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
+  <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
   <!-- BRO: commented out:
   </complexType>
   -->
@@ -419,7 +428,7 @@
       <element ref="wml2:DefaultTVPMetadata"/>
     </sequence>
   -->
-    <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
+  <!-- BRO: commented out: attributeGroup ref="gml:OwnershipAttributeGroup"/-->
   <!-- BRO: commented out:
   </complexType>
   -->
