@@ -75,8 +75,8 @@
           </om:metadata>
           <om:phenomenonTime>
             <gml:TimePeriod gml:id="id_0002">
-              <gml:beginPosition>2018-04-15T08:05:42+02:00</gml:beginPosition>
-              <gml:endPosition>2018-04-15T08:05:42+02:00</gml:endPosition>
+              <gml:beginPosition>2018-04-15</gml:beginPosition>
+              <gml:endPosition>2018-04-15</gml:endPosition>
             </gml:TimePeriod>
           </om:phenomenonTime>
           <om:resultTime>

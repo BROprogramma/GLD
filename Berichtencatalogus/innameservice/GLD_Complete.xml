@@ -102,8 +102,8 @@
           </om:metadata>
           <om:phenomenonTime>
             <gml:TimePeriod gml:id="id_0005">
-              <gml:beginPosition>2018-01-07T08:14:38+01:00</gml:beginPosition>
-              <gml:endPosition>2018-01-28T16:58:07+01:00</gml:endPosition>
+              <gml:beginPosition>2018-01-07</gml:beginPosition>
+              <gml:endPosition>2018-01-28</gml:endPosition>
             </gml:TimePeriod>
           </om:phenomenonTime>
           <om:resultTime>
@@ -284,8 +284,8 @@
           </om:metadata>
           <om:phenomenonTime>
             <gml:TimePeriod gml:id="id_0007">
-              <gml:beginPosition>2018-02-15T10:01:52+01:00</gml:beginPosition>
-              <gml:endPosition>2018-02-15T10:01:52+01:00</gml:endPosition>
+              <gml:beginPosition>2018-02-15</gml:beginPosition>
+              <gml:endPosition>2018-02-15</gml:endPosition>
             </gml:TimePeriod>
           </om:phenomenonTime>
           <om:resultTime>
@@ -359,8 +359,8 @@
           </om:metadata>
           <om:phenomenonTime>
             <gml:TimePeriod gml:id="id_0009">
-              <gml:beginPosition>2018-03-15T07:14:38+01:00</gml:beginPosition>
-              <gml:endPosition>2018-03-15T07:14:38+01:00</gml:endPosition>
+              <gml:beginPosition>2018-03-15</gml:beginPosition>
+              <gml:endPosition>2018-03-15</gml:endPosition>
             </gml:TimePeriod>
           </om:phenomenonTime>
           <om:resultTime>
@@ -434,8 +434,8 @@
           </om:metadata>
           <om:phenomenonTime>
             <gml:TimePeriod gml:id="id_0011">
-              <gml:beginPosition>2018-04-15T16:44:25+02:00</gml:beginPosition>
-              <gml:endPosition>2018-04-15T16:44:25+02:00</gml:endPosition>
+              <gml:beginPosition>2018-04-15</gml:beginPosition>
+              <gml:endPosition>2018-04-15</gml:endPosition>
             </gml:TimePeriod>
           </om:phenomenonTime>
           <om:resultTime>
@@ -511,8 +511,8 @@
           </om:metadata>
           <om:phenomenonTime>
             <gml:TimePeriod gml:id="id_0013">
-              <gml:beginPosition>2018-04-15T08:05:42+02:00</gml:beginPosition>
-              <gml:endPosition>2018-04-15T08:05:42+02:00</gml:endPosition>
+              <gml:beginPosition>2018-04-15</gml:beginPosition>
+              <gml:endPosition>2018-04-15</gml:endPosition>
             </gml:TimePeriod>
           </om:phenomenonTime>
           <om:resultTime>
@@ -603,8 +603,8 @@
           </om:metadata>
           <om:phenomenonTime>
             <gml:TimePeriod gml:id="id_0015">
-              <gml:beginPosition>2019-01-15T10:01:52+01:00</gml:beginPosition>
-              <gml:endPosition>2019-01-15T10:01:52+01:00</gml:endPosition>
+              <gml:beginPosition>2019-01-15</gml:beginPosition>
+              <gml:endPosition>2019-01-15</gml:endPosition>
             </gml:TimePeriod>
           </om:phenomenonTime>
           <om:resultTime>
@@ -715,8 +715,8 @@
           </om:relatedObservation>
           <om:phenomenonTime>
             <gml:TimePeriod gml:id="id_0017">
-              <gml:beginPosition>2018-01-07T08:14:38+01:00</gml:beginPosition>
-              <gml:endPosition>2019-01-15T10:01:52+01:00</gml:endPosition>
+              <gml:beginPosition>2018-01-07</gml:beginPosition>
+              <gml:endPosition>2019-01-15</gml:endPosition>
             </gml:TimePeriod>
           </om:phenomenonTime>
           <om:resultTime>
