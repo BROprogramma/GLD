@@ -615,6 +615,13 @@
     </complexContent>
   </complexType>
   <!-- ..................................................................... -->
+  <complexType name="MeasurementTimeseriesPropertyType">
+    <sequence minOccurs="0">
+      <element ref="wml2:MeasurementTimeseries"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+  </complexType>
+  <!-- ..................................................................... -->
   <!-- ===================== CategoricalTimeseriesType ===================== -->
   <!-- BRO: commented out:
   <element name="CategoricalTimeseries" type="wml2:CategoricalTimeseriesType" substitutionGroup="wml2:Timeseries">
