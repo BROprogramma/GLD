@@ -16,7 +16,7 @@
         xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/1.0 https://schema.broservices.nl/xsd/isgld/1.0/isgld-messages.xsd">
 
       Inhoud:
-
+      
       1 Observation (Observatie) van een reguliere, sensorische, telemetrische meting
       met 1 MeasurementTVP (Tijdmeetwaardepaar) gedaan op een bepaald moment
       en een verwijzing naar het ObservationProcess (Observatieproces) uit het voorbeeldbericht GLD_Addition_telemetrisch.xml.
@@ -43,9 +43,9 @@
                     <gco:CharacterString/>
                   </gmd:organisationName>
                   <gmd:role>
-                    <gmd:CI_RoleCode
-                            codeList="urn:ISO:19115:CI_RoleCode"
-                            codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
+                    <gmd:CI_RoleCode 
+                      codeList="urn:ISO:19115:CI_RoleCode" 
+                      codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
                   </gmd:role>
                 </gmd:CI_ResponsibleParty>
               </gmd:contact>

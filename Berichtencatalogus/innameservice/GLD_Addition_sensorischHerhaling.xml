@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <registrationRequest
         xmlns="http://www.broservices.nl/xsd/isgld/1.0"
-        xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/1.0"
         xmlns:wml2="http://www.opengis.net/waterml/2.0"
         xmlns:gmd="http://www.isotc211.org/2005/gmd"
         xmlns:gco="http://www.isotc211.org/2005/gco"
@@ -12,17 +11,17 @@
         xmlns:xlink="http://www.w3.org/1999/xlink"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/1.0 ../../XSD/isgld-messages.xsd">
-
   <!--Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
       Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
+        xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/1.0 https://schema.broservices.nl/xsd/isgld/1.0/isgld-messages.xsd">
 
       Inhoud:
       
-      3 Observations (Observaties) van reguliere, sensorische metingen doorgestuurd in één bundel
-      met ieder 1 MeasurementTVP (Tijdmeetwaardepaar) gedaan op een bepaald moment
-      en een verwijzing naar het ObservationProcess (Observatieproces) uit het voorbeeldbericht GLD_StartRegistration.xml.
+      1 Observation (Observatie) met reguliere, sensorische metingen doorgestuurd in één bundel
+      met 3 keer een MeasurementTVP (Tijdmeetwaardepaar) gedaan op bepaalde momenten
+      en een verwijzing naar het ObservationProcess (Observatieproces) uit het voorbeeldbericht GLD_Addition_sensorisch.xml..
   -->
-  <brocom:requestReference>BRO-GLD-1597</brocom:requestReference>
+  <brocom:requestReference>BRO-GLD-1598</brocom:requestReference>
   <!--Optional:-->
   <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
   <!--Optional: maar verplicht bij een GLD_Addition brondocument -->
@@ -41,7 +40,7 @@
               <gmd:contact>
                 <gmd:CI_ResponsibleParty>
                   <gmd:organisationName>
-                    <gco:CharacterString>Meten is ons vak</gco:CharacterString>
+                    <gco:CharacterString/>
                   </gmd:organisationName>
                   <gmd:role>
                     <gmd:CI_RoleCode 
@@ -74,12 +73,12 @@
           <om:phenomenonTime>
             <gml:TimePeriod gml:id="id_0002">
               <gml:beginPosition>2018-02-15</gml:beginPosition>
-              <gml:endPosition>2018-02-15</gml:endPosition>
+              <gml:endPosition>2018-04-15</gml:endPosition>
             </gml:TimePeriod>
           </om:phenomenonTime>
           <om:resultTime>
             <gml:TimeInstant gml:id="id_0003">
-              <gml:timePosition>2018-02-15T10:01:52+01:00</gml:timePosition>
+              <gml:timePosition>2018-04-15T16:44:25+02:00</gml:timePosition>
             </gml:TimeInstant>
           </om:resultTime>
           <om:procedure xlink:href="_e1821667-0704-47c0-ade5-5fda651f0895"/>
@@ -104,68 +103,10 @@
                   </wml2:metadata>
                 </wml2:MeasurementTVP>
               </wml2:point>
-            </wml2:MeasurementTimeseries>
-          </om:result>
-        </om:OM_Observation>
-      </observation>
-      <observation>
-        <om:OM_Observation gml:id="_047e1b31-5406-4c68-af73-303e3f057881">
-          <om:type xlink:href="http://www.opengis.net/def/observationType/waterml/2.0/MeasurementTimeseriesTVPObservation"/>
-          <om:metadata>
-            <wml2:ObservationMetadata>
-              <gmd:contact>
-                <gmd:CI_ResponsibleParty>
-                  <gmd:organisationName>
-                    <gco:CharacterString>Meten is ons vak</gco:CharacterString>
-                  </gmd:organisationName>
-                  <gmd:role>
-                    <gmd:CI_RoleCode 
-                      codeList="urn:ISO:19115:CI_RoleCode" 
-                      codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
-                  </gmd:role>
-                </gmd:CI_ResponsibleParty>
-              </gmd:contact>
-              <gmd:dateStamp>
-                <gco:Date>2018-03-15</gco:Date>
-              </gmd:dateStamp>
-              <gmd:identificationInfo gco:nilReason="unknown"/>
-              <wml2:status xlink:href="urn:bro:gld:StatusCode:voorlopig"/>
-              <wml2:parameter>
-                <om:NamedValue>
-                  <om:name xlink:href="urn:bro:gld:ObservationMetadata:principalInvestigator"/>
-                  <om:value xsi:type="brocom:OrganizationType">
-                    <brocom:chamberOfCommerceNumber>27376655</brocom:chamberOfCommerceNumber>
-                  </om:value>
-                </om:NamedValue>
-              </wml2:parameter>
-              <wml2:parameter>
-                <om:NamedValue>
-                  <om:name xlink:href="urn:bro:gld:ObservationMetadata:observationType"/>
-                  <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:ObservationType">reguliereMeting</om:value>
-                </om:NamedValue>
-              </wml2:parameter>
-            </wml2:ObservationMetadata>
-          </om:metadata>
-          <om:phenomenonTime>
-            <gml:TimePeriod gml:id="id_0004">
-              <gml:beginPosition>2018-03-15</gml:beginPosition>
-              <gml:endPosition>2018-03-15</gml:endPosition>
-            </gml:TimePeriod>
-          </om:phenomenonTime>
-          <om:resultTime>
-            <gml:TimeInstant gml:id="id_0005">
-              <gml:timePosition>2018-03-15T07:14:38+01:00</gml:timePosition>
-            </gml:TimeInstant>
-          </om:resultTime>
-          <om:procedure xlink:href="_e1821667-0704-47c0-ade5-5fda651f0895"/>
-          <om:observedProperty/>
-          <om:featureOfInterest/>
-          <om:result>
-            <wml2:MeasurementTimeseries gml:id="_8473976a-23b8-4b0f-ac8a-657825845e6b">
               <wml2:point>
                 <wml2:MeasurementTVP>
                   <wml2:time>2018-03-15T07:14:38+01:00</wml2:time>
-                  <wml2:value uom="m">-4.987</wml2:value>
+                  <wml2:value uom="m">-4.972</wml2:value>
                   <wml2:metadata>
                     <wml2:TVPMeasurementMetadata>
                       <wml2:qualifier>
@@ -179,64 +120,6 @@
                   </wml2:metadata>
                 </wml2:MeasurementTVP>
               </wml2:point>
-            </wml2:MeasurementTimeseries>
-          </om:result>
-        </om:OM_Observation>
-      </observation>
-      <observation>
-        <om:OM_Observation gml:id="_563bb7db-e089-4429-a0fc-3f9e0fb0ce6d">
-          <om:type xlink:href="http://www.opengis.net/def/observationType/waterml/2.0/MeasurementTimeseriesTVPObservation"/>
-          <om:metadata>
-            <wml2:ObservationMetadata>
-              <gmd:contact>
-                <gmd:CI_ResponsibleParty>
-                  <gmd:organisationName>
-                    <gco:CharacterString>Meten is ons vak</gco:CharacterString>
-                  </gmd:organisationName>
-                  <gmd:role>
-                    <gmd:CI_RoleCode 
-                      codeList="urn:ISO:19115:CI_RoleCode" 
-                      codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
-                  </gmd:role>
-                </gmd:CI_ResponsibleParty>
-              </gmd:contact>
-              <gmd:dateStamp>
-                <gco:Date>2018-04-15</gco:Date>
-              </gmd:dateStamp>
-              <gmd:identificationInfo gco:nilReason="unknown"/>
-              <wml2:status xlink:href="urn:bro:gld:StatusCode:voorlopig"/>
-              <wml2:parameter>
-                <om:NamedValue>
-                  <om:name xlink:href="urn:bro:gld:ObservationMetadata:principalInvestigator"/>
-                  <om:value xsi:type="brocom:OrganizationType">
-                    <brocom:chamberOfCommerceNumber>27376655</brocom:chamberOfCommerceNumber>
-                  </om:value>
-                </om:NamedValue>
-              </wml2:parameter>
-              <wml2:parameter>
-                <om:NamedValue>
-                  <om:name xlink:href="urn:bro:gld:ObservationMetadata:observationType"/>
-                  <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:ObservationType">reguliereMeting</om:value>
-                </om:NamedValue>
-              </wml2:parameter>
-            </wml2:ObservationMetadata>
-          </om:metadata>
-          <om:phenomenonTime>
-            <gml:TimePeriod gml:id="id_0006">
-              <gml:beginPosition>2018-04-15</gml:beginPosition>
-              <gml:endPosition>2018-04-15</gml:endPosition>
-            </gml:TimePeriod>
-          </om:phenomenonTime>
-          <om:resultTime>
-            <gml:TimeInstant gml:id="id_0007">
-              <gml:timePosition>2018-04-15T16:44:25+02:00</gml:timePosition>
-            </gml:TimeInstant>
-          </om:resultTime>
-          <om:procedure xlink:href="_e1821667-0704-47c0-ade5-5fda651f0895"/>
-          <om:observedProperty/>
-          <om:featureOfInterest/>
-          <om:result>
-            <wml2:MeasurementTimeseries gml:id="_2d509edf-760b-4708-a1b7-d47a69748791">
               <wml2:point>
                 <wml2:MeasurementTVP>
                   <wml2:time>2018-04-15T16:44:25+02:00</wml2:time>
