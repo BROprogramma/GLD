@@ -8,7 +8,7 @@
     xmlns:swe="http://www.opengis.net/swe/2.0"
     targetNamespace="http://www.opengis.net/waterml/2.0"
     elementFormDefault="qualified"
-    version="2.0.0">
+    version="2.0.1">
   <annotation>
     <documentation>WaterML (WML) profile for BRO.</documentation>
     <documentation>
@@ -32,6 +32,8 @@
       To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
     </documentation>
     <documentation>BRO wml-profile revision history:
+      2.0.1:
+      - Number of points (MeasurementTVP) in MeasurementTimeseriesType limited to 10000.
       2.0.0: Orignal version of the BRO wml-profile, extracted from:
       - http://schemas.opengis.net/waterml/2.0/waterml2.xsd
       - http://schemas.opengis.net/waterml/2.0/observationProcess.xsd
@@ -603,7 +605,7 @@
     <complexContent>
       <extension base="wml2:TimeseriesType">
         <sequence>
-          <element name="point" minOccurs="0" maxOccurs="unbounded">
+          <element name="point" minOccurs="0" maxOccurs="10000">
             <complexType>
               <sequence>
                 <element ref="wml2:MeasurementTVP"/>
