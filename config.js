@@ -1,19 +1,29 @@
 var respecConfig = {
-  specStatus: "GN-WV",
+  specStatus: "GN-VV",
   specType: "IM",
   //canonicalURI: "WV",
-  //publishDate: "2019-11-07",
+  publishDate: "2020-03-27",
   maxTocLevel: 3,
-  editors: [
+  logos: [
+ {
+    src: 'https://docs.geostandaarden.nl/bro/gen/logo_minbzk.png',
+    href: "https://www.geobasisregistraties.nl/basisregistraties/ondergrond",
+    alt: "Ministerie BZK",
+    width: 776,
+    height: 163,
+    id: 'logo_minbzk',
+  }
+]  ,
+  editors: [    {
+      name: "Geonovum",	
+      companyURL: "https://www.geonovum.nl/geo-standaarden/bro-basisregistratie-ondergrond",
+    }],
+  authors: [
     {
-      name: "TNO Geologische Dienst Nederland",
-      url: "https://www.tno.nl/nl/",
-    },
-    {
-      name: "Geonovum",
-      url: "https://www.geonovum.nl", 
-    },  
-  ],
+      name: "Geonovum",	
+      companyURL: "https://www.geonovum.nl/geo-standaarden/bro-basisregistratie-ondergrond",
+    }
+	],
   shortName: "gld",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GLD",
