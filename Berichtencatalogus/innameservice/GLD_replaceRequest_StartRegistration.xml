@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<registrationRequest
+<replaceRequest
         xmlns="http://www.broservices.nl/xsd/isgld/1.0"
         xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/1.0"
         xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
@@ -12,24 +12,24 @@
 
         Inhoud:
 
-        GroundwaterMonitoringTube (GMW-monitoringsbuis).
-        2 GroundwaterMonitoringNets (Grondwatermonitoringnetten).
+        Gecorrigeerde waarde voor GroundwaterMonitoringTube (GMW-monitoringsbuis).
+        Correctiereden = inOnderzoek.
     -->
-    <brocom:requestReference>BRO-GLD-1596</brocom:requestReference>
+    <brocom:requestReference>BRO-GLD-2596</brocom:requestReference>
     <!-- Optional: -->
     <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
-    <!-- Optional: maar niet toegestaan bij een GLD_StartRegistration brondocument
+    <!-- Optional: -->
     <brocom:broId>GLD123456789012</brocom:broId>
-    -->
     <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
     <!-- Optional: maar niet toegestaan bij GLD
     <brocom:underPrivilege>ja</brocom:underPrivilege>
     -->
+    <correctionReason codeSpace="urn:bro:gld:CorrectionReason">inOnderzoek</correctionReason>
     <sourceDocument>
         <GLD_StartRegistration gml:id="id_0001">
             <!-- optional -->
             <objectIdAccountableParty>myIdForThisGroundwaterLevelDossier_102989</objectIdAccountableParty>
-            <!-- 0 or more repetitions -->
+            <!-- 1 or more repetitions -->
             <groundwaterMonitoringNet>
                 <gldcom:GroundwaterMonitoringNet gml:id="id_0002">
                     <gldcom:broId>GMN123456789012</gldcom:broId>
@@ -43,10 +43,10 @@
             <!-- 1 monitoringpoint -->
             <monitoringPoint>
                 <gldcom:GroundwaterMonitoringTube gml:id="id_0004">
-                    <gldcom:broId>GMW123456789012</gldcom:broId>
-                    <gldcom:tubeNumber>1</gldcom:tubeNumber>
+                    <gldcom:broId>GMW2109876543210</gldcom:broId>
+                    <gldcom:tubeNumber>3</gldcom:tubeNumber>
                 </gldcom:GroundwaterMonitoringTube>
             </monitoringPoint>
         </GLD_StartRegistration>
     </sourceDocument>
-</registrationRequest>
+</replaceRequest>

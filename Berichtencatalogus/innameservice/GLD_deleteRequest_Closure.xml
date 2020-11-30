@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deleteRequest
+        xmlns="http://www.broservices.nl/xsd/isgld/1.0"
+        xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+        xmlns:gml="http://www.opengis.net/gml/3.2"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/1.0 ../../XSD/isgld-messages.xsd">
+    <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
+         Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
+        xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/1.0 https://schema.broservices.nl/xsd/isgld/1.0/isgld-messages.xsd">
+
+          Inhoud:
+          Identiek aan GLD_Closure.xml.
+          Correctiereden = eigenCorrectie.
+    -->
+    <brocom:requestReference>BRO-GLD-3603</brocom:requestReference>
+    <!--Optional:-->
+    <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
+    <!--Optional: maar verplicht bij een GLD_End brondocument -->
+    <brocom:broId>GLD123456789012</brocom:broId>
+    <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+    <!--Optional: maar niet toegestaan bij GLD
+    <brocom:underPrivilege>ja</brocom:underPrivilege>
+    -->
+    <correctionReason codeSpace="urn:bro:gld:CorrectionReason">eigenCorrectie</correctionReason>
+    <sourceDocument>
+        <GLD_Closure gml:id="id_0001"/>
+    </sourceDocument>
+</deleteRequest>

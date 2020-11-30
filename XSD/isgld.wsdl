@@ -5,27 +5,39 @@
                   xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
                   xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msg="http://www.broservices.nl/xsd/isgld/0.1"
-                  xmlns:tns="http://www.broservices.nl/wsdl/isgld/0.1"
-                  targetNamespace="http://www.broservices.nl/wsdl/isgld/0.1">
+                  xmlns:msg="http://www.broservices.nl/xsd/isgld/1.0"
+                  xmlns:tns="http://www.broservices.nl/wsdl/isgld/1.0"
+                  targetNamespace="http://www.broservices.nl/wsdl/isgld/1.0">
 
     <wsdl:documentation>
         This  WSDL defines the webservice for the GLD intake webservice (GroundwaterLevelDossier)
         in the context of the baseregistry subsurface (Basisregistratie Ondergrond).
-        This is version 0.1.1
+        This is version 0.2.0
         Changes compared to Version:0.1.0:
-        - schemalocation van http://www.broservices.nl/xsd/isgld/0.1 gewijzigd in ../0/9/isgld-messages.xsd
+        - added replaceRequest and deleteRequest
     </wsdl:documentation>
 
     <wsdl:types>
-        <xsd:schema xmlns:tns="http://www.broservices.nl/wsdl/isgld/0.1" targetNamespace="http://www.broservices.nl/wsdl/isgld/0.1">
-            <xsd:import namespace="http://www.broservices.nl/xsd/isgld/0.1" schemaLocation="isgld-messages.xsd" />
+        <xsd:schema xmlns:tns="http://www.broservices.nl/wsdl/isgld/1.0" targetNamespace="http://www.broservices.nl/wsdl/isgld/1.0">
+            <!--
+            <xsd:import namespace="http://www.broservices.nl/xsd/isgld/1.0" schemaLocation="https://schema.broservices.nl/xsd/isgld/1.0/isgld-messages.xsd" />
+            <xsd:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd" />
+            -->
+            <xsd:import namespace="http://www.broservices.nl/xsd/isgld/1.0" schemaLocation="isgld-messages.xsd" />
             <xsd:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd" />
         </xsd:schema>
     </wsdl:types>
 
     <wsdl:message name="registrationRequest">
         <wsdl:part element="msg:registrationRequest" name="request" />
+    </wsdl:message>
+
+    <wsdl:message name="replaceRequest">
+        <wsdl:part element="msg:replaceRequest" name="request" />
+    </wsdl:message>
+
+    <wsdl:message name="deleteRequest">
+        <wsdl:part element="msg:deleteRequest" name="request" />
     </wsdl:message>
 
     <wsdl:message name="intakeResponse">
@@ -37,7 +49,7 @@
     </wsdl:message>
 
     <wsdl:message name="DeliveryResponsiblePartyHeader">
-        <wsdl:part element="brocom:deliveryResponsibleParty" name="deliveryResponsibleParty"></wsdl:part>
+        <wsdl:part element="brocom:deliveryResponsibleParty" name="deliveryResponsibleParty"/>
     </wsdl:message>
 
     <wsdl:portType name="isgld">
@@ -46,11 +58,47 @@
             <wsdl:output message="tns:intakeResponse" wsam:Action="http://www.broservices.nl/wus/isgld/intakeResponse" />
             <wsdl:fault message="tns:parseSoapFault" name="parseFault" wsam:Action="http://www.broservices.nl/wus/isgld/parseSoapFault" />
         </wsdl:operation>
+        <wsdl:operation name="replace">
+            <wsdl:input message="tns:replaceRequest" wsam:Action="http://www.broservices.nl/wus/isgld/replaceRequest" />
+            <wsdl:output message="tns:intakeResponse" wsam:Action="http://www.broservices.nl/wus/isgld/intakeResponse" />
+            <wsdl:fault message="tns:parseSoapFault" name="parseFault" wsam:Action="http://www.broservices.nl/wus/isgld/parseSoapFault" />
+        </wsdl:operation>
+        <wsdl:operation name="delete">
+            <wsdl:input message="tns:deleteRequest" wsam:Action="http://www.broservices.nl/wus/isgld/deleteRequest" />
+            <wsdl:output message="tns:intakeResponse" wsam:Action="http://www.broservices.nl/wus/isgld/intakeResponse" />
+            <wsdl:fault message="tns:parseSoapFault" name="parseFault" wsam:Action="http://www.broservices.nl/wus/isgld/parseSoapFault" />
+        </wsdl:operation>
     </wsdl:portType>
 
     <wsdl:binding name="isgld_SOAP" type="tns:isgld">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
         <wsdl:operation name="register">
+            <soap:operation soapAction="" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+                <soap:header use="literal" part="deliveryResponsibleParty" message="tns:DeliveryResponsiblePartyHeader" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+            <wsdl:fault name="parseFault">
+                <soap:fault use="literal" name="parseFault" />
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="replace">
+            <soap:operation soapAction="" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+                <soap:header use="literal" part="deliveryResponsibleParty" message="tns:DeliveryResponsiblePartyHeader" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+            <wsdl:fault name="parseFault">
+                <soap:fault use="literal" name="parseFault" />
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="delete">
             <soap:operation soapAction="" style="document" />
             <wsdl:input>
                 <soap:body use="literal" />
