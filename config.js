@@ -1,8 +1,8 @@
 var respecConfig = {
-  specStatus: "GN-DEF",
+  specStatus: "GN-WV",
   specType: "IM",
   //canonicalURI: "WV",
-  publishDate: "2020-07-02",
+ //publishDate: "2020-07-02",
   maxTocLevel: 3,
   logos: [
  {
@@ -27,8 +27,8 @@ var respecConfig = {
   shortName: "gld",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GLD",
-  previousPublishDate: "2020-03-27",
-  previousStatus: "GN-VV",
+  previousPublishDate: "2020-07-02",
+  previousStatus: "GN-DEF",
   localBiblio: {
     "WaterML20": {
       "href": "https://portal.opengeospatial.org/files/?artifact_id=57222",
