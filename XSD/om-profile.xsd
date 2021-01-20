@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema
-  xmlns="http://www.w3.org/2001/XMLSchema"
-  xmlns:gml="http://www.opengis.net/gml/3.2"
-  xmlns:om="http://www.opengis.net/om/2.0"
-  xmlns:gmd="http://www.isotc211.org/2005/gmd"
-  targetNamespace="http://www.opengis.net/om/2.0"
-  elementFormDefault="qualified"
-  attributeFormDefault="unqualified"
-  version="2.1.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:om="http://www.opengis.net/om/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" targetNamespace="http://www.opengis.net/om/2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1.0">
   <annotation>
     <documentation>Observation profile for BRO.</documentation>
-		<documentation>Revision history
+    <documentation>Revision history
 			2.0.0: Orignal version of the BRO profile.
 			2.0.1: Changed type of phenomenonTime from gml:TimeInstantPropertyType to gml:TimePrimitivePropertyType.
 			       Added metadata with type gmd:MD_Metadata_PropertyType to OM_CommonProperties.
 			       Added import for gmd namespace.
+			2.0.2: Changed type of phenomenonTime from gml:TimeObjectPropertyType
+            2.0.3: Removed TODO comment.
 		</documentation>
   </annotation>
+  <!-- ====================================================================== -->
   <!--
-	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
-	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
-    -->
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="https://schema.broservices.nl/profile/gmd/1.0/gmd-profile.xsd"/>
+  -->
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
   <import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="gmd-profile.xsd"/>
+  <!-- ====================================================================== -->
   <group name="OM_CommonProperties">
     <sequence>
       <element name="type" type="gml:ReferenceType" minOccurs="0"/>
       <element name="metadata" type="gmd:MD_Metadata_PropertyType" minOccurs="0"/>
       <element name="relatedObservation" type="om:ObservationContextPropertyType" minOccurs="0" maxOccurs="unbounded"/>
       <!-- change of type to gml:TimePrimitivePropertyType -->
-      <element name="phenomenonTime" type="gml:TimePrimitivePropertyType"/>
+      <element name="phenomenonTime" type="om:TimeObjectPropertyType"/>
       <element name="resultTime" type="gml:TimeInstantPropertyType" block="#all"/>
       <element name="validTime" type="gml:TimePeriodPropertyType" minOccurs="0"/>
       <element name="procedure" type="om:OM_ProcessPropertyType" nillable="true"/>
@@ -39,7 +35,6 @@
     </sequence>
   </group>
   <!-- ====================================================================== -->
-  <!-- TODO: restrict to specific type per registration object? -->
   <element name="result"/>
   <!-- ====================================================================== -->
   <complexType name="OM_ObservationType">
@@ -100,4 +95,13 @@
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
   </complexType>
   <!-- ====================================================================== -->
+  <complexType name="TimeObjectPropertyType">
+    <annotation>
+      <documentation>This property type is not provided directly by GML</documentation>
+    </annotation>
+    <sequence minOccurs="0">
+      <element ref="gml:AbstractTimeObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+  </complexType>
 </schema>
