@@ -7,7 +7,7 @@
 			2.0.1: Changed type of phenomenonTime from gml:TimeInstantPropertyType to gml:TimePrimitivePropertyType.
 			       Added metadata with type gmd:MD_Metadata_PropertyType to OM_CommonProperties.
 			       Added import for gmd namespace.
-			2.0.2: Changed type of phenomenonTime from gml:TimeObjectPropertyType
+			2.0.2: Changed type of phenomenonTime from gml:TimeObjectPropertyType.
             2.0.3: Removed TODO comment.
 		</documentation>
   </annotation>
