@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deleteRequest
+        xmlns="http://www.broservices.nl/xsd/isgld/1.0"
+        xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+        xmlns:gml="http://www.opengis.net/gml/3.2"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/1.0 https://schema.broservices.nl/xsd/isgld/1.0/isgld-messages.xsd">
+    <!-- Disclaimer: dit voorbeeldbericht valideert tegen de validatieservice van het demo-bronhouderportaal, maar de gegevens zijn fictief en waarschijnlijk niet correct.
+	Het bericht 71_GLD_deleteRequest_Closure.xml verwijdert een eerder aangeboden GLD_Closure brondocument.
+    Een GLD_Closure brondocument kan maar 1 keer geregistreerd zijn. Daarom is een nadere identificatie, zoals bij het verwijderen van een GLD_Addition brondocument, niet nodig.
+    -->
+
+    <!--Inhoud:
+        Ongedaan maken van de beëindiging van de registratie, eerder aangeboden met 50_GLD_Closure.xml.
+        Correctiereden = eigenCorrectie.
+    -->
+    <brocom:requestReference>71_GLD_deleteRequest_Closure</brocom:requestReference>
+    <!--Optional:-->
+    <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
+    <!--Optional: maar verplicht bij een GLD_End brondocument -->
+    <brocom:broId>GLD000000000153</brocom:broId>
+    <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+    <!--Optional: maar niet toegestaan bij GLD
+    <brocom:underPrivilege>ja</brocom:underPrivilege>
+    -->
+    <correctionReason codeSpace="urn:bro:gld:CorrectionReason">eigenCorrectie</correctionReason>
+    <sourceDocument>
+        <GLD_Closure gml:id="id_0001"/>
+    </sourceDocument>
+</deleteRequest>

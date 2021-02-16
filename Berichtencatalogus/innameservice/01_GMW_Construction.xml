@@ -1,0 +1,96 @@
+<?xml version="1.0" standalone="yes"?>
+<registrationRequest 
+        xmlns:xlink="http://www.w3.org/1999/xlink" 
+        xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0" 
+        xmlns:gmwcommon="http://www.broservices.nl/xsd/gmwcommon/1.1" 
+        xmlns:gml="http://www.opengis.net/gml/3.2" 
+        xmlns="http://www.broservices.nl/xsd/isgmw/1.1">
+    <!-- Disclaimer: dit voorbeeldbericht valideert tegen de validatieservice van het demo-bronhouderportaal, maar de gegevens zijn fictief en waarschijnlijk niet correct.
+	Het bericht 01_GMW_Construction.xml is ingericht om opgenomen te worden in twee GMN meetnetten en om een GLD grondwaterstandonderzoek in uit te voeren.
+
+	Na het aanleveren en doorleveren in het bronhouderportaal wordt teruggemeld wat het BRO-ID van deze GMW is: GMW000000016118
+	Dit BRO-ID is relevant voor zowel beide GMNnen, als het GLD. -->
+    <brocom:requestReference>01_GMW_Construction</brocom:requestReference>
+    <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
+    <brocom:qualityRegime>IMBRO/A</brocom:qualityRegime>
+    <brocom:underPrivilege>ja</brocom:underPrivilege>
+    <sourceDocument>
+        <GMW_Construction>
+            <objectIdAccountableParty>B07F0076</objectIdAccountableParty>
+            <deliveryContext codeSpace="urn:bro:gmw:DeliveryContext">archiefoverdracht</deliveryContext>
+            <constructionStandard codeSpace="urn:bro:gmw:ConstructionStandard">onbekend</constructionStandard>
+            <initialFunction codeSpace="urn:bro:gmw:InitialFunction">stand</initialFunction>
+            <numberOfMonitoringTubes>2</numberOfMonitoringTubes>
+            <groundLevelStable>onbekend</groundLevelStable>
+            <wellStability codeSpace="urn:bro:gmw:WellStability">onbekend</wellStability>
+            <nitgCode>B00C0001</nitgCode>
+            <owner>27376655</owner>
+            <maintenanceResponsibleParty>09220932</maintenanceResponsibleParty>
+            <wellHeadProtector codeSpace="urn:bro:gmw:WellHeadProtector">onbekend</wellHeadProtector>
+            <wellConstructionDate>
+                <brocom:date>2021-01-01</brocom:date>
+            </wellConstructionDate>
+            <deliveredLocation>
+                <gmwcommon:location srsName="urn:ogc:def:crs:EPSG::28992" gml:id="GM_in_Samenhang_0001">
+                    <gml:pos>147800.000 432700.000</gml:pos>
+                </gmwcommon:location>
+                <gmwcommon:horizontalPositioningMethod codeSpace="urn:bro:gmw:HorizontalPositioningMethod">kaartOnbekend</gmwcommon:horizontalPositioningMethod>
+            </deliveredLocation>
+            <deliveredVerticalPosition>
+                <gmwcommon:localVerticalReferencePoint codeSpace="urn:bro:gmw:LocalVerticalReferencePoint">NAP</gmwcommon:localVerticalReferencePoint>
+                <gmwcommon:offset uom="m">0.000</gmwcommon:offset>
+                <gmwcommon:verticalDatum codeSpace="urn:bro:gmw:VerticalDatum">NAP</gmwcommon:verticalDatum>
+                <gmwcommon:groundLevelPosition uom="m">2.00</gmwcommon:groundLevelPosition>
+                <gmwcommon:groundLevelPositioningMethod codeSpace="urn:bro:gmw:GroundLevelPositioningMethod">onbekend</gmwcommon:groundLevelPositioningMethod>
+            </deliveredVerticalPosition>
+            <monitoringTube>
+                <tubeNumber>1</tubeNumber>
+                <tubeType codeSpace="urn:bro:gmw:TubeType">standaardbuis</tubeType>
+                <artesianWellCapPresent>onbekend</artesianWellCapPresent>
+                <sedimentSumpPresent>onbekend</sedimentSumpPresent>
+                <numberOfGeoOhmCables>0</numberOfGeoOhmCables>
+                <tubeTopDiameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uom="mm" xsi:nil="true"/>
+                <variableDiameter>onbekend</variableDiameter>
+                <tubeStatus codeSpace="urn:bro:gmw:TubeStatus">gebruiksklaar</tubeStatus>
+                <tubeTopPosition uom="m">2.80</tubeTopPosition>
+                <tubeTopPositioningMethod codeSpace="urn:bro:gmw:TubeTopPositioningMethod">onbekend</tubeTopPositioningMethod>
+                <materialUsed>
+                    <gmwcommon:tubePackingMaterial codeSpace="urn:bro:gmw:TubePackingMaterial">onbekend</gmwcommon:tubePackingMaterial>
+                    <gmwcommon:tubeMaterial codeSpace="urn:bro:gmw:TubeMaterial">onbekend</gmwcommon:tubeMaterial>
+                    <gmwcommon:glue codeSpace="urn:bro:gmw:Glue">onbekend</gmwcommon:glue>
+                </materialUsed>
+                <screen>
+                    <screenLength uom="m">1.000</screenLength>
+                    <sockMaterial codeSpace="urn:bro:gmw:SockMaterial">onbekend</sockMaterial>
+                </screen>
+                <plainTubePart>
+                    <gmwcommon:plainTubePartLength uom="m">17.000</gmwcommon:plainTubePartLength>
+                </plainTubePart>
+            </monitoringTube>
+            <monitoringTube>
+                <tubeNumber>2</tubeNumber>
+                <tubeType codeSpace="urn:bro:gmw:TubeType">standaardbuis</tubeType>
+                <artesianWellCapPresent>onbekend</artesianWellCapPresent>
+                <sedimentSumpPresent>onbekend</sedimentSumpPresent>
+                <numberOfGeoOhmCables>0</numberOfGeoOhmCables>
+                <tubeTopDiameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uom="mm" xsi:nil="true"/>
+                <variableDiameter>onbekend</variableDiameter>
+                <tubeStatus codeSpace="urn:bro:gmw:TubeStatus">gebruiksklaar</tubeStatus>
+                <tubeTopPosition uom="m">2.80</tubeTopPosition>
+                <tubeTopPositioningMethod codeSpace="urn:bro:gmw:TubeTopPositioningMethod">onbekend</tubeTopPositioningMethod>
+                <materialUsed>
+                    <gmwcommon:tubePackingMaterial codeSpace="urn:bro:gmw:TubePackingMaterial">onbekend</gmwcommon:tubePackingMaterial>
+                    <gmwcommon:tubeMaterial codeSpace="urn:bro:gmw:TubeMaterial">onbekend</gmwcommon:tubeMaterial>
+                    <gmwcommon:glue codeSpace="urn:bro:gmw:Glue">onbekend</gmwcommon:glue>
+                </materialUsed>
+                <screen>
+                    <screenLength uom="m">1.000</screenLength>
+                    <sockMaterial codeSpace="urn:bro:gmw:SockMaterial">onbekend</sockMaterial>
+                </screen>
+                <plainTubePart>
+                    <gmwcommon:plainTubePartLength uom="m">42.000</gmwcommon:plainTubePartLength>
+                </plainTubePart>
+            </monitoringTube>
+        </GMW_Construction>
+    </sourceDocument>
+</registrationRequest>

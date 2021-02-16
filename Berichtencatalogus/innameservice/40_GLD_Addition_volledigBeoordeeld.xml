@@ -10,25 +10,23 @@
         xmlns:gml="http://www.opengis.net/gml/3.2"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/1.0 ../../XSD/isgld-messages.xsd">
-    <!--Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
-        Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
         xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/1.0 https://schema.broservices.nl/xsd/isgld/1.0/isgld-messages.xsd">
+    <!-- Disclaimer: dit voorbeeldbericht valideert tegen de validatieservice van het demo-bronhouderportaal, maar de gegevens zijn fictief en waarschijnlijk niet correct.
+        Het bericht 40_GLD_Addition_volledigBeoordeeld.xml voegt een volledig beoordeelde observatie toe aan het grondwaterstandonderzoek. -->
 
-        Inhoud:
-
+    <!-- Inhoud:
         1 Observation (Observatie) van een volledig beoordeelde meetreeks
-        met 7 MeasurementTVPs (Tijdmeetwaardeparen)
+        met 1 MeasurementTimeseries (Tijdmeetwaardereeks) met daarin 9 MeasurementTVPs (Tijdmeetwaardeparen)
         een volledig uitgeschreven ObservationProcess (Observatieproces)
-        en relaties naar de observaties met sensorische reguliere metingen en controlemetingen uit de voorgaande berichten waarop de volledig beoordeelde tijdmeetwaardereeks is gebaseerd.
+        en relaties naar de 3 observaties met voorlopig beoordeelde, reguliere metingen en 1 observatie met de controlemeting waarop de volledig beoordeelde tijdmeetwaardereeks is gebaseerd.
     -->
-    <brocom:requestReference>BRO-GLD-1602</brocom:requestReference>
-    <!--Optional:-->
+    <brocom:requestReference>40_GLD_Addition_volledigBeoordeeld</brocom:requestReference>
+    <!--Optioneel:-->
     <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
-    <!--Optional: maar verplicht bij een GLD_Addition brondocument -->
-    <brocom:broId>GLD123456789012</brocom:broId>
+    <!--Optioneel: maar verplicht bij een GLD_Addition brondocument -->
+    <brocom:broId>GLD000000000153</brocom:broId>
     <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
-    <!--Optional: maar niet toegestaan bij GLD
+    <!--Optioneel: maar niet toegestaan bij GLD
     <brocom:underPrivilege>ja</brocom:underPrivilege>
     -->
     <sourceDocument>
@@ -44,9 +42,7 @@
                                         <gco:CharacterString/>
                                     </gmd:organisationName>
                                     <gmd:role>
-                                        <gmd:CI_RoleCode
-                                                codeList="urn:ISO:19115:CI_RoleCode"
-                                                codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
+                                        <gmd:CI_RoleCode codeList="urn:ISO:19115:CI_RoleCode" codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
                                     </gmd:role>
                                 </gmd:CI_ResponsibleParty>
                             </gmd:contact>
@@ -71,7 +67,7 @@
                             </wml2:parameter>
                         </wml2:ObservationMetadata>
                     </om:metadata>
-                    <!-- 0 or more repetitions -->
+                    <!-- 0 of meer keer een verwijzing naar een onderbouwende, voorlopig beoordeelde meting of een onderbouwende controlemeting. -->
                     <om:relatedObservation>
                         <om:ObservationContext>
                             <om:role xlink:href="http://resource.gwml.org/def/role/supportObservation"/>
@@ -87,13 +83,19 @@
                     <om:relatedObservation>
                         <om:ObservationContext>
                             <om:role xlink:href="http://resource.gwml.org/def/role/supportObservation"/>
+                            <om:relatedObservation xlink:href="_bd5725c1-4def-4c75-b7c8-64fa16ab5f88"/>
+                        </om:ObservationContext>
+                    </om:relatedObservation>
+                    <om:relatedObservation>
+                        <om:ObservationContext>
+                            <om:role xlink:href="http://resource.gwml.org/def/role/supportObservation"/>
                             <om:relatedObservation xlink:href="_2f62b66c-1c4c-4bab-824c-401d74d592b0"/>
                         </om:ObservationContext>
                     </om:relatedObservation>
                     <om:phenomenonTime>
                         <gml:TimePeriod gml:id="id_0002">
                             <gml:beginPosition>2018-01-07</gml:beginPosition>
-                            <gml:endPosition>2018-04-15</gml:endPosition>
+                            <gml:endPosition>2018-06-15</gml:endPosition>
                         </gml:TimePeriod>
                     </om:phenomenonTime>
                     <om:resultTime>
@@ -123,28 +125,30 @@
                     <om:featureOfInterest/>
                     <om:result>
                         <wml2:MeasurementTimeseries gml:id="_b78d96ed-eb6d-4c7f-9cd3-d1e6e6f67e0c">
+                            <!-- 1 of meer volledig beoordeelde metingen. -->
                             <wml2:point>
                                 <wml2:MeasurementTVP>
                                     <wml2:time>2018-01-07T08:14:38+01:00</wml2:time>
-                                    <wml2:value uom="m">-4.145</wml2:value>
+                                    <wml2:value uom="m">-4.345</wml2:value>
                                     <wml2:metadata>
                                         <wml2:TVPMeasurementMetadata>
                                             <wml2:qualifier>
                                                 <swe:Category>
+                                                    <!-- vaste waarde; aanduiding van de gebruikte codelijst. -->
                                                     <swe:codeSpace xlink:href="urn:bro:gld:StatusQualityControl"/>
                                                     <swe:value>goedgekeurd</swe:value>
                                                 </swe:Category>
                                             </wml2:qualifier>
-                                            <!-- optional
+                                            <!-- optioneel
                                             <wml2:qualifier>
-                                              <swe:Quantity definition="urn:bro:gld:PointMetadata:censoringLimitvalue">
-                                                <swe:uom code="m"/>
-                                                <swe:value>-5.123</swe:value>
-                                              </swe:Quantity>
+                                                <swe:Quantity definition="urn:bro:gld:PointMetadata:censoringLimitvalue">
+                                                    <swe:uom code="m"/>
+                                                    <swe:value>?</swe:value>
+                                                </swe:Quantity>
                                             </wml2:qualifier>
                                             -->
                                             <wml2:interpolationType xlink:href="http://www.opengis.net/def/waterml/2.0/interpolationType/Discontinuous"/>
-                                            <!-- optional
+                                            <!-- optioneel
                                             <wml2:censoredReason xlink:href="?"/>
                                             -->
                                         </wml2:TVPMeasurementMetadata>
@@ -154,7 +158,7 @@
                             <wml2:point>
                                 <wml2:MeasurementTVP>
                                     <wml2:time>2018-01-14T15:44:25+01:00</wml2:time>
-                                    <wml2:value uom="m">-4.787</wml2:value>
+                                    <wml2:value uom="m">-4.916</wml2:value>
                                     <wml2:metadata>
                                         <wml2:TVPMeasurementMetadata>
                                             <wml2:qualifier>
@@ -180,16 +184,17 @@
                                                     <swe:value>afgekeurd</swe:value>
                                                 </swe:Category>
                                             </wml2:qualifier>
-                                            <!-- optional -->
+                                            <!-- optioneel -->
                                             <wml2:qualifier>
+                                                <!-- vaste waarde; geeft aan dat deze qualifier de status censuurlimietwaarde bevat. -->
                                                 <swe:Quantity definition="urn:bro:gld:PointMetadata:censoringLimitvalue">
                                                     <swe:uom code="m"/>
-                                                    <!-- optional, missing element represents void value -->
+                                                    <!-- optioneel, afwezigheid betekent 'waarde ontbreekt'. -->
                                                     <swe:value>-5.123</swe:value>
                                                 </swe:Quantity>
                                             </wml2:qualifier>
                                             <wml2:interpolationType xlink:href="http://www.opengis.net/def/waterml/2.0/interpolationType/Discontinuous"/>
-                                            <!-- optional -->
+                                            <!-- optioneel -->
                                             <wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/BelowDetectionRange"/>
                                         </wml2:TVPMeasurementMetadata>
                                     </wml2:metadata>
@@ -198,7 +203,7 @@
                             <wml2:point>
                                 <wml2:MeasurementTVP>
                                     <wml2:time>2018-01-28T16:58:07+01:00</wml2:time>
-                                    <wml2:value uom="m">-4.388</wml2:value>
+                                    <wml2:value uom="m">-4.721</wml2:value>
                                     <wml2:metadata>
                                         <wml2:TVPMeasurementMetadata>
                                             <wml2:qualifier>
@@ -215,7 +220,7 @@
                             <wml2:point>
                                 <wml2:MeasurementTVP>
                                     <wml2:time>2018-02-15T10:01:52+01:00</wml2:time>
-                                    <wml2:value uom="m">-4.923</wml2:value>
+                                    <wml2:value uom="m">-5.123</wml2:value>
                                     <wml2:metadata>
                                         <wml2:TVPMeasurementMetadata>
                                             <wml2:qualifier>
@@ -232,7 +237,7 @@
                             <wml2:point>
                                 <wml2:MeasurementTVP>
                                     <wml2:time>2018-03-15T07:14:38+01:00</wml2:time>
-                                    <wml2:value uom="m">-4.772</wml2:value>
+                                    <wml2:value uom="m">-4.941</wml2:value>
                                     <wml2:metadata>
                                         <wml2:TVPMeasurementMetadata>
                                             <wml2:qualifier>
@@ -249,7 +254,7 @@
                             <wml2:point>
                                 <wml2:MeasurementTVP>
                                     <wml2:time>2018-04-15T16:44:25+02:00</wml2:time>
-                                    <wml2:value uom="m">-4.145</wml2:value>
+                                    <wml2:value uom="m">-4.123</wml2:value>
                                     <wml2:metadata>
                                         <wml2:TVPMeasurementMetadata>
                                             <wml2:qualifier>
@@ -259,6 +264,52 @@
                                                 </swe:Category>
                                             </wml2:qualifier>
                                             <wml2:interpolationType xlink:href="http://www.opengis.net/def/waterml/2.0/interpolationType/Discontinuous"/>
+                                        </wml2:TVPMeasurementMetadata>
+                                    </wml2:metadata>
+                                </wml2:MeasurementTVP>
+                            </wml2:point>
+                            <wml2:point>
+                                <wml2:MeasurementTVP>
+                                    <wml2:time>2018-05-15T08:14:38+01:00</wml2:time>
+                                    <wml2:value uom="m">-4.519</wml2:value>
+                                    <wml2:metadata>
+                                        <wml2:TVPMeasurementMetadata>
+                                            <wml2:qualifier>
+                                                <swe:Category>
+                                                    <swe:codeSpace xlink:href="urn:bro:gld:StatusQualityControl"/>
+                                                    <swe:value>goedgekeurd</swe:value>
+                                                </swe:Category>
+                                            </wml2:qualifier>
+                                            <wml2:interpolationType xlink:href="http://www.opengis.net/def/waterml/2.0/interpolationType/Discontinuous"/>
+                                        </wml2:TVPMeasurementMetadata>
+                                    </wml2:metadata>
+                                </wml2:MeasurementTVP>
+                            </wml2:point>
+                            <wml2:point>
+                                <wml2:MeasurementTVP>
+                                    <wml2:time>2018-06-15T13:19:37+02:00</wml2:time>
+                                    <wml2:value xsi:nil="true"/>
+                                    <wml2:metadata>
+                                        <wml2:TVPMeasurementMetadata>
+                                            <wml2:qualifier>
+                                                <swe:Category>
+                                                    <!-- vaste waarde; aanduiding van de gebruikte codelijst. -->
+                                                    <swe:codeSpace xlink:href="urn:bro:gld:StatusQualityControl"/>
+                                                    <swe:value>afgekeurd</swe:value>
+                                                </swe:Category>
+                                            </wml2:qualifier>
+                                            <!-- optioneel -->
+                                            <wml2:qualifier>
+                                                <!-- vaste waarde; geeft aan dat deze qualifier de status censuurlimietwaarde bevat. -->
+                                                <swe:Quantity definition="urn:bro:gld:PointMetadata:censoringLimitvalue">
+                                                    <swe:uom code="m"/>
+                                                    <!-- optioneel, afwezigheid betekent 'waarde ontbreekt'. -->
+                                                    <swe:value>-5.123</swe:value>
+                                                </swe:Quantity>
+                                            </wml2:qualifier>
+                                            <wml2:interpolationType xlink:href="http://www.opengis.net/def/waterml/2.0/interpolationType/Discontinuous"/>
+                                            <!-- optioneel -->
+                                            <wml2:censoredReason xlink:href="http://www.opengis.net/def/nil/OGC/0/BelowDetectionRange"/>
                                         </wml2:TVPMeasurementMetadata>
                                     </wml2:metadata>
                                 </wml2:MeasurementTVP>

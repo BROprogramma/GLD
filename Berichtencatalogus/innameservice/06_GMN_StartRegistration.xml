@@ -1,0 +1,60 @@
+<registrationRequest 
+      xmlns="http://www.broservices.nl/xsd/isgmn/1.0"
+      xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+      xmlns:gml="http://www.opengis.net/gml/3.2"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.broservices.nl/xsd/isgmn/1.0 http://schema.broservices.nl/xsd/isgmn/1.0/isgmn-messages.xsd"
+      >
+    <!-- Disclaimer: dit voorbeeldbericht valideert tegen de validatieservice van het demo-bronhouderportaal, maar de gegevens zijn fictief en waarschijnlijk niet correct.
+	Het bericht 06_GMN_StartRegistration.xml is ingericht om later GLD berichten aan te kunnen leveren.
+    Na het aanleveren en doorleveren in het bronhouderportaal wordt teruggemeld wat het BRO-ID van deze GMN is: GMN000000000084
+	Dit BRO-ID is relevant voor het GLD. -->
+   
+	<!--Het GMN bestaat uit 1 meetpunt, uitgevoerd in een monitoringbuis van een grondwatermonitoringput.
+    Bij een valide en doorgeleverd GMN is dit niet zichtbaar op de kaart van het bronhouderportaal-->
+    <brocom:requestReference>06_GMN_StartRegistration</brocom:requestReference>
+    <!--Optional: dataleverancier is niet de bronhouder, dus is het gegeven aanwezig. -->
+    <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
+    <!--Optional: brondocument is GMN_StartRegistration, dus het bro-id mag niet aanwezig zijn.
+    <brocom:broId>GMN123456789012</brocom:broId>
+    -->
+    <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+    <!--Optional: niet toegestaan bij GMN.
+    <brocom:underPrivilege>ja</brocom:underPrivilege>
+    -->
+    <sourceDocument>
+        <GMN_StartRegistration gml:id="GMN_02">
+            <objectIdAccountableParty>B07F0077</objectIdAccountableParty>
+            <name>Test meetnet 2 tbv GLD</name>
+            <deliveryContext codeSpace="urn:bro:gmn:DeliveryContext">waterschapswet</deliveryContext>
+            <monitoringPurpose codeSpace="urn:bro:gmn:MonitoringPurpose">strategischBeheerKwantiteitRegionaal</monitoringPurpose>
+            <!-- Doel van het meetnet is grondwaterkwantiteit metingen (GLD) -->
+            <groundwaterAspect codeSpace="urn:bro:gmn:GroundwaterAspect">kwantiteit</groundwaterAspect>
+            <startDateMonitoring>
+            <!--You have a CHOICE of the next 4 items at this level-->
+            <!-- 
+            <brocom:date>2021-03-01</brocom:date>
+            <brocom:yearMonth>2021-03</brocom:yearMonth>
+            <brocom:year>2021</brocom:year>
+            <brocom:voidReason>onbekend</brocom:voidReason>
+            -->
+            <brocom:date>2021-01-01</brocom:date>
+            </startDateMonitoring>
+            <!-- 1 or more repetitions: -->
+            <!--Ter illustratie: GMN_01 bestaat uit 1 meetpunt. Dit meetpunt is een combinatie van een GMW BRO-ID en het buisnummer van een buis in die GMW. 
+            In dit voorbeeld is dat de GMW GMW000000016118 en buisnummer 1. -->
+            <measuringPoint>
+                <MeasuringPoint gml:id="GMN02MP01">
+                    <measuringPointCode>GMN02MP01</measuringPointCode>
+                    <monitoringTube>
+                        <GroundwaterMonitoringTube gml:id="GMW0101">
+                            <!--Let op: BRO-ID van de GMW's moet bekend zijn en de status van de buizen mag niet 'onbekend zijn'  -->
+                            <broId>GMW000000016118</broId>
+                            <tubeNumber>1</tubeNumber>
+                        </GroundwaterMonitoringTube>
+                    </monitoringTube>
+                </MeasuringPoint>
+            </measuringPoint>
+        </GMN_StartRegistration>
+    </sourceDocument>
+</registrationRequest>

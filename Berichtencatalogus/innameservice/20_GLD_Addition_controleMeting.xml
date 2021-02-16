@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<deleteRequest
+<registrationRequest
         xmlns="http://www.broservices.nl/xsd/isgld/1.0"
+        xmlns:gldcom="http://www.broservices.nl/xsd/gldcommon/1.0"
         xmlns:wml2="http://www.opengis.net/waterml/2.0"
         xmlns:gmd="http://www.isotc211.org/2005/gmd"
         xmlns:gco="http://www.isotc211.org/2005/gco"
@@ -10,25 +11,24 @@
         xmlns:gml="http://www.opengis.net/gml/3.2"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/1.0 ../../XSD/isgld-messages.xsd">
-    <!--Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de innameservice.
-        Het is niet gevalideert door de innameservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
         xsi:schemaLocation="http://www.broservices.nl/xsd/isgld/1.0 https://schema.broservices.nl/xsd/isgld/1.0/isgld-messages.xsd">
+    <!-- Disclaimer: dit voorbeeldbericht valideert tegen de validatieservice van het demo-bronhouderportaal, maar de gegevens zijn fictief en waarschijnlijk niet correct.
+	Het bericht 20_Addition_controleMeting.xml voegt een observatie toe aan het grondwaterstandonderzoek. -->
 
-        Inhoud:
-        Identiek aan GLD_replaceRequest_Addition_controleMeting.xml.
-        Correctiereden = inOnderzoek.
+    <!-- Inhoud:
+        1 Observation (Observatie) van een handmatige controlemeting
+        met 1 MeasurementTimeseries (Tijdmeetwaardereeks) met daarin 1 MeasurementTVP (Tijdmeetwaardepaar) gedaan op een bepaald moment
+        en een volledig uitgeschreven ObservationProcess (Observatieproces).
     -->
-    <brocom:requestReference>BRO-GLD-3599</brocom:requestReference>
+    <brocom:requestReference>20_Addition_controleMeting</brocom:requestReference>
     <!--Optional:-->
     <brocom:deliveryAccountableParty>27376655</brocom:deliveryAccountableParty>
     <!--Optional: maar verplicht bij een GLD_Addition brondocument -->
-    <brocom:broId>GLD123456789012</brocom:broId>
+    <brocom:broId>GLD000000000153</brocom:broId>
     <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
     <!--Optional: maar niet toegestaan bij GLD
     <brocom:underPrivilege>ja</brocom:underPrivilege>
     -->
-    <correctionReason codeSpace="urn:bro:gld:CorrectionReason">inOnderzoek</correctionReason>
     <sourceDocument>
         <GLD_Addition gml:id="id_0001">
             <observation>
@@ -42,9 +42,7 @@
                                         <gco:CharacterString/>
                                     </gmd:organisationName>
                                     <gmd:role>
-                                        <gmd:CI_RoleCode
-                                                codeList="urn:ISO:19115:CI_RoleCode"
-                                                codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
+                                            <gmd:CI_RoleCode codeList="urn:ISO:19115:CI_RoleCode" codeListValue="principalInvestigator">principalInvestigator</gmd:CI_RoleCode>
                                     </gmd:role>
                                 </gmd:CI_ResponsibleParty>
                             </gmd:contact>
@@ -59,7 +57,7 @@
                                 <om:NamedValue>
                                     <om:name xlink:href="urn:bro:gld:ObservationMetadata:principalInvestigator"/>
                                     <om:value xsi:type="brocom:OrganizationType">
-                                        <brocom:chamberOfCommerceNumber>55667372</brocom:chamberOfCommerceNumber>
+                                        <brocom:chamberOfCommerceNumber>27376655</brocom:chamberOfCommerceNumber>
                                     </om:value>
                                 </om:NamedValue>
                             </wml2:parameter>
@@ -89,7 +87,7 @@
                             <wml2:parameter>
                                 <om:NamedValue>
                                     <om:name xlink:href="urn:bro:gld:ObservationProcess:evaluationProcedure"/>
-                                    <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:EvaluationProcedure">RWSAATGrondwaterv1.0</om:value>
+                                    <om:value xsi:type="gml:CodeWithAuthorityType" codeSpace="urn:bro:gld:EvaluationProcedure">oordeelDeskundige</om:value>
                                 </om:NamedValue>
                             </wml2:parameter>
                             <wml2:parameter>
@@ -127,4 +125,4 @@
             </observation>
         </GLD_Addition>
     </sourceDocument>
-</deleteRequest>
+</registrationRequest>
