@@ -1,5 +1,5 @@
 # Grondwaterstandonderzoek
-Deze repository wordt gebruikt voor het ontwikkelen van de geologische deelverzamelingen van de BRO catalogus Grondwaterstandonderzoek.
+Deze repository wordt gebruikt voor het ontwikkelen van de BRO catalogus Grondwaterstandonderzoek.
 
 De onderhanden versie van deze catalogus is te vinden op https://broprogramma.github.io/GLD/.
 
