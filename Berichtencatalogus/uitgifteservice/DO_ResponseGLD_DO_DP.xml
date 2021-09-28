@@ -91,13 +91,22 @@
               <!-- Optional. Uitgiftedocument is GLD_O_DP, dus is het gegeven aanwezig -->
               <wml2:parameter>
                 <om:NamedValue>
+                  <!-- vaste waarde; geeft aan dat deze namedValue de uitvoerder bevat -->
                   <om:name xlink:href="urn:bro:gld:ObservationMetadata:principalInvestigator"/>
+                  <!-- Keuze uit de volgende 3 opties. -->
+                  <!--
+                  <!- value met daarin een KvKNummer.->
+                  <om:value xsi:type="gldcom:OrganizationType">
+                       <gldcom:chamberOfCommerceNumber>27376655</gldcom:chamberOfCommerceNumber>
+                  </om:value>
+                  <!- value met daarin een europees handelsnummer.->
+                  <om:value xsi:type="gldcom:OrganizationType">
+                      <gldcom:europeanCompanyRegistrationNumber>DEB8537.HRB66039</gldcom:europeanCompanyRegistrationNumber>
+                  </om:value>
+                  <!- lege value geeft aan dat de waarde van de identificatie van de uitvoerder afwezig is.->
+                  <om:value xsi:type="gldcom:OrganizationType"/>
+                  -->
                   <om:value xsi:type="brocom:OrganizationType">
-                    <!-- You have a CHOICE of the next 2 pair of items at this level -->
-                    <!--
-                    <brocom:chamberOfCommerceNumber>27376655</brocom:chamberOfCommerceNumber>
-                    <brocom:europeanCompanyRegistrationNumber>DEB8537.HRB66039</brocom:europeanCompanyRegistrationNumber>
-                    -->
                     <brocom:chamberOfCommerceNumber>27376655</brocom:chamberOfCommerceNumber>
                   </om:value>
                 </om:NamedValue>

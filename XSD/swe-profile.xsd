@@ -67,11 +67,11 @@
   </complexType>
   <!-- ================================================= -->
   <!-- TODO: check -->
+  <simpleType name="StringList">
+	<list itemType="string"/>
+  </simpleType>
   <simpleType name="TokenPair">
-    <restriction>
-      <simpleType>
-        <list itemType="string"/>
-      </simpleType>
+    <restriction base="swe:StringList">
       <length value="2"/>
     </restriction>
   </simpleType>

@@ -20,7 +20,7 @@
 				xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0"
 				targetNamespace="http://www.broservices.nl/xsd/gldcommon/1.0"
 				elementFormDefault="qualified"
-				version="0.3.0">
+				version="1.0.1">
 
 	<xs:annotation>
 		<xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
@@ -28,12 +28,12 @@
 		</xs:appinfo>
 	</xs:annotation>
 
-  <!--
-  <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
-	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
-  -->
-  <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
+	<xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="brocommon.xsd"/>
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml-profile.xsd"/>
+    <!--
+	<xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
+    -->
 
 	<xs:element name="GroundwaterMonitoringNet" type="gldcom:GroundwaterMonitoringNetType" substitutionGroup="gml:AbstractFeature">
 		<xs:annotation>
@@ -90,4 +90,11 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
 	</xs:complexType>
+	<xs:complexType name="OrganizationType">
+		<xs:choice minOccurs="0">
+			<xs:element name="chamberOfCommerceNumber" type="brocom:ChamberOfCommerceNumberType"/>
+			<xs:element name="europeanCompanyRegistrationNumber" type="brocom:EuropeanCompanyRegistrationNumberType"/>
+		</xs:choice>
+	</xs:complexType>
+
 </xs:schema>
