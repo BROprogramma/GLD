@@ -4,7 +4,10 @@
         xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0" 
         xmlns:gmwcommon="http://www.broservices.nl/xsd/gmwcommon/1.1" 
         xmlns:gml="http://www.opengis.net/gml/3.2" 
-        xmlns="http://www.broservices.nl/xsd/isgmw/1.1">
+        xmlns="http://www.broservices.nl/xsd/isgmw/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.broservices.nl/xsd/isgmw/1.1 http://schema.broservices.nl/xsd/isgmw/1.1/isgmw-messages.xsd"
+      >
     <!-- Disclaimer: dit voorbeeldbericht valideert tegen de validatieservice van het demo-bronhouderportaal, maar de gegevens zijn fictief en waarschijnlijk niet correct.
 	Het bericht 01_GMW_Construction.xml is ingericht om opgenomen te worden in twee GMN meetnetten en om een GLD grondwaterstandonderzoek in uit te voeren.
 
