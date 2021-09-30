@@ -10,12 +10,13 @@
            targetNamespace="http://www.broservices.nl/xsd/isgld/1.0"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
-           version="1.0.0">
+           version="1.0.1">
 
     <xs:annotation>
         <xs:appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
             <gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
         </xs:appinfo>
+		<xs:documentation source="versiebeheer 1.0.1">Verschil met versie 1.0.0: complexType ReplaceableSourceDocumentType uitgebreid met choice isgld:GLD_Addition</xs:documentation>
     </xs:annotation>
 
     <xs:import namespace="http://www.opengis.net/waterml/2.0" schemaLocation="wml-profile.xsd"/>
@@ -29,7 +30,7 @@
     <xs:import namespace="http://www.opengis.net/om/2.0" schemaLocation="https://schema.broservices.nl/profile/om/1.0/om-profile.xsd"/>
     <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schema.broservices.nl/profile/gml/1.0/gml-profile.xsd"/>
     <xs:import namespace="http://www.broservices.nl/xsd/brocommon/3.0" schemaLocation="https://schema.broservices.nl/xsd/brocommon/3.0/brocommon.xsd"/>
-    -->
+	-->
 
     <xs:element name="intakeResponse" type="brocom:IntakeResponseType"/>
     <xs:element name="parseFault" type="brocom:ParseFaultType"/>
@@ -186,6 +187,7 @@
     <xs:complexType name="ReplaceableSourceDocumentType">
         <xs:choice minOccurs="1" maxOccurs="1">
             <xs:element ref="isgld:GLD_StartRegistration"/>
+			<xs:element ref="isgld:GLD_Addition"/>
         </xs:choice>
     </xs:complexType>
     <xs:complexType name="SourceDocumentType">
