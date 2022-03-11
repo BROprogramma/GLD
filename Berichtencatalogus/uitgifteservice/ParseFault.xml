@@ -11,7 +11,7 @@
         <gld:parseFault
             xmlns:gld="http://www.broservices.nl/xsd/dsgld/1.0"
             xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-            xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/1.0 ../../XSD/dsgld-messages.xsd">
+            xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/1.0 https://schema.broservices.nl/xsd/dsgld/1.0/dsgld-messages.xsd">
           <brocom:abortTime>2020-08-15T13:16:17+02:00</brocom:abortTime>
           <brocom:abortReason>
             <brocom:sequenceNumber>1</brocom:sequenceNumber>

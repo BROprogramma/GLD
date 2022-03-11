@@ -1,34 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gld:dispatchDataResponse
-    xmlns:gld="http://www.broservices.nl/xsd/dsgld/1.0"
-    xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/1.0 ../../XSD/dsgld-messages.xsd">
-  <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.
-       Het is niet gevalideerd door de uitgifteservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
-  -->
-  <brocom:responseType>rejection</brocom:responseType>
-  <brocom:requestReference>uitgifte-38</brocom:requestReference>
-  <!-- optional. Alleen aanwezig als responseType = rejection. -->
-  <brocom:rejectionTime>2021-08-15T13:16:17+02:00</brocom:rejectionTime>
-  <!-- optional. Alleen aanwezig als responseType = dispatch.
-  <brocom:dispatchTime>2022-01-14T10:55:00+01:00</brocom:dispatchTime>
-  -->
-  <!-- optional. Alleen aanwezig als responseType = rejection. -->
-  <brocom:rejectionReason>Dit registratieobject bestaat niet.</brocom:rejectionReason>
-  <!-- 0 or more repetitions: Optioneel alleen aanwezig als responseType = rejection.
-  <brocom:criterionError>
-    <brocom:sequenceNumber>1</brocom:sequenceNumber>
-    <brocom:specification>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</brocom:specification>
-  </brocom:criterionError>
-  <brocom:criterionError>
-    <brocom:sequenceNumber>2</brocom:sequenceNumber>
-    <brocom:specification>Vestibulum eget ultrices metus, eu interdum urna.</brocom:specification>
-  </brocom:criterionError>
-  -->
-  <!-- optional. Alleen aanwezig als responseType = dispatch.
-  <gmn:dispatchDocument>
-    ...
-  </gmn:dispatchDocument>
-  -->
-</gld:dispatchDataResponse>
+<soap:Envelope 
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <gld:dispatchDataResponse
+            xmlns:gld="http://www.broservices.nl/xsd/dsgld/1.0"
+            xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/1.0 https://schema.broservices.nl/xsd/dsgld/1.0/dsgld-messages.xsd">
+          <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.
+               Het is niet gevalideerd door de uitgifteservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
+          -->
+          <brocom:responseType>rejection</brocom:responseType>
+          <brocom:requestReference>uitgifte-38</brocom:requestReference>
+          <!-- optional. Alleen aanwezig als responseType = rejection. -->
+          <brocom:rejectionTime>2021-08-15T13:16:17+02:00</brocom:rejectionTime>
+          <!-- optional. Alleen aanwezig als responseType = dispatch.
+          <brocom:dispatchTime>2022-01-14T10:55:00+01:00</brocom:dispatchTime>
+          -->
+          <!-- optional. Alleen aanwezig als responseType = rejection. -->
+          <brocom:rejectionReason>Dit registratieobject bestaat niet.</brocom:rejectionReason>
+          <!-- 0 or more repetitions: Optioneel alleen aanwezig als responseType = rejection.
+          <brocom:criterionError>
+            <brocom:sequenceNumber>1</brocom:sequenceNumber>
+            <brocom:specification>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</brocom:specification>
+          </brocom:criterionError>
+          <brocom:criterionError>
+            <brocom:sequenceNumber>2</brocom:sequenceNumber>
+            <brocom:specification>Vestibulum eget ultrices metus, eu interdum urna.</brocom:specification>
+          </brocom:criterionError>
+          -->
+          <!-- optional. Alleen aanwezig als responseType = dispatch.
+          <gmn:dispatchDocument>
+            ...
+          </gmn:dispatchDocument>
+          -->
+        </gld:dispatchDataResponse>
+    </soap:Body>
+</soap:Envelope>

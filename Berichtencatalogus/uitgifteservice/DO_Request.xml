@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dispatchDataRequest
-    xmlns="http://www.broservices.nl/xsd/dsgld/1.0"
-    xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/1.0 ../../XSD/dsgld-messages.xsd"
-    >
-  <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.
-       Het is niet gevalideert door de uitgifteservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
-  -->
-  <brocom:requestReference>uitgifte-38</brocom:requestReference>
-  <brocom:broId>GLD123456789012</brocom:broId>
-</dispatchDataRequest>
+<soap:Envelope 
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <dispatchDataRequest
+            xmlns="http://www.broservices.nl/xsd/dsgld/1.0"
+            xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/1.0 https://schema.broservices.nl/xsd/dsgld/1.0/dsgld-messages.xsd"
+            >
+          <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.
+               Het is niet gevalideert door de uitgifteservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
+          -->
+          <brocom:requestReference>uitgifte-38</brocom:requestReference>
+          <brocom:broId>GLD123456789012</brocom:broId>
+        </dispatchDataRequest>
+    </soap:Body>
+</soap:Envelope>

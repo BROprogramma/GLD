@@ -1,41 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gld:dispatchDataResponse
-    xmlns:gld="http://www.broservices.nl/xsd/dsgld/1.0"
-    xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
-    xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/1.0 ../../XSD/dsgld-messages.xsd">
-  <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.
-       Het is niet gevalideerd door de uitgifteservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
-  -->
-  <brocom:responseType>dispatch</brocom:responseType>
-  <brocom:requestReference>uitgifte-38</brocom:requestReference>
-  <!-- optional. Alleen aanwezig als responseType = rejection.
-  <brocom:rejectionTime>2021-08-15T13:16:17+02:00</brocom:rejectionTime>
-  -->
-  <!-- optional. Alleen aanwezig als responseType = dispatch. -->
-  <brocom:dispatchTime>2022-01-14T10:55:00+01:00</brocom:dispatchTime>
-  <!-- optional. Alleen aanwezig als responseType = rejection.
-  <brocom:rejectionReason>...</brocom:rejectionReason>
-  -->
-  <!-- 0 or more repetitions: Alleen aanwezig als responseType = rejection.
-  <brocom:criterionError>
-    ...
-  </brocom:criterionError>
-  -->
-  <!-- optional. Alleen aanwezig als responseType = dispatch. -->
-  <gld:dispatchDocument>
-    <!-- Expect one of the following options
-    <BRO_DO gml:id="?">?</BRO_DO>
-    <GMN_PO gml:id="?">?</GMN_PO>
-    <GMN_PO_DP gml:id="?">?</GMN_PO_DP>
-    <GMN_PPO gml:id="?">?</GMN_PPO>
-    <GMN_PPO_DP gml:id="?">?</GMN_PPO_DP>
-    -->
-    <brocom:BRO_DO gml:id="SEQ_0001">
-      <brocom:broId>GMN123456789012</brocom:broId>
-      <brocom:deregistered>ja</brocom:deregistered>
-      <brocom:deregistrationTime>2022-01-13T13:15:57+01:00</brocom:deregistrationTime>
-    </brocom:BRO_DO>
-  </gld:dispatchDocument>
-</gld:dispatchDataResponse>
+<soap:Envelope 
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <gld:dispatchDataResponse
+            xmlns:gld="http://www.broservices.nl/xsd/dsgld/1.0"
+            xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+            xmlns:gml="http://www.opengis.net/gml/3.2"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.broservices.nl/xsd/dsgld/1.0 https://schema.broservices.nl/xsd/dsgld/1.0/dsgld-messages.xsd">
+          <!-- Disclaimer: dit voorbeeldbericht valideert tegen de XSD van de uitgifteservice.
+               Het is niet gevalideerd door de uitgifteservice en is vaktechnisch/inhoudelijk niet voorbeeldig.
+          -->
+          <brocom:responseType>dispatch</brocom:responseType>
+          <brocom:requestReference>uitgifte-38</brocom:requestReference>
+          <!-- optional. Alleen aanwezig als responseType = rejection.
+          <brocom:rejectionTime>2021-08-15T13:16:17+02:00</brocom:rejectionTime>
+          -->
+          <!-- optional. Alleen aanwezig als responseType = dispatch. -->
+          <brocom:dispatchTime>2022-01-14T10:55:00+01:00</brocom:dispatchTime>
+          <!-- optional. Alleen aanwezig als responseType = rejection.
+          <brocom:rejectionReason>...</brocom:rejectionReason>
+          -->
+          <!-- 0 or more repetitions: Alleen aanwezig als responseType = rejection.
+          <brocom:criterionError>
+            ...
+          </brocom:criterionError>
+          -->
+          <!-- optional. Alleen aanwezig als responseType = dispatch. -->
+          <gld:dispatchDocument>
+            <!-- Expect one of the following options
+            <BRO_DO gml:id="?">?</BRO_DO>
+            <GMN_PO gml:id="?">?</GMN_PO>
+            <GMN_PO_DP gml:id="?">?</GMN_PO_DP>
+            <GMN_PPO gml:id="?">?</GMN_PPO>
+            <GMN_PPO_DP gml:id="?">?</GMN_PPO_DP>
+            -->
+            <brocom:BRO_DO gml:id="SEQ_0001">
+              <brocom:broId>GMN123456789012</brocom:broId>
+              <brocom:deregistered>ja</brocom:deregistered>
+              <brocom:deregistrationTime>2022-01-13T13:15:57+01:00</brocom:deregistrationTime>
+            </brocom:BRO_DO>
+          </gld:dispatchDocument>
+        </gld:dispatchDataResponse>
+    </soap:Body>
+</soap:Envelope>
