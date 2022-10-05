@@ -1,8 +1,8 @@
 var respecConfig = {
-  specStatus: "GN-DEF",
+  specStatus: "GN-WC",
   specType: "IM",
   //canonicalURI: "WV",
- publishDate: "2021-04-21",
+// publishDate: "2021-04-21",
   maxTocLevel: 3,
   logos: [
  {
@@ -27,7 +27,7 @@ var respecConfig = {
   shortName: "gld",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GLD",
-  previousPublishDate: "2020-07-02",
+  previousPublishDate: "2021-04-21",
   previousStatus: "GN-DEF",
   localBiblio: {
     "WaterML20": {
