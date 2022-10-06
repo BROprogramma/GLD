@@ -1,5 +1,5 @@
 var respecConfig = {
-  specStatus: "GN-WC",
+  specStatus: "GN-WV",
   specType: "IM",
   //canonicalURI: "WV",
 // publishDate: "2021-04-21",
