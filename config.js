@@ -27,8 +27,8 @@ var respecConfig = {
   shortName: "gld",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GLD",
-  previousPublishDate: "2023-03-16",
-  previousStatus: "GN-CV",
+  previousPublishDate: "2023-05-04",
+  previousStatus: "GN-VV",
   localBiblio: {
     "WaterML20": {
       "href": "https://portal.opengeospatial.org/files/?artifact_id=57222",
