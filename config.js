@@ -1,5 +1,5 @@
 var respecConfig = {
-  specStatus: "GN-VV",
+  specStatus: "GN-DEF",
   specType: "IM", 
   publishDate: "2023-05-04",
   maxTocLevel: 4,
