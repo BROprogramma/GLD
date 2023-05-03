@@ -1,9 +1,8 @@
 var respecConfig = {
-  specStatus: "GN-WV",
-  specType: "IM",
-  //canonicalURI: "WV",
-  //publishDate: "2018-01-01",
-  maxTocLevel: 3,
+  specStatus: "GN-V V",
+  specType: "IM", 
+  publishDate: "2023-05-04",
+  maxTocLevel: 4,
   editors: [
     {
       name: "TNO Geologische Dienst Nederland",
@@ -17,8 +16,8 @@ var respecConfig = {
   shortName: "bro-gld",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GLD",
-  //previousPublishDate: "2017-01-01",
-  //previousStatus: "GN-CV",
+  previousPublishDate: "2023-03-16",
+  previousStatus: "GN-CV",
   //localBiblio: {
   //  "ISO19136": {
   //    "href": "https://www.iso.org/standard/32554.html",
