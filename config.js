@@ -1,5 +1,5 @@
 var respecConfig = {
-  specStatus: "GN-DEF",
+  specStatus: "GN-VV",
   specType: "IM", 
   publishDate: "2023-05-04",
   maxTocLevel: 4,
@@ -13,7 +13,7 @@ var respecConfig = {
       url: "https://www.geonovum.nl", 
     },  
   ],
-  shortName: "bro-gld",
+  shortName: "gld",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GLD",
   previousPublishDate: "2023-03-16",
