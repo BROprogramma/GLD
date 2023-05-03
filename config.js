@@ -3,16 +3,23 @@ var respecConfig = {
   specType: "IM", 
   publishDate: "2023-05-04",
   maxTocLevel: 4,
-  editors: [
-    {
-      name: "TNO Geologische Dienst Nederland",
-      url: "https://www.tno.nl/nl/",
-    },
-    {
-      name: "Geonovum",
-      url: "https://www.geonovum.nl", 
-    },  
-  ],
+   logos: [ {
+    src: 'https://docs.geostandaarden.nl/bro/gen/logo_minbzk.png',
+    href: "https://www.geobasisregistraties.nl/basisregistraties/ondergrond",
+    alt: "Ministerie BZK",
+    width: 776,
+    height: 163,
+    id: 'logo_minbzk',
+  }]  ,
+   editors: [    {
+      name: "Geonovum",	
+      companyURL: "https://www.geonovum.nl/geo-standaarden/bro-basisregistratie-ondergrond",
+    }],
+  authors: [
+    {  name: "Geonovum",
+      companyURL: "https://www.geonovum.nl/geo-standaarden/bro-basisregistratie-ondergrond",
+    }
+	],
   shortName: "gld",
   pubDomain: "bro",
   github: "https://github.com/BROprogramma/GLD",
