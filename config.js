@@ -3,7 +3,7 @@ var respecConfig = {
   specType: "IM",
   //canonicalURI: "WV",
 // publishDate: "2021-04-21",
-  maxTocLevel: 3,
+  maxTocLevel: 4,
   logos: [
  {
     src: 'https://docs.geostandaarden.nl/bro/gen/logo_minbzk.png',
