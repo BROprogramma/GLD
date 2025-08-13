@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Interpolatietype>
+		<Waarde>discontinu</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De meting van de waterstand gebeurt zodanig dat het niet mogelijk is om de reeks als continu te beschouwen. Het is aan de gebruiker om interpretaties te maken en conclusies te trekken uit de reeks van metingen.</Omschrijving>
+	</Interpolatietype>
+</domeintabel>

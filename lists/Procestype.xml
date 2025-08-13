@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Procestype>
+		<Waarde>algoritme</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>-- Definitie -- Het resultaat van de observatie is door toepassen van een algoritme tot stand gekomen. Bij grondwaterstandonderzoek komt een waterstand t.o.v. NAP (vrijwel altijd) tot stand via een omrekening.</Omschrijving>
+	</Procestype>
+</domeintabel>

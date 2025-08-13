@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TypeMeetinstrument>
+		<Waarde>akoestischeSensor</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Sensor die de waterstand bepaalt aan de hand van de reflectietijd van een akoestisch signaal.</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
+		<Waarde>akoestischHandapparaat</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Handapparaat met geïntegreerde akoestische sensor, die de waterstand bepaalt aan de hand van de reflectietijd van het akoestisch signaal.</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
+		<Waarde>analoogPeilklokje</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meetlint met een analoog dompelklokje, dat geluid maakt bij het raken van het water.</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
+		<Waarde>druksensor</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Sensor die in het water in de monitoringbuis hangt en de plaatselijke druk meet. Bij dit type meetinstrument moet het type luchtdrukcompensatie worden vermeld.</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
+		<Waarde>elektronischPeilklokje</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meetlint met elektronisch dompelklokje, dat een licht- en/of geluidssignaal afgeeft bij het raken van water.</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
+		<Waarde>opzetStuk</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Opzetstuk inclusief afleesbare schaalverdeling dat in geval van artesisch grondwater op de bovenkant van de monitoringbuis wordt geplaatst.</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
+		<Waarde>radarsensor</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Sensor die de waterstand bepaalt aan de hand van de reflectietijd van een radarsignaal.</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
+		<Waarde>stereoDruksensor</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Apparaat of opstelling met twee druksensoren die de druk in tweevoud bepalen, en combineren tot een enkele meetreeks met verhoogde betrouwbaarheid. Bij dit type meetinstrument moet het type luchtdrukcompensatie worden vermeld.</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend met welk meetinstrument de meting gedaan is (IMBRO/A kwaliteitsregime).</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
+		<Waarde>onbekendPeilklokje</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meetlint met dompelklokje maar het is onbekend of een analoog of een electronisch dompelklokje is gebruikt (IMBRO/A kwaliteitsregime).</Omschrijving>
+	</TypeMeetinstrument>
+</domeintabel>
