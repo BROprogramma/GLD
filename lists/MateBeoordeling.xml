@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<domeintabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MateBeoordeling>
+		<Waarde>volledigBeoordeeld</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De tijd-meetwaardereeks van deze observatie heeft de volledige beoordeling ondergaan zoals beschreven in de gebruikte beoordelingsprocedure.</Omschrijving>
+	</MateBeoordeling>
+	<MateBeoordeling>
+		<Waarde>voorlopig</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>De tijd-meetwaardereeks van deze observatie heeft geen of een voorlopige beoordeling ondergaan zoals beschreven in de gebruikte beoordelingsprocedure.</Omschrijving>
+	</MateBeoordeling>
+	<MateBeoordeling>
+		<Waarde>onbekend</Waarde>
+		<IMBRO> </IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Het is onbekend of de tijd-meetwaardereeks van deze observatie een beoordeling heeft ondergaan (IMBRO/A kwaliteitsregime).</Omschrijving>
+	</MateBeoordeling>
+</domeintabel>
