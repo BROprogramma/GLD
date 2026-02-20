@@ -13,7 +13,7 @@
 		<Omschrijving>De validatie- en beoordelingsprocedure die door Wageningen Environmental Research in samenwerking met Eijkelkamp Soil &amp; Water is ontwikkeld voor het valideren van hoogfrequente grondwaterstandsmetingen gebaseerd op de Fuzzy-set-theorie (versie 0.0.9).</Omschrijving>
 	</Beoordelingsprocedure>
 	<Beoordelingsprocedure>
-		<Waarde>GWDatalens</Waarde>
+		<Waarde>GWDataLens</Waarde>
 		<IMBRO>v</IMBRO>
 		<IMBROA>v</IMBROA>
 		<Omschrijving>Beoordelingsprocedure voor het detecteren, corrigeren en labelen van potentieel onbetrouwbare meetwaarden op basis van tijdreeksanalyse met PASTAS, aangevuld met detectieregels uit TRAVAL.</Omschrijving>
@@ -67,4 +67,5 @@
 		<Omschrijving>Het is onbekend volgens welke procedure de beoordeling is gedaan (IMBRO/A kwaliteitsregime).</Omschrijving>
 	</Beoordelingsprocedure>
 </domeintabel>
+
 
