@@ -31,6 +31,18 @@
 		<Omschrijving>Meetlint met elektronisch dompelklokje, dat een licht- en/of geluidssignaal afgeeft bij het raken van water.</Omschrijving>
 	</TypeMeetinstrument>
 	<TypeMeetinstrument>
+		<Waarde>handmatigLengtemeetgereedschap</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Lengtemeetgereedschap (zoals een duimstok of rolmaat) om een hoge waterstand vlak onder de buisrand handmatig af te lezen.</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
+		<Waarde>manometer</Waarde>
+		<IMBRO>v</IMBRO>
+		<IMBROA>v</IMBROA>
+		<Omschrijving>Meter waarmee de waterstand bij artesisch grondwater handmatig wordt vastgesteld in monitoringbuizen met een drukdop.</Omschrijving>
+	</TypeMeetinstrument>
+	<TypeMeetinstrument>
 		<Waarde>opzetStuk</Waarde>
 		<IMBRO>v</IMBRO>
 		<IMBROA>v</IMBROA>
@@ -61,3 +73,4 @@
 		<Omschrijving>Meetlint met dompelklokje maar het is onbekend of een analoog of een electronisch dompelklokje is gebruikt (IMBRO/A kwaliteitsregime).</Omschrijving>
 	</TypeMeetinstrument>
 </domeintabel>
+
