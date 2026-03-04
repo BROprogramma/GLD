@@ -16,7 +16,7 @@
 		<Waarde>GWDataLens</Waarde>
 		<IMBRO>v</IMBRO>
 		<IMBROA>v</IMBROA>
-		<Omschrijving>Beoordelingsprocedure voor het detecteren, corrigeren en labelen van potentieel onbetrouwbare meetwaarden op basis van tijdreeksanalyse met PASTAS, aangevuld met detectieregels uit TRAVAL.</Omschrijving>
+		<Omschrijving>Beoordelingsprocedure van Artesia voor het detecteren, corrigeren en labelen van potentieel onbetrouwbare meetwaarden op basis van tijdreeksanalyse met PASTAS, aangevuld met detectieregels uit TRAVAL.</Omschrijving>
 	</Beoordelingsprocedure>
 	<Beoordelingsprocedure>
 		<Waarde>oordeelDeskundige</Waarde>
@@ -67,5 +67,6 @@
 		<Omschrijving>Het is onbekend volgens welke procedure de beoordeling is gedaan (IMBRO/A kwaliteitsregime).</Omschrijving>
 	</Beoordelingsprocedure>
 </domeintabel>
+
 
 
