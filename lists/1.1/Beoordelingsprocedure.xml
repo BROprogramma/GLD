@@ -10,7 +10,7 @@
 		<Waarde>eijkelkampDataValidatiev0.0.9</Waarde>
 		<IMBRO>v</IMBRO>
 		<IMBROA>v</IMBROA>
-		<Omschrijving>De validatie- en beoordelingsprocedure die door Wageningen Environmental Research in samenwerking met Eijkelkamp Soil &amp; Water is ontwikkeld voor het valideren van hoogfrequente grondwaterstandsmetingen gebaseerd of de Fuzzy-set-theorie (versie 0.0.9).</Omschrijving>
+		<Omschrijving>De validatie- en beoordelingsprocedure die door Wageningen Environmental Research in samenwerking met Eijkelkamp Soil &amp; Water is ontwikkeld voor het valideren van hoogfrequente grondwaterstandsmetingen gebaseerd op de Fuzzy-set-theorie (versie 0.0.9).</Omschrijving>
 	</Beoordelingsprocedure>
 	<Beoordelingsprocedure>
 		<Waarde>GWDataLens</Waarde>
@@ -67,4 +67,5 @@
 		<Omschrijving>Het is onbekend volgens welke procedure de beoordeling is gedaan (IMBRO/A kwaliteitsregime).</Omschrijving>
 	</Beoordelingsprocedure>
 </domeintabel>
+
 
