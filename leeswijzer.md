@@ -12,4 +12,4 @@
 
 [Hoofdstuk 6](#uitbreidbare-waardelijsten) geeft de inhoud van de uitbreidbare waardelijsten weer, dat wil zeggen een lijst van waarden die een attribuut uit hoofdstuk 5 mag hebben.
 
-[Bijlage A](#referenties) geeft de referenties behorend bij deze catalogus weer.
+[Bijlage A](#references) geeft de referenties behorend bij deze catalogus weer.
