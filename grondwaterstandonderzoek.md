@@ -74,10 +74,10 @@ Het proces waarin grondwaterstandonderzoeksgegevens in de praktijk ontstaan is s
     - relatief hoogfrequente sensormetingen, waarbij de meetgegevens opgeslagen worden in een datalogger die in of rond de monitoringbuis aanwezig is;  
     - relatief hoogfrequente sensormetingen, waarbij de meetgegevens via telemetrie naar de bronhouder/leverancier worden gestuurd.  
          
-<figure id="image005">
-<img src="./media/GLD_Stroomschema.png" alt="GLD stroomschema" width="400"/>
-<figcaption>Stroomschema van grondwaterstandgegevens, vanaf de monitoringbuis en meetinstrumenten in het veld, via de database of software van de dataleverancier of bronhouder naar de BRO (naar KWR, 2018).</figcaption>
-</figure>  
+    <figure id="image005">
+    <img src="./media/GLD_Stroomschema.png" alt="GLD stroomschema" width="400"/>
+    <figcaption>Stroomschema van grondwaterstandgegevens, vanaf de monitoringbuis en meetinstrumenten in het veld, via de database of software van de dataleverancier of bronhouder naar de BRO (naar KWR, 2018).</figcaption>
+    </figure>  
 
     De handpeiling betreft een meting van de grondwaterstand die tijdens het veldbezoek wordt uitgevoerd. De meting wordt bijvoorbeeld uitgevoerd met een meetlint met analoog of elektronisch peilklokje of met een akoestische sensor. In het laatste geval wordt de reistijd tot de waterspiegel in de monitoringbuis gemeten, die omgerekend dient te worden naar de waterstand in de monitoringbuis (zie stap 2). Per veldbezoek komt hierbij slechts een enkele meetwaarde per monitoringbuis beschikbaar. De handpeiling kan fungeren als controlemeting van sensormetingen, zoals hieronder beschreven.  
 
