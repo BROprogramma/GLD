@@ -65,9 +65,11 @@ Het proces waarin grondwaterstandonderzoeksgegevens in de praktijk ontstaan is s
 </figure>
 
 1. Meten  
+
     Het meten van de waterstand in de monitoringbuis betreft de wijze waarop de fysieke meting in de grondwatermonitoringput wordt uitgevoerd. De meting kan worden uitgevoerd met bijvoorbeeld een meetlint of een sensor. Er zijn drie mogelijke stromen van grondwaterstandgegevens naar de bronhouder (zie [figuur 5](#image005)). Het onderscheid daartussen wordt gevormd door de meetfrequentie en/of periodiciteit van het beschikbaar komen van de meting. Binnen een grondwaterstandonderzoek kunnen de verschillende gegevensstromen naast elkaar voorkomen.  
 
     De drie gegevensstromen die worden onderscheiden zijn afkomstig van (zie onderstaande figuur):  
+
         - relatief laagfrequent uitgevoerde handpeilingen;  
         - relatief hoogfrequente sensormetingen, waarbij de meetgegevens opgeslagen worden in een datalogger die in of rond de monitoringbuis aanwezig is;  
         - relatief hoogfrequente sensormetingen, waarbij de meetgegevens via telemetrie naar de bronhouder/leverancier worden gestuurd.
@@ -76,27 +78,31 @@ Het proces waarin grondwaterstandonderzoeksgegevens in de praktijk ontstaan is s
 <img src="./media/GLD_Stroomschema.png" alt="GLD stroomschema" width="400"/>
 <figcaption>Stroomschema van grondwaterstandgegevens, vanaf de monitoringbuis en meetinstrumenten in het veld, via de database of software van de dataleverancier of bronhouder naar de BRO (naar KWR, 2018).</figcaption>
 </figure>
-
-    De handpeiling betreft een meting van de grondwaterstand die tijdens het veldbezoek wordt uitgevoerd. De meting wordt bijvoorbeeld uitgevoerd met een meetlint met analoog of elektronisch peilklokje of met een akoestische sensor. In het laatste geval wordt de reistijd tot de waterspiegel in de monitoringbuis gemeten, die omgerekend dient te worden naar de waterstand in de monitoringbuis (zie stap 2). Per veldbezoek komt hierbij slechts een enkele meetwaarde per monitoringbuis beschikbaar. De handpeiling kan fungeren als controlemeting van sensormetingen, zoals hieronder beschreven.
+  
+      De handpeiling betreft een meting van de grondwaterstand die tijdens het veldbezoek wordt uitgevoerd. De meting wordt bijvoorbeeld uitgevoerd met een meetlint met analoog of elektronisch peilklokje of met een akoestische sensor. In het laatste geval wordt de reistijd tot de waterspiegel in de monitoringbuis gemeten, die omgerekend dient te worden naar de waterstand in de monitoringbuis (zie stap 2). Per veldbezoek komt hierbij slechts een enkele meetwaarde per monitoringbuis beschikbaar. De handpeiling kan fungeren als controlemeting van sensormetingen, zoals hieronder beschreven.
 
     De grootheid die met sensoren wordt gemeten, is afhankelijk van het type: bij druksensoren wordt de druk van de water- en/of luchtkolom boven de sensor gemeten; bij reflectiesensoren de reistijd tot de waterspiegel. Het meetresultaat wordt door de, in de monitoringbuis aanwezige datalogger opgeslagen. Gedurende een veldbezoek wordt de datalogger uitgelezen met bijvoorbeeld een laptop. Soms wordt daarbij het omrekenen van de meetgegevens naar een waterstand in de monitoringbuis ten opzichte van het referentieniveau (zie stap 2 van het proces) ook uitgevoerd. De (al dan niet omgerekende) meetgegevens komen hierbij beschikbaar vanaf het moment van de voorgaande uitlezing tot aan het moment van uitlezen.
 
     Bij de metingen die via telemetrie vanuit het veld worden verzonden, worden de meetgegevens door middel van een modem draadloos (via bijvoorbeeld het GSM- of LoRa-netwerk) aan de dataleverancier of bronhouder verstuurd. Het omrekenen van de meetgegevens naar een waterstand in de monitoringbuis ten opzichte van het referentieniveau (zie stap 2 van het proces) gebeurt hierbij bijvoorbeeld op het dataportaal waarop de gegevens binnenkomen.
     
 2. Omrekenen  
+
     De methodiek van omrekenen van de meetwaarde naar een waterstand in de monitoringbuis ten opzichte van het referentieniveau, NAP, hangt samen met de wijze waarop is gemeten. Bij een meting met een peillint wordt de afstand van een vast punt, waarvan de hoogte ten opzichte van NAP bekend is, tot de grondwaterstand gemeten. Bij een meting met een reflectiesensor wordt de reistijd van een akoestisch of radarsignaal vanaf het nulpunt van de sensor tot aan de waterspiegel gemeten, en vervolgens omgerekend naar een hoogte ten opzichte van NAP. Bij druksensoren wordt de waterdruk boven de sensor gemeten, en omgerekend naar een waterkolom. Hieruit wordt, samen met het niveau van de druksensor ten opzichte van het referentieniveau, de waterstand in de monitoringbuis bepaald. De omrekening gebeurt in sommige gevallen in de software die bij de sensor hoort. In andere gevallen vindt omrekening in een latere fase plaats, bijvoorbeeld in de database bij de dataleverancier of bronhouder.  
     
 3. Controleren  
+
     De tijdreeks van handmatig dan wel via sensormetingen verkregen waterstanden in de peilbuis wordt, door de bronhouder en/of een derde partij, gecontroleerd op fouten en afwijkingen. Daarbij kunnen controles op integriteit, representativiteit, consistentie en/of plausibiliteit doorlopen worden. Bij metingen uitgevoerd met een sensor wordt in het bijzonder het functioneren van de sensor gecontroleerd, onder andere op nulpunt en drift. Hiervoor wordt doorgaans gebruik gemaakt van specifiek daarvoor uitgevoerde handmatige controlemetingen. Daarnaast kan de samenhang (in tijd en ruimte) met andere reeksen beoordeeld worden, en/of gebruik gemaakt worden van (statistische) modellen of technieken zoals tijdreeksanalyse.  
 
     Voor metingen die uit telemetriesystemen beschikbaar komen, kan een belangrijk deel van de controles pas uitgevoerd worden nadat een (periodieke) controlemeting beschikbaar is. Over de periode waarin er nog geen nieuwe of onvoldoende aantal controlemetingen beschikbaar zijn, kunnen de metingen slechts gedeeltelijk worden gecontroleerd.  
     
 4. Corrigeren  
+
     De bronhouder of derde partij corrigeert indien noodzakelijk de omgerekende meetwaarden op basis van de in stap 3 uitgevoerde controles. Er wordt gecorrigeerd op systematische afwijkingen van bijvoorbeeld de druksensor en/of de klok, of naar aanleiding van fouten zoals filterverwisselingen of een verkeerde inhangdiepte van de sensor. Nadat eventuele correcties zijn doorgevoerd wordt de vorige stap, controleren, veelal opnieuw doorlopen. De controles en correcties zijn beschreven in een procedure of werkvoorschrift, de beoordelingsprocedure. Deze correcties vinden plaats voorafgaand aan de registratie in de basisregistratie ondergrond. De gegevens worden als ‘voorlopig’ of direct als ‘volledig beoordeeld’ geregistreerd (zie stap 5 van het proces). Deze correcties kunnen ook plaatsvinden naar aanleiding van het uitvoeren van de volledige beoordeling. De gegevens worden dan als ‘volledig beoordeeld’ geregistreerd. De voorlopige gegevens blijven ongewijzigd in de basisregistratie ondergrond aanwezig.  
 
     Binnen de basisregistratie ondergrond vindt ook een andere vorm van correctie plaats. Dit zijn correcties waarbij middels een correctiebericht, een gegeven dat al in de registratie ondergrond geregistreerd is, wordt overschreven. De oude waarde van het gegeven is in dat geval niet meer direct beschikbaar voor de afnemers. Deze correcties worden in de formele geschiedenis van de basisregistratie ondergrond vastgelegd.  
 
 5. Keuren  
+
     De controles en correcties leiden tot een keuring of oordeel over de kwaliteit en bruikbaarheid van de gegevens. De uitkomsten van het proces worden vastgelegd en leiden tot een status kwaliteitscontrole die een eindoordeel geeft over de bruikbaarheid van de meting.  
     
     De drie verschillende gegevensstromen (handpeilingen, sensormetingen die in het veld uitgelezen worden en telemetrische sensormetingen) zorgen voor een verschillende dynamiek in aanvoer van gegevens. Voor zowel handpeilingen als sensormetingen die in het veld uitgelezen worden, geldt dat ook de metingen daarna nog aanvullende informatie kunnen geven over de interpretatie en kwaliteit ervan. Afhankelijk van de gevolgde procedure wordt het proces van beoordelen pas volledig doorlopen op het moment dat er ook latere metingen beschikbaar zijn, wat kan leiden tot een verschil in de mate van beoordeling.  
